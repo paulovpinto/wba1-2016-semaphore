@@ -1,9 +1,8 @@
-
-
 var jsons = {};
 jsons.quizOverview = "http://wba1-semaphore.christiannoss.de/app/data/quizuebersicht.json";
 jsons.quizStart = jsons.quizOverview;
 jsons.quizRanking = "http://wba1-semaphore.christiannoss.de/app/data/ranking-";
+jsons.quizQuestions = "http://wba1-semaphore.christiannoss.de/app/data/questions-";
 
 var model = {};
 model.data = {};
@@ -28,8 +27,9 @@ function parseQuizes() {
                         
             //parse JSON
             for (var quizId in model.data.uebersichtjson){
-                var temp = snippetquiz.outerHTML;
-            
+                //var temp = snippetquiz.outerHTML;
+                var temp.innerHTML = templates["quizOverview"];
+                console.log(temp);
                 var quiz = model.data.uebersichtjson[quizId];
 
                 temp = temp.replace(/{{quizIdx}}/, quiz.quizIdx);
@@ -71,6 +71,7 @@ function parseRanking( quizIdx, callback) {
     var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
+            model.data.rankingjson = JSON.parse(this.responseText);
 			callback.call(this, quizIdx);
             //return this.responseText;
         }
@@ -84,6 +85,30 @@ function parseRanking( quizIdx, callback) {
         
 }
 
+
+function parseQuestions( quizIdx, callback) {
+    
+    
+    
+    var rankingjson;
+    console.log("parseQuestions");
+        
+    var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+            model.data.rankingjson = JSON.parse(this.responseText);
+			callback.call(this, quizIdx);
+            //return this.responseText;
+        }
+	};
+    
+    
+    xhttp.open("GET", jsons.quizQuestions + quizIdx + ".json", true);
+	xhttp.send();
+}
+    
+
+
 function createQuizOverview() {
     
     // snippet holen
@@ -95,9 +120,15 @@ function createQuizOverview() {
         document.getElementById("content").innerHTML = this.responseText;
         
         //Zu bearbeitenden Abschnitt holen
-        snippetquiz = document.getElementById("snippetQuiz");
-        
+        //snippetquiz = templates["quizOverview"];
+       /* snippetquiz = document.getElementById("snippetQuiz");
+        console.log(snippetquiz);
+
         snippetquiz.parentNode.removeChild(snippetquiz);
+        
+        console.log(snippetquiz);
+        
+        */
         
         //JSON holen/speichern
         parseQuizes();
@@ -134,11 +165,11 @@ function createStart( quiz ) {
 		        
 		        //Snippet des gesamten Startscreens speichern
 		        snippetstart = document.getElementById("start");
+
 		        
 		        //Snippet der Ranking-Liste speichern
-		        snippetranking = document.getElementById("tabelleranking");
-		        
-		        //Snippet des Ranking_Headers speichern
+		        snippetranking = document.getElementById("tabellenranking");
+                //Snippet des Ranking_Headers speichern
 		        listhead = document.getElementById("listhead");
 		
 		        //eventuelle "Eltern" löschen
@@ -183,7 +214,7 @@ function createStart( quiz ) {
     	}
     };
     
-    xhttp.open("GET", urls.quizStart, true);
+    xhttp.open("GET", urls.startscreen, true);
     xhttp.send();
     }        
 }
