@@ -47,10 +47,13 @@ function get(id, callback, urlliste) {
 		if (this.readyState == 4) { callback.call(this, id); }
 	};
     
-    console.log("folgende url wird abgefragt: ");
-    console.log(urlliste[id]);
-	xhttp.open("GET", urlliste[id], true);
-	xhttp.send();
+	if(urlliste[id]){
+	    console.log("folgende url wird abgefragt: ");
+
+		xhttp.open("GET", urlliste[id], true);
+		xhttp.send();		
+	}
+
 
 }
 
@@ -96,7 +99,6 @@ function getNextTemplate(){
 				// Wir speichern das Template unter der id im Objekt "templates".
 				templates[next_template] = this.responseText;
 
-                //console.log(templates["quizOverview"]);
 				// Wir rufen die getNextQuiz-Funktion erneut auf.
 				getNextTemplate();
 			}, urls
