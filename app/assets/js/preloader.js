@@ -138,7 +138,6 @@ function getNextTemplate(){
 		
 	// Falls es keine Quiz-Id mehr gibt, machen wir irgend etwas anderes. Erst dann stehen die Templates zur Verfügung.
 	}else{
-        console.log("breadcrump")
 		doSomething();
 	}
 }
