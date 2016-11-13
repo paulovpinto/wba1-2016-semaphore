@@ -1,17 +1,43 @@
 
 /***************************************************
-Dieses Script zieht sich alle notwendigen Templates
-Die die Url namen werden doppelt benutzt und die Namne
-müssen angeglichen werden.
+Damit das Laden der HTML Templates und der Json Dateien
+Zeitlich mit dem verarbeiten dieser Daten getrennt 
+werden kann übernimmt der Preloader einmalig diese Aufgabe.
+
+Es werden zuerst alle HTML Templates als String 
+in der dem Array Templates gespeichert.
+Anschließend werden die Json dateien geladen und
+verarbeitet (JSON.parese()). 
+Die verarbeiteten Json Daten werden in jsondata gespeichert. 
+
+
+Wenn alles geladen wurde wird ein Callback ausgelöst,
+der die Startseite läd.
 ****************************************************/
+
+
+// In diesem Objekt werdne die Templates gespeichert
+var templates = {};
+
+// Hier werden die geparsten jsons gespeichert
+var jsondata = {};
+
 
 console.log("Das preloader.js Script wird ausgeführt..")
 
 // Welcher Server stellt die Daten bereit?
-var server = "http://wba1-semaphore.christiannoss.de/app";
+var server = "";//"http://wba1-semaphore.christiannoss.de/app";
+
+if(location.href.match(/wba1-semaphore.christiannoss.de/)){
+	server = "http://wba1-semaphore.christiannoss.de/app";
+}
+
+
+// Basispfad fur die Jsons
+var jsonbasis = server + "/data";
 
 // Zum Testen in diesem Branch
-server = "";
+//server = "";
 
 var loaderisready = false;
 
@@ -21,18 +47,21 @@ var loaderisready = false;
 var urls = {};
 urls.highscore      = server + "/quiz_app/highscore/highscore.html";
 urls.quizrunde      = server + "/quiz_app/quizrunde/quizrunde.html";
-urls.quizOverview  = server + "/quiz_app/quizubersicht/quizubersicht.html";
+urls.quizOverview   = server + "/quiz_app/quizuebersicht/quizuebersicht.html";
 urls.schlussscreen  = server + "/quiz_app/schlussscreen/schlussscreen.html";
 urls.startscreen    = server + "/quiz_app/startscreen/startscreen.html";
 
 var jsons = {};
-jsons.quizubersicht  = server + "/data/quizuebersicht.json";
+jsons.quizubersicht    = jsonbasis + "/quizuebersicht.json";
+jsons.rankingquiz1      = jsonbasis + "/ranking-1.json";
+jsons.rankingquiz2      = jsonbasis + "/ranking-3.json";
+jsons.rankingquiz3      = jsonbasis + "/ranking-5.json";
 //jsons.highscore      = server + "/data/ranking-1.json";
 
+jsons.question1      = jsonbasis + "/questions-1.json";
+jsons.question2      = jsonbasis + "/questions-3.json";
+jsons.question3      = jsonbasis + "/questions-5.json";
 
-// In diesem Objekt werdne die Templates gespeichert
-var templates = {};
-var jsondata = {};
 
 /* Functions
 ############################################# */
@@ -47,8 +76,10 @@ function get(id, callback, urlliste) {
 		if (this.readyState == 4) { callback.call(this, id); }
 	};
     
+	xhttp.open("GET", urlliste[id], true);
+	xhttp.send();
+    
 	if(urlliste[id]){
-	    console.log("folgende url wird abgefragt: ");
 
 		xhttp.open("GET", urlliste[id], true);
 		xhttp.send();		
@@ -71,7 +102,8 @@ function getNextJson(){
         get(next_json, function(next_json){
             
             //wir speichern die Json unter der id im Objekt templates
-            jsondata[next_json] = this.responseText;
+            jsondata[next_json] = JSON.parse( this.responseText );
+
             
             //rekursiver Aufruf von getNextJson
             getNextJson();
@@ -106,16 +138,16 @@ function getNextTemplate(){
 		
 	// Falls es keine Quiz-Id mehr gibt, machen wir irgend etwas anderes. Erst dann stehen die Templates zur Verfügung.
 	}else{
+        console.log("breadcrump")
 		doSomething();
 	}
 }
 	
 // Hier geben wir aus Spaß mal das Template eines Quizzes aus.
 function doSomething(){
-    createQuizOverview();
 	var hightscoreTemplate = templates["highscore"];   
 	loaderisready = true;
-    console.log(jsondata);
+    createQuizOverview();
 }
 
 /* Main
