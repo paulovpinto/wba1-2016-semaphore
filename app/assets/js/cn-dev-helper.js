@@ -32,7 +32,7 @@ var dev_antworten = Array(10);
 for(var i=0; i<dev_antworten.length;i++){
     dev_antworten[i] = false;
 }
-item.onclick = function(){ createEndscreen(100, dev_antworten, "1"); }
+item.onclick = function(){ createEndscreen(650, dev_antworten, "1"); }
 devnavi.appendChild(item);
 
 // Highscore

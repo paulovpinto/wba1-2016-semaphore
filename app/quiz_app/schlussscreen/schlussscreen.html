@@ -57,50 +57,19 @@
 
 					<div class="highscore">
 
-						<table>
-							<tr>
+						<table id="ranking">
+							<tr id="listhead">
 								<th><div class="rank"><img src="../grafiker/Grafiken/05_medallie_tablet%20mit%20gelben%20hintergrund.jpg" /></div></th>
 								<th>Spieler</th>
 								<th>Zeit</th>
 								<th>Punkte</th>
 							</tr>
-							<tr>
-								<td>1.</td>
-								<td>Nicole Trommler</td>
-								<td>02.06.2016</td>
-								<td>900</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Markus Boehm</td>
-								<td>25.05.2016</td>
-								<td>875</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>Peter Scholz</td>
-								<td>23.07.2016</td>
-								<td>700</td>
-							</tr>
-							<tr>
-								<td>4.</td>
-								<td>Stefanie Dresner</td>
-								<td>15.05.2016</td>
-								<td>725</td>
-							</tr>
-
-							<tr>
-								<td>5.</td>
-								<td>Silke Bader</td>
-								<td>17.07.2016</td>
-								<td>725</td>
-							</tr>
-							<tr>
-								<td>15.</td>
-								<td>Ich</td>
-								<td>18.08.2016</td>
-								<td>600</td>
-							</tr>
+							 <tr id="tabellenranking">
+                                <td>{{rankIdx}}.</td>
+                                 <td>{{player}}</td>
+                                 <td>{{date}}</td>
+                                 <td>{{points}}</td>
+                            </tr>
 						</table>
 					</div>
 					<!--Highscoreliste-->
