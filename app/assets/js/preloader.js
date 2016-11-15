@@ -76,8 +76,8 @@ function get(id, callback, urlliste) {
 		if (this.readyState == 4) { callback.call(this, id); }
 	};
     
-	xhttp.open("GET", urlliste[id], true);
-	xhttp.send();
+	//xhttp.open("GET", urlliste[id], true);
+	//xhttp.send();
     
 	if(urlliste[id]){
 
