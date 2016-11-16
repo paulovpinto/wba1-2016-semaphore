@@ -92,31 +92,6 @@ img {
     margin-right: 1em;
     border-spacing: 0px 10px;
 }
-.liste th{
-    background-color: #E9C20C;
-    text-align: left;
-}
-.liste tr th:nth-child(1),
-.liste tr td:nth-child(1) {
-    width: 10%;
-   text-align: center;
-}
-.liste tr th:nth-child(2),
-.liste tr td:nth-child(2) {
-    width: 40%;
-}
-.liste tr th:nth-child(4),
-.liste tr td:nth-child(4) {
-    width: 10%;
-    text-align: right;
-}
-th, td{
-    padding: 4px;
-    color: black;
-}
-td{
-    background:rgba(248, 245, 228, 0.7);
-}
 /* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media screen and (max-width:439px) {
     .btn1 {

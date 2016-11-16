@@ -20,6 +20,8 @@ function createStartscreen(quizId){
 
 	var quizze = jsondata["quizubersicht"];
 	var quiz = quizze[quizId];
+    console.log(quizze);
+    console.log(quiz);
 
 	template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
@@ -38,9 +40,6 @@ function createStartscreen(quizId){
 	/*	document.getElementById("playButton").onclick = function(){
 		initQuiz(quiz.quizIdx);
 	}  */
-
-    console.log("Übergabe: ");
-    console.log(quizId);
 
     var ubersicht_parsedjson = jsondata["quizubersicht"];
     var currentrank_parsedjson = jsondata["ranking" + quizId];
