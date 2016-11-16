@@ -18,10 +18,284 @@
 
 body{
     max-height: auto;
-    background-image:url(../images/background.jpg);
+    background-image: url(../images/NeuStadion.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+.heading {
+    font-size: 24px;
+    text-align: center;
+    color:black;
+    width: 800px;
+    height: 50px;
+    display: inline-block;
+    background-color: white;
+    margin-left: 15px;
+    line-height: 50px;
+    font-family: Oswald;
+}
+
+.erneut {
+    background-color: rgba(203,7,39,1); 
+    color: rgba(255,255,255,1 );
+    font-size: 20px;
+    border:none;
+    text-align: center;
+    text-decoration:none;
+    width: 345px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    font-family: Noto-Sans;
+}
+
+.erneut p{
+    text-align:center;
+}
+
+.fussbaelle img{
+    height: 15px;
+    width: 15px;
+    padding: 8px;
+}
+
+.ballFalsch img{
+    opacity: 30%;
+}
+
+.fussbaelle {
+    //width: 345px;
+    width: (100%-15px);
+}
+
+.punkte {
+    background-color: rgba(233,194,12,1);
+    color: black;
+    font-size: 20px;
+    text-align:center;
+    width: 345px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    margin-top: 3px;
+    font-family: Oswald;
+}
  
+.suggestions {
+    background-color: rgba(233,194,12,1);
+    color: black;
+    font-size: 20px;
+    text-align:center;
+    width: 345px;
+    height: 50px;
+    font-family: Oswald;
+    line-height: 50px;
+    display: inline-block;
+    font-style: normal;
+    margin-top: 3px;
+}
+
+.suggestions img{
+    width: 113px;
+    height: 70px;
+    margin-top: 21px;
+}
+
+.suggestions .sugg {
+    float: left; 
+    margin-right: 2px;
+}
+
+.suggestions .sugg div {
+    position:relative;
+    top: -36px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 113px;
+    height: 20px;
+    line-height: 20px;
+    font-family: 'Noto-Sans';
+    
+}
+
+.linke-seite {
+    float: left;
+    padding: 50px;
+    padding-right: 50px;
+}
+
+.rechte-seite {
+    float: left;
+    padding: 50px;
+    padding-left: 5px;
+}
+
+.quizbild img {
+    width: 345px;
+    height: 214px;
+    margin-top: -5px;
+}
+
+.rank img {
+    height: 15px;
+    width: 20px;
+}
+
+
+.highscore table{
+    //width: 345px;
+    width: 100%;
+    margin-top: -9px;
+    border-spacing: 0px 5px;
+}
+
+.highscore table th {
+    background-color: rgba(233,194,12,1);
+    text-align: left;
+    text-width: none;
+    font-family: Oswald;
+}
+.highscore table td {
+    background-color: rgba(255, 255, 255, 0.5);  
+    font-family: Oswald;
+}
+
+.highscore tr:last-child {
+    outline: solid 3px rgba(203, 7, 39, 1);
+}
+
+.highscore-btn, .infos {
+    display: none;
+}
+
+
+
+
+
+@media only screen and (max-device-width: 439px)
+{
+    body{
+        background-image: url(../images/background.jpg);
+    }
+        
+    .heading{
+        height: 2em;
+        width: calc(100% - 21px);
+        background: rgb(248, 245, 228);
+        position: absolute;
+        transform: translate(11px);
+        margin-top: 6em;
+        margin-bottom: 0%;   
+    }
+    
+    h1{
+        margin-top: 0.25em;
+        font-family: 'OswaldRegular';
+        font-size: 1em;
+    }
+    
+    .quizbild img{
+        width: calc(100% - 21px);  
+        display: block;
+        margin-top: 0.56em;
+        margin-left: 11px;
+    }
+
+    .punkte{
+        height: 2.1em;
+        width: calc(100% - 21px);
+        transform: translate(11px);
+    }
+    
+    .punkte p{
+        text-align: center;
+        font-family: 'OswaldRegular';
+        font-size: 0.8em;
+        margin-top: 0.55em;
+    }
+
+    .fussbaelle img{
+        height: 0.75em;
+        width: 0.75em;
+        margin-right: 0.2em;
+        margin-top: 5pt;
+        padding: 0px;
+    }
+    
+    .fussbaelle{
+        width: calc(100% - 21px);
+        transform: translate(70%);
+    }
+        
+    .erneut, .highscore-btn{
+        background: rgb(203, 7, 39);
+        color: rgb(255, 255, 255);
+        height: 2.1em;
+        width: calc(100% - 21px);
+        transform: translate(11px);
+        margin-top: 0.8em;
+        border: none;
+        display: inline-block;
+    }
+    
+    .erneut p, .highscore-btn p{
+        font-family: 'NotoSans';
+        font-size: 0.8em;
+        text-align: center;
+        text-decoration-line: none; 
+        margin-top: 0.5em;
+    }
+
+    .highscore, h2{
+        display:none;
+    }
+
+    .suggestions{
+        margin-top: 1em;
+        width: calc(100% - 21px);
+        transform: translate(11px);
+    }
+    
+    .sugg{
+        height: 2.9em;
+        display: block;
+        margin-bottom: 7pt;
+        margin-top: auto;
+    }
+    
+    .sugg img{
+        display: inline-block;
+        height: 2.9em;
+    }
+    
+    .sugg-infos{
+        height: 2.9em;
+        width: calc(100% - 76px);
+        float: right;
+        font-size: 0.55em;
+        display: inline-block;
+    }
+    
+    .sugg-head{
+        font-family: 'OswaldRegular';
+        text-align: center;
+        background: rgb(248, 245, 228);
+    }
+    
+    .infos{
+        background: rgba(248, 245, 227, 0.6);
+    }
+    
+    .erstellt{
+        font-family: 'OswaldLight';
+        text-align: left;
+        padding-left: 0.5em;
+    }
+    
+    .gespielt{
+        font-family: 'OswaldLight';
+        text-align: right;
+    }
+    
+}
