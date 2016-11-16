@@ -25,7 +25,7 @@ function createStartscreen(quizId){
 
 	template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
-    template = template.replace(/{{date}}/, quiz.date);
+    template = template.replace(/{{date}}/, schoeneresDatum(quiz.date));
     template = template.replace(/{{counter}}/, quiz.counter);
     template = template.replace(/{{image}}/, quiz.image);
     template = template.replace(/{{description}}/, quiz.description);
@@ -71,7 +71,7 @@ function createStartscreen(quizId){
 	var template = snippetstart.outerHTML;
 
 	template = template.replace(/{{name}}/, info.name);
-	template = template.replace(/{{date}}/, info.date);
+	template = template.replace(/{{date}}/, schoeneresDatum(info.date));
 	template = template.replace(/{{image}}/, info.image);
 	template = template.replace(/{{description}}/, info.description);
 	template = template.replace(/{{description}}/, info.description);
