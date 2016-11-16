@@ -38,7 +38,7 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-/*Einbindung der Schriftart Oswald */
+/*Einbindung der Schriftart Oswald  */
 @font-face {
   font-family: Oswald;
   src: url("Oswald-Regular.tff") format("truetype"); }
@@ -125,7 +125,7 @@ img {
   margin-right: 1em;
   border-spacing: 0px 10px; }
 
-/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media screen and (max-width: 439px) {
   .btn1 {
     display: inline-block; }
