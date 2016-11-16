@@ -34,8 +34,8 @@
             <!--Highscoreliste/Tabelle-->
             <table class="liste"> 
                 <!--Tabellenkopf-->
-                <thead>
-                <tr> 
+                <thead >
+                <tr id="h_listhead"> 
                     <th><img id="medaillen" src="../../assets/images/medaillen%20highscore.png"/></th> 
                     <th>Spieler</th> 
                     <th>Zeit</th> 
@@ -44,73 +44,13 @@
                 </thead>
                 
                 <!--Tabellenkörper-->
-                <tbody>
+                <tbody id="h_ranking">
                 <tr> 
-                    <td>1.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                <tr> 
-                    <td>2.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>200</td>
-                </tr> 
-                 <tr> 
-                    <td>3.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>4.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>5.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>6.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>500</td>
-                </tr> 
-                 <tr> 
-                    <td>7.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>8.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>9.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr> 
-                    <td>10.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>900</td>
-                </tr> 
-                 <tr id="lastentry"> 
-                    <td>11.</td> 
-                    <td>Name</td> 
-                    <td>02.06.2016</td> 
-                    <td>100</td>
-                </tr> 
+                    <td>{{rankIdx}}.</td> 
+                    <td>{{player}}</td> 
+                    <td>{{date}}</td> 
+                    <td>{{points}}</td>
+                </tr>  
                 </tbody>
             </table>
         </div>
