@@ -86,14 +86,12 @@ function createStartscreen(quizId){
 
         //"reinen" Text des Rankings speichern
         var temp = snippetranking.outerHTML;
-		var date = new Date(scoredata[i].date);
-		var monat = (date.getMonth()+1 < 10 ) ? "0" + (date.getMonth()+1) : (date.getMonth()+1);
-		var schoenesDatum = date.getDate() + "." + monat + "." + date.getFullYear();
-		console.log(schoenesDatum);
+
+		console.log(schoeneresDatum(scoredata[i].date));
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
         temp = temp.replace(/{{player}}/, scoredata[i].player);
         temp = temp.replace(/{{points}}/, scoredata[i].points);
-        temp = temp.replace(/{{date}}/, schoenesDatum);
+        temp = temp.replace(/{{date}}/, schoeneresDatum(scoredata[i].date));
 
         var item = document.createElement("tr");
         item.innerHTML = temp;
