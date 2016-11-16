@@ -1,0 +1,85 @@
+/* Variabeln
+###################################################### */
+/* Bausteine
+###################################################### */
+.button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid 1px #cb0727;
+  padding: 5px;
+  color: #fff;
+  width: 100%; }
+
+.button.is-primary {
+  background-color: #ff3737; }
+
+.liste th {
+  background-color: #E9C20C;
+  text-align: left; }
+
+.liste tr th:nth-child(1),
+.liste tr td:nth-child(1) {
+  width: 10%;
+  text-align: center; }
+
+.liste tr th:nth-child(2),
+.liste tr td:nth-child(2) {
+  width: 40%; }
+
+.liste tr th:nth-child(4),
+.liste tr td:nth-child(4) {
+  width: 10%;
+  text-align: right; }
+
+th, td {
+  padding: 4px;
+  color: black; }
+
+td {
+  background: rgba(248, 245, 228, 0.7); }
+
+.quizuebersicht .content {
+  width: 1000px;
+  margin: 0 auto; }
+  .quizuebersicht .content .Sortierliste {
+    background-color: #e9c20c;
+    margin: 0;
+    padding: 0; }
+    .quizuebersicht .content .Sortierliste .sortiercontent {
+      margin: 0;
+      padding: 0;
+      display: flex; }
+      .quizuebersicht .content .Sortierliste .sortiercontent > li {
+        display: inline-block;
+        flex-grow: 1;
+        text-align: center; }
+  .quizuebersicht .content .kacheln {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      box-sizing: border-box;
+      display: block;
+      flex-basis: 25%;
+      /*flex-grow: 1;*/
+      margin-bottom: 5px;
+      padding: 10px; }
+      .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner {
+        background: rgba(248, 245, 228, 0.9);
+        color: #000;
+        height: 100%;
+        position: relative; }
+        .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner .auswahl-button {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+      .quizuebersicht .content .kacheln .Quizkachel .Quizbild {
+        width: 100%; }
+@media only screen and (max-width: 1024px) {
+  .quizuebersicht .content {
+    width: 800px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      flex-basis: 33%; } }
+
+/*# sourceMappingURL=cn-quizuebersicht.css.map */
