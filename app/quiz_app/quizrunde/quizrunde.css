@@ -5,7 +5,7 @@
 ###################################################### */
 .button {
   background-color: rgba(0, 0, 0, 0.1);
-  border: solid 1px red;
+  border: solid 1px #cb0727;
   padding: 5px;
   color: #fff;
   width: 100%; }
@@ -13,13 +13,38 @@
 .button.is-primary {
   background-color: #ff3737; }
 
+.liste th {
+  background-color: #E9C20C;
+  text-align: left; }
+
+.liste tr th:nth-child(1),
+.liste tr td:nth-child(1) {
+  width: 10%;
+  text-align: center; }
+
+.liste tr th:nth-child(2),
+.liste tr td:nth-child(2) {
+  width: 40%; }
+
+.liste tr th:nth-child(4),
+.liste tr td:nth-child(4) {
+  width: 10%;
+  text-align: right; }
+
+th, td {
+  padding: 4px;
+  color: black; }
+
+td {
+  background: rgba(248, 245, 228, 0.7); }
+
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
 .quizrunde * {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
   font-weight: lighter;
   color: #000;
-  /*background-color, Vorläufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
+  /*background-color, Vorl├ñufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
 
 /*Anzeige fragen-counte r*/
 .quizrunde .fragen-counter {
@@ -67,7 +92,7 @@
   max-width: 0; }
 
 /*Allgemeine Formatierung der Antworten,
-hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
+haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten {
   position: absolute;
   left: 0;
@@ -78,7 +103,7 @@ hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
   margin: 0; }
 
 /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
-Abstände zwischen den Fragen*/
+Abst├ñnde zwischen den Fragen*/
 .quizrunde .antwort {
   font-weight: lighter;
   margin: 10px 15px;

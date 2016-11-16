@@ -109,45 +109,6 @@ body{
     border-spacing: 0px 10px;   
 }
 
-/*Tabellenkopf*/
-.liste th{
-    background-color: #E9C20C;
-    text-align: left;
-}
-
-/*Container für Tabelle*/
-.liste tr th:nth-child(1),
-.liste tr td:nth-child(1) {
-    width: 10%;
-   text-align: center;
-}
-
-/*Breite der einzelnen Tabellenspalten*/
-.liste tr th:nth-child(2),
-.liste tr td:nth-child(2) {
-    width: 40%;
-}
-
-.liste tr th:nth-child(4),
-.liste tr td:nth-child(4) {
-    width: 10%;
-    text-align: right;
-}
-
-/*Rote Border um letzten Eintrag*/
-#lastentry{
-   outline: solid 3px rgba(203, 7, 39, 1);
-}
-
-th, td{
-    padding: 4px;
-    color: black;
-}
-
-td{
-    background:rgba(248, 245, 228, 0.7);
-}
-
 
 /*Tablet-Anischt*/
 @media only screen and (max-width: 1024px) {
