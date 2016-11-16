@@ -15,8 +15,18 @@ function createHighscore(){
     // Stylesheet austauschen
 	var sheeturl = urls["highscore"].replace(/\.html/, ".css");
 	document.getElementById('css-for-view').setAttribute('href', sheeturl);
+    
+
 	
 	var template = templates["highscore"];
+    
+    var h_ranking = document.getElementById("h_ranking");
+    //Snippet des Ranking_Headers speichern
+	var h_listhead = document.getElementById("h_listhead");
+    
+    console.log(document.getElementById("h_ranking"));
+    console.log(document.getElementById("h_listhead"));
+    
 
     var quizze = jsondata["quizubersicht"];
 
@@ -44,8 +54,14 @@ function createHighscore(){
 
     var item = document.createElement("div");
     item.innerHTML = template;
-
+    
+    
+    
+    
     document.getElementById("content").replaceChild(item, document.getElementById("content").firstChild);
+    
+    
+    
 
 
 }
