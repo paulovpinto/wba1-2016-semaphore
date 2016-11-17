@@ -1,6 +1,6 @@
 /*
 Error: Invalid CSS after "	flex-wrap:wrap": expected "{", was ";"
-        on line 79 of quizuebersicht/quizuebersicht.scss
+        on line 79 of ./app/quiz_app/quizuebersicht/quizuebersicht.scss
 
 74: /* wurde gr├Â├ƒengerecht angepasst *\/
 75: 
@@ -15,7 +15,7 @@ Error: Invalid CSS after "	flex-wrap:wrap": expected "{", was ";"
 84:     margin-right: 15pt;
 
 Backtrace:
-quizuebersicht/quizuebersicht.scss:79
+./app/quiz_app/quizuebersicht/quizuebersicht.scss:79
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
@@ -50,4 +50,4 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"	flex-wrap:wrap\": expected \"{\", was \";\"\A         on line 79 of quizuebersicht/quizuebersicht.scss\A \A 74: /* wurde gr├Â├ƒengerecht angepasst */\A 75: \A 76: .Quizkachel {\A 77: 	\A 78: <<<<<<< HEAD\A 79: 	flex-wrap:wrap;\A 80: 	box-sizing: border-box;\A 81:     display: block;\A 82:     /*float: left; */\A 83:     padding: 0;\A 84:     margin-right: 15pt;"; }
+  content: "Error: Invalid CSS after \"	flex-wrap:wrap\": expected \"{\", was \";\"\A         on line 79 of ./app/quiz_app/quizuebersicht/quizuebersicht.scss\A \A 74: /* wurde gr├Â├ƒengerecht angepasst */\A 75: \A 76: .Quizkachel {\A 77: 	\A 78: <<<<<<< HEAD\A 79: 	flex-wrap:wrap;\A 80: 	box-sizing: border-box;\A 81:     display: block;\A 82:     /*float: left; */\A 83:     padding: 0;\A 84:     margin-right: 15pt;"; }
