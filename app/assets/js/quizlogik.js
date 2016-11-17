@@ -84,7 +84,7 @@ function count( ){
 }
 
 function neueFrage( data, aktuelleFrage){
-
+	
 	removeFeedback();
 	delayA= readTime(data.question);
 
@@ -99,7 +99,6 @@ function neueFrage( data, aktuelleFrage){
 
 	i=10;
 	updateTimer();
-
   setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
