@@ -86,6 +86,7 @@ function count( ){
 function neueFrage( data, aktuelleFrage){
 
 	removeFeedback();
+	delayA= readTime(data.question);
 
   $("#frage").html(data.question);
 	$("#antwort1").html(data.options[0].option);    // ändert per Id den Inhalt
@@ -155,6 +156,14 @@ function removeFeedback(){
 	$("#antwort4").removeClass("richtig");
 	$("#antwort4").removeClass("falsch");
 }
+
+function readTime(charCount){
+	console.log(charCount.length);
+	console.log(charCount.length/7/3.5*1000);
+	return charCount.length/7/3.5*1000;
+
+}
+
 /*
 function tausch(obj1, obj2){
 
