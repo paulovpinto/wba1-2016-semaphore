@@ -52,6 +52,8 @@ td {
     margin-left: 7px;
     color: #FFFFFF; }
   .quizrunde .fragenblock {
+    font-weight: lighter;
+    color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -82,6 +84,8 @@ td {
   .quizrunde #timer.start {
     max-width: 0; }
   .quizrunde .alle-antworten {
+    font-weight: lighter;
+    color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -93,7 +97,8 @@ td {
     margin: 10px 15px;
     padding: 3px 20px;
     cursor: pointer;
-    background-color: rgba(248, 245, 228, 0.7); }
+    background-color: rgba(248, 245, 228, 0.7);
+    min-height: 30px; }
   .quizrunde .antwort:hover {
     background-color: #f8f5e4; }
   @media only screen and (min-width: 439px) {
