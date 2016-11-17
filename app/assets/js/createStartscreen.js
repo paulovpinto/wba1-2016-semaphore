@@ -20,8 +20,6 @@ function createStartscreen(quizId){
 
 	var quizze = jsondata["quizubersicht"];
 	var quiz = quizze[quizId];
-    console.log(quizze);
-    console.log(quiz);
 
 	template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
@@ -52,7 +50,6 @@ function createStartscreen(quizId){
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
-    console.log(document);
 	//Snippet des gesamten Startscreens speichern
 	var snippetstart = document.getElementById("start");
 	//Snippet der Ranking-Liste speichern
