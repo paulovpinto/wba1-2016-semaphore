@@ -39,10 +39,10 @@ function createQuizOverview(){
         var item = document.createElement("div");
         item.innerHTML = temp;
         item.firstChild.id = quizId;
-        item.firstChild.onclick = function() {
-            console.log(this.id);
-            createStartscreen(this.id);
-        };
+       // item.firstChild.onclick = function() {
+        //    console.log(this.id);
+        //    createStartscreen(this.id);
+        //};
         
         // Kachel in Wrap einfügen
         document.getElementById("snippetQuiz").appendChild(item.firstChild);
@@ -50,4 +50,23 @@ function createQuizOverview(){
 	
 	// Kacheltemplate loeschen
 	document.getElementById("snippetQuiz").removeChild(document.getElementsByClassName("quizkachel")[0]);
+    
+    //ACHTUNG! VON QUIZÜBERSICHT EINGEFÜGT. 
+    //Funktion zum Anzeigen der Beschreibung(beim )
+    
+     $(document).ready(function(){
+       $('.beschreibung').addClass("hidden");
+       
+
+        $('.quizkachel').click(function() {
+            var $this = $(this);
+
+            var $beschreibung = $this.find(".beschreibung");
+            
+            console.log($beschreibung);
+            $beschreibung.toggleClass("hidden");
+            
+        });
+    }); // Ende der vom Quizübersich-Team erstellten Funktion
 }
+   
