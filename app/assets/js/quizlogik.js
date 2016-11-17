@@ -19,23 +19,16 @@ var quizLogik = {}; // Quizdaten
 quizLogik.data = {};
 quizLogik.quiz = {};
 
-
-
-// Zeit für den Timer im View
-var zeit = i;
+var zeit = i; // Zeit für den Timer im View
 
 function updateTimer(){
-	//i--;
 	document.getElementById("timer-js").style.width = (i * 10) + "%";
-	if(zeit <= 0){ clearInterval(timer); }
-
+	if(zeit <= 0){ clearInterval(timer);
+	}
 }
 
 function antwortPruefen(ele, answer){
 
-	//$ele.removeClass('hover');
-
-//	var $ele = $(ele);
   $ele= $(ele);                              // cast zu jQuery
   antwortId = $(ele).attr("data-antwortId");
 
@@ -66,7 +59,7 @@ function antwortPruefen(ele, answer){
 
 function count( ){
   i--;
-    //  document.getElementById("text").innerHTML = i;
+
   console.log("Zeit: "+i);
   console.log(quizLogik.quiz);
 
@@ -76,13 +69,13 @@ function count( ){
   if(i===0){
           aktuelleFrage++;
           clearInterval(timer);
-          if(aktuelleFrage<=9){
+          if(aktuelleFrage<=9){ //Zeit abgelaufen & es gibt noch Fragen:
 
+							$("#antwort"+ quizLogik.quiz.allQuestions[aktuelleFrage].question.answer).addClass("richtig"); //Richtige Antwort anzeigen
               setTimeout(function() {neueFrage(quizLogik.quiz.allQuestions[aktuelleFrage].question, aktuelleFrage)}, delayQ);
           }
-          else{
+          else{ // Quizrunde ist vorbei da die Zeit abgelaufen ist & 10 Frage beantwortet worden sind:
               clearInterval(timer);
-              $("#question").html("Quizrunde ist vorbei" );
               setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
       }
@@ -130,27 +123,26 @@ function buttonKlick(quizIdx){
 			darfKlicken=false;
       clearInterval(timer);
       antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
-          aktuelleFrage++;
-          console.log("aktuelle Frage: "+ aktuelleFrage);
+      aktuelleFrage++;
+      console.log("aktuelle Frage: "+ aktuelleFrage);
 
           if(aktuelleFrage<=9){
               setTimeout(function() {neueFrage( quizLogik.quiz.allQuestions[aktuelleFrage].question, aktuelleFrage )}, delayQ);
-
           }
-          else{
+         else{
               //window.location="http://www.google.de";
               //document.getElementById("text").innerHTML = "Jetzt auf Endscreen leiten";
 
-            console.log("Quizrunde ist vorbei");
+              console.log("Quizrunde ist vorbei");
               for(k=0; k<10;k++){
               console.log(antworten[k]);
-            }
+              }
               setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
-          }
+         }
 
-        }
-  });
-}
+     }
+  }); // ende click-Funktion
+} // ende buttonKlick
 
 function removeFeedback(){
 
