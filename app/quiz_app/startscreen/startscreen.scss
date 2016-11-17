@@ -120,11 +120,9 @@
         display:none;
     }
 
-    .visible {
-        height: 200px;
-        display: block;
-        z-index: 1;
-    }
+.moreButton {
+    display:block;
+}
 
 .toggleBox {
     position: relative;
