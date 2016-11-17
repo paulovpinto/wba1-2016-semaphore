@@ -56,7 +56,8 @@
 	/*Allgemeine Formatierung der Antworten,
 	hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 	.alle-antworten{
-	  position:absolute;
+    font-weight:lighter;
+    position:absolute;
 	  left: 0;
 	  right: 0;
 	  bottom: 0;

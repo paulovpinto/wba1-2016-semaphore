@@ -82,6 +82,7 @@ td {
   .quizrunde #timer.start {
     max-width: 0; }
   .quizrunde .alle-antworten {
+    font-weight: lighter;
     position: absolute;
     left: 0;
     right: 0;
