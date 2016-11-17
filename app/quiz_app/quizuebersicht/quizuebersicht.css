@@ -86,6 +86,14 @@ td {
     width: 100%;
     padding: 10px; }
     .quizuebersicht .content .kacheln {
-      display: block; } }
+      display: block; }
+      .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos {
+        float: left; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizbild {
+          float: left;
+          width: 113px;
+          height: 70px; }
+  .quizuebersicht .hidden {
+    display: none; } }
 
 /*# sourceMappingURL=quizuebersicht.css.map */
