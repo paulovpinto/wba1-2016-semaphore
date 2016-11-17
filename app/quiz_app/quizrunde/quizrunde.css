@@ -1,15 +1,15 @@
 /*
 Error: Invalid CSS after "}": expected "}", was ""
-        on line 236 of ./app/quiz_app/quizrunde/quizrunde.scss
+        on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss
 
-231: 	    .fragen-counter{
-232: 	        font-size: 24px;
-233: 	    }
-234: 	}
-235: }
+233: 	    .fragen-counter{
+234: 	        font-size: 24px;
+235: 	    }
+236: 	}
+237: }
 
 Backtrace:
-./app/quiz_app/quizrunde/quizrunde.scss:236
+./app/quiz_app/quizrunde/quizrunde.scss:238
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
@@ -38,4 +38,4 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 236 of ./app/quiz_app/quizrunde/quizrunde.scss\A \A 231: 	    .fragen-counter{\A 232: 	        font-size: 24px;\A 233: 	    }\A 234: 	}\A 235: }"; }
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss\A \A 233: 	    .fragen-counter{\A 234: 	        font-size: 24px;\A 235: 	    }\A 236: 	}\A 237: }"; }

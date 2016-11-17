@@ -12,15 +12,15 @@
         	<p>erstellt von {{author}} am {{date}}</p>
     	</div>
 		<div class="teasertext">
-			<p>{{description}}</p> 
-			<div class="toggleBox">      
+			<p class="Beschreibung">{{description}}</p> 
+			<!--<div class="toggleBox">      
     				<input name="toggleContent" id="toggleContent" type="checkbox">
     				<label for="toggleContent" class="open">aufklappen</label>
     				<div>
 			        <p class="teasertext2">{{description}}</p> 
 			    </div>
 				<label for="toggleContent" class="close">zuklappen</label>
-			</div>        
+			</div> -->       
 		</div>
 		<div class="buttons"> 
     		<button class="button is-primary" href="quiz.html">Spielen</button>
@@ -46,6 +46,21 @@
 	</table>
 	</div>
 </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+       $('.teasertext .Beschreibung').addClass("hidden");
+
+        $('.teasertext').click(function() {
+            var $this = $(this);
+
+            var $beschreibung = $this.find(".Beschreibung");
+            
+            console.log($beschreibung);
+            $beschreibung.toggleClass("hidden");
+            
+        });
+    });
+</script>
 
 
 

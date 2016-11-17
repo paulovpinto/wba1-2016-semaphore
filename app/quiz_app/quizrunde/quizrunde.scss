@@ -133,6 +133,7 @@ Abstände zwischen den Fragen*/
 	/*Formatierung Frage und Hintergrund der Frage*/
 	.fragenblock{
     font-weight:lighter;
+    color: black;
     position:absolute;
 	  left: 0;
 	  right: 0;
@@ -176,6 +177,7 @@ Abstände zwischen den Fragen*/
 	hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 	.alle-antworten{
     font-weight:lighter;
+    color:black;
     position:absolute;
 	  left: 0;
 	  right: 0;
