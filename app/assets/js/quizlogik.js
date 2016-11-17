@@ -1,6 +1,6 @@
 
 var delayQ=0; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
-var delayA=0; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
+var delayA=2000; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
 
 var punkte=0;  //aktuelle Punktzahl
 
@@ -70,10 +70,10 @@ function count( ){
     //  document.getElementById("text").innerHTML = i;
   console.log("Zeit: "+i);
   console.log(quizLogik.quiz);
-  
+
   // Ändert den Timer im View
   updateTimer();
-  
+
   if(i===0){
           aktuelleFrage++;
           clearInterval(timer);
@@ -103,6 +103,9 @@ function neueFrage( data, aktuelleFrage){
   $("#antwort2").html(" ");    //$ signalisiert das jQuery Objekt, # ersetzt getElementbyId, .html signalisiert html Objekt(Inhalt)
   $("#antwort3").html(" ");
   $("#antwort4").html(" ");
+	i=10;
+	updateTimer();
+
   setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
@@ -113,14 +116,15 @@ function neueFrage( data, aktuelleFrage){
   $("#antwort4").html(data.options[3].option);
 
   clearInterval(timer);
-  i=10;
+//  i=10;
+//	updateTimer();
   timer = setInterval("count()", 1000);
-  
+
   $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
     }, delayA);
   }
-  
-  
+
+
 
 function buttonKlick(quizIdx){
     $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
