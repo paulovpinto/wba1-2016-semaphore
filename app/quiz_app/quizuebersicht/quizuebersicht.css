@@ -1,389 +1,53 @@
-@charset "UTF-8";
-/* Variabeln
-###################################################### */
-/* Bausteine
-###################################################### */
-.button {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: solid 1px #cb0727;
-  padding: 5px;
-  color: #fff;
-  width: 100%; }
+/*
+Error: Invalid CSS after "	flex-wrap:wrap": expected "{", was ";"
+        on line 79 of quizuebersicht/quizuebersicht.scss
 
-.button.is-primary {
-  background-color: #ff3737; }
+74: /* wurde gr├Â├ƒengerecht angepasst *\/
+75: 
+76: .Quizkachel {
+77: 	
+78: <<<<<<< HEAD
+79: 	flex-wrap:wrap;
+80: 	box-sizing: border-box;
+81:     display: block;
+82:     /*float: left; *\/
+83:     padding: 0;
+84:     margin-right: 15pt;
 
-.liste th {
-  background-color: #E9C20C;
-  text-align: left; }
-
-.liste tr th:nth-child(1),
-.liste tr td:nth-child(1) {
-  width: 10%;
-  text-align: center; }
-
-.liste tr th:nth-child(2),
-.liste tr td:nth-child(2) {
-  width: 40%; }
-
-.liste tr th:nth-child(4),
-.liste tr td:nth-child(4) {
-  width: 10%;
-  text-align: right; }
-
-th, td {
-  padding: 4px;
-  color: black; }
-
-td {
-  background: rgba(248, 245, 228, 0.7); }
-
-.quizuebersicht {
-  /* Sortierliste wurde angepasst, muss aber noch bearbeitet werden */
-  /* wurde gr├Â├ƒengerecht angepasst */
-  /*.Quizkachel:nth-child(5n) {
-  	margin-right: 0;
-  }*/
-  /* NEU Klasse "Quizbild" wurde eingef├╝gt und gr├Â├ƒengerecht angepasst */
-  /* wurde an Desktopversion angepasst und ist in einer Reihe, anstatt in 2 Reihen*/
-  /* NEU Klasse "Beschreibung" wurde eingef├╝gt: 3 Zeilen pro Beschreibung */
-  /* Schriftgr├Â├ƒe wurde ver├ñndert */
-  /* NEU Button "Auswahl" wurde eingef├╝gt, farblich gemacht und angepasst */
-  /********************************************************************************
-  *                                                                               *
-  *                               TABLET-ANSICHT                                  *
-  *                                                                               *
-  *********************************************************************************/
-  /********************************************************************************
-  *                                                                               *
-  *                               MOBILE-ANSICHT                                  *
-  *                                                                               *
-  *********************************************************************************/
-  /**DIE QUIZKACHEL IST ZU BREIT! BZW DAS PADDING/MARGIN GREIFT NICHT**/ }
-  .quizuebersicht body {
-    background-image: url(/Pfad);
-    font-size: 100%;
-    margin: 0em;
-    padding: 0em; }
-  .quizuebersicht .content {
-    margin: 0 auto;
-    /*margin-left: 113pt;
-    margin-right: 112pt;
-    width: calc(100% - 25px);*/
-    width: 1000px;
-    background-color: purple; }
-  .quizuebersicht .content::after {
-    content: "";
-    height: 0;
-    display: block;
-    clear: both; }
-  .quizuebersicht .kacheln {
-    display: flex; }
-  .quizuebersicht .clearfix {
-    clear: both; }
-  .quizuebersicht .Sortierliste {
-    background-color: #e9c20c;
-    height: 27pt;
-    /*width: calc(100% - 270px);*/
-    margin-top: 20px;
-    margin-bottom: 13pt;
-    font-family: Oswald; }
-  .quizuebersicht .sortiercontent {
-    width: 100%;
-    font-size: 16.1pt;
-    line-height: 24.3pt;
-    text-align: center;
-    padding: 0em; }
-  .quizuebersicht .sortiercontent li {
-    display: inline-block;
-    width: 25%; }
-  .quizuebersicht .sortiercontent a {
-    text-align: center; }
-  .quizuebersicht .Sortierliste a {
-    text-decoration: none;
-    color: black; }
-  .quizuebersicht .Quizkachel {
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    display: block;
-    /*float: left; */
-    padding: 0;
-    margin-right: 15pt;
-    margin-bottom: 29.5pt;
-    background-color: #f8f5e4;
-    font-family: Oswald, sans-serif;
-    font-style: normal;
-    width: 25%;
-    height: 232pt; }
-  .quizuebersicht .Quizbild {
-    display: block;
-    margin: auto;
-    width: 172.5pt;
-    height: 107pt; }
-  .quizuebersicht .Quizkachel h3 {
-    font-family: Oswald;
-    margin: auto;
-    font-size: 12pt;
-    line-height: 100%;
-    background-color: #f8f5e4;
-    text-align: center;
-    height: 18pt;
-    padding-top: 5px;
-    padding-left: 4.5pt;
-    padding-right: 6.7pt; }
-  .quizuebersicht .Erstellinfos {
-    font-family: Oswald;
-    font-weight: 100;
-    color: #2F2D2C;
-    text-align: left;
-    padding-top: 1pt;
-    padding-bottom: 2pt;
-    padding-left: 7.5pt;
-    padding-right: 5pt;
-    background-color: #f8f5e4;
-    margin: auto; }
-  .quizuebersicht .Inhalt {
-    height: 64pt;
-    font-family: Oswald;
-    font-size: 10pt;
-    color: #2F2D2C;
-    background-color: rgba(248, 245, 228, 0.7); }
-  .quizuebersicht .Beschreibung {
-    text-align: left;
-    font-weight: lighter;
-    background-color: #f8f5e4;
-    margin: 0em;
-    height: 48pt;
-    padding-left: 7.5pt;
-    padding-right: 7.5pt;
-    padding-bottom: 5pt;
-    padding-top: 5pt; }
-  .quizuebersicht .AnzGespielt {
-    font-size: 10pt;
-    text-align: right;
-    font-weight: lighter;
-    background-color: #f8f5e4;
-    margin: 0em;
-    height: 16pt;
-    padding-right: 7.5pt; }
-  .quizuebersicht .button {
-    padding-bottom: 8pt;
-    margin: 0em;
-    height: 25pt; }
-  .quizuebersicht .Auswahl {
-    background-color: #CB0727;
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    font-family: Noto Sans;
-    color: white;
-    text-decoration: none;
-    height: 25pt;
-    font-size: 12pt;
-    margin-bottom: 7.5pt;
-    padding-top: 3.5pt; }
-  @media screen and (max-width: 1024px) {
-    .quizuebersicht .content Sortierliste {
-      margin: 0;
-      padding: 0; }
-    .quizuebersicht .Sortierliste {
-      width: calc(172.5pt * 3 + 30px); }
-    .quizuebersicht body {
-      background-image: url(image/8-324_fussballstadion.jpg);
-      background-color: darkgray;
-      /**ENTFERNEN!!**/
-      font-size: 100%;
-      margin: 0em;
-      padding: 0em; }
-    .quizuebersicht .Auswahl {
-      background-color: transparent;
-      padding: 0;
-      position: relative;
-      margin-top: -10pt; }
-    .quizuebersicht .content {
-      width: 100%;
-      margin-left: calc((100% - (172.5pt * 3) - 30px) / 2);
-      margin-right: calc((100% - (172.5pt * 3) - 30px) / 2); }
-    .quizuebersicht .inhalt {
-      position: absolute;
-      bottom: 40px;
-      width: 100%; }
-    .quizuebersicht h1 {
-      font-size: 1em;
-      line-height: 2.5em;
-      font-family: Helvetica;
-      font-weight: 100;
-      color: #2F2D2C;
-      margin: -0.6em; }
-    .quizuebersicht .Quizbild {
-      display: block;
-      margin: auto;
-      width: 100%;
-      height: 107pt; }
-    .quizuebersicht p {
-      line-height: 0.75em;
-      font-family: Helvetica;
-      font-weight: 100;
-      color: #2F2D2C; }
-    .quizuebersicht .Quizkachel {
-      float: left;
-      display: inline-block;
-      background: beige;
-      width: 172.5pt;
-      height: 353.31px;
-      /**width: calc((100% - 120px - 30px)/3);
-      min-width: 150px;
-      min-height: 34.502%;**/
-      margin: 0;
-      margin-right: 15px;
-      position: relative;
-      text-align: center; }
-    .quizuebersicht .button {
-      background-color: #CB0727;
-      border: none;
-      color: white;
-      padding: 0px 0px 10px 0px;
-      text-align: center;
-      text-decoration: none;
-      font-family: Oswald;
-      font-size: 20px;
-      width: 100%;
-      height: 30px;
-      position: absolute;
-      left: 0;
-      bottom: 0px; }
-    .quizuebersicht .Erstellinfos {
-      font-family: Oswald;
-      font-weight: 100;
-      color: #2F2D2C;
-      text-align: left;
-      background: beige;
-      display: block;
-      line-height: 20px;
-      height: 15px;
-      margin: 5px 10px 0 0; }
-    .quizuebersicht .AnzGespielt {
-      font-size: 10pt;
-      text-align: right;
-      font-weight: lighter;
-      background-color: #f8f5e4;
-      margin: 0;
-      padding: 0 5px 0 0;
-      width: calc(100%-5px);
-      height: 16pt;
-      float: right; }
-    .quizuebersicht .Beschreibung {
-      text-align: left;
-      font-weight: lighter;
-      background-color: #f8f5e4;
-      height: 30pt;
-      margin-left: 10px;
-      padding-left: 0; }
-    .quizuebersicht #img {
-      background-color: burlywood;
-      /**ENTFERNEN!!**/
-      margin-left: -10px;
-      width: 250px;
-      height: 50px; } }
-  @media only screen and (max-width: 439px) {
-    .quizuebersicht html, .quizuebersicht body {
-      padding: initial;
-      margin: initial;
-      background-image: url(img/Background_Desktop.jpg); }
-    .quizuebersicht .content {
-      padding: 0;
-      margin: 0;
-      width: 100%; }
-    .quizuebersicht .Quizkachel, .quizuebersicht .Quizkachel * {
-      width: auto;
-      height: initial; }
-    .quizuebersicht .Quizkachel {
-      width: initial;
-      height: initial;
-      float: initial;
-      position: relative;
-      padding: 0;
-      background-color: lightgrey;
-      margin-top: 5px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-bottom: 5px; }
-    .quizuebersicht .Quizbild {
-      margin: initial;
-      padding: initial;
-      width: initial;
-      height: auto;
-      float: left;
-      margin-right: 10px; }
-    .quizuebersicht .Quizkachel h3 {
-      margin-left: 113px;
-      margin-bottom: -29px; }
-    .quizuebersicht .inhalt {
-      padding: initial;
-      margin: initial;
-      width: initial;
-      height: initial;
-      float: left;
-      position: relative;
-      bottom: initial;
-      text-align: left;
-      font-size: 13px; }
-    .quizuebersicht .Erstellinfos {
-      padding: 2px 0 0 0;
-      margin: 0 10px 0 0;
-      width: initial;
-      height: initial;
-      background-color: initial;
-      text-decoration: none;
-      float: left;
-      margin-top: 29px;
-      font-size: 13px;
-      line-height: 17px; }
-    .quizuebersicht .button {
-      display: none; }
-    .quizuebersicht .AnzGespielt {
-      padding: initial;
-      margin: initial;
-      width: initial;
-      height: initial;
-      text-align: right;
-      background-color: initial;
-      font-size: 8px; }
-    .quizuebersicht .Beschreibung {
-      width: initial;
-      height: initial;
-      padding: 0;
-      margin: 10px;
-      background-color: initial;
-      line-height: 15px;
-      font-family: Oswald;
-      color: #2F2D2C; }
-    .quizuebersicht .basicInfos {
-      position: relative; }
-    .quizuebersicht .datum, .quizuebersicht .AnzGespielt {
-      position: absolute;
-      bottom: 0; }
-    .quizuebersicht .datum {
-      left: 0;
-      padding: 2px 0 0 0;
-      margin: 0 10px 0 0;
-      width: initial;
-      height: initial;
-      background-color: initial;
-      text-decoration: none;
-      float: left;
-      margin-top: 29px;
-      font-size: 13px;
-      line-height: 17px; }
-    .quizuebersicht .AnzGespielt {
-      right: 0; }
-    .quizuebersicht .desktop, .quizuebersicht .tablet {
-      display: none; }
-    .quizuebersicht .hidden {
-      display: none; }
-    .quizuebersicht .visible {
-      height: 200px;
-      display: block;
-      z-index: 1; } }
-
-/*# sourceMappingURL=quizuebersicht.css.map */
+Backtrace:
+quizuebersicht/quizuebersicht.scss:79
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	flex-wrap:wrap\": expected \"{\", was \";\"\A         on line 79 of quizuebersicht/quizuebersicht.scss\A \A 74: /* wurde gr├Â├ƒengerecht angepasst */\A 75: \A 76: .Quizkachel {\A 77: 	\A 78: <<<<<<< HEAD\A 79: 	flex-wrap:wrap;\A 80: 	box-sizing: border-box;\A 81:     display: block;\A 82:     /*float: left; */\A 83:     padding: 0;\A 84:     margin-right: 15pt;"; }
