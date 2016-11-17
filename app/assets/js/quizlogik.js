@@ -83,7 +83,8 @@ function count( ){
           }
           else{
               clearInterval(timer);
-              $("#question").html("Quizrunde ist vorbei" + test++ );
+              $("#question").html("Quizrunde ist vorbei" );
+              setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
       }
 
@@ -121,17 +122,17 @@ function neueFrage( data, aktuelleFrage){
   
   
 
-  function buttonKlick(quizIdx){
-  $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
-  //	var cButton = e.target;
-  if(i===0){
+function buttonKlick(quizIdx){
+    $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
+    //	var cButton = e.target;
+    if(i===0){
 
 
 
-  }else
-  {
-  clearInterval(timer);
-  antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
+    }else
+      {
+      clearInterval(timer);
+      antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
           aktuelleFrage++;
           console.log("aktuelle Frage: "+ aktuelleFrage);
 
@@ -147,10 +148,10 @@ function neueFrage( data, aktuelleFrage){
               for(k=0; k<10;k++){
               console.log(antworten[k]);
             }
-              createEndscreen(punkte, antworten, quizIdx);
+              setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
 
-    }
+        }
   });
 }
 /*
@@ -175,4 +176,3 @@ function ballfüllen(){
   } */
 
 //}
-
