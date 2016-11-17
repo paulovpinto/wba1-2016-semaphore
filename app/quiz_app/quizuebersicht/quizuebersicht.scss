@@ -140,7 +140,7 @@
 	
 	/**DIE QUIZKACHEL IST ZU BREIT! BZW DAS PADDING/MARGIN GREIFT NICHT**/
 	
-	@media only screen and (max-width: 439px){
+	@media only screen and (max-width: $bp-smartphone){
 	    
 	    html, body{
 	        padding: 0;

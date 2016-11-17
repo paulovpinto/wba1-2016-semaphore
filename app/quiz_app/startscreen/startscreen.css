@@ -124,6 +124,7 @@ td {
   .startscreen td {
     background: rgba(248, 245, 228, 0.7); }
 
+<<<<<<< HEAD
 /* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   .startscreen {
@@ -141,6 +142,36 @@ td {
 
 /*# sourceMappingURL=cn-start.css.map */
 
+=======
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+@media screen and (max-width: 439px) {
+  .btn1 {
+    display: inline-block; }
+
+  #highscorecontent {
+    display: none; }
+
+  .boxbox {
+    /*margin-top: -8em;*/
+    width: 90%;
+    margin-left: 1.5em;
+    margin-right: 1.5em; }
+
+  .quizbox {
+    margin-top: -36em; }
+
+  .titel {
+    margin-top: -3em; } }
+@media screen and (max-width: 1024px) {
+  .quizbox {
+    margin-top: -32em; }
+
+  #highscorecontent {
+    margin-top: -33em; } }
+@media screen and (min-width: 750px) {
+  .titel {
+    margin-top: -3em; } }
+>>>>>>> 68e79e76074861b15b6fc47345dca025d365f4de
 .toggleBox {
   position: relative;
   padding-top: 0px;

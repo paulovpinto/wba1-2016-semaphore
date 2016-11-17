@@ -40,12 +40,12 @@ td {
 
 .quizuebersicht {
   /* Sortierliste wurde angepasst, muss aber noch bearbeitet werden */
-  /* wurde größengerecht angepasst */
-  /* NEU Klasse "Quizbild" wurde eingefügt und größengerecht angepasst */
+  /* wurde gr├Â├ƒengerecht angepasst */
+  /* NEU Klasse "Quizbild" wurde eingef├╝gt und gr├Â├ƒengerecht angepasst */
   /* wurde an Desktopversion angepasst und ist in einer Reihe, anstatt in 2 Reihen*/
-  /* NEU Klasse "Beschreibung" wurde eingefügt: 3 Zeilen pro Beschreibung */
-  /* Schriftgröße wurde verändert */
-  /* NEU Button "Auswahl" wurde eingefügt, farblich gemacht und angepasst */
+  /* NEU Klasse "Beschreibung" wurde eingef├╝gt: 3 Zeilen pro Beschreibung */
+  /* Schriftgr├Â├ƒe wurde ver├ñndert */
+  /* NEU Button "Auswahl" wurde eingef├╝gt, farblich gemacht und angepasst */
   /*.button{
       padding-bottom: 8pt;
       margin: 0em;
