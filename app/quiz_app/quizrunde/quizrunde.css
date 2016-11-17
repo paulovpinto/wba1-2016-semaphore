@@ -52,6 +52,8 @@ td {
     margin-left: 7px;
     color: #FFFFFF; }
   .quizrunde .fragenblock {
+    font-weight: lighter;
+    color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -82,6 +84,8 @@ td {
   .quizrunde #timer.start {
     max-width: 0; }
   .quizrunde .alle-antworten {
+    font-weight: lighter;
+    color: black;
     position: absolute;
     left: 0;
     right: 0;

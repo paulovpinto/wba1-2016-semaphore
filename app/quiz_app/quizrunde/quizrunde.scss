@@ -14,6 +14,8 @@
 
 	/*Formatierung Frage und Hintergrund der Frage*/
 	.fragenblock{
+    font-weight:lighter;
+    color: black;
     position:absolute;
 	  left: 0;
 	  right: 0;
@@ -56,7 +58,9 @@
 	/*Allgemeine Formatierung der Antworten,
 	hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 	.alle-antworten{
-	  position:absolute;
+    font-weight:lighter;
+    color:black;
+    position:absolute;
 	  left: 0;
 	  right: 0;
 	  bottom: 0;
