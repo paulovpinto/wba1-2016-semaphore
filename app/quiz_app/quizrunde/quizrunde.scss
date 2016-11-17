@@ -4,9 +4,15 @@
 	padding: $base-padding;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 50vw;
 	bottom: 0;
-	right: 0;
+	width: $content-width-desktop;
+	
+	.quizrunde-inner{
+		margin-left: -50%;		
+		width: $content-width-desktop;
+	}
+
 }
 
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
@@ -59,9 +65,9 @@
 hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten{
   position:absolute;
-  left: $base-padding;
-  right: $base-padding;
-  bottom: $base-padding;
+  width: $content-width-desktop;
+  left: -50%;
+  bottom: 0;
   list-style:none;
   padding: 0;
   margin: 0;

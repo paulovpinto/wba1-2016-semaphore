@@ -42,9 +42,12 @@ td {
   padding: 5px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50vw;
   bottom: 0;
-  right: 0; }
+  width: 1200px; }
+  .quizrunde .quizrunde-inner {
+    margin-left: -50%;
+    width: 1200px; }
 
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
 .quizrunde * {
@@ -90,9 +93,9 @@ td {
 hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten {
   position: absolute;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
+  width: 1200px;
+  left: -50%;
+  bottom: 0;
   list-style: none;
   padding: 0;
   margin: 0; }
