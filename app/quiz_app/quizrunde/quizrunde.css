@@ -44,9 +44,9 @@ td {
   top: 0;
   left: 50vw;
   bottom: 0;
-  width: 1200px; }
+  width: 600px; }
   .quizrunde .quizrunde-inner {
-    margin-left: -50%;
+    margin-left: -100%;
     width: 1200px; }
 
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
@@ -73,7 +73,9 @@ td {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 3px;
-  padding-bottom: 3px; }
+  padding-bottom: 3px;
+  hyphens: auto;
+  word-wrap: break-word; }
 
 .quizrunde #timer-js {
   height: 20px;
@@ -94,14 +96,18 @@ hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten {
   position: absolute;
   width: 1200px;
-  left: -50%;
+  left: -100%;
   bottom: 0;
   list-style: none;
   padding: 0;
   margin: 0; }
 
-#antworten.hidden {
-  display: none !important; }
+#antworten .antwort {
+  transform: scale(1);
+  transition: transform 0.5s; }
+
+#antworten.hidden .antwort {
+  transform: scale(0); }
 
 /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
 Abstände zwischen den Fragen*/
@@ -136,7 +142,20 @@ Abstände zwischen den Fragen*/
     background-color: rgba(248, 245, 228, 0.7); }
   50%, 100% {
     background-color: #0FDC00; } }
-@media only screen and (min-width: 439px) {
+@media only screen and (max-width: 439px) {
+  .quizrunde {
+    position: static;
+    left: auto;
+    width: auto; }
+    .quizrunde .quizrunde-inner {
+      width: auto;
+      margin-left: auto; }
+    .quizrunde .alle-antworten {
+      width: auto;
+      left: 5px;
+      right: 5px;
+      bottom: 10px; }
+
   .quizrunde .antwort {
     margin-top: 20px; }
 

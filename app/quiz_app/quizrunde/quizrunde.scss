@@ -6,10 +6,10 @@
 	top: 0;
 	left: 50vw;
 	bottom: 0;
-	width: $content-width-desktop;
+	width: $content-width-desktop /2;
 	
 	.quizrunde-inner{
-		margin-left: -50%;		
+		margin-left: -100%;		
 		width: $content-width-desktop;
 	}
 
@@ -42,6 +42,8 @@
   padding-right: 20px;
   padding-top: 3px;
   padding-bottom: 3px;
+  hyphens: auto;
+  word-wrap: break-word;
 
 }
 
@@ -66,14 +68,22 @@ hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten{
   position:absolute;
   width: $content-width-desktop;
-  left: -50%;
+  left: -100%;
   bottom: 0;
   list-style:none;
   padding: 0;
   margin: 0;
 }
-#antworten.hidden {
-  display: none !important;
+
+#antworten .antwort {
+	transform: scale(1);
+	transition: transform 0.5s;
+}
+
+#antworten.hidden{
+	.antwort {
+		transform: scale(0);
+	}
 }
 
 /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
@@ -123,8 +133,26 @@ Abstände zwischen den Fragen*/
           }
       }
 
-@media only screen and (min-width: $bp-smartphone) {
-
+@media only screen and (max-width: $bp-smartphone) {
+	
+	.quizrunde{
+		position: static;
+		left: auto;
+		width: auto;
+		
+		.quizrunde-inner{
+			width: auto;
+			margin-left: auto;
+		}
+		
+		.alle-antworten{
+			width: auto;
+			left: $base-padding;
+			right: $base-padding;
+			bottom: $base-padding *2;
+		}
+	}
+	
     .quizrunde .antwort{
         margin-top:20px;
     }
