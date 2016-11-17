@@ -92,7 +92,7 @@ img {
     border-spacing: 0px 10px;
 }
 /* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
-@media screen and (max-width:439px) {
+@media screen and (max-width:$bp-smartphone) {
     .btn1 {
         display: inline-block;
     }
@@ -114,7 +114,7 @@ img {
     }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:$bp-tablet){
   .quizbox{
     margin-top: -32em;
   }
