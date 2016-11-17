@@ -50,7 +50,7 @@ body {
   background: url(../../assets/images/stadion_Desktop.jpg) no-repeat center center fixed;
   background-size: cover; }
 
-/*├£berschrift Container*/
+/*Überschrift Container*/
 .headline {
   height: 45px;
   background: #F8F5E4;
@@ -60,14 +60,14 @@ body {
   transform: translate(-50%);
   margin-top: 116px; }
 
-/*├£berschrifttext*/
+/*Überschrifttext*/
 #headlinetext {
   text-align: center;
   margin-top: 3px;
   font-family: 'Oswald-Regular', sans-serif;
   font-size: 24px; }
 
-/*Dropdown-Men├╝*/
+/*Dropdown-Menü*/
 #auswahl {
   margin-bottom: 10px;
   width: 100%;
@@ -122,7 +122,7 @@ body {
   display: block;
   height: 50%; }
 
-/*Container f├╝r Tabelle*/
+/*Container für Tabelle*/
 .container-table {
   float: right;
   margin: 15px;
