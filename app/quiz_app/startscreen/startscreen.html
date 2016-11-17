@@ -1,52 +1,53 @@
-<!--../../assets/js/createStartscreen.js-->
-
-<section class="startscreen">
-	<div id="start">
-		<div class="titel">
-	        <h2>{{name}}</h2>
-	    </div>
-	
-	    <div class="boxbox"><!--Box, die alle anderen Boxen umschließt. Außer den Titel.-->
-	        <div class="quizbox">
-	            <div class="teaserbild">
-	                <img src="{{image}}">
-	            </div>
-				<div class="author">
-	            	<p>{{date}}</p>
-				</div>
-				<div class="teasertext">
-	        		<p>{{description}}</p> 
-					<div class="toggleBox">      
-						<input name="toggleContent" id="toggleContent" type="checkbox">
-						<label for="toggleContent" class="open">aufklappen</label>
-						<div>
-							<p class="teasertext2">{{description}}</p> 
-						</div>
-	          
-						<label for="toggleContent" class="close">zuklappen</label>
-					</div>        
-				</div>
-				<div class="buttons"> 
-					<button class="btn" id="playButton">Spielen</button>
-					<button class="btn1" id="highscoreButton">Highscore</button>
-				</div>
-	        </div>
-	            <div id="highscorecontent">
-			<table class="liste" id="ranking">
-				<tr id="listhead">
-	                <th>Rang</th>
-	                <th>Spieler</th>
-	                <th>Zeit</th>
-	                <th>Punkte</th>
-	            </tr>
-	            <tr id="tabellenranking">
-	                <td>{{rankIdx}}.</td>
-	                <td>{{player}}</td>
-	                <td>{{date}}</td>
-	                <td>{{points}}</td>
-	            </tr>
-	        </table>
-	    </div>
+<div id="start">
+<div class="titel"> <!--Titel oberste Zeile-->
+	<h2>{{name}}</h2>
+</div>
+<div class="boxbox"> <!--Box, die alle anderen Boxen umschließt. Außer den Titel.-->
+<div class="column">
+    <div class="quizbox">
+        <div class="teaserbild">
+            <img src={{image}}/>
+        </div>
+		<div class="author">
+        	<p>{{date}}</p>
+    	</div>
+		<div class="teasertext">
+			<p>{{description}}</p> 
+			<div class="toggleBox">      
+    				<input name="toggleContent" id="toggleContent" type="checkbox">
+    				<label for="toggleContent" class="open">aufklappen</label>
+    				<div>
+			        <p class="teasertext2">{{description}}</p> 
+			    </div>
+				<label for="toggleContent" class="close">zuklappen</label>
+			</div>        
+		</div>
+		<div class="buttons"> 
+    		<button class="button is-primary" href="quiz.html">Spielen</button>
+			<button class="btn1 button is-primary" href="">Highscore</button>
 		</div>
 	</div>
-</section>
+</div>
+<div class="column">
+	<div id="highscorecontent">
+	<table class="liste" id="ranking">
+		<tr id="listhead">
+	        <th>Rang</th>
+	        <th>Spieler</th>
+	        <th>Zeit</th>
+	        <th>Punkte</th>
+	    </tr>
+	    <tr id="tabellenranking">
+	        <td>{{rankIdx}}.</td>
+	        <td>{{player}}</td>
+	        <td>{{date}}</td>
+	        <td>{{points}}</td>
+	    </tr>
+	</table>
+	</div>
+</div>
+
+
+
+
+
