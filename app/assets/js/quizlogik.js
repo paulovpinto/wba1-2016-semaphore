@@ -84,7 +84,7 @@ function count( ){
 }
 
 function neueFrage( data, aktuelleFrage){
-	
+	clearInterval(timer);
 	removeFeedback();
 	delayA= readTime(data.question);
 
