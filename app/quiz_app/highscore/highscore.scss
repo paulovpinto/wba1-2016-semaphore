@@ -111,7 +111,7 @@ body{
 
 
 /*Tablet-Anischt*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: $bp-tablet) {
        
     .headline{    
         margin-top: 50px;
@@ -128,7 +128,7 @@ body{
 
 /*Smartphone-Ansicht*/
 /*ID-Namen identisch, siehe oben*/
-@media only screen and (max-width: 439px) {
+@media only screen and (max-width: $bp-smartphone) {
     
     body{
         margin: 0;

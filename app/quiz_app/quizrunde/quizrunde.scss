@@ -88,7 +88,7 @@ Abstände zwischen den Fragen*/
   background-color:rgba(248,245,228,1);
 }
 
-@media only screen and (min-width: 439px) {
+@media only screen and (min-width: $bp-smartphone) {
 
     .quizrunde .antwort{
         margin-top:20px;
@@ -107,7 +107,7 @@ Abstände zwischen den Fragen*/
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $bp-tablet) {
     .quizrunde .antwort{
         margin-top:40px;
         font-size:24px;

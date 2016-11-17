@@ -54,10 +54,11 @@ function createEndscreen(punkte, antworten, quizIdx){
         var ball_src = "{{ball" + (i+1) + "}}";
 
         if(antworten[i]){
-            template = template.replace(ball_src,"../../assets/images/g_ball.png");
+            template = template.replace(ball_src,"../../assets/images/ball.png");
         }
-        else
+/*        else
             template = template.replace(ball_src,"../../assets/images/r_ball.png");
+            */
     }
 
     // Platz in Rangliste anzeigen
