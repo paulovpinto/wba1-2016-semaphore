@@ -91,7 +91,7 @@ function count( ){
 }
 
 function neueFrage( data, aktuelleFrage){
-
+	
 	removeFeedback();
 
   $("#frage").html(data.question);
@@ -105,7 +105,6 @@ function neueFrage( data, aktuelleFrage){
 
 	i=10;
 	updateTimer();
-
   setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
