@@ -566,7 +566,11 @@ img{
 	background: #CB0727;
 	padding: 60px 0;
 }
-
+img gif1{
+    width:50%;
+    height:auto;
+    max-width:70%;
+}
 
 
 

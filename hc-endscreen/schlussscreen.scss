@@ -229,7 +229,14 @@ body{
 }
 
 
-@media only screen and (max-width: 800px){
+@media only screen and ($bp-tablet){
+ 
+    
+    
+}
+
+
+@media only screen and ($bp-smartphone){
 	
 	.schlussscreen{
 		

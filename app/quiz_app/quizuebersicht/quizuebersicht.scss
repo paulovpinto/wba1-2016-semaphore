@@ -1,6 +1,5 @@
 @import "../../assets/css/base";
 
-
 .quizuebersicht{
 	
 	.content{
@@ -8,7 +7,7 @@
 		width: 1000px;
 		margin: 0 auto;
 	
-		.Sortierliste{
+		.sortierliste{
 			background-color: $bg-yellow;
 			margin: 0;
 			padding: 0;
@@ -32,7 +31,7 @@
 		    margin-left: -$gutter-width;
 		    margin-right: -$gutter-width;
 		    
-		    .Quizkachel{
+		    .quizkachel{
 			    box-sizing: border-box;
 			    display: block;
 			    flex-basis: 25%;
@@ -54,16 +53,17 @@
 					}
 				}
 			      
-			    .Quizbild{
+			    .quizbild{
 				    width: 100%;
 			    }
 		    }
 		}		
 	}
 	
-	@media only screen and (max-width: $bp-tablet){
+	@media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
 		
 		.content{
+		
 			width: $content-width-tablet;
 			
 			.kacheln{
@@ -72,8 +72,43 @@
 				}
 			}
 
-		}
-		
+		}   
 	}
+	
+	@media only screen and (max-width: $bp-smartphone){
+		
+		.content{
+			width: 100%;
+			padding: $gutter-width;
+			
+			.kacheln{
+				display: block;
+                
+                .quizkachel{
+                    
+                    .quizkachel-inner{
+                        
+                        .basicInfos{
+                            
+                            float: left;
+                            .quizbild{
+                                float: left;
+                                width: 113px;
+                                height: 70px;
+                            }
+                        }
+                    }
+                }
+			}
 
+            
+		}  
+        .hidden{
+                display: none;
+        }
+        
+	}
+         
 }
+
+
