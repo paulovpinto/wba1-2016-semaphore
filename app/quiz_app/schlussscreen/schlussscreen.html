@@ -1,6 +1,129 @@
-<!DOCTYPE>
-<html>
-    <body>
-        Wenn du das hier lesen kannst wurde der Schlussscreen erfolgreich in die Seite geschrieben!
-    </body>
-</html>
+<div id="ende">
+
+            <div class="heading">
+                <h1>{{name}}</h1>
+                <!-- Screen Überschrift-->
+            </div>
+
+			<div class="inhalt">
+
+				<div class="linke-seite">
+
+					<div class="quizbild">
+						<img src="{{image}}">
+					</div>
+
+					<div class="punkte">
+						<p>Erreichte Punkte {{punkte}} Rang {{rang}}</p>
+						<!-- Quizbild und erreichte Punkte-->
+					</div>
+
+					<div class="fussbaelle">
+						<table>
+							<tr>
+
+								<td><img id="ball1" src="{{ball1}}" /></td>
+								<td><img id="ball2" src="{{ball2}}" /></td>
+								<td><img id="ball3" src="{{ball3}}" /></td>
+								<td><img id="ball4" src="{{ball4}}" /></td>
+								<td><img id="ball5" src="{{ball5}}" /></td>
+								<td><img id="ball6" src="{{ball6}}" /></td>
+								<td><img id="ball7" src="{{ball7}}" /></td>
+								<td><img id="ball8" src="{{ball8}}" /></td>
+								<td><img id="ball9" src="{{ball9}}" /></td>
+								<td><img id="ball10" src="{{ball10}}" /></td>
+
+							</tr>
+						</table>
+					</div>
+
+					<a href="https://www.google.de">
+						<div class="highscore-btn">
+							<p>Highscore</p>
+							<!--Knopf zur Highscoreliste-->
+						</div>
+					</a>
+
+                    <a href="https://www.google.de">
+						<div class="erneut">
+							<p>Erneut spielen</p>
+							<!--Knopf zum erneuten Spielen-->
+						</div>
+					</a>
+
+				</div>
+
+				<div class="rechte-seite">
+
+                    <!--Highscoreliste-->
+					<div class="highscore">
+
+						<table id="ranking">
+							<tr id="listhead">
+								<th>
+                                    <div class="rank">  
+                                        <img src="../grafiker/Grafiken/05_medallie_tablet%20mit%20gelben%20hintergrund.jpg" />        
+                                    </div>
+                                </th>
+								<th>Spieler</th>
+								<th>Zeit</th>
+								<th>Punkte</th>
+							</tr>
+							 <tr id="tabellenranking">
+                                <td>{{rankIdx}}.</td>
+                                 <td>{{player}}</td>
+                                 <td>{{date}}</td>
+                                 <td>{{points}}</td>
+                            </tr>
+						</table>
+                    </div>
+
+
+					<div class="suggestions">
+
+                        <h2 >Spielen Sie angesagte Quizzes!</h2>
+
+						<div class="sugg">
+							<img src="{{r_image}}" />
+
+                            <div class="sugg-infos">
+                                <div class="sugg-head">{{r_name}}</div>
+
+                                <div class="infos">
+                                    <div class="erstellt">von {{r_author}} erstellt am {{r_date}}</div>
+                                    <div class="gespielt">{{r_counter}} mal gespielt</div>
+                                </div>
+                            </div>
+						</div>
+
+						<div class="sugg">
+							<img src="{{r_image}}" />
+
+                            <div class="sugg-infos">
+                                <p class="sugg-head">{{r_name}}</p>
+
+                                <div class="infos">
+                                    <p class="erstellt">von {{r_author}} erstellt am {{r_date}}</p>
+                                    <p class="gespielt">{{r_counter}} mal gespielt</p>
+                                </div>
+                            </div>
+						</div>
+
+						<div class="sugg">
+							<img src="{{r_image}}" />
+
+                            <div class="sugg-infos">
+                                <p class="sugg-head">{{r_name}}</p>
+
+                                <div class="infos">
+                                    <p class="erstellt">von {{r_author}} erstellt am {{r_date}}</p>
+                                    <p class="gespielt">{{r_counter}} mal gespielt</p>
+                                </div>
+                            </div>
+						</div>
+					</div>
+					<!--Auswahl des nächsten Quizzes-->
+
+				</div>  <!--Ende rechte Seite-->
+			</div>  <!--Ende Inhalt-->
+		</div>  <!--Ende move-->

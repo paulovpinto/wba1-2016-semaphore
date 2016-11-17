@@ -1,70 +1,45 @@
 <html>
     <head>
+
       <meta charset="utf-8">  <!-- erlaubt das Benutzen von deutschen Umlauten-->
       <title>Quizrunde</title>
-        <!--link href="navi.css" type="text/css" rel="stylesheet">
-        <script src="navi.js" type="text/javascript" language="JavaScript"></script-->
-      <link href="reset.css" rel="stylesheet"/>
+
       <link href="quiz.css" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
-     <!-- Navigation auskommentiert!
-     <div id="move">
-                <div class="container">
-                <header>
-                       <p> <a href="/quizrundepp/img/Logo_Fubuizz.png"><img src="quizrundepp/img/Logo_Fubuizz.png" height= 40px alt="Fubuizz"/></a>
-                       <img class="burgermenu" src="quizrundepp/img/Logo_Fubuizz.png" onclick="myMove()"/>
-                    <ul class="head">
-                        <li><a href="https://www.google.de">Registrieren</a></li>
-                        <li><a href="https://www.google.de">Login</a></li>
-                    </ul>
-                </header>
-                <nav>
-                    <ul class="navi">
-                        <li><a href="https://www.google.de">Aktuelle Quizze</a></li>
-                        <li><a href="https://www.google.de">Highscore</a></li>
-                        <li><a href="https://www.google.de">Über Fubuizz</a></li>
-                        <li><a href="https://www.google.de">Kontakt</a></li>
-                        <li><a href="https://www.google.de">Einstellungen</a></li>
-                    </ul>
-                </nav>
-                </div>
-                <div class="menu">
-                    <header class="burgerheader">
-                        <p> <a href="/quizrundepp/img/Logo_Fubuizz.png"><img src="quizrundepp/img/Logo_Fubuizz.png" height= 40px alt="Fubuizz"/></a>
-                    </header>
-                    <nav class="burgernav">
-                        <ul>
-                            <li><a href="https://www.google.de">Aktuelle Quizze</a></li>
-                            <li><a href="https://www.google.de">Highscore</a></li>
-                            <li><a href="https://www.google.de">Uber Fubuizz</a></li>
-                            <li><a href="https://www.google.de">Kontakt</a></li>
-                            <li><a href="https://www.google.de">Einstellungen</a></li>
-                        </ul>
-                        <button class="quizbeenden" type="button">Quiz beenden</button>
-                    </nav>
-                </div>
-            </div-->
 
         <p class = "fragen-counter" id="question" ></p>
         <!--- <p id="text"></p> -->
             <!--Hier steht der Fragenblock. Diese Fragen werden später durch das Skript zufällig wiedergegeben (hier wird das Skript implementiert).-->
         <p class="fragenblock" id="frage"></p>
         <!-- Fortschrittsbalken -->
+
+        <div class="wrap">
+	          <div id="timer"></div>
+	          <div id="timer-js"></div>
+        </div>
+
+
+
+
+
         <!-- Einheitliches Konzept zu Klassennamen
 	        http://cssguidelin.es/
 	         -->
+        <!--Die Klasse "AlleAntworten" gruppiert alle möglichen Antworten zur Frage.-->
+        <!-- Hier steht nacheinander aufgelistet die Klasse "Antwort".
+              Die Antworten sind mit ids ausgestattet,
+              damit das Javaskript dort die Antworten einbinden kann. -->
+        <ul class= "alle-antworten" id="antworten"
 
-	    <!-- anworten besser als Liste (ul) -->
-
-        <ul class= "alle-antworten" id="antworten">
-            <!--Die Klasse "AlleAntworten" gruppiert alle möglichen Antworten zur Frage.-->
-              <!--Hier steht nacheinander aufgelistet die Klasse "Antwort". Vorerst haben wir hier die Antworten A - D benannt, später soll hier aber das Javaskript zur Generierung von Antworten eingebunden sein.-->
             <li><p class="antwort  button-id1" id="antwort1" data-antwortId="1"></p></li>
             <li><p class="antwort  button-id2" id="antwort2" data-antwortId="2"></p></li>
             <li><p class="antwort  button-id3" id="antwort3" data-antwortId="3"></p></li>
             <li><p class="antwort  button-id4" id="antwort4" data-antwortId="4"></p></li>
+
         </div>
 
         <!-- JavaScripte laden  -->
@@ -74,5 +49,35 @@
         <script src="js/script.js?v=1"></script>
         <script src="../Logik/quizlogik.js"></script>
         <script src="../app/assets/js/fubuizz.js"></script>
-    </body>
+        <script type="text/javascript"></script>
+        <script type="text/javascript">
+	       /*
+	        setTimeout(startTimer, 1000);
+	         function startTimer(){
+
+         }*/
+	        var zeit = 100;
+
+	        function showAnswers(){
+		/*document.getElementById("timer").className = "start";*/
+
+            var timer = setInterval(updateTimer, 10 );
+            function updateTimer(){
+	             zeit--;
+	            document.getElementById("timer-js").style.width = zeit + "%";
+	            if(zeit <= 0){ clearInterval(timer); }
+              console.log(zeit);
+        }
+	}
+
+	window.onload = function () {
+
+        setTimeout(showAnswers, 1000);
+
+    }
+
+
+  </script>
+
+      </body>
 </html>

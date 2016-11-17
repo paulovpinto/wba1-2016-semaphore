@@ -1,0 +1,14 @@
+/* Variabeln
+###################################################### */
+/* Bausteine
+###################################################### */
+.button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid 1px red;
+  padding: 5px;
+  color: #fff; }
+
+.button.play {
+  background-color: #ff3737; }
+
+/*# sourceMappingURL=base.css.map */
