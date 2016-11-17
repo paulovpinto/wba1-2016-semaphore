@@ -1,7 +1,5 @@
 /****************************
-Dieses Script Läd die startscreen.html Datei und 
-schreibt sie in das Dokument. Dabei wird der Name, Id, Datum, 
-Beschreibung, Author, des ausgewählten Quiz übergeben.
+Dieses Script erzeugt dynmaisch die startscreen Seite
 
 *****************************/
 

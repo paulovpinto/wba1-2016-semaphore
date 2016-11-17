@@ -1,7 +1,5 @@
 /*******************************************************
-Dieses Script läd ein highscore Json und das dazugehörige 
-HTML Snippet. Anschließend wird der inhalt der Json 
-in das Snippet geschrieben und in das Dokument geschrieben.
+Dieses Script erzeugt dynamisch die Highscore Seite.
 
 ********************************************************/
 
