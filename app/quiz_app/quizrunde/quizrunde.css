@@ -38,14 +38,14 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-/* GGf mal CSS Präprozessoren checken. */
+/* GGf mal CSS Pr├ñprozessoren checken. */
 .quizrunde {
   /*Anzeige fragen-counte r*/
   /*Formatierung Frage und Hintergrund der Frage*/
   /*Allgemeine Formatierung der Antworten,
-  hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
+  haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
   /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
-  Abstände zwischen den Fragen*/ }
+  Abst├ñnde zwischen den Fragen*/ }
   .quizrunde .fragen-counter {
     width: 100px;
     margin-top: 1px;
