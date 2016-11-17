@@ -53,7 +53,7 @@ body {
 /*├£berschrift Container*/
 .headline {
   height: 45px;
-  background: #F8F5E4;
+  background: rgba(248, 245, 228, 0.9);
   width: calc(100% - 30px);
   position: absolute;
   left: 50%;
@@ -64,7 +64,7 @@ body {
 #headlinetext {
   text-align: center;
   margin-top: 3px;
-  font-family: 'Oswald-Regular', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 24px; }
 
 /*Dropdown-Men├╝*/
@@ -72,11 +72,11 @@ body {
   margin-bottom: 10px;
   width: 100%;
   height: 34px;
-  font-family: 'Oswald-Regular';
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   margin-bottom: 10px;
   padding-left: 10px;
-  background-color: #F8F5E4; }
+  background-color: rgba(248, 245, 228, 0.9); }
 
 /*Container linke Seite*/
 .teaser {
@@ -95,11 +95,11 @@ body {
 
 /*Autor und Erstelldatum*/
 #author {
-  font-family: 'Oswald-Regular';
+  font-family: "Oswald", sans-serif;
   font-size: 20px;
   width: calc(100% - 20px);
   margin: 0;
-  background: #F8F5E4;
+  background: rgba(248, 245, 228, 0.9);
   padding: 10px;
   float: left; }
 
@@ -108,7 +108,7 @@ body {
   width: calc(100% - 20px);
   margin-top: 10px;
   font-family: 'NotoSans-Regular';
-  background: rgba(248, 245, 228, 0.7);
+  background: rgba(248, 245, 228, 0.9);
   padding: 10px;
   float: left;
   text-align: left;
