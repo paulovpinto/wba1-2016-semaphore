@@ -25,7 +25,7 @@ body{
 }
 
 .heading {
-    font-size: 24px;
+    
     text-align: center;
     color:black;
     width: calc(100%-30px);
@@ -33,8 +33,15 @@ body{
     background-color: white;
     margin-left: 15px;
     margin-right: 15px;
-    line-height: 50px;
+    
+    
+}
+
+h1{
     font-family: 'OswaldRegular';
+    line-height: 50px;
+    color:black;
+    font-size: 24px;
 }
 
 .erneut {
@@ -78,11 +85,11 @@ body{
 .punkte {
     background-color: rgba(233,194,12,1);
     color: black;
-    font-size: 20px;
+    font-size: 125%;
     text-align:center;
     width: calc(100% - 30px);
-    height: 50px;
-    line-height: 50px;
+    height: 312.5%;
+    line-height: 312.5%;
     display: inline-block;
     margin-top: 3px;
     font-family: 'OswaldRegular';
@@ -184,14 +191,15 @@ body{
 
 
 
-@media only screen and (max-width: 439px)
+@media only screen and (max-device-width: 439px)
 {
+    
     body{
         background-image: url(../images/background.jpg);
     }
         
     .heading{
-        height: 2em;
+        height: 200%;
         width: calc(100% - 21px);
         background: rgb(248, 245, 228);
         position: absolute;
@@ -203,8 +211,7 @@ body{
     
     h1{
         margin-top: 0.25em;
-        font-family: 'OswaldRegular';
-        font-size: 100%;
+        font-size: 1em;
         line-height: 100%;
     }
     
@@ -231,14 +238,17 @@ body{
     .fussbaelle img{
         height: 0.75em;
         width: 0.75em;
-        margin-right: 0.2em;
-        margin-top: 5pt;
-        padding: 0px;
     }
     
     .fussbaelle{
-        width: calc(100% - 21px);
-        transform: translate(70%);
+        width: 100%;
+        height: 
+        line-height: 
+    }
+    
+    .fussbaelle table {
+        width: calc(100% - 30px);
+        text-align: center;
     }
         
     .erneut, .highscore-btn{
