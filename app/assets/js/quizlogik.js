@@ -1,22 +1,23 @@
 
-var delayQ=0; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
+var delayQ=1000; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
 var delayA=2000; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
 
 var punkte=0;  //aktuelle Punktzahl
 
-var antworten= Array(10);
+var antworten= Array(10);   // hier wird gespiechert, ob die Frage richtig oder falsch beantwortet wurde um später die Bälle einzufärben
 //  var random= math.random();
 
 
-var $ele;
-var antwortId;
-var timer= null;
+var $ele;  // aktuell angeklicktes Element
+var antwortId; // zum überprüfen der richten Antwort
+var timer= null; // das Zeitintervall, mitdem die count Methode ausgeführt wird
 var i=10; // Zeit in Sekunden
 
 var aktuelleFrage = 0;
 var quizLogik = {}; // Quizdaten
 quizLogik.data = {};
 quizLogik.quiz = {};
+
 
 
 // Zeit für den Timer im View
@@ -30,6 +31,9 @@ function updateTimer(){
 }
 
 function antwortPruefen(ele, answer){
+
+	//$ele.removeClass('hover');
+
 //	var $ele = $(ele);
   $ele= $(ele);                              // cast zu jQuery
   antwortId = $(ele).attr("data-antwortId");
@@ -39,25 +43,25 @@ function antwortPruefen(ele, answer){
   console.log("richtige Antwort: " + answer);
 
   if(answer === antwortId){
-//  $("#rof").html("Richtig");
-//  setTimeout(function() {$ele.css("background-color", "#40FF00")}, 2000);
-//  $ele.css("background-color", "#FFFFFF");
-// $ele.removeClass("antwort")
- //$ele.addClass("richtig"); //
- punkte+=i*5+50;
- console.log("Punkte: "+ punkte);
- antworten[aktuelleFrage]=true;
+			//  $("#rof").html("Richtig");
+			//  setTimeout(function() {$ele.css("background-color", "#40FF00")}, 2000);
+  //$ele.css("background-color", "#FFFFFF");
+	// $ele.removeClass("antwort")
+ 		$ele.addClass("richtig");
+ 		punkte+=i*5+50;
+ 		console.log("Punkte: "+ punkte);
+ 		antworten[aktuelleFrage]=true;
 
 
   } else {
-//    $("#rof").html("falsch");
-console.log("Punkte: "+punkte);
-antworten[aktuelleFrage]=false;
-//    setTimeout(function() {$ele.css("background-color", "#FF0000")}, 2000);
-//    $ele.css("background-color", "#FFFFFF");
+			//    $("#rof").html("falsch");
+		console.log("Punkte: "+punkte);
+		antworten[aktuelleFrage]=false;
+			//    setTimeout(function() {$ele.css("background-color", "#FF0000")}, 2000);
+			//$ele.css("background-color", "#CB0");
 
-//$ele.removeClass("antwort")
-//$ele.addClass("falsch")
+		//$ele.removeClass("antwort")
+		$ele.addClass("falsch");
 
   }
 
@@ -90,19 +94,20 @@ function count( ){
 
 
 }
+
 function neueFrage( data, aktuelleFrage){
 
-
-//  $("#antwort1").removeClass("richtig", "falsch");
-//  $("#antwort2").removeClass("richtig", "falsch");
-//  $("#antwort3").removeClass("richtig", "falsch");
-//  $("#antwort4").removeClass("richtig", "falsch");
+	removeFeedback();
 
   $("#frage").html(data.question);
-  $("#antwort1").html(" ");    // ändert per Id den Inhalt
-  $("#antwort2").html(" ");    //$ signalisiert das jQuery Objekt, # ersetzt getElementbyId, .html signalisiert html Objekt(Inhalt)
-  $("#antwort3").html(" ");
-  $("#antwort4").html(" ");
+	$("#antwort1").html(data.options[0].option);    // ändert per Id den Inhalt
+	$("#antwort2").html(data.options[1].option);    //$ signalisiert das jQuery Objekt, # ersetzt getElementbyId, .html signalisiert html Objekt(Inhalt)
+	$("#antwort3").html(data.options[2].option);
+	$("#antwort4").html(data.options[3].option);
+	$("#antworten").addClass("hidden");
+
+  $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
+	
 	i=10;
 	updateTimer();
 
@@ -110,24 +115,21 @@ function neueFrage( data, aktuelleFrage){
 
 //  console.log(document.getElementbyId("antwort1"));
 //  tausch($("#antwort1"), $("#antwort2"));
-  $("#antwort1").html(data.options[0].option);    // ändert per Id den Inhalt
-  $("#antwort2").html(data.options[1].option);    //$ signalisiert das jQuery Objekt, # ersetzt getElementbyId, .html signalisiert html Objekt(Inhalt)
-  $("#antwort3").html(data.options[2].option);
-  $("#antwort4").html(data.options[3].option);
+		$("#antworten").removeClass("hidden");
 
   clearInterval(timer);
 //  i=10;
 //	updateTimer();
   timer = setInterval("count()", 1000);
 
-  $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
+
     }, delayA);
   }
 
 
 
 function buttonKlick(quizIdx){
-    $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
+    $(".antwort").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
     //	var cButton = e.target;
     if(i===0){
 
@@ -157,6 +159,18 @@ function buttonKlick(quizIdx){
 
         }
   });
+}
+
+function removeFeedback(){
+
+	$("#antwort1").removeClass("richtig");
+	$("#antwort1").removeClass("falsch");
+	$("#antwort2").removeClass("richtig");
+	$("#antwort2").removeClass("falsch");
+	$("#antwort3").removeClass("richtig");
+	$("#antwort3").removeClass("falsch");
+	$("#antwort4").removeClass("richtig");
+	$("#antwort4").removeClass("falsch");
 }
 /*
 function tausch(obj1, obj2){
