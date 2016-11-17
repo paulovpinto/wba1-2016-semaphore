@@ -1,53 +1,85 @@
-/*
-Error: Invalid CSS after "	flex-wrap:wrap": expected "{", was ";"
-        on line 79 of quizuebersicht/quizuebersicht.scss
+/* Variabeln
+###################################################### */
+/* Bausteine
+###################################################### */
+.button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid 1px #cb0727;
+  padding: 5px;
+  color: #fff;
+  width: 100%; }
 
-74: /* wurde gr├Â├ƒengerecht angepasst *\/
-75: 
-76: .Quizkachel {
-77: 	
-78: <<<<<<< HEAD
-79: 	flex-wrap:wrap;
-80: 	box-sizing: border-box;
-81:     display: block;
-82:     /*float: left; *\/
-83:     padding: 0;
-84:     margin-right: 15pt;
+.button.is-primary {
+  background-color: #ff3737; }
 
-Backtrace:
-quizuebersicht/quizuebersicht.scss:79
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"	flex-wrap:wrap\": expected \"{\", was \";\"\A         on line 79 of quizuebersicht/quizuebersicht.scss\A \A 74: /* wurde gr├Â├ƒengerecht angepasst */\A 75: \A 76: .Quizkachel {\A 77: 	\A 78: <<<<<<< HEAD\A 79: 	flex-wrap:wrap;\A 80: 	box-sizing: border-box;\A 81:     display: block;\A 82:     /*float: left; */\A 83:     padding: 0;\A 84:     margin-right: 15pt;"; }
+.liste th {
+  background-color: #E9C20C;
+  text-align: left; }
+
+.liste tr th:nth-child(1),
+.liste tr td:nth-child(1) {
+  width: 10%;
+  text-align: center; }
+
+.liste tr th:nth-child(2),
+.liste tr td:nth-child(2) {
+  width: 40%; }
+
+.liste tr th:nth-child(4),
+.liste tr td:nth-child(4) {
+  width: 10%;
+  text-align: right; }
+
+th, td {
+  padding: 4px;
+  color: black; }
+
+td {
+  background: rgba(248, 245, 228, 0.7); }
+
+.quizuebersicht .content {
+  width: 1000px;
+  margin: 0 auto; }
+  .quizuebersicht .content .Sortierliste {
+    background-color: #e9c20c;
+    margin: 0;
+    padding: 0; }
+    .quizuebersicht .content .Sortierliste .sortiercontent {
+      margin: 0;
+      padding: 0;
+      display: flex; }
+      .quizuebersicht .content .Sortierliste .sortiercontent > li {
+        display: inline-block;
+        flex-grow: 1;
+        text-align: center; }
+  .quizuebersicht .content .kacheln {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      box-sizing: border-box;
+      display: block;
+      flex-basis: 25%;
+      /*flex-grow: 1;*/
+      margin-bottom: 5px;
+      padding: 10px; }
+      .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner {
+        background: rgba(248, 245, 228, 0.9);
+        color: #000;
+        height: 100%;
+        position: relative; }
+        .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner .auswahl-button {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+      .quizuebersicht .content .kacheln .Quizkachel .Quizbild {
+        width: 100%; }
+@media only screen and (max-width: 1024px) {
+  .quizuebersicht .content {
+    width: 800px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      flex-basis: 33%; } }
+
+/*# sourceMappingURL=quizuebersicht.css.map */
