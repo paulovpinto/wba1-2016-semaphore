@@ -1,24 +1,27 @@
 <div id="ende">
 
-            <div class="heading">
+    <section class="schlussscreen">
+        
+            <div class="heading tablet desktop">
                 <h1>{{name}}</h1>
-                <!-- Screen Überschrift-->
+                <!--Desktop Tablet Screen Überschrift-->
             </div>
 
 			<div class="inhalt">
 
-				<div class="linke-seite">
+				<div class="linke-seite"><!--Linker Content bei Tablet/Desktop-->
 
-					<div class="quizbild">
-						<img src="{{image}}">
+					<div class="quizbild"> 
+                        <h2 class="headline mobile">Deutschland</h2> <!--Überschrift SmartphoneScreen-->
+						<img src="{{image}}"> <!--Quizbild-->
 					</div>
 
 					<div class="punkte">
 						<p>Erreichte Punkte {{punkte}} Rang {{rang}}</p>
-						<!-- Quizbild und erreichte Punkte-->
+						<!-- Erreichte Punkte-->
 					</div>
 
-					<div class="fussbaelle">
+					<div class="fussbaelle"><!--Fußball Leiste-->
 						<table>
 							<tr>
 
@@ -40,20 +43,20 @@
 					<a href="https://www.google.de">
 						<div class="highscore-btn">
 							<p>Highscore</p>
-							<!--Knopf zur Highscoreliste-->
+							<!--Button zur Highscoreliste-->
 						</div>
 					</a>
 
                     <a href="https://www.google.de">
 						<div class="erneut">
 							<p>Erneut spielen</p>
-							<!--Knopf zum erneuten Spielen-->
+							<!--Button zum erneuten Spielen-->
 						</div>
 					</a>
 
 				</div>
 
-				<div class="rechte-seite">
+				<div class="rechte-seite"><!--Rechter Content von Tablet/Desktop-->
 
                     <!--Highscoreliste-->
 					<div class="highscore">
@@ -62,7 +65,7 @@
 							<tr id="listhead">
 								<th>
                                     <div class="rank">  
-                                        <img src="../grafiker/Grafiken/05_medallie_tablet%20mit%20gelben%20hintergrund.jpg" />        
+                                        <img src="../grafiker/Grafiken/05_medallie_tablet%20mit%20gelben%20hintergrund.jpg" /><!--Medaille-->      
                                     </div>
                                 </th>
 								<th>Spieler</th>
@@ -79,15 +82,15 @@
                     </div>
 
 
-					<div class="suggestions">
+					<div class="suggestions"><!--Vorgeschlagene Quizze-->
 
                         <h2 >Spielen Sie angesagte Quizzes!</h2>
 
 						<div class="sugg">
-							<img src="{{r_image}}" />
+							<img src="{{r_image}}" /><!--Quizbild-->
 
                             <div class="sugg-infos">
-                                <div class="sugg-head">{{r_name}}</div>
+                                <div class="sugg-head">{{r_name}}</div><!--Überschrift-->
 
                                 <div class="infos">
                                     <div class="erstellt">von {{r_author}} erstellt am {{r_date}}</div>
@@ -126,4 +129,5 @@
 
 				</div>  <!--Ende rechte Seite-->
 			</div>  <!--Ende Inhalt-->
-		</div>  <!--Ende move-->
+    </section>
+</div>  <!--Ende move-->
