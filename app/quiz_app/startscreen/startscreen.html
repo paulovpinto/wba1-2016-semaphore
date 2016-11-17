@@ -1,37 +1,49 @@
 <!--../../assets/js/createStartscreen.js-->
 
-<section class="startscreen">
-	<div id="start">
-		<div class="titel">
-	        <h2>{{name}}</h2>
+<html>
+    <head>
+        <title>Fubuizz</title>
+        <link rel="stylesheet" href="cn-navi.css" type="text/css"/>
+        <link rel="stylesheet" href="startscreen.css" type="text/css"/>
+        <link rel="stylesheet" href="start.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> <!--Schiftart Oswald-->
+        <meta charset="utf-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximal-scale=1.0"> <!--Responsive-->
+        <script src="navi.js" type="text/javascript" language="JavaScript"></script>  
+    </head>
+<body>
+    <section class="startscreen">
+	   <div id="start">
+	   <div class="titel"> <!--Titel oberste Zeile-->
+           <h2>{{name}}</h2>
 	    </div>
-	
-	    <div class="boxbox"><!--Box, die alle anderen Boxen umschließt. Außer den Titel.-->
-	        <div class="quizbox">
-	            <div class="teaserbild">
-	                <img src="{{image}}">
-	            </div>
-				<div class="author">
-	            	<p>{{date}}</p>
+	    <div class="boxbox"> <!--Box, die alle anderen Boxen umschließt. Außer den Titel.-->
+	    	<div class="column">
+		        <div class="quizbox">
+		            <div class="teaserbild">
+		                <img src={{image}}/>
+		            </div>
+					<div class="author">
+		            	<p>{{date}}</p>
+		        	</div>
+					<div class="teasertext">
+						<p>{{description}}</p> 
+						<div class="toggleBox">      
+		    				<input name="toggleContent" id="toggleContent" type="checkbox">
+		    				<label for="toggleContent" class="open">aufklappen</label>
+		    				<div>
+						        <p class="teasertext2">{{description}}</p> 
+						    </div>
+							<label for="toggleContent" class="close">zuklappen</label>
+						</div>        
+					</div>
+					<div class="buttons"> 
+		        		<button class="button is-primary" href="quiz.html">Spielen</button>
+						<button class="btn1 button is-primary" href="">Highscore</button>
+					</div>
 				</div>
-				<div class="teasertext">
-	        		<p>{{description}}</p> 
-					<div class="toggleBox">      
-						<input name="toggleContent" id="toggleContent" type="checkbox">
-						<label for="toggleContent" class="open">aufklappen</label>
-						<div>
-							<p class="teasertext2">{{description}}</p> 
-						</div>
-	          
-						<label for="toggleContent" class="close">zuklappen</label>
-					</div>        
-				</div>
-				<div class="buttons"> 
-					<button class="btn" id="playButton">Spielen</button>
-					<button class="btn1" id="highscoreButton">Highscore</button>
-				</div>
-	        </div>
-	            <div id="highscorecontent">
+	    	</div>
+         <div id="highscorecontent">
 			<table class="liste" id="ranking">
 				<tr id="listhead">
 	                <th>Rang</th>
@@ -47,6 +59,8 @@
 	            </tr>
 	        </table>
 	    </div>
-		</div>
-	</div>
-</section>
+            </section>
+    </div>
+    </body>
+</html>
+
