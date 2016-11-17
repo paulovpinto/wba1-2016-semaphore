@@ -1,0 +1,29 @@
+.offcanvas {
+  background: #000000;
+  position: fixed;
+  padding: 24px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  overflow-y: scroll; }
+
+.offcanvas .close {
+  position: absolute;
+  top: 8px;
+  right: 8px; }
+
+.offcanvas-left {
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+.offcanvas-right {
+  left: auto;
+  right: 0; }
+
+.offcanvas-push-body {
+  position: relative; }
+
+.hide {
+  display: none; }
+
+/*# sourceMappingURL=kube-fubuizz.css.map */
