@@ -52,8 +52,6 @@ td {
     margin-left: 7px;
     color: #FFFFFF; }
   .quizrunde .fragenblock {
-    font-weight: lighter;
-    color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -84,8 +82,6 @@ td {
   .quizrunde #timer.start {
     max-width: 0; }
   .quizrunde .alle-antworten {
-    font-weight: lighter;
-    color: black;
     position: absolute;
     left: 0;
     right: 0;
@@ -93,6 +89,9 @@ td {
     list-style: none;
     padding: 0;
     margin: 0; }
+    #antworten.hidden {
+      display: none !important;
+    }
   .quizrunde .antwort {
     margin: 10px 15px;
     padding: 3px 20px;
@@ -100,7 +99,7 @@ td {
     background-color: rgba(248, 245, 228, 0.7);
     min-height: 30px; }
   .quizrunde .antwort:hover {
-    background-color: #f8f5e4; }
+     background-color: #f8f5e4; }
   @media only screen and (min-width: 439px) {
     .quizrunde .antwort {
       margin-top: 20px; }
@@ -120,6 +119,14 @@ td {
       height: 15%;
       font-size: 24px; }
     .quizrunde .fragen-counter {
-      font-size: 24px; } }
+      font-size: 24px; }
+    .quizrunde .falsch{
+      background-color: #CB0727 !important;
+    }
+    .quizrunde .richtig{
+      background-color: #0FDC00 !important;
+    }
+
+     }
 
 /*# sourceMappingURL=quizrunde.css.map */

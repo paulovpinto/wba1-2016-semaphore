@@ -42,11 +42,11 @@ function createEndscreen(punkte, antworten, quizIdx){
 
         }
         else{
+            
             i--;
-            }
+        }
     }
-
-
+    
     // Ball-Farben für die Antworten zuweisen
     for(var i=0; i< antworten.length; i++){
 
@@ -59,6 +59,8 @@ function createEndscreen(punkte, antworten, quizIdx){
             template = template.replace(ball_src,"../../assets/images/r_ball.png");
             */
     }
+    
+
 
     // Platz in Rangliste anzeigen
 
@@ -87,36 +89,49 @@ function createEndscreen(punkte, antworten, quizIdx){
     var ranking_done = false;
 
     // TODO Fehler finden und Vereinfachen!!!!
+    
+    //suche position in der Liste
+    
+    
     for (var i = 0; i < scoredata.length; i++){
 
         var temp = snippetranking.outerHTML;
 
         if(punkte >= scoredata[i].points){
             template = template.replace(/{{rang}}/, " " + scoredata[i].rankIdx);
-        /*    if(i < 5 && !ranking_done){
-                for(var j = 0; j<5; j++){
-                    temp = temp.replace(/{{rankIdx}}/, scoredata[]);
-                }
-
-                ranking_done = true;
-            }
-            else if(!ranking_done){
-
-                 for(var k = 0; k<5; k++){
-                    temp = temp.replace(/{{rankIdx}}/, scoredata[k].rankIdx);
-
-                     var item = document.createElement("tr");
-                     item.innerHTML = temp;
-                     htmlRankings += temp;
-
-                     ranking_done = true;
-                }
-
-            } */
-
+        	   
+            var position = i;
+            break;
         }
+        
     }
 
+    
+    
+    
+    console.log("breadcrump 3");
+    
+    
+    var rang_arr;
+    
+    //Ein array mit rang namen und idx für jeden spielstand erzeugen
+    //Array deklarieren und mit allen Spielständen füllen
+    
+    var superContainer = Array(20);
+    for( var i = 0; i < scoredata.length; i++ ){
+        superContainer[i] = [scoredata[i].points, scoredata[i].rankIdx, scoredata[i].player, schoeneresDatum(scoredata[i].date)];
+    }
+    
+    var neuerEintrag = [0, 24, "Ich", "Heute"];
+    
+    superContainer.push(neuerEintrag);
+    
+    //Falls der Rang größer ist als 5
+        //Dann schreibe von Rang - 5 bis Rang 
+    
+    //bubbleSort(superContainer);
+    superContainer.sort();  
+    
     //document.getElementById("ranking").innerHTML = htmlRankings;
 
     var item = document.createElement("div");

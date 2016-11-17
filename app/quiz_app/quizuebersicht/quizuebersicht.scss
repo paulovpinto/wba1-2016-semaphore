@@ -83,9 +83,30 @@
 			
 			.kacheln{
 				display: block;
+                
+                .quizkachel{
+                    
+                    .quizkachel-inner{
+                        
+                        .basicInfos{
+                            
+                            float: left;
+                            .quizbild{
+                                float: left;
+                                width: 113px;
+                                height: 70px;
+                            }
+                        }
+                    }
+                }
 			}
 
-		}   
+            
+		}  
+        .hidden{
+                display: none;
+        }
+        
 	}
          
 }
