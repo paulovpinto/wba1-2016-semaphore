@@ -21,47 +21,49 @@
 </head>
 <body>
     <header class="fubuizz-header">
-    	<div id="move">
-			<div class="menu">
-				<header class="burgerheader">
-					<a class="navia" href="https://www.google.de"><img class="avatar" src="../assets/images/Logo_Fubuizz.png"></a>
-                    <p class="navip">Nico Schnurbusch</p>
-				</header>
-				
-				<nav class="burgernav">
-					<ul>
-						<li><a class="navia" id="quizze"> Aktuelle Quizze</a></li>
-                        <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
-                        <li><a class="navia" id="highscore">Highscore</a></li>
-                        <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
-                        <li><a class="navia" id="kontakt" href="https://www.google.de">Kontakt</a></li>
-                        <li><a class="navia" id="einstellungen" href="https://www.google.de">Einstellungen</a></li>
-                    </ul>
-                    <button class="quizbeenden" id="beenden" type="button">Quiz beenden</button>
-                </nav>
-                
-            </div>
-            
-            <div class="container">
+      
+      <div class="container">
                 <header>
-                    <a  class="navia" href="Index.html"><img class="logo" src="../assets/images/Logo_Fubuizz.png" title="Startseite" alt="Fubuizz"></a>
-                    <img class="burgermenu" src="../assets/images/Logo_Fubuizz.png" onclick="myMove()">
+                        <a class="navia" href="index.html"><img class="logo" src="../assets/images/Logo_Fubuizz.png" title="Startseite" alt="Fubuizz"></a>
+                        <img class="burgermenu" src="../assets/images/Logo_Fubuizz.png" href="#" data-component="offcanvas" data-target="#offcanvas-right" data-direction="right">
                     <ul class="head">
                         <li><a class="navia" href="https://www.google.de">Registrieren</a></li>
                         <li><a class="navia" href="https://www.google.de">Login</a></li>
                     </ul>
                 </header>
                 <nav>
+                    
                     <ul class="navi">
-                        <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
-                        <li><a class="navia" id="highscore" >Highscore</a></li>
-                        <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
-                        <li><a class="navia" id="kontakt" href="https://www.google.de">Kontakt</a></li>
-                        <li><a class="navia" id="einstellungen" href="https://www.google.de">Einstellungen</a></li>
+                        <!--<button class="navibeenden" type="button">Quiz beenden</button>-->
+                            <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
+                            <li><a class="navia" id="highscore" >Highscore</a></li>
+                            <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
+                            <li><a class="navia" id="kontakt" >Kontakt</a></li>
+                            <li><a class="navia" id="einstellungen" >Einstellungen</a></li>
                     </ul>
                 </nav>
-            </div>
-        </div>
+                </div>
+                    <div id="offcanvas-right" class="hide" style="background-color: #000000;">
+                        <!--<a href="#" class="close"></a>-->
+                        <div class="burgerheader">
+                            <a class="navia" href="https://www.google.de"><img class="avatar" src="img/Avatar.png"></a>
+                            <p class="navip">Nico Schnurbusch</p>
+                        </div>
+                        <ul class="burgernav">
+                            <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
+                            <li><a class="navia" id="highscore" >Highscore</a></li>
+                            <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
+                            <li><a class="navia" id="kontakt" >Kontakt</a></li>
+                            <li><a class="navia" id="einstellungen" >Einstellungen</a></li>
+                        </ul>
+                                <!--<button class="quizbeenden" type="button">Quiz beenden</button>-->
+                    </div>
+                <div class="content-wrap" id="content">
+                    <!-- hier Inhalt einfügen -->
+                </div>
+  
+      
+      
     </header>
 
     <section id="content"></section>
