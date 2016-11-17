@@ -483,7 +483,7 @@ fieldset {
 
 #tag1 {
 	color: #fff;
-	background: #505050;
+	background: #CB0727;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -558,7 +558,14 @@ img{
     height:auto;
     max-width:100%;
 }
-
+#screens {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	background: #504F48;
+	padding: 60px 0;
+}
 
 
 
