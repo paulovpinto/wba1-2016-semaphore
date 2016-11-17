@@ -17,6 +17,7 @@ function initQuiz(quizIdx){
 
 	var jsonurl = jsonbasis + "/questions-" + quizIdx + ".json";
 	getQuizJson(jsonurl, function(){  startQuiz(quizIdx, this.responseText); });
+	
 
 }
 

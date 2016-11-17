@@ -56,7 +56,6 @@ html, body {
   background-color: #000000;
   height: 53px;
   font-size: 25px; }
-
 .fubuizz-header .navia {
   text-decoration: none;
   color: #FFFFFF; }
@@ -74,9 +73,13 @@ html, body {
   display: inline-block; }
 
 .fubuizz-header .container {
+<<<<<<< HEAD
   position: fixed;
   width: 100%;
 }
+=======
+  width: 100%; }
+>>>>>>> eb869d6ee457950c2ef6f569d4f9908c0bf5f177
 
 .fubuizz-header .navip {
   position: relative;
@@ -107,10 +110,9 @@ html, body {
 
 .fubuizz-header .navi > li {
   width: 161px;
-  padding: 0.67em 0em;
+  padding: 0.3em 0em;
   text-align: center;
-  border-left: 1px solid #504F48; 
-  font-size: 22px;}
+  border-left: 1px solid #504F48; }
 
 .fubuizz-header .navi > li:last-child {
   border-right: 1px solid #504F48; }
@@ -124,36 +126,31 @@ html, body {
   visibility: hidden; }
 
 .fubuizz-header .avatar {
+  float: left;
   left: 10px;
   width: 32px;
   height: 32px;
-  margin-top: 4px;
-  margin-left: 10px;
+  padding-top: 4px;
+  padding-left: 5px;
   z-index: 2; }
 
 .fubuizz-header .burgerheader {
-  width: 250px;
-  height: 37px; 
-  margin-top: -24px;
-  margin-left: -25px;
-  background-color: #504F48;}
+  width: 170px;
+  height: 37px; }
 
 .fubuizz-header .burgernav {
   width: 170px;
-  height: 550px; } 
+  height: 550px; }
 
 .fubuizz-header .burgernav > ul {
   margin-left: 0px;
   padding: 0px; } 
 
-.fubuizz-header .burgernav li{
+.fubuizz-header .burgernav > ul > li {
   display: block;
-  margin-left: -48px;
-  width: 250px;
-  padding: 0.7em 3em;
-  font-size: 16px;
-  border-bottom: 1px solid #504F48; 
-  color: #FFFFFF;}
+  padding: 10px 20px;
+  font-size: 17px;
+  border-bottom: 1px solid #504F48; }
 
 .fubuizz-header .quizbeenden {
   background-color: #CB0727;
@@ -165,6 +162,15 @@ html, body {
   font-size: 20px;
   position: relative;
   top: 260px; }
+
+.fubuizz-header .menu {
+  width: 170px;
+  position: relative;
+  float: right;
+  left: 170px; }
+
+#move {
+  position: relative; }
 
 @media only screen and (max-width: 1024px) {
   
@@ -180,9 +186,9 @@ html, body {
   .fubuizz-header nav {
     visibility: hidden; }
 
-/*  .fubuizz-header .burgernav {
+  .fubuizz-header .burgernav {
     visibility: visible; }
-*/
+
   .fubuizz-header .logo {
     left: 20px;
     height: 38px;
@@ -191,7 +197,6 @@ html, body {
 
   .fubuizz-header .burgermenu {
     visibility: visible; } }
-
 @media only screen and (max-width: 800px) {
 
   .fubuizz-header p {
@@ -205,7 +210,9 @@ html, body {
 
   .fubuizz-header .avatar {
     width: 28px;
-    height: 28px;}
+    height: 28px;
+    padding-top: 6px;
+    padding-left: 5px; }
 
   .fubuizz-header .burgerheader {
     height: 37px; }
