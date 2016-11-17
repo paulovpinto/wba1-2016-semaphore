@@ -1,7 +1,5 @@
 /****************************
-Dieses Script Läd die startscreen.html Datei und 
-schreibt sie in das Dokument. Dabei wird der Name, Id, Datum, 
-Beschreibung, Author, des ausgewählten Quiz übergeben.
+Dieses Script erzeugt dynmaisch die startscreen Seite
 
 *****************************/
 
@@ -23,12 +21,22 @@ function createStartscreen(quizId){
     console.log(quizze);
     console.log(quiz);
 
+	// Wir brauchen geteilten Text zum Ausklappen
+	var description_text = quiz.description.split(/ /);
+	var words = description_text.length;
+	var anzahl_worte_desc1 = 6;
+	var trim = (words < anzahl_worte_desc1)? words : anzahl_worte_desc1;
+	var description1 = description_text.slice(0, trim).join(" ");
+	var description2 = description_text.slice(trim, words).join(" ");
+
 	template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
     template = template.replace(/{{date}}/, schoeneresDatum(quiz.date));
     template = template.replace(/{{counter}}/, quiz.counter);
     template = template.replace(/{{image}}/, quiz.image);
     template = template.replace(/{{description}}/, quiz.description);
+    template = template.replace(/{{description1}}/, description1);
+    template = template.replace(/{{description2}}/, description2);    
 
 	var item = document.createElement("div");
 	item.innerHTML = template;
@@ -52,10 +60,6 @@ function createStartscreen(quizId){
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
-<<<<<<< HEAD
-    console.log(document);
-=======
->>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 	//Snippet des gesamten Startscreens speichern
 	var snippetstart = document.getElementById("start");
 	//Snippet der Ranking-Liste speichern

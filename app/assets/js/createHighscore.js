@@ -1,7 +1,5 @@
 /*******************************************************
-Dieses Script läd ein highscore Json und das dazugehörige 
-HTML Snippet. Anschließend wird der inhalt der Json 
-in das Snippet geschrieben und in das Dokument geschrieben.
+Dieses Script erzeugt dynamisch die Highscore Seite.
 
 ********************************************************/
 
@@ -16,7 +14,6 @@ function createHighscore(){
 	var sheeturl = urls["highscore"].replace(/\.html/, ".css");
 	document.getElementById('css-for-view').setAttribute('href', sheeturl);
     
-<<<<<<< HEAD
 
 	
 	var template = templates["highscore"];
@@ -28,12 +25,7 @@ function createHighscore(){
     console.log(document.getElementById("h_ranking"));
     console.log(document.getElementById("h_listhead"));
     
-=======
-	
-	var template = templates["highscore"];
-    
 
->>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 
     var quizze = jsondata["quizubersicht"];
 
@@ -62,15 +54,6 @@ function createHighscore(){
     var item = document.createElement("div");
     item.innerHTML = template;
     
-    
-<<<<<<< HEAD
-    
-    
-    document.getElementById("content").replaceChild(item, document.getElementById("content").firstChild);
-    
-    
-    
-=======
     document.getElementById("content").replaceChild(item, document.getElementById("content").firstChild);
     
     
@@ -91,7 +74,7 @@ function createHighscore(){
 
         //"reinen" Text des Rankings speichern
         var temp = h_ranking.outerHTML;
->>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
+
 
 		console.log(schoeneresDatum(scoredata[i].date));
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);

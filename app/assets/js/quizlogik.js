@@ -1,6 +1,6 @@
 
 var delayQ=0; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
-var delayA=0; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
+var delayA=2000; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
 
 var punkte=0;  //aktuelle Punktzahl
 
@@ -18,6 +18,16 @@ var quizLogik = {}; // Quizdaten
 quizLogik.data = {};
 quizLogik.quiz = {};
 
+
+// Zeit für den Timer im View
+var zeit = i;
+
+function updateTimer(){
+	//i--;
+	document.getElementById("timer-js").style.width = (i * 10) + "%";
+	if(zeit <= 0){ clearInterval(timer); }
+
+}
 
 function antwortPruefen(ele, answer){
 //	var $ele = $(ele);
@@ -60,6 +70,10 @@ function count( ){
     //  document.getElementById("text").innerHTML = i;
   console.log("Zeit: "+i);
   console.log(quizLogik.quiz);
+
+  // Ändert den Timer im View
+  updateTimer();
+
   if(i===0){
           aktuelleFrage++;
           clearInterval(timer);
@@ -69,7 +83,8 @@ function count( ){
           }
           else{
               clearInterval(timer);
-              $("#question").html("Quizrunde ist vorbei" + test++ );
+              $("#question").html("Quizrunde ist vorbei" );
+              setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
       }
 
@@ -88,6 +103,9 @@ function neueFrage( data, aktuelleFrage){
   $("#antwort2").html(" ");    //$ signalisiert das jQuery Objekt, # ersetzt getElementbyId, .html signalisiert html Objekt(Inhalt)
   $("#antwort3").html(" ");
   $("#antwort4").html(" ");
+	i=10;
+	updateTimer();
+
   setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
@@ -98,24 +116,27 @@ function neueFrage( data, aktuelleFrage){
   $("#antwort4").html(data.options[3].option);
 
   clearInterval(timer);
-  i=10;
+//  i=10;
+//	updateTimer();
   timer = setInterval("count()", 1000);
 
-      $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
+  $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
     }, delayA);
   }
 
-  function buttonKlick(quizIdx){
-  $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
-  //	var cButton = e.target;
-  if(i===0){
+
+
+function buttonKlick(quizIdx){
+    $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
+    //	var cButton = e.target;
+    if(i===0){
 
 
 
-  }else
-  {
-  clearInterval(timer);
-  antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
+    }else
+      {
+      clearInterval(timer);
+      antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
           aktuelleFrage++;
           console.log("aktuelle Frage: "+ aktuelleFrage);
 
@@ -131,10 +152,10 @@ function neueFrage( data, aktuelleFrage){
               for(k=0; k<10;k++){
               console.log(antworten[k]);
             }
-              createEndscreen(punkte, antworten, quizIdx);
+              setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
 
-    }
+        }
   });
 }
 /*
@@ -159,4 +180,3 @@ function ballfüllen(){
   } */
 
 //}
-

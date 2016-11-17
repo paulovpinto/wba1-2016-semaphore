@@ -2,14 +2,13 @@
 /***************************************************
 Damit das Laden der HTML Templates und der Json Dateien
 Zeitlich mit dem verarbeiten dieser Daten getrennt 
-werden kann übernimmt der Preloader einmalig diese Aufgabe.
+werden kann übernimmt der Preloader einmalig zum Start der Seite diese Aufgabe.
 
 Es werden zuerst alle HTML Templates als String 
 in der dem Array Templates gespeichert.
 Anschließend werden die Json dateien geladen und
-verarbeitet (JSON.parese()). 
+verarbeitet (JSON.parse()). 
 Die verarbeiteten Json Daten werden in jsondata gespeichert. 
-
 
 Wenn alles geladen wurde wird ein Callback ausgelöst,
 der die Startseite läd.
@@ -31,7 +30,6 @@ var server = "";//"http://wba1-semaphore.christiannoss.de/app";
 if(location.href.match(/wba1-semaphore.christiannoss.de/)){
 	server = "http://wba1-semaphore.christiannoss.de/app";
 }
-
 
 // Basispfad fur die Jsons
 var jsonbasis = server + "/data";

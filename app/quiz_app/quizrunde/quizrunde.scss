@@ -117,4 +117,119 @@ Abstände zwischen den Fragen*/
     .quizrunde .fragen-counter{
         font-size: 24px;
     }
+/* GGf mal CSS Präprozessoren checken. */
+
+
+.quizrunde{
+
+	/*Anzeige fragen-counte r*/
+	.fragen-counter {
+	  width: 100px;
+	  margin-top: 1px;
+	  margin-left: 7px;
+	  color: #FFFFFF;
+	}
+
+	/*Formatierung Frage und Hintergrund der Frage*/
+	.fragenblock{
+    font-weight:lighter;
+    position:absolute;
+	  left: 0;
+	  right: 0;
+	  top: 20;
+	  margin-left: 15px;
+	  margin-right: 15px;
+	  background-color:rgba(248,245,228,0.6);
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  padding-top: 3px;
+	  padding-bottom: 3px;
+
+	}
+	#timer{
+				height: 20px;
+	            margin-top: 83;
+	            margin-left: 15px;
+	            margin-right: 15px;
+				max-width: 100%;
+				transition: max-width 5s;
+				 background: red;
+			}
+
+
+	#timer-js{
+				height: 20px;
+
+	            margin-left: 15px;
+	            margin-right: 15px;
+				max-width: 100%;
+	            background: red; /* For browsers that do not support gradients */
+
+				transition: max-width 30s;
+			}
+
+			#timer.start{
+				max-width: 0;
+			}
+
+	/*Allgemeine Formatierung der Antworten,
+	hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
+	.alle-antworten{
+    font-weight:lighter;
+    position:absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  list-style:none;
+	  padding: 0;
+	  margin: 0;
+	}
+
+	/*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
+	Abstände zwischen den Fragen*/
+
+
+	.antwort{
+	  margin: 10px 15px;
+	  padding:3px 20px;
+	  cursor: pointer;
+	  background-color:rgba(248,245,228,0.7);
+    min-height:30px;
+	}
+	.antwort:hover{
+	  background-color:rgba(248,245,228,1);
+	}
+
+	@media only screen and (min-width: 439px) {
+
+	    .antwort{
+	        margin-top:20px;
+	    }
+	    .fragenblock{
+	        height: 10%;
+	        font-size: 24px;
+	    }
+	    .alle-antworten{
+	        margin-top:-20px;
+	        font-size: 24px;
+	    }
+
+	    .fragen-counter{
+	        font-size: 24px;
+	    }
+	    }
+
+	@media only screen and (min-width: 1024px) {
+	    .antwort{
+	        margin-top:40px;
+	        font-size:24px;
+	    }
+	    .fragenblock{
+	        height:15%;
+	        font-size: 24px;
+	    }
+	    .fragen-counter{
+	        font-size: 24px;
+	    }
+	}
 }

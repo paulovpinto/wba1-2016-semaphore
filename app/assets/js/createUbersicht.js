@@ -1,7 +1,5 @@
 /***************************************************
-Hier wird der HTML Code dynamisch erzeugt und mit 
-den Json Daten befüllt. Dieser Code wird dann
-in das Dokument geschrieben.
+Dieses Script erzeugt dynamisch die übersicht Seite
 
 ****************************************************/
 
@@ -23,7 +21,7 @@ function createQuizOverview(){
 	target.innerHTML = templates["quizOverview"];
     
     // Kachel holen
-    var snippet = document.getElementsByClassName("Quizkachel")[0];
+    var snippet = document.getElementsByClassName("quizkachel")[0];
 
 	
     // JSON verarbeiten
@@ -51,5 +49,5 @@ function createQuizOverview(){
 	}
 	
 	// Kacheltemplate loeschen
-	document.getElementById("snippetQuiz").removeChild(document.getElementsByClassName("Quizkachel")[0]);
+	document.getElementById("snippetQuiz").removeChild(document.getElementsByClassName("quizkachel")[0]);
 }
