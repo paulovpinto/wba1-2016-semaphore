@@ -12,7 +12,8 @@
         	<p>erstellt von {{author}} am {{date}}</p>
     	</div>
 		<div class="teasertext">
-			<p class="Beschreibung">{{description}}</p> 
+			<p class="Beschreibung_kurz">{{description1}}</p>
+            <p class="Beschreibung_lang">{{description2}}</p>
 			<!--<div class="toggleBox">      
     				<input name="toggleContent" id="toggleContent" type="checkbox">
     				<label for="toggleContent" class="open">aufklappen</label>
@@ -48,12 +49,13 @@
 </div>
     <script type="text/javascript">
     $(document).ready(function(){
-       $('.teasertext .Beschreibung').addClass("hidden");
+       $('.teasertext .Beschreibung_lang').addClass("hidden");
+        console.log("javascript eingebunden")
 
         $('.teasertext').click(function() {
             var $this = $(this);
 
-            var $beschreibung = $this.find(".Beschreibung");
+            var $beschreibung = $this.find(".Beschreibung_lang");
             
             console.log($beschreibung);
             $beschreibung.toggleClass("hidden");
