@@ -14,7 +14,6 @@
 
 	/*Formatierung Frage und Hintergrund der Frage*/
 	.fragenblock{
-    font-family: $base-font-family;
     position:absolute;
 	  left: 0;
 	  right: 0;
@@ -75,7 +74,7 @@
 	  padding:3px 20px;
 	  cursor: pointer;
 	  background-color:rgba(248,245,228,0.7);
-    min-height:
+    min-height:30px;
 	}
 	.antwort:hover{
 	  background-color:rgba(248,245,228,1);
