@@ -28,13 +28,13 @@ body{
     font-size: 24px;
     text-align: center;
     color:black;
-    width: 800px;
+    width: calc(100%-30px);
     height: 50px;
-    display: inline-block;
     background-color: white;
     margin-left: 15px;
+    margin-right: 15px;
     line-height: 50px;
-    font-family: Oswald;
+    font-family: 'OswaldRegular';
 }
 
 .erneut {
@@ -44,7 +44,7 @@ body{
     border:none;
     text-align: center;
     text-decoration:none;
-    width: 345px;
+    width: calc(100% - 30px);
     height: 50px;
     line-height: 50px;
     display: inline-block;
@@ -58,7 +58,6 @@ body{
 .fussbaelle img{
     height: 15px;
     width: 15px;
-    padding: 8px;
 }
 
 .ballFalsch img{
@@ -66,8 +65,14 @@ body{
 }
 
 .fussbaelle {
-    //width: 345px;
-    width: (100%-15px);
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.fussbaelle table {
+    width: calc(100% - 30px);
+    text-align: center;
 }
 
 .punkte {
@@ -75,12 +80,12 @@ body{
     color: black;
     font-size: 20px;
     text-align:center;
-    width: 345px;
+    width: calc(100% - 30px);
     height: 50px;
     line-height: 50px;
     display: inline-block;
     margin-top: 3px;
-    font-family: Oswald;
+    font-family: 'OswaldRegular';
 }
  
 .suggestions {
@@ -88,9 +93,9 @@ body{
     color: black;
     font-size: 20px;
     text-align:center;
-    width: 345px;
+    width: calc(100% - 30px);
     height: 50px;
-    font-family: Oswald;
+    font-family: 'OswaldRegular';
     line-height: 50px;
     display: inline-block;
     font-style: normal;
@@ -98,21 +103,25 @@ body{
 }
 
 .suggestions img{
-    width: 113px;
+    width: 100%;
     height: 70px;
-    margin-top: 21px;
 }
 
 .suggestions .sugg {
     float: left; 
-    margin-right: 2px;
+    margin-right: 10px;
+    width: calc((100% - 20px)/3);
+    margin-top: 21px;
+}
+
+.suggestions .sugg:last-child {
+    margin-right:  0px;
 }
 
 .suggestions .sugg div {
     position:relative;
     top: -36px;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 113px;
     height: 20px;
     line-height: 20px;
     font-family: 'Noto-Sans';
@@ -122,19 +131,22 @@ body{
 .linke-seite {
     float: left;
     padding: 50px;
-    padding-right: 50px;
+    padding-right: 5px;
+    width: calc(50% - 55px);
 }
 
 .rechte-seite {
     float: left;
     padding: 50px;
     padding-left: 5px;
+    width: calc(50% - 55px);
 }
 
 .quizbild img {
-    width: 345px;
-    height: 214px;
-    margin-top: -5px;
+    margin-top: 5px;
+    width: calc(100% - 30px);
+    max-height: 275px;
+    object-fit: cover;
 }
 
 .rank img {
@@ -144,21 +156,20 @@ body{
 
 
 .highscore table{
-    //width: 345px;
-    width: 100%;
+    width: calc(100% - 30px);
     margin-top: -9px;
-    border-spacing: 0px 5px;
+    border-spacing: 0px 14px;
 }
 
 .highscore table th {
     background-color: rgba(233,194,12,1);
     text-align: left;
     text-width: none;
-    font-family: Oswald;
+    font-family: 'OswaldRegular';
 }
 .highscore table td {
     background-color: rgba(255, 255, 255, 0.5);  
-    font-family: Oswald;
+    font-family: 'OswaldRegular';
 }
 
 .highscore tr:last-child {
@@ -173,7 +184,7 @@ body{
 
 
 
-@media only screen and (max-device-width: 439px)
+@media only screen and (max-width: 439px)
 {
     body{
         background-image: url(../images/background.jpg);
@@ -186,13 +197,15 @@ body{
         position: absolute;
         transform: translate(11px);
         margin-top: 6em;
-        margin-bottom: 0%;   
+        margin-bottom: 0%; 
+        display: inline-block;
     }
     
     h1{
         margin-top: 0.25em;
         font-family: 'OswaldRegular';
-        font-size: 1em;
+        font-size: 100%;
+        line-height: 100%;
     }
     
     .quizbild img{
