@@ -91,6 +91,7 @@ html, body {
   font-size: 15px; }
 
 .fubuizz-header .head {
+  margin-top: 5px;
   float: right;
   z-index: 1; }
 
@@ -100,7 +101,7 @@ html, body {
 
 .fubuizz-header .logo {
   position: absolute;
-  margin-top: 0px;
+  margin-top: 5px;
   height: 43px;
   left: 33px; }
 
