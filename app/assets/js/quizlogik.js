@@ -107,7 +107,7 @@ function neueFrage( data, aktuelleFrage){
 	$("#antworten").addClass("hidden");
 
   $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
-	
+
 	i=10;
 	updateTimer();
 
