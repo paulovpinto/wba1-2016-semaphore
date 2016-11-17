@@ -2109,7 +2109,7 @@ button:hover .menu-icon {
   opacity: .6; }
 
 .offcanvas {
-  background: #fff;
+  background: #000000;
   position: fixed;
   padding: 24px;
   height: 100%;
@@ -2129,7 +2129,7 @@ button:hover .menu-icon {
 .offcanvas-right {
   left: auto;
   right: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.1); }
+  //border-left: 1px solid rgba(0, 0, 0, 0.1); }
 
 .offcanvas-push-body {
   position: relative; }

@@ -21,20 +21,32 @@ function createStartscreen(quizId){
     console.log(quizze);
     console.log(quiz);
 
-	template = template.replace(/{{name}}/, quiz.name);
+	// Wir brauchen geteilten Text zum Ausklappen
+	var description_text = quiz.description.split(/ /);
+	var words = description_text.length;
+	var anzahl_worte_desc1 = 6;
+	var trim = (words < anzahl_worte_desc1)? words : anzahl_worte_desc1;
+	var description1 = description_text.slice(0, trim).join(" ");
+	var description2 = description_text.slice(trim, words).join(" ");
+
+	/*template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
     template = template.replace(/{{date}}/, schoeneresDatum(quiz.date));
     template = template.replace(/{{counter}}/, quiz.counter);
     template = template.replace(/{{image}}/, quiz.image);
     template = template.replace(/{{description}}/, quiz.description);
+    template = template.replace(/{{description1}}/, description1);
+    template = template.replace(/{{description2}}/, description2);    */
 
 	var item = document.createElement("div");
 	item.innerHTML = template;
 	item.firstChild.id = quizId;
 
 	// HTML in Wrap einfügen
-	document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
+	//document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
 	
+	document.getElementById("content").innerHTML = template;
+
 	/*	document.getElementById("playButton").onclick = function(){
 		initQuiz(quiz.quizIdx);
 	}  */
@@ -70,8 +82,8 @@ function createStartscreen(quizId){
 	template = template.replace(/{{name}}/, info.name);
 	template = template.replace(/{{date}}/, schoeneresDatum(info.date));
 	template = template.replace(/{{image}}/, info.image);
-	template = template.replace(/{{description}}/, info.description);
-	template = template.replace(/{{description}}/, info.description);
+	template = template.replace(/{{description1}}/, description1);
+	template = template.replace(/{{description2}}/, description2);
 
 	//"reinen" Text des Listen Headers speichern
 	var htmlRankings = listhead.outerHTML;
@@ -100,9 +112,25 @@ function createStartscreen(quizId){
     document.getElementById("ranking").innerHTML = htmlRankings;
 	  // return this.responseText;
 
-    		document.getElementById("playButton").onclick = function(){
+	document.getElementById("playButton").onclick = function(){
 		initQuiz(quiz.quizIdx);
 	}
+	
+	// Desc Text Funktionen
+
+    $('.teasertext .Beschreibung_lang').addClass("hidden");
+	console.log("javascript eingebunden")
+
+    $('.teasertext').click(function() {
+        var $this = $(this);
+
+        var $beschreibung = $this.find(".Beschreibung_lang");
+        
+        console.log($beschreibung);
+        $beschreibung.toggleClass("hidden");
+        
+    });
+
 }
 
 

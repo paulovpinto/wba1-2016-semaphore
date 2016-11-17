@@ -124,7 +124,14 @@ td {
   #start td {
     background: rgba(248, 245, 228, 0.7); }
 
-<<<<<<< HEAD
+.hidden {
+  display: none; }
+
+.visible {
+  height: 200px;
+  display: block;
+  z-index: 1; }
+
 .toggleBox {
   position: relative;
   padding-top: 0px;
@@ -160,10 +167,7 @@ td {
 .toggleBox input:checked ~ .open {
   display: none; }
 
-/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
-=======
 /* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
->>>>>>> aa35831e95114e558e5d9671cea1730b02a77285
 @media only screen and (max-width: 1024px) {
   .startscreen {
     width: 100%;

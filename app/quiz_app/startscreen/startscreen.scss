@@ -5,6 +5,7 @@
 	width: 1000px;
 	box-sizing: border-box;
 
+    
 	.boxbox{
 	    box-sizing: border-box;
 	    width: 100%;
@@ -114,6 +115,16 @@
 	}
 	
 }
+
+ .hidden {
+        display:none;
+    }
+
+    .visible {
+        height: 200px;
+        display: block;
+        z-index: 1;
+    }
 
 .toggleBox {
     position: relative;

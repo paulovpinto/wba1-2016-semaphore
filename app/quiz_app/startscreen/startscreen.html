@@ -12,18 +12,20 @@
         	<p>erstellt von {{author}} am {{date}}</p>
     	</div>
 		<div class="teasertext">
-			<p>{{description}}</p> 
-			<div class="toggleBox">      
+			<p class="Beschreibung_kurz">{{description1}}</p>
+            <p class="Beschreibung_lang">{{description2}}</p>
+            <img class="moreButton" src="../../assets/images/expand_more.png">
+			<!--<div class="toggleBox">      
     				<input name="toggleContent" id="toggleContent" type="checkbox">
     				<label for="toggleContent" class="open">aufklappen</label>
     				<div>
 			        <p class="teasertext2">{{description}}</p> 
 			    </div>
 				<label for="toggleContent" class="close">zuklappen</label>
-			</div>        
+			</div> -->       
 		</div>
 		<div class="buttons"> 
-    		<button class="button is-primary" href="quiz.html">Spielen</button>
+    		<button class="button is-primary" id="playButton" href="quiz.html">Spielen</button>
 			<button class="btn1 button is-primary" href="">Highscore</button>
 		</div>
 	</div>
@@ -46,6 +48,7 @@
 	</table>
 	</div>
 </div>
+
 
 
 
