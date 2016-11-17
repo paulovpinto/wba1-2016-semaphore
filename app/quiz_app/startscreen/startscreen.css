@@ -167,7 +167,7 @@ td {
 .toggleBox input:checked ~ .open {
   display: none; }
 
-/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   .startscreen {
     width: 100%;
