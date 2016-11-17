@@ -40,37 +40,80 @@ td {
 
 .quizuebersicht {
   /* Sortierliste wurde angepasst, muss aber noch bearbeitet werden */
-  /* wurde größengerecht angepasst */
-  /* NEU Klasse "Quizbild" wurde eingefügt und größengerecht angepasst */
-  /* wurde an Desktopversion angepasst und ist in einer Reihe, anstatt in 2 Reihen*/
-  /* NEU Klasse "Beschreibung" wurde eingefügt: 3 Zeilen pro Beschreibung */
-  /* Schriftgröße wurde verändert */
-  /* NEU Button "Auswahl" wurde eingefügt, farblich gemacht und angepasst */
-  /*.button{
-      padding-bottom: 8pt;
-      margin: 0em;
-      height: 25pt;
+  /* wurde gr├Â├ƒengerecht angepasst */
+  /*.Quizkachel:nth-child(5n) {
+  	margin-right: 0;
   }*/
+  /* NEU Klasse "Quizbild" wurde eingef├╝gt und gr├Â├ƒengerecht angepasst */
+  /* wurde an Desktopversion angepasst und ist in einer Reihe, anstatt in 2 Reihen*/
+  /* NEU Klasse "Beschreibung" wurde eingef├╝gt: 3 Zeilen pro Beschreibung */
+  /* Schriftgr├Â├ƒe wurde ver├ñndert */
+  /* NEU Button "Auswahl" wurde eingef├╝gt, farblich gemacht und angepasst */
+  /********************************************************************************
+  *                                                                               *
+  *                               TABLET-ANSICHT                                  *
+  *                                                                               *
+  *********************************************************************************/
   /********************************************************************************
   *                                                                               *
   *                               MOBILE-ANSICHT                                  *
   *                                                                               *
   *********************************************************************************/
   /**DIE QUIZKACHEL IST ZU BREIT! BZW DAS PADDING/MARGIN GREIFT NICHT**/ }
-  .quizuebersicht .uebersicht {
-    width: 900pt;
+  .quizuebersicht body {
+    background-image: url(/Pfad);
+    font-size: 100%;
+    margin: 0em;
+    padding: 0em; }
+  .quizuebersicht .content {
     margin: 0 auto;
-    margin-top: 55px; }
+    /*margin-left: 113pt;
+    margin-right: 112pt;
+    width: calc(100% - 25px);*/
+    width: 1000px;
+    background-color: purple; }
+  .quizuebersicht .content::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both; }
+  .quizuebersicht .kacheln {
+    display: flex; }
+  .quizuebersicht .clearfix {
+    clear: both; }
+  .quizuebersicht .Sortierliste {
+    background-color: #e9c20c;
+    height: 27pt;
+    /*width: calc(100% - 270px);*/
+    margin-top: 20px;
+    margin-bottom: 13pt;
+    font-family: Oswald; }
+  .quizuebersicht .sortiercontent {
+    width: 100%;
+    font-size: 16.1pt;
+    line-height: 24.3pt;
+    text-align: center;
+    padding: 0em; }
+  .quizuebersicht .sortiercontent li {
+    display: inline-block;
+    width: 25%; }
+  .quizuebersicht .sortiercontent a {
+    text-align: center; }
+  .quizuebersicht .Sortierliste a {
+    text-decoration: none;
+    color: black; }
   .quizuebersicht .Quizkachel {
-    display: table;
-    float: left;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    display: block;
+    /*float: left; */
     padding: 0;
     margin-right: 15pt;
     margin-bottom: 29.5pt;
-    background-color: rgba(248, 245, 228, 0.9);
-    font-family: "Oswald", sans-serif;
+    background-color: #f8f5e4;
+    font-family: Oswald, sans-serif;
     font-style: normal;
-    width: 172.5pt;
+    width: 25%;
     height: 232pt; }
   .quizuebersicht .Quizbild {
     display: block;
@@ -78,7 +121,6 @@ td {
     width: 172.5pt;
     height: 107pt; }
   .quizuebersicht .Quizkachel h3 {
-    color: black;
     font-family: Oswald;
     margin: auto;
     font-size: 12pt;
@@ -107,8 +149,6 @@ td {
     color: #2F2D2C;
     background-color: rgba(248, 245, 228, 0.7); }
   .quizuebersicht .Beschreibung {
-    font-size: 10px;
-    color: black;
     text-align: left;
     font-weight: lighter;
     background-color: #f8f5e4;
@@ -126,6 +166,10 @@ td {
     margin: 0em;
     height: 16pt;
     padding-right: 7.5pt; }
+  .quizuebersicht .button {
+    padding-bottom: 8pt;
+    margin: 0em;
+    height: 25pt; }
   .quizuebersicht .Auswahl {
     background-color: #CB0727;
     width: 100%;
@@ -136,73 +180,210 @@ td {
     text-decoration: none;
     height: 25pt;
     font-size: 12pt;
-    margin-top: 10pt;
     margin-bottom: 7.5pt;
     padding-top: 3.5pt; }
+  @media screen and (max-width: 1024px) {
+    .quizuebersicht .content Sortierliste {
+      margin: 0;
+      padding: 0; }
+    .quizuebersicht .Sortierliste {
+      width: calc(172.5pt * 3 + 30px); }
+    .quizuebersicht body {
+      background-image: url(image/8-324_fussballstadion.jpg);
+      background-color: darkgray;
+      /**ENTFERNEN!!**/
+      font-size: 100%;
+      margin: 0em;
+      padding: 0em; }
+    .quizuebersicht .Auswahl {
+      background-color: transparent;
+      padding: 0;
+      position: relative;
+      margin-top: -10pt; }
+    .quizuebersicht .content {
+      width: 100%;
+      margin-left: calc((100% - (172.5pt * 3) - 30px) / 2);
+      margin-right: calc((100% - (172.5pt * 3) - 30px) / 2); }
+    .quizuebersicht .inhalt {
+      position: absolute;
+      bottom: 40px;
+      width: 100%; }
+    .quizuebersicht h1 {
+      font-size: 1em;
+      line-height: 2.5em;
+      font-family: Helvetica;
+      font-weight: 100;
+      color: #2F2D2C;
+      margin: -0.6em; }
+    .quizuebersicht .Quizbild {
+      display: block;
+      margin: auto;
+      width: 100%;
+      height: 107pt; }
+    .quizuebersicht p {
+      line-height: 0.75em;
+      font-family: Helvetica;
+      font-weight: 100;
+      color: #2F2D2C; }
+    .quizuebersicht .Quizkachel {
+      float: left;
+      display: inline-block;
+      background: beige;
+      width: 172.5pt;
+      height: 353.31px;
+      /**width: calc((100% - 120px - 30px)/3);
+      min-width: 150px;
+      min-height: 34.502%;**/
+      margin: 0;
+      margin-right: 15px;
+      position: relative;
+      text-align: center; }
+    .quizuebersicht .button {
+      background-color: #CB0727;
+      border: none;
+      color: white;
+      padding: 0px 0px 10px 0px;
+      text-align: center;
+      text-decoration: none;
+      font-family: Oswald;
+      font-size: 20px;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      bottom: 0px; }
+    .quizuebersicht .Erstellinfos {
+      font-family: Oswald;
+      font-weight: 100;
+      color: #2F2D2C;
+      text-align: left;
+      background: beige;
+      display: block;
+      line-height: 20px;
+      height: 15px;
+      margin: 5px 10px 0 0; }
+    .quizuebersicht .AnzGespielt {
+      font-size: 10pt;
+      text-align: right;
+      font-weight: lighter;
+      background-color: #f8f5e4;
+      margin: 0;
+      padding: 0 5px 0 0;
+      width: calc(100%-5px);
+      height: 16pt;
+      float: right; }
+    .quizuebersicht .Beschreibung {
+      text-align: left;
+      font-weight: lighter;
+      background-color: #f8f5e4;
+      height: 30pt;
+      margin-left: 10px;
+      padding-left: 0; }
+    .quizuebersicht #img {
+      background-color: burlywood;
+      /**ENTFERNEN!!**/
+      margin-left: -10px;
+      width: 250px;
+      height: 50px; } }
   @media only screen and (max-width: 439px) {
     .quizuebersicht html, .quizuebersicht body {
-      padding: 0;
-      margin: 0; }
-    .quizuebersicht .uebersicht {
+      padding: initial;
+      margin: initial;
+      background-image: url(img/Background_Desktop.jpg); }
+    .quizuebersicht .content {
       padding: 0;
       margin: 0;
       width: 100%; }
-    .quizuebersicht .Quizbild {
-      width: 113px;
-      height: 70px;
-      float: left;
-      z-index: 1; }
-    .quizuebersicht #Sortierliste, .quizuebersicht .Quizkachel, .quizuebersicht .Erstellinfos {
-      margin: 5px 15px; }
+    .quizuebersicht .Quizkachel, .quizuebersicht .Quizkachel * {
+      width: auto;
+      height: initial; }
     .quizuebersicht .Quizkachel {
-      height: 70px;
-      display: inline-block;
-      width: 100%;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      width: initial;
+      height: initial;
+      float: initial;
       position: relative;
-      padding: 0; }
+      padding: 0;
+      background-color: lightgrey;
+      margin-top: 5px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 5px; }
+    .quizuebersicht .Quizbild {
+      margin: initial;
+      padding: initial;
+      width: initial;
+      height: auto;
+      float: left;
+      margin-right: 10px; }
+    .quizuebersicht .Quizkachel h3 {
+      margin-left: 113px;
+      margin-bottom: -29px; }
     .quizuebersicht .inhalt {
-      width: calc(100% - 113px);
-      height: 70px;
+      padding: initial;
+      margin: initial;
+      width: initial;
+      height: initial;
       float: left;
       position: relative;
-      align-content: center;
-      font-family: Oswald, sans-serif;
-      font-style: normal;
-      padding: 0; }
-    .quizuebersicht .Quizkachel h3 {
-      padding: 0;
-      font-size: 13px;
-      line-height: 20px;
-      margin-bottom: 0;
-      margin-top: 0;
-      position: absolute;
-      margin-left: 113px;
-      z-index: 1;
-      width: calc(100% - 113px);
-      background-color: white; }
+      bottom: initial;
+      text-align: left;
+      font-size: 13px; }
     .quizuebersicht .Erstellinfos {
-      padding: 0;
-      font-size: 10px;
-      font-style: normal;
-      position: absolute;
-      margin: 5px;
-      margin-left: calc(113px + 10px);
-      margin-top: 25px;
-      z-index: 1; }
-    .quizuebersicht .AnzGespielt {
-      padding: 0;
-      font-size: 8px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-right: 25px;
-      z-index: 1;
-      text-decoration: none; }
-    .quizuebersicht .Beschreibung {
-      display: none; }
+      padding: 2px 0 0 0;
+      margin: 0 10px 0 0;
+      width: initial;
+      height: initial;
+      background-color: initial;
+      text-decoration: none;
+      float: left;
+      margin-top: 29px;
+      font-size: 13px;
+      line-height: 17px; }
     .quizuebersicht .button {
-      display: none; } }
+      display: none; }
+    .quizuebersicht .AnzGespielt {
+      padding: initial;
+      margin: initial;
+      width: initial;
+      height: initial;
+      text-align: right;
+      background-color: initial;
+      font-size: 8px; }
+    .quizuebersicht .Beschreibung {
+      width: initial;
+      height: initial;
+      padding: 0;
+      margin: 10px;
+      background-color: initial;
+      line-height: 15px;
+      font-family: Oswald;
+      color: #2F2D2C; }
+    .quizuebersicht .basicInfos {
+      position: relative; }
+    .quizuebersicht .datum, .quizuebersicht .AnzGespielt {
+      position: absolute;
+      bottom: 0; }
+    .quizuebersicht .datum {
+      left: 0;
+      padding: 2px 0 0 0;
+      margin: 0 10px 0 0;
+      width: initial;
+      height: initial;
+      background-color: initial;
+      text-decoration: none;
+      float: left;
+      margin-top: 29px;
+      font-size: 13px;
+      line-height: 17px; }
+    .quizuebersicht .AnzGespielt {
+      right: 0; }
+    .quizuebersicht .desktop, .quizuebersicht .tablet {
+      display: none; }
+    .quizuebersicht .hidden {
+      display: none; }
+    .quizuebersicht .visible {
+      height: 200px;
+      display: block;
+      z-index: 1; } }
 
 /*# sourceMappingURL=quizuebersicht.css.map */
