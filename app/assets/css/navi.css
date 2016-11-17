@@ -56,6 +56,11 @@ html, body {
   background-color: #000000;
   height: 53px;
   font-size: 25px; }
+
+.fubuizz-header .navib {
+  text-decoration: none;
+  color: #FFFFFF; }
+
 .fubuizz-header .navia {
   text-decoration: none;
   color: #FFFFFF; }
@@ -73,13 +78,9 @@ html, body {
   display: inline-block; }
 
 .fubuizz-header .container {
-<<<<<<< HEAD
   position: fixed;
   width: 100%;
 }
-=======
-  width: 100%; }
->>>>>>> eb869d6ee457950c2ef6f569d4f9908c0bf5f177
 
 .fubuizz-header .navip {
   position: relative;
@@ -120,36 +121,33 @@ html, body {
 
 .fubuizz-header .burgermenu {
   position: absolute;
-  right: 15px;
+  right: 10px;
   width: 40px;
   height: 40px;
   z-index: 2;
-  visibility: hidden; }
-
-.fubuizz-header .avatar {
-  float: left;
-  left: 10px;
-  width: 32px;
-  height: 32px;
-  padding-top: 4px;
-  padding-left: 5px;
-  z-index: 2; }
+  visibility: hidden; 
+  padding-top: 5px;
+  text-align: center;
+  color: #FFFFFF;}
 
 .fubuizz-header .burgerheader {
-  width: 170px;
-  height: 37px; }
+  width: 250px;
+  height: 37px; 
+  margin-top: -24px;
+  margin-left: -25px;
+  padding-top: 3px;
+  padding-left: 10px;
+  background-color: #504F48;}
 
 .fubuizz-header .burgernav {
   width: 170px;
-  height: 550px; }
+  height: 550px; } 
 
-.fubuizz-header .burgernav > ul {
-  margin-left: 0px;
-  padding: 0px; } 
-
-.fubuizz-header .burgernav > ul > li {
+.fubuizz-header .burgernav li {
   display: block;
-  padding: 10px 20px;
+  margin-left: -25px;
+  width: 250px;
+  padding: 0.7em 2em;
   font-size: 17px;
   border-bottom: 1px solid #504F48; }
 
@@ -208,12 +206,6 @@ html, body {
 /*
   .fubuizz-header header {
     height: 37px; }*/
-
-  .fubuizz-header .avatar {
-    width: 28px;
-    height: 28px;
-    padding-top: 6px;
-    padding-left: 5px; }
 
   .fubuizz-header .burgerheader {
     height: 37px; }
