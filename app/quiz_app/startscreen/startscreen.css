@@ -125,7 +125,7 @@ img {
   margin-right: 1em;
   border-spacing: 0px 10px; }
 
-/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media screen and (max-width: 439px) {
   .btn1 {
     display: inline-block; }
@@ -144,7 +144,7 @@ img {
 
   .titel {
     margin-top: -3em; } }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .quizbox {
     margin-top: -32em; }
 
