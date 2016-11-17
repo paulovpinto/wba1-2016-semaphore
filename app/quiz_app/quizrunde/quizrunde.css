@@ -1,5 +1,5 @@
 /*
-Error: Invalid CSS after "*\/": expected "{", was ""
+Error: Invalid CSS after "	}": expected selector or at-rule, was "}*\/"
         on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss
 
 233: 	    }
@@ -7,19 +7,13 @@ Error: Invalid CSS after "*\/": expected "{", was ""
 235: 	        font-size: 24px;
 236: 	    }
 237: 	}
-238: *\/
+238: }*\/
 
 Backtrace:
 ./app/quiz_app/quizrunde/quizrunde.scss:238
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:656:in `block'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
@@ -37,4 +31,4 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"*/\": expected \"{\", was \"\"\A         on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss\A \A 233: 	    }\A 234: 	    .fragen-counter{\A 235: 	        font-size: 24px;\A 236: 	    }\A 237: 	}\A 238: */"; }
+  content: "Error: Invalid CSS after \"	}\": expected selector or at-rule, was \"}*/\"\A         on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss\A \A 233: 	    }\A 234: 	    .fragen-counter{\A 235: 	        font-size: 24px;\A 236: 	    }\A 237: 	}\A 238: }*/"; }
