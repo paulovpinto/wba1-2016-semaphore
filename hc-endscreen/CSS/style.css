@@ -25,6 +25,7 @@ body{
 }
 
 .heading {
+
     
     text-align: center;
     color:black;
@@ -32,9 +33,7 @@ body{
     height: 50px;
     background-color: white;
     margin-left: 15px;
-    margin-right: 15px;
-    
-    
+    margin-right: 15px; 
 }
 
 h1{
@@ -93,6 +92,7 @@ h1{
     display: inline-block;
     margin-top: 3px;
     font-family: 'OswaldRegular';
+
 }
  
 .suggestions {
@@ -129,6 +129,7 @@ h1{
     position:relative;
     top: -36px;
     background-color: rgba(255, 255, 255, 0.5);
+    width: 113px;
     height: 20px;
     line-height: 20px;
     font-family: 'Noto-Sans';
@@ -193,13 +194,12 @@ h1{
 
 @media only screen and (max-width: 439px)
 {
-    
     body{
         background-image: url(../images/background.jpg);
     }
         
     .heading{
-        height: 2em;
+        height: 200%;
         width: calc(100% - 21px);
         background: rgb(248, 245, 228);
         position: absolute;
@@ -212,6 +212,7 @@ h1{
     h1{
         text-align: center;
         margin-top: 0.25em;
+        font-family: 'OswaldRegular';
         font-size: 1em;
         line-height: 1em;
     }

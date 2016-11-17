@@ -124,7 +124,7 @@ td {
   #start td {
     background: rgba(248, 245, 228, 0.7); }
 
-/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   .startscreen {
     width: 100%;
