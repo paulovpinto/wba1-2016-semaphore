@@ -35,14 +35,12 @@
 }
 
 .quizrunde #timer{
-			height: 20px; 
-            margin-top: 83;
-            margin-left: 15px;
-            margin-right: 15px;
+            height: 20px;
 			max-width: 100%;
             background: red; /* For browsers that do not support gradients */
+            background: linear-gradient(to right, yellow ,lightyellow); /* Standard syntax */
 			/*-webkit-transition: width 2s; Safari */
-			transition: max-width 5s;
+			transition: max-width 10s;
 		}
 
 
@@ -52,7 +50,7 @@
             margin-left: 15px;
             margin-right: 15px;
 			max-width: 100%;
-            background: red; /* For browsers that do not support gradients */
+            background: #E9C20C; /* For browsers that do not support gradients */
 			/*-webkit-transition: width 2s; Safari */
 			transition: max-width 30s;
 		}
