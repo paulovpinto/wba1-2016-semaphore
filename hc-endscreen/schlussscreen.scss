@@ -1,0 +1,394 @@
+@import "../app/assets/css/base";
+
+ html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+
+}
+
+@font-face { font-family: 'OswaldRegular'; 
+            src: url('fonts/Oswald-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'OswaldLight'; 
+            src: url('fonts/Oswald-Light.ttf') format('truetype'); }
+@font-face { font-family: 'NotoSans'; 
+            src: url('fonts/NotoSans-Regular.ttf') format('truetype'); }
+
+
+body{
+    max-height: auto;
+    background-image: url(images/NeuStadion.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.schlussscreen{
+	
+	box-sizing: border-box;
+	
+	width: $content-width-desktop;
+	margin: 0 auto;
+
+
+	.tablet, .desktop{
+		display: block !important;
+	}
+	
+	.mobile{
+		display: none  !important;
+	}
+		
+	.inhalt::after{
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+	}
+	
+	.heading {
+	
+	    
+	    text-align: center;
+	    color:black;
+	    /*width: calc(100%-30px); */
+	    height: 50px;
+	    background-color: white;
+	    /*margin-left: 15px;
+	    margin-right: 15px; */
+	}
+	
+	h1{
+	    font-family: 'OswaldRegular';
+	    line-height: 50px;
+	    color:black;
+	    font-size: 24px;
+	}
+	
+	.erneut {
+	    background-color: rgba(203,7,39,1); 
+	    color: rgba(255,255,255,1 );
+	    font-size: 20px;
+	    border:none;
+	    text-align: center;
+	    text-decoration:none;
+	    width: calc(100% - 30px);
+	    height: 50px;
+	    line-height: 50px;
+	    display: inline-block;
+	    font-family: Noto-Sans;
+	}
+	
+	.erneut p{
+	    text-align:center;
+	}
+	
+	.fussbaelle img{
+	    height: 15px;
+	    width: 15px;
+	}
+	
+	.ballFalsch img{
+	    opacity: 30%;
+	}
+	
+	.fussbaelle {
+	    width: 100%;
+	    height: 50px;
+	    line-height: 50px;
+	}
+	
+	.fussbaelle table {
+	    width: calc(100% - 30px);
+	    text-align: center;
+	}
+	
+	.punkte {
+	    background-color: rgba(233,194,12,1);
+	    color: black;
+	    font-size: 125%;
+	    text-align:center;
+	    width: calc(100% - 30px);
+	    height: 312.5%;
+	    line-height: 312.5%;
+	    display: inline-block;
+	    margin-top: 3px;
+	    font-family: 'OswaldRegular';
+	
+	}
+	 
+	.suggestions {
+	    background-color: rgba(233,194,12,1);
+	    color: black;
+	    font-size: 1.25em;
+	    text-align:center;
+	    width: calc(100% - 30px);
+	    height: 3.125em;
+	    font-family: 'OswaldRegular';
+	    line-height: 3.125em;
+	    display: inline-block;
+	    font-style: normal;
+	    margin-top: 0.188em;
+	}
+	
+	.suggestions::after{
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+	}
+	
+	.suggestions img{
+	    width: 100%;
+	    height: 70px;
+	}
+	
+	.suggestions .sugg {
+	    float: left; 
+	    margin-right: 10px;
+	    width: calc((100% - 20px)/3);
+	    margin-top: 21px;
+	}
+	
+	.suggestions .sugg:last-child {
+	    margin-right:  0px;
+	}
+	
+	.suggestions .sugg div {
+	    position:relative;
+	    top: -36px;
+	    background-color: rgba(255, 255, 255, 0.5);
+	    width: 113px;
+	    height: 20px;
+	    line-height: 20px;
+	    font-family: 'Noto-Sans';
+	    
+	}
+	
+	.linke-seite {
+	    float: left;
+	    /*padding: 50px;
+	    padding-right: 5px;*/
+	    margin-top: 20px;
+	    width: calc(50% - 55px);
+	}
+	
+	.rechte-seite {
+	    float: right;
+	    /*padding: 50px;
+	    padding-left: 5px;*/
+		margin-top: 20px;
+	    width: calc(50% - 55px);
+	}
+	
+	.quizbild img {
+	    margin-top: 5px;
+	    width: calc(100% - 30px);
+	    max-height: 275px;
+	    object-fit: cover;
+	}
+	
+	.rank img {
+	    height: 15px;
+	    width: 20px;
+	}
+	
+	
+	.highscore table{
+	    /*width: calc(100% - 30px);*/
+	    width: 100%;
+	    margin-top: -9px;
+	    border-spacing: 0px 14px;
+	}
+	
+	.highscore table th {
+	    background-color: rgba(233,194,12,1);
+	    text-align: left;
+	    text-width: none;
+	    font-family: 'OswaldRegular';
+	}
+	.highscore table td {
+	    background-color: rgba(255, 255, 255, 0.5);  
+	    font-family: 'OswaldRegular';
+	}
+	
+	.highscore tr:last-child {
+	    outline: solid 3px rgba(203, 7, 39, 1);
+	}
+	
+	.highscore-btn, .infos {
+	    display: none;
+	}
+	
+
+}
+
+
+@media only screen and (max-width: 800px){
+	
+	.schlussscreen{
+		
+		
+		width: 100%;
+		padding: 20px;
+		
+		.tablet, .desktop{
+			display: none !important;
+		}
+		
+		.mobile{
+			display: block !important;
+		}
+		
+		.linke-seite, .rechte-seite{
+			float:none;
+			width: 100%;
+		}
+		
+	    body{
+	        background: purple;
+	    }
+	        
+	    .heading{
+	        /*height: 200%;
+	        width: calc(100% - 21px);*/
+	        background: rgb(248, 245, 228);
+	        position: absolute;
+	        transform: translate(11px);
+	        margin-top: 6em;
+	        margin-bottom: 0em; 
+	        display: inline-block;
+	    }
+	    
+	    h1{
+	        text-align: center;
+	        margin-top: 0.25em;
+	        font-family: 'OswaldRegular';
+	        font-size: 1em;
+	        line-height: 1em;
+	    }
+	    
+	    
+	    .quizbild{
+		 	
+		 	position: relative;
+		 	
+			.headline{
+				background: pink;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			
+			img{
+		        width: 100%;
+		        display: block;
+		        margin-top: 0.56em;
+		    }   
+	    }
+	
+	    .punkte{
+	        height: 2.1em;
+	        width: calc(100% - 21px);
+	        transform: translate(11px);
+	    }
+	    
+	    .punkte p{
+	        text-align: center;
+	        font-family: 'OswaldRegular';
+	        font-size: 0.8em;
+	        margin-top: 0.55em;
+	    }
+	
+	    .fussbaelle img{
+	        height: 0.75em;
+	        width: 0.75em;
+	    }
+	    
+	    .fussbaelle{
+	        width: 100%; 
+	    }
+	    
+	    .fussbaelle table {
+	        /*width: calc(100% - 30px);*/
+	        text-align: center;
+	    }
+	        
+	    .erneut, .highscore-btn{
+	        background: rgb(203, 7, 39);
+	        color: rgb(255, 255, 255);
+	        height: 2.1em;
+	        width: calc(100% - 21px);
+	        transform: translate(11px);
+	        margin-top: 0.8em;
+	        border: none;
+	        display: inline-block;
+	    }
+	    
+	    .erneut p, .highscore-btn p{
+	        font-family: 'NotoSans';
+	        font-size: 0.8em;
+	        text-align: center;
+	        text-decoration-line: none; 
+	        margin-top: 0.5em;
+	    }
+	
+	    .highscore, h2{
+	        display:none;
+	    }
+	
+	    .suggestions{
+	        margin-top: 1em;
+	        /*width: calc(100% - 21px);*/
+	        width: 100%;
+	        transform: translate(11px);
+	    }
+	    
+	    .sugg{
+	        height: 2.9em;
+	        display: block;
+	        margin-bottom: 7pt;
+	        margin-top: auto;
+	    }
+	    
+	    .sugg img{
+	        display: inline-block;
+	        height: 2.9em;
+	    }
+	    
+	    .sugg-infos{
+	        height: 2.9em;
+	        width: calc(100% - 76px);
+	        /*float: right; */
+	        font-size: 0.55em;
+	        display: inline-block;
+	    }
+	    
+	    .sugg-head{
+	        font-family: $base-font-family;
+	        text-align: center;
+	        background: rgb(248, 245, 228);
+	    }
+	    
+	    .infos{
+	        background: rgba(248, 245, 227, 0.6);
+	    }
+	    
+	    .erstellt{
+	        font-family: 'OswaldLight';
+	        text-align: left;
+	        padding-left: 0.5em;
+	    }
+	    
+	    .gespielt{
+	        font-family: 'OswaldLight';
+	        text-align: right;
+	    }
+	}
+}

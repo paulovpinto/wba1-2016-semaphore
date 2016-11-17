@@ -1,7 +1,6 @@
 /****************************
-Dieses Script Läd die schlussscreen.html Datei und
-schreibt sie in das Dokument. Dabei wird die Punktzahl sowie
-die richtigen/falschen Antworten übergeben.
+Dieses Script erzeugt dynamisch die endscreen Seite.
+
 
 *****************************/
 

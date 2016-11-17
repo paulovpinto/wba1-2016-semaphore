@@ -350,7 +350,7 @@ h1.slide_title, h2.slide_subtitle {
 	position: relative;
 }
 /* Contact Form */
-#tag5 {
+#tag51 {
 	position: relative;
 	text-align: center;
 	color: #505050;
@@ -432,7 +432,7 @@ fieldset {
 .footer {
 	position: relative;
 	width: 100%;
-	background: #CB0727;
+	background: #504F48;
 }
 .footer p {
 	color: #fff;
@@ -483,7 +483,7 @@ fieldset {
 
 #tag1 {
 	color: #fff;
-	background: #505050;
+	background: #504F48;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -494,7 +494,7 @@ fieldset {
 
 #tag2 {
 	color: #fff;
-	background: #CB0727;
+	background: #E9C20C;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -504,7 +504,7 @@ fieldset {
 }
 #tag3 {
 	color: #fff;
-	background: #E9C20C;
+	background: #504F48;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -514,7 +514,7 @@ fieldset {
 }
 #tag4 {
 	color: #fff;
-	background: #505050;
+	background: #CB0727;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -525,7 +525,7 @@ fieldset {
 
 #tag5 {
 	color: #fff;
-	background: #CB0727;
+	background: #E9C20C;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -535,7 +535,7 @@ fieldset {
 }
 #tag6 {
 	color: #fff;
-	background: #E9C20C;
+	background: #504F48;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -545,7 +545,7 @@ fieldset {
 }
 #tag7 {
 	color: #fff;
-	background: #505050;
+	background: #CB0727;
 	padding: 60px 0;
 	line-height: 1.9;
 	letter-spacing: 0.8px;
@@ -558,8 +558,19 @@ img{
     height:auto;
     max-width:100%;
 }
-
-
+#screens {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	background: #CB0727;
+	padding: 60px 0;
+}
+img gif1{
+    width:50%;
+    height:auto;
+    max-width:70%;
+}
 
 
 
