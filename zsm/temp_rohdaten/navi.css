@@ -314,14 +314,20 @@ body{
     font-family: Oswald;
     src: url('Oswald-Regular.tff') format('truetype');
 }
+
+.startscreen{
+	margin: 100px auto;
+	width: 1000px;
+}
+
 body {
     background-image: url(http://www.spanien-newsletter.de/fileadmin/user_upload/ausgabe-2013-oktober/barcelona-camp-nou_0801823.jpg);
     background-size:cover;
 }
 
 .boxbox{
-    width: 80%;
-    margin-left: 10%;
+    /*width: 80%;*/
+    /*margin-left: 10%; */
     display:flex;
     margin-top: 0.5em;
 }
@@ -444,7 +450,7 @@ td{
       margin-right: 1.5em;
     }
     .quizbox{
-      margin-top: -36em;
+    	margin-top: -36em;
     }
 
     .titel {
@@ -464,8 +470,9 @@ td{
 }
 @media screen and (min-width:750px){
   .titel{
-    margin-top: -3em;
-    padding-left: 5em;
+    /*margin-top: -3em;
+    padding-left: 5em;*/
+    
   }
 
 }

@@ -8,14 +8,30 @@ body{
 
 .content {
     margin: 0 auto;
-    margin-left: 113pt;
+    /*margin-left: 113pt;
     margin-right: 112pt;
-    width: calc(100% - 25px);
+    width: calc(100% - 25px);*/
+    width: 1000px;
+    background-color: purple;
 }
 
+.content::after{
+	content:"";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.kacheln{
+	display: flex;
+}
 
 .Sortierliste, .Quizkachel{
     
+}
+
+.clearfix{
+	clear:both;
 }
 
 /* Sortierliste wurde angepasst, muss aber noch bearbeitet werden */
@@ -23,7 +39,7 @@ body{
 .Sortierliste{
     background-color:rgba(233,194,12,1);
     height: 27pt;
-    width: calc(100% - 270px);
+    /*width: calc(100% - 270px);*/
     margin-top: 20px;
     margin-bottom: 13pt;  
     font-family: Oswald; 
@@ -37,31 +53,42 @@ body{
     padding: 0em;
 }
 
+.sortiercontent li{
+	display: inline-block;
+    width: 25%;
+}
+
 .sortiercontent a{
     text-align: center;
-    width: 25%;
+
 }
 
 .Sortierliste a{
     text-decoration: none;
     color: black;
-    float: left;
 }
 
 /* wurde größengerecht angepasst */
 
 .Quizkachel {
+	
+	flex-wrap:wrap;
+	box-sizing: border-box;
     display: block;
-    float: left;
+    /*float: left; */
     padding: 0;
     margin-right: 15pt;
     margin-bottom: 29.5pt;
     background-color: rgba(248,245,228,1);
     font-family: Oswald, sans-serif;
     font-style: normal;
-    width: 172.5pt;
+    width: 25%;
     height: 232pt;
 }
+
+/*.Quizkachel:nth-child(5n) {
+	margin-right: 0;
+}*/
 
 /* NEU Klasse "Quizbild" wurde eingefügt und größengerecht angepasst */
 
@@ -331,6 +358,11 @@ body{
     }
     
     
+     .Quizkachel, .Quizkachel *{
+	    width: auto;
+        height: initial;
+     }
+     
     .Quizkachel{
         width: initial;
         height: initial;

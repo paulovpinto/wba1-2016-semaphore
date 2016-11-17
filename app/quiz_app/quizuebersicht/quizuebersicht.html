@@ -1,19 +1,44 @@
-<div class="uebersicht" id="snippetQuiz">
-    <div class="Quizkachel" id={{quizIdx}}>
-        <h3>{{name}}</h3>  
-        <img class="Quizbild" src={{image}} alt="Fubuizz"/>
-        <p class="Erstellinfos">
-            von {{author}} erstellt <br>
-            am {{date}}
-        </p>
-        <div class="inhalt">
-            <p class="Beschreibung">
-                {{description}}
-            </p>
-            <p class="AnzGespielt">
-                {{counter}} mal gespielt
-            </p>
+<section class="quizuebersicht">
+	<div class="content">
+		
+	    <div class="Sortierliste"><!-- cn: klassennamen bitte klein beginnen -->
+            <ul class="sortiercontent">
+				<li class="Top"><a href="https://www.google.de">Top</a></li>
+				<li class="AZ"><a href="https://www.google.de">A-Z</a></li>
+				<li class="New"><a href="https://www.google.de">New</a></li>
+				<li class="Last"><a href="https://www.google.de">Last</a></li>
+			</ul> 
         </div>
-        <button class="button is-primary">Auswählen</button>
-    </div>
-</div>
+            
+		<div class="kacheln uebersicht" id="snippetQuiz">
+		    <div class="Quizkachel" id={{quizIdx}}>
+			    <div class="quizkachel-inner">
+			        <div class="basicInfos">
+			            <h3>{{name}}</h3>  
+			            <img class="Quizbild" src="{{image}}" alt="Fubuizz"/>
+			            <p class="Erstellinfos">
+			                von {{author}} erstellt 
+			            </p>
+			            <p class="datum">
+			                 am {{date}}
+			            </p>
+			            <p class="AnzGespielt mobile">
+			                {{counter}} mal gespielt
+			            </p>
+			        </div>
+		            <div class="inhalt">
+		                <p class="Beschreibung">
+		                    {{description}}
+		                </p>
+		                <p class="AnzGespielt desktop tablet">
+		                    {{counter}} mal gespielt
+		                </p>
+		            </div>
+
+		            <button class="auswahl-button button is-primary" href="">Auswaehlen</button>
+
+			    </div>
+		    </div>
+		</div>
+	</div>
+</section>

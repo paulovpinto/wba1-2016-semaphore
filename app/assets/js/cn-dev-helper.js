@@ -30,7 +30,7 @@ var item = document.createElement("li");
 item.innerHTML = "Quizende";
 var dev_antworten = Array(10);
 for(var i=0; i<dev_antworten.length;i++){
-    dev_antworten[i] = false;
+    dev_antworten[i] = true;
 }
 item.onclick = function(){ createEndscreen(650, dev_antworten, "1"); }
 devnavi.appendChild(item);

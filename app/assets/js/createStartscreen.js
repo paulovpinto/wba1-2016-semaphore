@@ -20,10 +20,12 @@ function createStartscreen(quizId){
 
 	var quizze = jsondata["quizubersicht"];
 	var quiz = quizze[quizId];
+    console.log(quizze);
+    console.log(quiz);
 
 	template = template.replace(/{{name}}/, quiz.name);
     template = template.replace(/{{author}}/, quiz.author);
-    template = template.replace(/{{date}}/, quiz.date);
+    template = template.replace(/{{date}}/, schoeneresDatum(quiz.date));
     template = template.replace(/{{counter}}/, quiz.counter);
     template = template.replace(/{{image}}/, quiz.image);
     template = template.replace(/{{description}}/, quiz.description);
@@ -39,9 +41,6 @@ function createStartscreen(quizId){
 		initQuiz(quiz.quizIdx);
 	}  */
 
-    console.log("Übergabe: ");
-    console.log(quizId);
-
     var ubersicht_parsedjson = jsondata["quizubersicht"];
     var currentrank_parsedjson = jsondata["ranking" + quizId];
     var currentinfo_object = ubersicht_parsedjson[quizId];
@@ -53,7 +52,7 @@ function createStartscreen(quizId){
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
-
+    console.log(document);
 	//Snippet des gesamten Startscreens speichern
 	var snippetstart = document.getElementById("start");
 	//Snippet der Ranking-Liste speichern
@@ -72,7 +71,7 @@ function createStartscreen(quizId){
 	var template = snippetstart.outerHTML;
 
 	template = template.replace(/{{name}}/, info.name);
-	template = template.replace(/{{date}}/, info.date);
+	template = template.replace(/{{date}}/, schoeneresDatum(info.date));
 	template = template.replace(/{{image}}/, info.image);
 	template = template.replace(/{{description}}/, info.description);
 	template = template.replace(/{{description}}/, info.description);
@@ -87,14 +86,12 @@ function createStartscreen(quizId){
 
         //"reinen" Text des Rankings speichern
         var temp = snippetranking.outerHTML;
-		var date = new Date(scoredata[i].date);
-		var monat = (date.getMonth()+1 < 10 ) ? "0" + (date.getMonth()+1) : (date.getMonth()+1);
-		var schoenesDatum = date.getDate() + "." + monat + "." + date.getFullYear();
-		console.log(schoenesDatum);
+
+		console.log(schoeneresDatum(scoredata[i].date));
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
         temp = temp.replace(/{{player}}/, scoredata[i].player);
         temp = temp.replace(/{{points}}/, scoredata[i].points);
-        temp = temp.replace(/{{date}}/, schoenesDatum);
+        temp = temp.replace(/{{date}}/, schoeneresDatum(scoredata[i].date));
 
         var item = document.createElement("tr");
         item.innerHTML = temp;

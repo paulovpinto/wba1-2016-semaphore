@@ -149,6 +149,15 @@ function doSomething(){
     createQuizOverview();
 }
 
+function schoeneresDatum(olddate){
+
+    var date = new Date(olddate);
+    var monat = (date.getMonth()+1 < 10 ) ? "0" + (date.getMonth()+1) : (date.getMonth()+1);
+    var schoenesDatum = date.getDate() + "." + monat + "." + date.getFullYear();
+    return schoenesDatum;
+
+}
+
 /* Main
 ############################################# */
 
