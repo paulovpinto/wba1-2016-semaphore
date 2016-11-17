@@ -75,7 +75,7 @@ function count( ){
 
 
 }
-function neueFrage( data, aktuelleFrage ){
+function neueFrage( data, aktuelleFrage){
 
 
 //  $("#antwort1").removeClass("richtig", "falsch");
@@ -105,7 +105,7 @@ function neueFrage( data, aktuelleFrage ){
     }, delayA);
   }
 
-  function buttonKlick(){
+  function buttonKlick(quizIdx){
   $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
   //	var cButton = e.target;
   if(i===0){
@@ -131,7 +131,7 @@ function neueFrage( data, aktuelleFrage ){
               for(k=0; k<10;k++){
               console.log(antworten[k]);
             }
-            //  createEndscreen(punkte, antworten );
+              createEndscreen(punkte, antworten, quizIdx);
           }
 
     }

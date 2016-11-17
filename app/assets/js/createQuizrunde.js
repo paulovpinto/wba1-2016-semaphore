@@ -28,7 +28,6 @@ function startQuiz( quizIdx, json ){
 //	neueFrage( data, aktuelleFrage );
 	
     console.log("createStartscreeen wurde aufgerufen.");
-    //console.log("Übergabe: " + quizIdx);
 
 	// Stylesheet austauschen
 	var sheeturl = urls["quizrunde"].replace(/\.html/, ".css");
@@ -56,8 +55,8 @@ function startQuiz( quizIdx, json ){
 	
 	
 	document.getElementById("content").innerHTML = template;
-	buttonKlick();
-	neueFrage( quizLogik.data, aktuelleFrage );
+	buttonKlick(quizIdx);
+	neueFrage( quizLogik.data, aktuelleFrage);
 
 	// HTML in Wrap einfügen
 	//document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);

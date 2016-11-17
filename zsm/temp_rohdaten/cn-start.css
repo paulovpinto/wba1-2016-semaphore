@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* Variabeln
+###################################################### */
+/* Bausteine
+###################################################### */
+.button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid 1px #cb0727;
+  padding: 5px;
+  color: #fff;
+  width: 100%; }
+
+.button.is-primary {
+  background-color: #ff3737; }
+
+.liste th {
+  background-color: #E9C20C;
+  text-align: left; }
+
+.liste tr th:nth-child(1),
+.liste tr td:nth-child(1) {
+  width: 10%;
+  text-align: center; }
+
+.liste tr th:nth-child(2),
+.liste tr td:nth-child(2) {
+  width: 40%; }
+
+.liste tr th:nth-child(4),
+.liste tr td:nth-child(4) {
+  width: 10%;
+  text-align: right; }
+
+th, td {
+  padding: 4px;
+  color: black; }
+
+td {
+  background: rgba(248, 245, 228, 0.7); }
+
+.startscreen {
+  margin: 60px auto;
+  width: 1000px;
+  box-sizing: border-box; }
+  .startscreen .boxbox {
+    box-sizing: border-box;
+    width: 100%;
+    /*margin-left: 10%; */
+    display: flex;
+    margin-top: 0.5em; }
+    .startscreen .boxbox .column {
+      flex: 1 0 0;
+      box-sizing: border-box; }
+  .startscreen .quizbox {
+    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+  .startscreen .titel {
+    background-color: #F8F5E4;
+    text-align: center;
+    color: black; }
+  .startscreen h2 {
+    text-align: center;
+    /*padding-left: 5em;*/ }
+  .startscreen img {
+    max-width: 100%;
+    height: auto; }
+  .startscreen .author {
+    background-color: rgba(248, 245, 228, 0.7); }
+  .startscreen .teasertext {
+    background-color: rgba(248, 245, 228, 0.7);
+    margin-bottom: 0em;
+    padding-bottom: 0em; }
+  .startscreen .teasertext2 {
+    margin-top: -60px; }
+  .startscreen .btn {
+    padding: 0em;
+    margin-bottom: 0.5em;
+    background-color: #CB0727;
+    width: 100%;
+    height: 10%;
+    display: inline-block;
+    text-align: center;
+    line-height: 550%;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; }
+  .startscreen .btn1 {
+    padding: 0em;
+    background-color: #CB0727;
+    width: 100%;
+    height: 10%;
+    display: none;
+    text-align: center;
+    line-height: 550%;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; }
+  .startscreen .liste {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    margin-top: 0em;
+    margin-right: 1em;
+    border-spacing: 0px 10px; }
+  .startscreen .liste th {
+    background-color: #E9C20C;
+    text-align: left; }
+  .startscreen .liste tr th:nth-child(1),
+  .startscreen .liste tr td:nth-child(1) {
+    width: 10%;
+    text-align: center; }
+  .startscreen .liste tr th:nth-child(2),
+  .startscreen .liste tr td:nth-child(2) {
+    width: 40%; }
+  .startscreen .liste tr th:nth-child(4),
+  .startscreen .liste tr td:nth-child(4) {
+    width: 10%;
+    text-align: right; }
+  .startscreen th, .startscreen td {
+    padding: 4px;
+    color: black; }
+  .startscreen td {
+    background: rgba(248, 245, 228, 0.7); }
+
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+@media only screen and (max-width: 1024px) {
+  .startscreen {
+    width: 100%;
+    padding: 20px; }
+    .startscreen .boxbox {
+      display: block;
+      margin-top: 0.5em; }
+      .startscreen .boxbox .quizbox {
+        margin: 0; }
+    .startscreen .btn1 {
+      display: inline-block; }
+    .startscreen #highscorecontent {
+      display: none; } }
+
+/*# sourceMappingURL=cn-start.css.map */

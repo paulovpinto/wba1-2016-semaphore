@@ -7,67 +7,69 @@ in das Snippet geschrieben und in das Dokument geschrieben.
 
 console.log("Das createHighscore Scrip wird ausgeführt..");
 
+var quizIdx = 1;
+
 function createHighscore(){
     console.log("createHighscore wurde aufgerufen.");
     
     // Stylesheet austauschen
 	var sheeturl = urls["highscore"].replace(/\.html/, ".css");
 	document.getElementById('css-for-view').setAttribute('href', sheeturl);
-	
-	
-    // Hole das Snippet
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-	
-	   // Template injizieren
-        document.getElementById("content").innerHTML = this.responseText;
-	
-	   // Snippet ziehen 
-	   var spielerScoreSnippetItem = document.getElementById("spielerScoreSnippet");
-	
-        // Item im Wrap löschen
-        spielerScoreSnippetItem.parentNode.removeChild(spielerScoreSnippetItem);
     
-        // Hol das JSON
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-		
-                var html;
-                
-                // JSON Merken
-                var json = JSON.parse(this.responseText);
-				
-                // JSON verarbeiten
-                for(var i = 0; i < json.highscore.length; i++){
-                    var temp = spielerScoreSnippetItem.outerHTML;
-						
-                    var rank = json.highscore[i];
-                    
-                    console.log(json.highscore[0].player);
-                    
-                    temp = temp.replace(/{{name}}/, rank.player);
-                    temp = temp.replace(/{{date}}/, rank.date);
-                    temp = temp.replace(/{{points}}/, rank.points);
-			     
-                    var item = document.createElement("div");
-                    item.innerHTML = temp;
-			 			 
-                    // HTML in Wrap einfügen
-                    document.getElementById("content").appendChild(item.firstChild);
-                }
-	       }
-		};
-		
-		
-		xhttp.open("GET", jsons.highscore, true);
-		xhttp.send();
-     
-     return this.responseText;
-    }
-  };
 
-  xhttp.open("GET", urls.highscore, true);
-  xhttp.send();
+	
+	var template = templates["highscore"];
+    
+    var h_ranking = document.getElementById("h_ranking");
+    //Snippet des Ranking_Headers speichern
+	var h_listhead = document.getElementById("h_listhead");
+    
+    console.log(document.getElementById("h_ranking"));
+    console.log(document.getElementById("h_listhead"));
+    
+
+    var quizze = jsondata["quizubersicht"];
+
+    var i = 1;
+    
+    for(var quizId in quizze){
+
+        var option = "{{option" + i + "}}";
+
+        var h_quiz = quizze["quiz"+i];
+
+        template = template.replace(option, h_quiz.name);
+
+        i++;
+
+    }
+
+    h_quiz = quizze["quiz" + quizIdx];
+
+    template = template.replace(/{{image}}/, h_quiz.image);
+    template = template.replace(/{{author}}/, h_quiz.author);
+    template = template.replace(/{{date}}/, h_quiz.date);
+    template = template.replace(/{{description}}/, h_quiz.description);
+
+
+    var item = document.createElement("div");
+    item.innerHTML = template;
+    
+    
+    
+    
+    document.getElementById("content").replaceChild(item, document.getElementById("content").firstChild);
+    
+    
+    
+
+
+}
+
+function changeHighscore(stuff){
+
+    quizIdx = stuff;
+
+    createHighscore();
+
 }
