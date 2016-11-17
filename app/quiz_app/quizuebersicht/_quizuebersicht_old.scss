@@ -230,3 +230,152 @@
 	    
 	}
 }
+
+@media only screen and (max-width: $bp-smartphone){
+
+    
+    .kacheln {
+	
+		    display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+		    flex-wrap:wrap;
+            width: 100%;
+		    
+		    .quizkachel{
+			    box-sizing: border-box;
+			    display: block;
+			    flex-basis: 100%;
+			    /*flex-grow: 1;*/
+			    margin-bottom: $base-margin;
+			    padding: $gutter-width;
+				
+				.quizkachel-inner{
+					background: $bg-opak;
+					color: #000;
+					height: 100%;
+					position: relative;
+					
+					.auswahl-button{
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0; 
+					}
+				}
+			      
+			    .quizbild{
+				    width: 100%;
+			    }
+		    }
+		}	
+    
+    .quizbild{
+        margin: initial;
+        padding: initial;
+        width: initial;
+        height: auto;
+        float:left;
+        width: 70px;                   /** ACHTUNG PIXEL-ANGABE! Noch anzupassen! **/
+        height: 113px;
+        margin-right: 10px;
+    }
+    
+    .quizkachel h3{
+        margin-left: 113px;
+        margin-bottom: -29px;
+    }
+    
+    .inhalt{
+        padding: initial;
+        margin: initial;
+        width: initial;
+        height: initial;
+        float: left;
+        position: relative;
+        bottom: initial;
+        text-align: left;
+        font-size: 13px;
+    }
+
+    .erstellinfos{
+        padding: 2px 0 0 0;
+        margin: 0 10px 0 0;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        text-decoration: none;
+        float: left;
+        margin-top: 29px;
+        font-size: 13px;
+        line-height: 17px;
+    }
+    
+    .button{
+        display: none;
+    }
+    
+    .anzGespielt{
+        padding: initial;
+        margin: initial;
+        width: initial;
+        height: initial;
+        text-align:right;
+        background-color:initial;
+        font-size: 8px;
+    }
+    
+    .beschreibung{
+        width: initial;
+        height: initial;
+        padding: 0;
+        margin: 10px;
+        background-color: initial;
+        line-height: 15px;
+        font-family: Oswald;
+        color: #2F2D2C;
+        
+    }
+    
+    .basicInfos{
+        position: relative;
+    }
+    
+    .datum, .anzGespielt{
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .datum{
+        left: 0;
+        padding: 2px 0 0 0;
+        margin: 0 10px 0 0;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        text-decoration: none;
+        float: left;
+        margin-top: 29px;
+        font-size: 13px;
+        line-height: 17px;
+    }
+    
+    .anzGespielt{
+        right: 0;
+    }
+    
+    .desktop, .tablet{
+        display: none;
+    }
+    
+    .hidden {
+        display:none;
+    }
+
+    .visible {
+        height: 200px;
+        display: block;
+        z-index: 1;
+    }
+}
