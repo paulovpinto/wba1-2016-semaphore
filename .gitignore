@@ -11,3 +11,8 @@ ehthumbs.db
 Thumbs.db
 .sass-cache/
 .map
+app/quiz_app/highscore/highscore.css
+app/quiz_app/quizrunde/quizrunde.css
+app/quiz_app/quizuebersicht/quizuebersicht.css
+app/quiz_app/startscreen/startscreen.css
+app/quiz_app/schlussscreen/schlussscreen.css
