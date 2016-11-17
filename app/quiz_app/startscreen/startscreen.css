@@ -124,6 +124,7 @@ td {
   #start td {
     background: rgba(248, 245, 228, 0.7); }
 
+<<<<<<< HEAD
 .toggleBox {
   position: relative;
   padding-top: 0px;
@@ -160,6 +161,9 @@ td {
   display: none; }
 
 /* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+=======
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+>>>>>>> aa35831e95114e558e5d9671cea1730b02a77285
 @media only screen and (max-width: 1024px) {
   .startscreen {
     width: 100%;

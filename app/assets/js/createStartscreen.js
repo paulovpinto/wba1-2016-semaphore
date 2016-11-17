@@ -1,7 +1,5 @@
 /****************************
-Dieses Script Läd die startscreen.html Datei und 
-schreibt sie in das Dokument. Dabei wird der Name, Id, Datum, 
-Beschreibung, Author, des ausgewählten Quiz übergeben.
+Dieses Script erzeugt dynmaisch die startscreen Seite
 
 *****************************/
 
@@ -52,10 +50,6 @@ function createStartscreen(quizId){
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
-<<<<<<< HEAD
-    console.log(document);
-=======
->>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 	//Snippet des gesamten Startscreens speichern
 	var snippetstart = document.getElementById("start");
 	//Snippet der Ranking-Liste speichern
