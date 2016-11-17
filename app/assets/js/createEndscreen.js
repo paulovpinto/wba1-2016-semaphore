@@ -95,22 +95,16 @@ function createEndscreen(punkte, antworten, quizIdx){
     
     for (var i = 0; i < scoredata.length; i++){
 
-        var temp = snippetranking.outerHTML;
-
         if(punkte >= scoredata[i].points){
             template = template.replace(/{{rang}}/, " " + scoredata[i].rankIdx);
         	   
-            var position = i;
+            var position = (i+1);
             break;
         }
         
     }
 
-    
-    
-    
-    console.log("breadcrump 3");
-    
+    console.log(position);
     
     var rang_arr;
     
@@ -128,6 +122,7 @@ function createEndscreen(punkte, antworten, quizIdx){
     
     //Falls der Rang größer ist als 5
         //Dann schreibe von Rang - 5 bis Rang 
+
     
     //bubbleSort(superContainer);
     superContainer.sort();  
@@ -138,4 +133,26 @@ function createEndscreen(punkte, antworten, quizIdx){
     item.innerHTML = template;
 
     document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
+    
+        
+    if(position > 5){
+        
+        for(var i = (position-5); i < (position); i++){
+            
+           var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
+            temp = temp.replace(/{{player}}/, scoredata[i].player);
+            temp = temp.replace(/{{points}}/, scoredata[i].points);
+            temp = temp.replace(/{{date}}/, schoeneresDatum(scoredata[i].date));
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+        }
+        
+    }
+    
+    document.getElementById("ranking").innerHTML = htmlRankings;
 }
