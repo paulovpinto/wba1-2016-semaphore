@@ -52,7 +52,10 @@ function createStartscreen(quizId){
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
+<<<<<<< HEAD
     console.log(document);
+=======
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 	//Snippet des gesamten Startscreens speichern
 	var snippetstart = document.getElementById("start");
 	//Snippet der Ranking-Liste speichern
