@@ -5,7 +5,7 @@
 			"author": "Paulo_Pinto",
 			"date": "2016-09-12T19:28:35+02:00",
 			"counter": 212,
-            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/photocasehgjhk76b2.jpg",
+            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tGer.jpg",
 			"description": "Alles rund um Sieg und Niederlage der Nationalelf. Dieses Quiz ist eine Herausforderung für alle Fußballkenner."
 			
 		},
@@ -27,7 +27,7 @@
 			"date": "2015-12-01T11:58:35+02:00",
 			"counter": 149,
             "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tBliga.jpg",
-			"description": "Bundesliga einer der mit den meisten Fußball anhängern und Sympathisanten der gesamten Fußballszene. Eine bunte Mischung des Fußballs, in der auch du dich auskennst?"
+			"description": "Die Bundesliga ist die höchste Spielklasse im deutschen Fußball. Jedes Jahr spielen 18 Mannschaften um den Titel Deutscher Fußballmeister."
 			
 		},
         
@@ -38,7 +38,7 @@
 			"date": "2016-08-14T11:58:35+02:00",
 			"counter": 156,
             "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tseriea.jpg",
-			"description": "Die Seria A ist die italienische Bundesliga, wo mitunter die Stärksten Fußballmannschaften der Welt vertretten sind. Zeige jetzt, dass du auch ein Profi bist und alle Fragen beantworten kannst."
+			"description": "Die Serie A ist die italienische Bundesliga, wo mitunter die stärksten Fußballmannschaften der Welt vertreten sind. Zeige jetzt, dass du auch ein Profi bist und alle Fragen beantworten kannst."
 			
 		},
         
@@ -49,7 +49,7 @@
 			"date": "2016-03-29T11:58:35+02:00",
 			"counter": 144,
             "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tlaLiga.jpg",
-			"description": "Die brasilianische Liga ist eine leidenschaftliche und startke Liga. Auch zu den Fans ist das gleiche zu sagen. Hast du auch so viel Leidenschaft? Dann zeig es uns, in dem du viele Punkte im Quiz ergatterst."
+			"description": "Die spanische Liga ist eine leidenschaftliche und starke Liga. Auch zu den Fans ist das Gleiche zu sagen. Hast du auch so viel Leidenschaft? Dann zeig es uns, in dem du viele Punkte im Quiz ergatterst."
 			
 		},   
         
@@ -60,7 +60,7 @@
 			"date": "2016-07-07T11:58:35+02:00",
 			"counter": 139,
             "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tCleague.jpg",
-			"description": "Die höchste Spielklasse im englsichen Fußball. Wer es bis hier geschafft hat, kann Stolz sein. Kannst auch du auf dich stolz sein, dass du alle Fragen in kürzester Zeit beantwortet hast? Beweise es uns!"
+			"description": "Die höchste Spielklasse im englischen Fußball. Wer es bis hier hin geschafft hat, kann Stolz sein. Kannst auch du auf dich stolz sein, dass du alle Fragen in kürzester Zeit beantwortet hast? Beweise es uns!"
 			
 		},  
         
@@ -70,8 +70,8 @@
 			"author": "Ewiger_Schalker",
 			"date": "2016-04-25T11:58:35+02:00",
 			"counter": 87,
-            "image": "http://i.imgur.com/T4DVE73.png",
-			"description": "Der blau weiße gelsenkirchener Verein ist seit Kindertagen dein Lieblingsverein? Dann zeig uns jetzt, das du immer gut aufgepasst hast, wenn es darum geht wer hat die meisten Tore geschossen oder die meisten gelben Karten bekommen."
+            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tFcSchalke.png",
+			"description": "Der blau-weiße gelsenkirchener Verein ist seit Kindertagen dein Lieblingsverein? Dann zeig uns jetzt, dass du immer gut aufgepasst hast, wenn es darum ging, wer die meisten Tore geschossen oder die meisten gelben Karten bekommen hat."
 			
 		},   
         
@@ -81,8 +81,8 @@
 			"author": "KölnerJung",
 			"date": "2015-11-17T11:58:35+02:00",
 			"counter": 256,
-            "image": "http://i.imgur.com/T4DVE73.png",
-			"description": "Köln ist nicht nur für Karneval bekannt, sondern hat auch den viertgrößten Sportverein Deutschlands. Du bist ein richtiger Kölner Jung und kennst dich mit allen Fragen rund um den FC aus? Dann starte direkt mit dem Quiz."
+            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tFcKöln.png",
+			"description": "Köln ist nicht nur für Karneval bekannt, sondern hat auch den viertgrößten Sportverein Deutschlands. Du bist ein richtiger Kölsche Jung und kennst dich mit allen Fragen rund um den FC aus? Dann starte direkt mit dem Quiz."
 			
 		},
         
@@ -92,7 +92,7 @@
 			"author": "Maxi_Schmidt",
 			"date": "2016-01-13T11:58:35+02:00",
 			"counter": 146,
-            "image": "http://i.imgur.com/T4DVE73.png",
+            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tJuventus.png",
 			"description": "Der italienische Fußballverein ist einer der erfolgreichsten Vereine der Welt. Seit 1897 ist viel passiert. Kennst du dich mit allen Fragen rund um Juventus Turin aus? Dann zeig uns das jetzt und starte mit der ersten Frage."
 			
 		},
@@ -100,11 +100,22 @@
     "quiz10": 	{
 			"quizIdx": 10,
 			"name": "Trainer und ihre Macken",
-			"author": "Mücke36",
+			"author": "Maik789",
 			"date": "2016-06-06T11:58:35+02:00",
 			"counter": 96,
             "image": "http://i.imgur.com/T4DVE73.png",
-			"description": "Am Spielfeldrand flippen sie gerne mal aus, popeln in der Nase oder fassen sich in den Schritt. Kennst du alle Macken der Bundesliga Trainer?"
+			"description": "Am Spielfeldrand flippen sie gerne mal aus, popeln in der Nase oder fassen sich in den Schritt. Kennst du alle Macken der Trainer?"
+			
+		},
+    
+    "quiz11": 	{
+			"quizIdx": 11,
+			"name": "Werder Bremen",
+			"author": "Mücke36",
+			"date": "2016-06-06T11:58:35+02:00",
+			"counter": 84,
+            "image": "http://wba1-semaphore.christiannoss.de/app/data/quizbilder/tWerBremen.png",
+			"description": "Du bist ein Fan von Werder Bremen? Teste hier wie gut du den Verein wirklich kennst!"
 			
 		}
         

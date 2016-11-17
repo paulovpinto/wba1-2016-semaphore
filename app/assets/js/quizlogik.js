@@ -19,6 +19,16 @@ quizLogik.data = {};
 quizLogik.quiz = {};
 
 
+// Zeit für den Timer im View
+var zeit = i;
+
+function updateTimer(){
+	//i--;
+	document.getElementById("timer-js").style.width = (i * 10) + "%";
+	if(zeit <= 0){ clearInterval(timer); }
+
+}
+
 function antwortPruefen(ele, answer){
 //	var $ele = $(ele);
   $ele= $(ele);                              // cast zu jQuery
@@ -60,6 +70,10 @@ function count( ){
     //  document.getElementById("text").innerHTML = i;
   console.log("Zeit: "+i);
   console.log(quizLogik.quiz);
+  
+  // Ändert den Timer im View
+  updateTimer();
+  
   if(i===0){
           aktuelleFrage++;
           clearInterval(timer);
@@ -101,10 +115,12 @@ function neueFrage( data, aktuelleFrage){
   clearInterval(timer);
   i=10;
   timer = setInterval("count()", 1000);
-
-      $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
+  
+  $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
     }, delayA);
   }
+  
+  
 
 function buttonKlick(quizIdx){
     $("#antworten").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
