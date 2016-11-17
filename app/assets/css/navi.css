@@ -43,16 +43,16 @@ td {
 ###################################################### */
 .button {
   background-color: rgba(0, 0, 0, 0.1);
-  border: solid 1px #cb0727;
+  border: solid 1px #ff3737;
   padding: 5px;
-  color: #fff;
+  color: white;
   width: 100%; }
 
 .button.is-primary {
   background-color: #ff3737; }
 
 .liste th {
-  background-color: #E9C20C;
+  background-color: #e9c20c;
   text-align: left; }
 
 .liste tr th:nth-child(1),
@@ -74,41 +74,41 @@ th, td {
   color: black; }
 
 td {
-  background: rgba(248, 245, 228, 0.7); }
+  background: rgba(248, 245, 228, 0.9); }
 
 html, body {
   margin: 0px;
   font-family: "Oswald", sans-serif;
-  color: #FFFFFF;
+  color: white;
   background: url(../images/fubuizz-bg-gross.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 .fubuizz-header header {
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color: #504F48;
+  background-color: #504f48;
   height: 53px;
   font-size: 20px; }
 
 .fubuizz-header nav {
   margin-top: 0px;
-  background-color: #000000;
+  background-color: black;
   height: 53px;
   font-size: 25px; }
 
 .fubuizz-header .navib {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: white; }
 
 .fubuizz-header .navia {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: white; }
 
 .fubuizz-header .navia:hover {
-  color: #E9C20C; }
+  color: #e9c20c; }
 
 .fubuizz-header .navia:active {
-  color: #E9C20C; }
+  color: #e9c20c; }
 
 .fubuizz-header ul {
   margin: 0px; }
@@ -152,10 +152,10 @@ html, body {
   width: 161px;
   padding: 0.57em 0em;
   text-align: center;
-  border-left: 1px solid #504F48; }
+  border-left: 1px solid #504f48; }
 
 .fubuizz-header .navi > li:last-child {
-  border-right: 1px solid #504F48; }
+  border-right: 1px solid #504f48; }
 
 .fubuizz-header .burgermenu {
   position: absolute;
@@ -166,7 +166,7 @@ html, body {
   visibility: hidden;
   padding-top: 5px;
   text-align: center;
-  color: #FFFFFF; }
+  color: white; }
 
 .fubuizz-header .burgerheader {
   width: 250px;
@@ -175,7 +175,7 @@ html, body {
   margin-left: -25px;
   padding-top: 3px;
   padding-left: 10px;
-  background-color: #504F48; }
+  background-color: #504f48; }
 
 .fubuizz-header .burgernav {
   width: 170px;
@@ -187,11 +187,11 @@ html, body {
   width: 250px;
   padding: 0.7em 2em;
   font-size: 17px;
-  border-bottom: 1px solid #504F48; }
+  border-bottom: 1px solid #504f48; }
 
 .fubuizz-header .quizbeenden {
-  background-color: #CB0727;
-  color: #FFFFFF;
+  background-color: #cb0727;
+  color: white;
   border: none;
   width: 170px;
   height: 40px;
