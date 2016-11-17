@@ -44,12 +44,15 @@ html, body {
   background: url(../images/fubuizz-bg-gross.jpg) no-repeat center center fixed;
   background-size: cover; }
 
-header.fubuizz-header {
+.fubuizz-header header {
+  margin-top: 0px;
+  margin-bottom: 0px;
   background-color: #504F48;
   height: 53px;
   font-size: 20px; }
 
 .fubuizz-header nav {
+  margin-top: 0px;
   background-color: #000000;
   height: 53px;
   font-size: 25px; }
@@ -72,7 +75,8 @@ header.fubuizz-header {
 
 .fubuizz-header .container {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+}
 
 .fubuizz-header .navip {
   position: relative;
@@ -93,7 +97,7 @@ header.fubuizz-header {
 
 .fubuizz-header .logo {
   position: absolute;
-  margin-top: 4px;
+  margin-top: 0px;
   height: 43px;
   left: 33px; }
 
@@ -134,13 +138,13 @@ header.fubuizz-header {
   margin-left: -25px;
   background-color: #504F48;}
 
-/*.fubuizz-header .burgernav {
+.fubuizz-header .burgernav {
   width: 170px;
   height: 550px; } 
 
 .fubuizz-header .burgernav > ul {
   margin-left: 0px;
-  padding: 0px; } */
+  padding: 0px; } 
 
 .fubuizz-header .burgernav li{
   display: block;
@@ -163,9 +167,7 @@ header.fubuizz-header {
   top: 260px; }
 
 @media only screen and (max-width: 1024px) {
-  body {
-    background-color: #FFFFFF; }
-
+  
   .fubuizz-header .head {
     visibility: hidden; }
 
@@ -191,17 +193,15 @@ header.fubuizz-header {
     visibility: visible; } }
 
 @media only screen and (max-width: 800px) {
-  body {
-    background-color: #FFFFFF; }
 
   .fubuizz-header p {
     font-size: 13px; }
 
   .fubuizz-header .head {
     visibility: hidden; }
-
+/*
   .fubuizz-header header {
-    height: 37px; }
+    height: 37px; }*/
 
   .fubuizz-header .avatar {
     width: 28px;
