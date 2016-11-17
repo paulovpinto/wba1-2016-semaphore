@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Variabeln
 ###################################################### */
 /* Bausteine
@@ -38,171 +37,49 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.quizuebersicht {
-  /* Sortierliste wurde angepasst, muss aber noch bearbeitet werden */
-  /* wurde gr├Â├ƒengerecht angepasst */
-  /* NEU Klasse "Quizbild" wurde eingef├╝gt und gr├Â├ƒengerecht angepasst */
-  /* wurde an Desktopversion angepasst und ist in einer Reihe, anstatt in 2 Reihen*/
-  /* NEU Klasse "Beschreibung" wurde eingef├╝gt: 3 Zeilen pro Beschreibung */
-  /* Schriftgr├Â├ƒe wurde ver├ñndert */
-  /* NEU Button "Auswahl" wurde eingef├╝gt, farblich gemacht und angepasst */
-  /*.button{
-      padding-bottom: 8pt;
-      margin: 0em;
-      height: 25pt;
-  }*/
-  /********************************************************************************
-  *                                                                               *
-  *                               MOBILE-ANSICHT                                  *
-  *                                                                               *
-  *********************************************************************************/
-  /**DIE QUIZKACHEL IST ZU BREIT! BZW DAS PADDING/MARGIN GREIFT NICHT**/ }
-  .quizuebersicht .uebersicht {
-    width: 900pt;
-    margin: 0 auto;
-    margin-top: 55px; }
-  .quizuebersicht .Quizkachel {
-    display: table;
-    float: left;
-    padding: 0;
-    margin-right: 15pt;
-    margin-bottom: 29.5pt;
-    background-color: rgba(248, 245, 228, 0.9);
-    font-family: "Oswald", sans-serif;
-    font-style: normal;
-    width: 172.5pt;
-    height: 232pt; }
-  .quizuebersicht .Quizbild {
-    display: block;
-    margin: auto;
-    width: 172.5pt;
-    height: 107pt; }
-  .quizuebersicht .Quizkachel h3 {
-    color: black;
-    font-family: Oswald;
-    margin: auto;
-    font-size: 12pt;
-    line-height: 100%;
-    background-color: #f8f5e4;
-    text-align: center;
-    height: 18pt;
-    padding-top: 5px;
-    padding-left: 4.5pt;
-    padding-right: 6.7pt; }
-  .quizuebersicht .Erstellinfos {
-    font-family: Oswald;
-    font-weight: 100;
-    color: #2F2D2C;
-    text-align: left;
-    padding-top: 1pt;
-    padding-bottom: 2pt;
-    padding-left: 7.5pt;
-    padding-right: 5pt;
-    background-color: #f8f5e4;
-    margin: auto; }
-  .quizuebersicht .Inhalt {
-    height: 64pt;
-    font-family: Oswald;
-    font-size: 10pt;
-    color: #2F2D2C;
-    background-color: rgba(248, 245, 228, 0.7); }
-  .quizuebersicht .Beschreibung {
-    font-size: 10px;
-    color: black;
-    text-align: left;
-    font-weight: lighter;
-    background-color: #f8f5e4;
-    margin: 0em;
-    height: 48pt;
-    padding-left: 7.5pt;
-    padding-right: 7.5pt;
-    padding-bottom: 5pt;
-    padding-top: 5pt; }
-  .quizuebersicht .AnzGespielt {
-    font-size: 10pt;
-    text-align: right;
-    font-weight: lighter;
-    background-color: #f8f5e4;
-    margin: 0em;
-    height: 16pt;
-    padding-right: 7.5pt; }
-  .quizuebersicht .Auswahl {
-    background-color: #CB0727;
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    font-family: Noto Sans;
-    color: white;
-    text-decoration: none;
-    height: 25pt;
-    font-size: 12pt;
-    margin-top: 10pt;
-    margin-bottom: 7.5pt;
-    padding-top: 3.5pt; }
-  @media only screen and (max-width: 439px) {
-    .quizuebersicht html, .quizuebersicht body {
-      padding: 0;
-      margin: 0; }
-    .quizuebersicht .uebersicht {
-      padding: 0;
+.quizuebersicht .content {
+  width: 1000px;
+  margin: 0 auto; }
+  .quizuebersicht .content .Sortierliste {
+    background-color: #e9c20c;
+    margin: 0;
+    padding: 0; }
+    .quizuebersicht .content .Sortierliste .sortiercontent {
       margin: 0;
-      width: 100%; }
-    .quizuebersicht .Quizbild {
-      width: 113px;
-      height: 70px;
-      float: left;
-      z-index: 1; }
-    .quizuebersicht #Sortierliste, .quizuebersicht .Quizkachel, .quizuebersicht .Erstellinfos {
-      margin: 5px 15px; }
-    .quizuebersicht .Quizkachel {
-      height: 70px;
-      display: inline-block;
-      width: 100%;
-      margin-top: 5px;
+      padding: 0;
+      display: flex; }
+      .quizuebersicht .content .Sortierliste .sortiercontent > li {
+        display: inline-block;
+        flex-grow: 1;
+        text-align: center; }
+  .quizuebersicht .content .kacheln {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      box-sizing: border-box;
+      display: block;
+      flex-basis: 25%;
+      /*flex-grow: 1;*/
       margin-bottom: 5px;
-      position: relative;
-      padding: 0; }
-    .quizuebersicht .inhalt {
-      width: calc(100% - 113px);
-      height: 70px;
-      float: left;
-      position: relative;
-      align-content: center;
-      font-family: Oswald, sans-serif;
-      font-style: normal;
-      padding: 0; }
-    .quizuebersicht .Quizkachel h3 {
-      padding: 0;
-      font-size: 13px;
-      line-height: 20px;
-      margin-bottom: 0;
-      margin-top: 0;
-      position: absolute;
-      margin-left: 113px;
-      z-index: 1;
-      width: calc(100% - 113px);
-      background-color: white; }
-    .quizuebersicht .Erstellinfos {
-      padding: 0;
-      font-size: 10px;
-      font-style: normal;
-      position: absolute;
-      margin: 5px;
-      margin-left: calc(113px + 10px);
-      margin-top: 25px;
-      z-index: 1; }
-    .quizuebersicht .AnzGespielt {
-      padding: 0;
-      font-size: 8px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-right: 25px;
-      z-index: 1;
-      text-decoration: none; }
-    .quizuebersicht .Beschreibung {
-      display: none; }
-    .quizuebersicht .button {
-      display: none; } }
+      padding: 10px; }
+      .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner {
+        background: rgba(248, 245, 228, 0.9);
+        color: #000;
+        height: 100%;
+        position: relative; }
+        .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner .auswahl-button {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+      .quizuebersicht .content .kacheln .Quizkachel .Quizbild {
+        width: 100%; }
+@media only screen and (max-width: 1024px) {
+  .quizuebersicht .content {
+    width: 800px; }
+    .quizuebersicht .content .kacheln .Quizkachel {
+      flex-basis: 33%; } }
 
 /*# sourceMappingURL=quizuebersicht.css.map */
