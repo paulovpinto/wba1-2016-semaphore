@@ -1,125 +1,41 @@
-@charset "UTF-8";
-/* Variabeln
-###################################################### */
-/* Bausteine
-###################################################### */
-.button {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: solid 1px #cb0727;
-  padding: 5px;
-  color: #fff;
-  width: 100%; }
+/*
+Error: Invalid CSS after "}": expected "}", was ""
+        on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss
 
-.button.is-primary {
-  background-color: #ff3737; }
+233: 	    .fragen-counter{
+234: 	        font-size: 24px;
+235: 	    }
+236: 	}
+237: }
 
-.liste th {
-  background-color: #E9C20C;
-  text-align: left; }
-
-.liste tr th:nth-child(1),
-.liste tr td:nth-child(1) {
-  width: 10%;
-  text-align: center; }
-
-.liste tr th:nth-child(2),
-.liste tr td:nth-child(2) {
-  width: 40%; }
-
-.liste tr th:nth-child(4),
-.liste tr td:nth-child(4) {
-  width: 10%;
-  text-align: right; }
-
-th, td {
-  padding: 4px;
-  color: black; }
-
-td {
-  background: rgba(248, 245, 228, 0.7); }
-
-/* GGf mal CSS Pr├ñprozessoren checken. */
-.quizrunde {
-  /*Anzeige fragen-counte r*/
-  /*Formatierung Frage und Hintergrund der Frage*/
-  /*Allgemeine Formatierung der Antworten,
-  haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
-  /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
-  Abst├ñnde zwischen den Fragen*/ }
-  .quizrunde .fragen-counter {
-    width: 100px;
-    margin-top: 1px;
-    margin-left: 7px;
-    color: #FFFFFF; }
-  .quizrunde .fragenblock {
-    font-weight: lighter;
-    color: black;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 20;
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: rgba(248, 245, 228, 0.6);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px; }
-  .quizrunde #timer {
-    height: 20px;
-    margin-top: 83;
-    margin-left: 15px;
-    margin-right: 15px;
-    max-width: 100%;
-    transition: max-width 5s;
-    background: red; }
-  .quizrunde #timer-js {
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    max-width: 100%;
-    background: red;
-    /* For browsers that do not support gradients */
-    transition: max-width 30s; }
-  .quizrunde #timer.start {
-    max-width: 0; }
-  .quizrunde .alle-antworten {
-    font-weight: lighter;
-    color: black;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .quizrunde .antwort {
-    margin: 10px 15px;
-    padding: 3px 20px;
-    cursor: pointer;
-    background-color: rgba(248, 245, 228, 0.7);
-    min-height: 30px; }
-  .quizrunde .antwort:hover {
-    background-color: #f8f5e4; }
-  @media only screen and (min-width: 439px) {
-    .quizrunde .antwort {
-      margin-top: 20px; }
-    .quizrunde .fragenblock {
-      height: 10%;
-      font-size: 24px; }
-    .quizrunde .alle-antworten {
-      margin-top: -20px;
-      font-size: 24px; }
-    .quizrunde .fragen-counter {
-      font-size: 24px; } }
-  @media only screen and (min-width: 1024px) {
-    .quizrunde .antwort {
-      margin-top: 40px;
-      font-size: 24px; }
-    .quizrunde .fragenblock {
-      height: 15%;
-      font-size: 24px; }
-    .quizrunde .fragen-counter {
-      font-size: 24px; } }
-
-/*# sourceMappingURL=quizrunde.css.map */
+Backtrace:
+./app/quiz_app/quizrunde/quizrunde.scss:238
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:658:in `block'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:409:in `media_directive'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 238 of ./app/quiz_app/quizrunde/quizrunde.scss\A \A 233: 	    .fragen-counter{\A 234: 	        font-size: 24px;\A 235: 	    }\A 236: 	}\A 237: }"; }
