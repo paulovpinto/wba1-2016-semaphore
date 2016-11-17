@@ -1,7 +1,5 @@
 /***************************************************
-Hier wird der HTML Code dynamisch erzeugt und mit 
-den Json Daten befüllt. Dieser Code wird dann
-in das Dokument geschrieben.
+Dieses Script erzeugt dynamisch die übersicht Seite
 
 ****************************************************/
 
