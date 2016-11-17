@@ -24,7 +24,7 @@
 			</div> -->       
 		</div>
 		<div class="buttons"> 
-    		<button class="button is-primary" href="quiz.html">Spielen</button>
+    		<button class="button is-primary" id="playButton" href="quiz.html">Spielen</button>
 			<button class="btn1 button is-primary" href="">Highscore</button>
 		</div>
 	</div>
@@ -47,22 +47,7 @@
 	</table>
 	</div>
 </div>
-    <script type="text/javascript">
-    $(document).ready(function(){
-       $('.teasertext .Beschreibung_lang').addClass("hidden");
-        console.log("javascript eingebunden")
 
-        $('.teasertext').click(function() {
-            var $this = $(this);
-
-            var $beschreibung = $this.find(".Beschreibung_lang");
-            
-            console.log($beschreibung);
-            $beschreibung.toggleClass("hidden");
-            
-        });
-    });
-</script>
 
 
 
