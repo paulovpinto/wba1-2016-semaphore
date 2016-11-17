@@ -38,42 +38,42 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.startscreen {
+#start {
   margin: 60px auto;
   width: 1000px;
   box-sizing: border-box; }
-  .startscreen .boxbox {
+  #start .boxbox {
     box-sizing: border-box;
     width: 100%;
     /*margin-left: 10%; */
     display: flex;
     margin-top: 0.5em; }
-    .startscreen .boxbox .column {
+    #start .boxbox .column {
       flex: 1 0 0;
       box-sizing: border-box; }
-  .startscreen .quizbox {
+  #start .quizbox {
     margin-right: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.5em; }
-  .startscreen .titel {
+  #start .titel {
     background-color: #F8F5E4;
     text-align: center;
     color: black; }
-  .startscreen h2 {
+  #start h2 {
     text-align: center;
     /*padding-left: 5em;*/ }
-  .startscreen img {
+  #start img {
     max-width: 100%;
     height: auto; }
-  .startscreen .author {
+  #start .author {
     background-color: rgba(248, 245, 228, 0.7); }
-  .startscreen .teasertext {
+  #start .teasertext {
     background-color: rgba(248, 245, 228, 0.7);
     margin-bottom: 0em;
     padding-bottom: 0em; }
-  .startscreen .teasertext2 {
+  #start .teasertext2 {
     margin-top: -60px; }
-  .startscreen .btn {
+  #start .btn {
     padding: 0em;
     margin-bottom: 0.5em;
     background-color: #CB0727;
@@ -86,7 +86,7 @@ td {
     font-weight: bold;
     color: white;
     text-decoration: none; }
-  .startscreen .btn1 {
+  #start .btn1 {
     padding: 0em;
     background-color: #CB0727;
     width: 100%;
@@ -98,34 +98,33 @@ td {
     font-weight: bold;
     color: white;
     text-decoration: none; }
-  .startscreen .liste {
+  #start .liste {
     font-family: 'Oswald', sans-serif;
     width: 100%;
     margin-top: 0em;
     margin-right: 1em;
     border-spacing: 0px 10px; }
-  .startscreen .liste th {
+  #start .liste th {
     background-color: #E9C20C;
     text-align: left; }
-  .startscreen .liste tr th:nth-child(1),
-  .startscreen .liste tr td:nth-child(1) {
+  #start .liste tr th:nth-child(1),
+  #start .liste tr td:nth-child(1) {
     width: 10%;
     text-align: center; }
-  .startscreen .liste tr th:nth-child(2),
-  .startscreen .liste tr td:nth-child(2) {
+  #start .liste tr th:nth-child(2),
+  #start .liste tr td:nth-child(2) {
     width: 40%; }
-  .startscreen .liste tr th:nth-child(4),
-  .startscreen .liste tr td:nth-child(4) {
+  #start .liste tr th:nth-child(4),
+  #start .liste tr td:nth-child(4) {
     width: 10%;
     text-align: right; }
-  .startscreen th, .startscreen td {
+  #start th, #start td {
     padding: 4px;
     color: black; }
-  .startscreen td {
+  #start td {
     background: rgba(248, 245, 228, 0.7); }
 
-<<<<<<< HEAD
-/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   .startscreen {
     width: 100%;
@@ -139,72 +138,5 @@ td {
       display: inline-block; }
     .startscreen #highscorecontent {
       display: none; } }
-
-/*# sourceMappingURL=cn-start.css.map */
-
-=======
-/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
-@media screen and (max-width: 439px) {
-  .btn1 {
-    display: inline-block; }
-
-  #highscorecontent {
-    display: none; }
-
-  .boxbox {
-    /*margin-top: -8em;*/
-    width: 90%;
-    margin-left: 1.5em;
-    margin-right: 1.5em; }
-
-  .quizbox {
-    margin-top: -36em; }
-
-  .titel {
-    margin-top: -3em; } }
-@media screen and (max-width: 1024px) {
-  .quizbox {
-    margin-top: -32em; }
-
-  #highscorecontent {
-    margin-top: -33em; } }
-@media screen and (min-width: 750px) {
-  .titel {
-    margin-top: -3em; } }
->>>>>>> 68e79e76074861b15b6fc47345dca025d365f4de
-.toggleBox {
-  position: relative;
-  padding-top: 0px;
-  margin-top: 0px; }
-
-/* Ausblenden des input-Feldes */
-.toggleBox input {
-  position: absolute;
-  left: -99999px; }
-
-/* Gestaltung der labels */
-.toggleBox label {
-  display: block;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  margin-top: -40px; }
-
-.toggleBox label:hover {
-  background: #ddd; }
-
-/* Der Aufklappmechanismus */
-.toggleBox input:not(:checked) ~ div {
-  opacity: 0;
-  height: 0; }
-
-.toggleBox input:checked ~ div {
-  opacity: 1;
-  padding: 0em; }
-
-/* Steuerung der Sichtbarkeit der labels */
-.toggleBox input:not(:checked) ~ .close,
-.toggleBox input:checked ~ .open {
-  display: none; }
 
 /*# sourceMappingURL=startscreen.css.map */

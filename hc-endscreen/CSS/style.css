@@ -25,6 +25,7 @@ body{
 }
 
 .heading {
+<<<<<<< HEAD
     font-size: 24px;
     text-align: center;
     color:black;
@@ -68,11 +69,69 @@ body{
 .fussbaelle {
     //width: 345px;
     width: (100%-15px);
+=======
+    
+    text-align: center;
+    color:black;
+    width: calc(100%-30px);
+    height: 50px;
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    
+}
+
+h1{
+    font-family: 'OswaldRegular';
+    line-height: 50px;
+    color:black;
+    font-size: 24px;
+}
+
+.erneut {
+    background-color: rgba(203,7,39,1); 
+    color: rgba(255,255,255,1 );
+    font-size: 20px;
+    border:none;
+    text-align: center;
+    text-decoration:none;
+    width: calc(100% - 30px);
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    font-family: Noto-Sans;
+}
+
+.erneut p{
+    text-align:center;
+}
+
+.fussbaelle img{
+    height: 15px;
+    width: 15px;
+}
+
+.ballFalsch img{
+    opacity: 30%;
+}
+
+.fussbaelle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.fussbaelle table {
+    width: calc(100% - 30px);
+    text-align: center;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .punkte {
     background-color: rgba(233,194,12,1);
     color: black;
+<<<<<<< HEAD
     font-size: 20px;
     text-align:center;
     width: 345px;
@@ -81,6 +140,16 @@ body{
     display: inline-block;
     margin-top: 3px;
     font-family: Oswald;
+=======
+    font-size: 125%;
+    text-align:center;
+    width: calc(100% - 30px);
+    height: 312.5%;
+    line-height: 312.5%;
+    display: inline-block;
+    margin-top: 3px;
+    font-family: 'OswaldRegular';
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
  
 .suggestions {
@@ -88,14 +157,21 @@ body{
     color: black;
     font-size: 20px;
     text-align:center;
+<<<<<<< HEAD
     width: 345px;
     height: 50px;
     font-family: Oswald;
+=======
+    width: calc(100% - 30px);
+    height: 50px;
+    font-family: 'OswaldRegular';
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     line-height: 50px;
     display: inline-block;
     font-style: normal;
     margin-top: 3px;
 }
+<<<<<<< HEAD
 
 .suggestions img{
     width: 113px;
@@ -106,13 +182,33 @@ body{
 .suggestions .sugg {
     float: left; 
     margin-right: 2px;
+=======
+
+.suggestions img{
+    width: 100%;
+    height: 70px;
+}
+
+.suggestions .sugg {
+    float: left; 
+    margin-right: 10px;
+    width: calc((100% - 20px)/3);
+    margin-top: 21px;
+}
+
+.suggestions .sugg:last-child {
+    margin-right:  0px;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .suggestions .sugg div {
     position:relative;
     top: -36px;
     background-color: rgba(255, 255, 255, 0.5);
+<<<<<<< HEAD
     width: 113px;
+=======
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     height: 20px;
     line-height: 20px;
     font-family: 'Noto-Sans';
@@ -122,19 +218,35 @@ body{
 .linke-seite {
     float: left;
     padding: 50px;
+<<<<<<< HEAD
     padding-right: 50px;
+=======
+    padding-right: 5px;
+    width: calc(50% - 55px);
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .rechte-seite {
     float: left;
     padding: 50px;
     padding-left: 5px;
+<<<<<<< HEAD
 }
 
 .quizbild img {
     width: 345px;
     height: 214px;
     margin-top: -5px;
+=======
+    width: calc(50% - 55px);
+}
+
+.quizbild img {
+    margin-top: 5px;
+    width: calc(100% - 30px);
+    max-height: 275px;
+    object-fit: cover;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .rank img {
@@ -144,21 +256,35 @@ body{
 
 
 .highscore table{
+<<<<<<< HEAD
     //width: 345px;
     width: 100%;
     margin-top: -9px;
     border-spacing: 0px 5px;
+=======
+    width: calc(100% - 30px);
+    margin-top: -9px;
+    border-spacing: 0px 14px;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .highscore table th {
     background-color: rgba(233,194,12,1);
     text-align: left;
     text-width: none;
+<<<<<<< HEAD
     font-family: Oswald;
 }
 .highscore table td {
     background-color: rgba(255, 255, 255, 0.5);  
     font-family: Oswald;
+=======
+    font-family: 'OswaldRegular';
+}
+.highscore table td {
+    background-color: rgba(255, 255, 255, 0.5);  
+    font-family: 'OswaldRegular';
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
 }
 
 .highscore tr:last-child {
@@ -175,24 +301,42 @@ body{
 
 @media only screen and (max-device-width: 439px)
 {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     body{
         background-image: url(../images/background.jpg);
     }
         
     .heading{
+<<<<<<< HEAD
         height: 2em;
+=======
+        height: 200%;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
         width: calc(100% - 21px);
         background: rgb(248, 245, 228);
         position: absolute;
         transform: translate(11px);
         margin-top: 6em;
+<<<<<<< HEAD
         margin-bottom: 0%;   
+=======
+        margin-bottom: 0%; 
+        display: inline-block;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     }
     
     h1{
         margin-top: 0.25em;
+<<<<<<< HEAD
         font-family: 'OswaldRegular';
         font-size: 1em;
+=======
+        font-size: 1em;
+        line-height: 100%;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     }
     
     .quizbild img{
@@ -218,6 +362,7 @@ body{
     .fussbaelle img{
         height: 0.75em;
         width: 0.75em;
+<<<<<<< HEAD
         margin-right: 0.2em;
         margin-top: 5pt;
         padding: 0px;
@@ -226,6 +371,19 @@ body{
     .fussbaelle{
         width: calc(100% - 21px);
         transform: translate(70%);
+=======
+    }
+    
+    .fussbaelle{
+        width: 100%;
+        height: 
+        line-height: 
+    }
+    
+    .fussbaelle table {
+        width: calc(100% - 30px);
+        text-align: center;
+>>>>>>> 8695c84799df5f81b48c68f64f0750ad447ec23e
     }
         
     .erneut, .highscore-btn{
