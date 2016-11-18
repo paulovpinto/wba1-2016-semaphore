@@ -161,11 +161,11 @@ body {
   .schlussscreen .linke-seite {
     float: left;
     margin-top: 20px;
-    width: calc(50% - 55px); }
+    width: calc(52% - 55px); }
   .schlussscreen .rechte-seite {
     float: right;
     margin-top: 20px;
-    width: calc(50% - 55px); }
+    width: calc(54% - 55px); }
   .schlussscreen .quizbild img {
     margin-top: 5px;
     width: calc(100% - 30px);
