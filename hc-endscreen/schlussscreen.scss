@@ -238,6 +238,10 @@ body{
     .schlussscreen{
         
         
+	box-sizing: border-box;
+	
+	width: $content-width-tablet;
+	margin: 0 auto;
         
         
     }
