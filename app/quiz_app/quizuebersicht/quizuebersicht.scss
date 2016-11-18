@@ -6,8 +6,10 @@
 				
 		width: 1000px;
 		margin: 0 auto;
+        margin-top: 70px;
 	
 		.sortierliste{
+            margin-top: $gutter-width;
 			background-color: $bg-yellow;
 			margin: 0;
 			padding: 0;
@@ -24,7 +26,7 @@
 			}
 		}		
 
-		.kacheln {
+		.kacheln{
 	
 		    display: flex;
 		    flex-wrap:wrap;
@@ -37,42 +39,74 @@
 			    flex-basis: 25%;
 			    /*flex-grow: 1;*/
 			    margin-bottom: $base-margin;
-			    padding: $gutter-width;
+			    padding: $gutter-width; 
 				
 				.quizkachel-inner{
+                    margin-bottom: 0em;
+                    margin-top: 0em;
 					background: $bg-opak;
-					color: #000;
+					color: $dark_black;
 					height: 100%;
 					position: relative;
 					
-					.auswahl-button{
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0; 
-					}
+                    .basicInfos{
+                    
+                        .quizueberschrift{
+                            background-color: rgba(248,245,228,1);
+                            text-align: center;
+                            }
+                        
+                        .erstellinfos, .datum{
+                            width: relative;
+                            float: left;
+                            font-weight: $font-weight-light;
+                            font-size: 10pt; 
+                            padding-bottom: $base-padding;
+                        }
+                        
+                        .erstellinfos{
+                            padding-left: $base-padding;
+                        }
+                        
+                        .anzGespielt.mobile{
+                            display: none;
+                        }
+                    }
+                    .inhalt{
+                        font-weight: $font-weight-light;
+                        
+                        .beschreibung{
+                            float: left;
+                            padding-left: $base-padding;
+                            padding-right: $base-padding;
+                            font-size: 10pt;
+                        }
+                        
+                        .anzGespielt.desktop.tablet{
+                            font-weight: $font-weight-light;
+                            padding-right: $base-padding;
+                            text-align: right;
+                            float: right;
+                            font-size: 10pt;
+                        }
+                    }
+                    
+				    .auswahl-button{
+                        font-size: 12pt;
+						position: relative;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        }
+                    
 				}
+                
 			      
 			    .quizbild{
 				    width: 100%;
 			    }
 		    }
 		}		
-	}
-	
-	@media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
-		
-		.content{
-		
-			width: $content-width-tablet;
-			
-			.kacheln{
-				.Quizkachel{
-					flex-basis: 33%;	
-				}
-			}
-
-		}   
 	}
 	
 	@media only screen and (max-width: $bp-smartphone){

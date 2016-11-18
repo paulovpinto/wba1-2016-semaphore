@@ -39,8 +39,10 @@ td {
 
 .quizuebersicht .content {
   width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 70px; }
   .quizuebersicht .content .sortierliste {
+    margin-top: 10px;
     background-color: #e9c20c;
     margin: 0;
     padding: 0; }
@@ -65,22 +67,46 @@ td {
       margin-bottom: 5px;
       padding: 10px; }
       .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
+        margin-bottom: 0em;
+        margin-top: 0em;
         background: rgba(248, 245, 228, 0.9);
-        color: #000;
+        color: black;
         height: 100%;
         position: relative; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
+          background-color: #f8f5e4;
+          text-align: center; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          width: relative;
+          float: left;
+          font-weight: 300;
+          font-size: 10pt;
+          padding-bottom: 5px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos {
+          padding-left: 5px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
+          display: none; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt {
+          font-weight: 300; }
+          .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 10pt; }
+          .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .anzGespielt.desktop.tablet {
+            font-weight: 300;
+            padding-right: 5px;
+            text-align: right;
+            float: right;
+            font-size: 10pt; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
-          position: absolute;
+          font-size: 12pt;
+          position: relative;
           bottom: 0;
-          left: 0;
-          right: 0; }
+          right: 0;
+          left: 0; }
       .quizuebersicht .content .kacheln .quizkachel .quizbild {
         width: 100%; }
-@media only screen and (min-width: 439px) and (max-width: 1024px) {
-  .quizuebersicht .content {
-    width: 800px; }
-    .quizuebersicht .content .kacheln .Quizkachel {
-      flex-basis: 33%; } }
 @media only screen and (max-width: 439px) {
   .quizuebersicht .content {
     width: 100%;
