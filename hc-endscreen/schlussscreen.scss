@@ -10,8 +10,6 @@
 
 }
 
-@font-face { font-family: 'OswaldRegular'; 
-            src: url('fonts/Oswald-Regular.ttf') format('truetype'); }
 @font-face { font-family: 'OswaldLight'; 
             src: url('fonts/Oswald-Light.ttf') format('truetype'); }
 @font-face { font-family: 'NotoSans'; 
@@ -52,27 +50,22 @@ body{
 	}
 	
 	.heading {
-	
-	    
 	    text-align: center;
-	    color:black;
-	    /*width: calc(100%-30px); */
+	    color: $dark_black;
 	    height: 50px;
-	    background-color: white;
-	    /*margin-left: 15px;
-	    margin-right: 15px; */
+	    background-color: $bright;
 	}
 	
 	h1{
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	    line-height: 50px;
-	    color:black;
+	    color: $dark_black;
 	    font-size: 24px;
 	}
 	
 	.erneut {
-	    background-color: rgba(203,7,39,1); 
-	    color: rgba(255,255,255,1 );
+	    background-color: $primary; 
+	    color: $primary-light;
 	    font-size: 20px;
 	    border:none;
 	    text-align: center;
@@ -81,7 +74,7 @@ body{
 	    height: 50px;
 	    line-height: 50px;
 	    display: inline-block;
-	    font-family: Noto-Sans;
+	    font-family: 'NotoSans';
 	}
 	
 	.erneut p{
@@ -109,8 +102,8 @@ body{
 	}
 	
 	.punkte {
-	    background-color: rgba(233,194,12,1);
-	    color: black;
+	    background-color: $bg-yellow;
+	    color: $dark_black;
 	    font-size: 125%;
 	    text-align:center;
 	    width: calc(100% - 30px);
@@ -118,7 +111,7 @@ body{
 	    line-height: 312.5%;
 	    display: inline-block;
 	    margin-top: 3px;
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	
 	}
 
@@ -138,13 +131,13 @@ body{
         }
         
         h2 {
-            background-color: rgba(233,194,12,1);
-            color: black;
+            background-color: $bg-yellow;
+            color: $dark_black;
             font-size: 1.25em;
             text-align:center;
             width: 100%;
             height: 3.125em;
-            font-family: 'OswaldRegular';
+            font-family: $base-font-family;
             line-height: 3.125em;
             display: inline-block;
             font-style: normal;
@@ -169,7 +162,7 @@ body{
                 width: 100%;
                 height: 20px;
                 line-height: 20px;
-                font-family: 'Noto-Sans';
+                font-family: 'NotoSans';
 
             }
         }
@@ -178,17 +171,13 @@ body{
 	
 	.linke-seite {
 	    float: left;
-	    /*padding: 50px;
-	    padding-right: 5px;*/
 	    margin-top: 20px;
 	    width: calc(50% - 55px);
 	}
 	
 	.rechte-seite {
 	    float: right;
-	    /*padding: 50px;
-	    padding-left: 5px;*/
-		margin-top: 20px;
+        margin-top: 20px;
 	    width: calc(50% - 55px);
 	}
 	
@@ -206,25 +195,24 @@ body{
 	
 	
 	.highscore table{
-	    /*width: calc(100% - 30px);*/
 	    width: 100%;
 	    margin-top: -9px;
 	    border-spacing: 0px 14px;
 	}
 	
 	.highscore table th {
-	    background-color: rgba(233,194,12,1);
+	    background-color: $bg-yellow;
 	    text-align: left;
 	    text-width: none;
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	}
 	.highscore table td {
 	    background-color: rgba(255, 255, 255, 0.5);  
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	}
 	
 	.highscore tr:last-child {
-	    outline: solid 3px rgba(203, 7, 39, 1);
+	    outline: solid 3px $primary;
 	}
 	
 	.highscore-btn, .infos {
@@ -235,13 +223,29 @@ body{
 }
 
 
-@media only screen and (max-width: 800px){
+
+
+
+@media only screen and ($bp-tablet){
+    
+    .schlussscreen{
+        
+        
+        
+        
+    }
+
+}
+
+
+
+@media only screen and ($bp-smartphone){
 	
 	.schlussscreen{
 		
 		
 		width: 100%;
-		padding: 20px;
+		padding: $base-padding;
 		
 		.tablet, .desktop{
 			display: none !important;
@@ -274,7 +278,7 @@ body{
 	    h1{
 	        text-align: center;
 	        margin-top: 0.25em;
-	        font-family: 'OswaldRegular';
+	        font-family: $base-font-family;
 	        font-size: 1em;
 	        line-height: 1em;
 	    }
@@ -307,7 +311,7 @@ body{
 	    
 	    .punkte p{
 	        text-align: center;
-	        font-family: 'OswaldRegular';
+	        font-family: $base-font-family;
 	        font-size: 0.8em;
 	        margin-top: 0.55em;
 	    }
@@ -327,8 +331,8 @@ body{
 	    }
 	        
 	    .erneut, .highscore-btn{
-	        background: rgb(203, 7, 39);
-	        color: rgb(255, 255, 255);
+	        background: $primary;
+	        color: $bright;
 	        height: 2.1em;
 	        width: calc(100% - 21px);
 	        transform: translate(11px);
@@ -383,7 +387,7 @@ body{
 	    }
 	    
 	    .infos{
-	        background: rgba(248, 245, 227, 0.6);
+	        background: rgba(248, 245, 228, 0.6);
 	    }
 	    
 	    .erstellt{
