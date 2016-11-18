@@ -107,6 +107,11 @@ td {
           left: 0; }
       .quizuebersicht .content .kacheln .quizkachel .quizbild {
         width: 100%; }
+@media only screen and (min-width: 439px) and (max-width: 1024px) {
+  .quizuebersicht .content {
+    width: 800px; }
+    .quizuebersicht .content .kacheln .quizkachel {
+      flex-basis: 33%; } }
 @media only screen and (max-width: 439px) {
   .quizuebersicht .content {
     width: 100%;
