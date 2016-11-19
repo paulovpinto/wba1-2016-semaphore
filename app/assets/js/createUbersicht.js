@@ -52,21 +52,25 @@ function createQuizOverview(){
 	document.getElementById("snippetQuiz").removeChild(document.getElementsByClassName("quizkachel")[0]);
     
     //ACHTUNG! VON QUIZÜBERSICHT EINGEFÜGT. 
-    //Funktion zum Anzeigen der Beschreibung(beim )
+    //Funktion zum Anzeigen der Beschreibung(beim Klick öffnet sich die Beschreibung)
     
      $(document).ready(function(){
-       $('.beschreibung').addClass("hidden");
+         $('.beschreibung').addClass("hidden");
+         $('.button').addClass("hidden");
+         
        
 
         $('.quizkachel').click(function() {
             var $this = $(this);
 
             var $beschreibung = $this.find(".beschreibung");
+            var $button = $this.find(".button")
             
             console.log($beschreibung);
             $beschreibung.toggleClass("hidden");
+            $button.toggleClass("hidden");
             
         });
-    }); // Ende der vom Quizübersich-Team erstellten Funktion
+    }); // Ende der vom Quizübersicht-Team erstellten Funktion
 }
    
