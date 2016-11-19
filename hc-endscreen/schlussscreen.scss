@@ -239,8 +239,24 @@ body{
 	width: $content-width-tablet;
 	margin: 0 auto;
         
+    
+    
+    .highscore table{
+        width: 100%;
+	}
         
+    .rechte-seite, .linke-seite {
+            width: 50%;
     }
+        
+
+    }
+    
+    
+    
+    
+   
+    
 
 }
 
@@ -366,7 +382,7 @@ body{
         }
         
 	    .suggestions{
-            
+        
             
             
             .sugg{

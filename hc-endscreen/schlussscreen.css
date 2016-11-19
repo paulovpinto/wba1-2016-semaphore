@@ -192,7 +192,11 @@ body {
   .schlussscreen {
     box-sizing: border-box;
     width: 800px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+    .schlussscreen .highscore table {
+      width: 100%; }
+    .schlussscreen .rechte-seite, .schlussscreen .linke-seite {
+      width: 50%; } }
 @media only screen and (max-width: 439px) {
   body {
     background-image: url(images/background.jpg);
