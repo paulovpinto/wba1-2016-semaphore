@@ -65,7 +65,7 @@ body{
 	
 	.erneut {
 	    background-color: $primary; 
-	    color: $primary-light;
+	    color: $bright;
 	    font-size: 20px;
 	    border:none;
 	    text-align: center;
@@ -80,12 +80,7 @@ body{
 	.erneut p{
 	    text-align:center;
 	}
-	
-	.fussbaelle img{
-	    height: 15px;
-	    width: 15px;
-	}
-	
+		
 	.ballFalsch img{
 	    opacity: 30%;
 	}
@@ -233,7 +228,7 @@ body{
 
 
 
-@media only screen and ($bp-tablet){
+@media only screen and (max-width: $bp-tablet){
     
     .schlussscreen{
         
@@ -250,13 +245,22 @@ body{
 
 
 
-@media only screen and ($bp-smartphone){
+@media only screen and (max-width: $bp-smartphone){
 	
+    body{
+        background-image: url(images/background.jpg);
+        max-height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
 	.schlussscreen{
 		
-		
+		box-sizing: border-box;
+        
 		width: 100%;
-		padding: $base-padding;
+		padding: 9px;
 		
 		.tablet, .desktop{
 			display: none !important;
@@ -271,40 +275,28 @@ body{
 			width: 100%;
 		}
 		
-	    body{
-	        background: purple;
-	    }
-	        
-	    .heading{
-	        /*height: 200%;
-	        width: calc(100% - 21px);*/
-	        background: rgb(248, 245, 228);
-	        position: absolute;
-	        transform: translate(11px);
-	        margin-top: 6em;
-	        margin-bottom: 0em; 
-	        display: inline-block;
-	    }
 	    
-	    h1{
-	        text-align: center;
-	        margin-top: 0.25em;
-	        font-family: $base-font-family;
-	        font-size: 1em;
-	        line-height: 1em;
-	    }
+        
+        
+	  
+	   
 	    
 	    
 	    .quizbild{
 		 	
+            
 		 	position: relative;
 		 	
 			.headline{
-				background: pink;
+				background: $bg-opak;
 				position: absolute;
 				left: 0;
 				right: 0;
 				bottom: 0;
+                text-align: center;
+                font-family: $base-font-family;
+                font-size: 16px;
+                padding: 4px 0;
 			}
 			
 			img{
@@ -315,31 +307,19 @@ body{
 	    }
 	
 	    .punkte{
-	        height: 2.1em;
-	        width: calc(100% - 21px);
-	        transform: translate(11px);
+            width: 100%;
+            
+            
+            p{
+                font-size: 13px;
+                
+            }
 	    }
 	    
-	    .punkte p{
-	        text-align: center;
-	        font-family: $base-font-family;
-	        font-size: 0.8em;
-	        margin-top: 0.55em;
-	    }
-	
-	    .fussbaelle img{
-	        height: 0.75em;
-	        width: 0.75em;
-	    }
 	    
-	    .fussbaelle{
-	        width: 100%; 
-	    }
+	   
 	    
-	    .fussbaelle table {
-	        /*width: calc(100% - 30px);*/
-	        text-align: center;
-	    }
+	    
 	        
 	    .erneut, .highscore-btn{
 	        background: $primary;
