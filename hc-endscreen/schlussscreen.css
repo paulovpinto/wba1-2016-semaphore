@@ -106,11 +106,11 @@ body {
   .schlussscreen .punkte {
     background-color: #e9c20c;
     color: black;
-    font-size: 125%;
+    font-size: 20px;
     text-align: center;
     width: calc(100% - 30px);
-    height: 312.5%;
-    line-height: 312.5%;
+    height: 50px;
+    line-height: 50px;
     display: inline-block;
     margin-top: 3px;
     font-family: "Oswald", sans-serif; }
@@ -126,7 +126,7 @@ body {
   .schlussscreen .suggestions h2 {
     background-color: #e9c20c;
     color: black;
-    font-size: 1.25em;
+    font-size: 20px;
     text-align: center;
     width: 100%;
     height: 3.125em;
@@ -204,7 +204,8 @@ body {
   .schlussscreen {
     box-sizing: border-box;
     width: 100%;
-    padding: 9px; }
+    padding: 9px;
+    /*suggestion Ende*/ }
     .schlussscreen .tablet, .schlussscreen .desktop {
       display: none !important; }
     .schlussscreen .mobile {
@@ -212,6 +213,10 @@ body {
     .schlussscreen .linke-seite, .schlussscreen .rechte-seite {
       float: none;
       width: 100%; }
+    .schlussscreen .highscore, .schlussscreen .suggestions h2 {
+      display: none; }
+    .schlussscreen .infos {
+      display: inline-block; }
     .schlussscreen .quizbild {
       position: relative; }
       .schlussscreen .quizbild .headline {
@@ -234,54 +239,60 @@ body {
       .schlussscreen .punkte p {
         font-size: 16px;
         margin-top: -15px; }
+    .schlussscreen .fussbaelle {
+      width: 100%;
+      height: 13px;
+      line-height: 13px;
+      margin: 7px 0px 13px 0px; }
+    .schlussscreen .fussbaelle table {
+      width: 100%;
+      text-align: center; }
+    .schlussscreen .fussbaelle img {
+      width: 13px;
+      height: 13px; }
     .schlussscreen .erneut, .schlussscreen .highscore-btn {
+      width: 100%;
       background: #cb0727;
       color: white;
-      height: 2.1em;
-      width: calc(100% - 21px);
-      transform: translate(11px);
-      margin-top: 0.8em;
+      height: 35px;
+      margin-top: 7px;
       border: none;
       display: inline-block; }
-    .schlussscreen .erneut p, .schlussscreen .highscore-btn p {
-      font-family: 'NotoSans';
-      font-size: 0.8em;
-      text-align: center;
-      text-decoration-line: none;
-      margin-top: 0.5em; }
-    .schlussscreen .highscore, .schlussscreen h2 {
-      display: none; }
-    .schlussscreen .suggestions {
-      margin-top: 1em;
-      /*width: calc(100% - 21px);*/
-      width: 100%;
-      transform: translate(11px); }
-    .schlussscreen .sugg {
-      height: 2.9em;
-      display: block;
-      margin-bottom: 7pt;
-      margin-top: auto; }
-    .schlussscreen .sugg img {
-      display: inline-block;
-      height: 2.9em; }
-    .schlussscreen .sugg-infos {
-      height: 2.9em;
-      width: calc(100% - 76px);
-      /*float: right; */
-      font-size: 0.55em;
-      display: inline-block; }
-    .schlussscreen .sugg-head {
-      font-family: "Oswald", sans-serif;
-      text-align: center;
-      background: #f8f5e4; }
-    .schlussscreen .infos {
-      background: rgba(248, 245, 228, 0.6); }
-    .schlussscreen .erstellt {
-      font-family: 'OswaldLight';
-      text-align: left;
-      padding-left: 0.5em; }
-    .schlussscreen .gespielt {
-      font-family: 'OswaldLight';
-      text-align: right; } }
+      .schlussscreen .erneut p, .schlussscreen .highscore-btn p {
+        font-family: 'NotoSans';
+        font-size: 13px;
+        text-align: center;
+        text-decoration-line: none;
+        margin-top: 8px; }
+    .schlussscreen .erneut p {
+      margin-top: -8px; }
+    .schlussscreen .suggestions .sugg {
+      clear: both;
+      margin-top: 9px;
+      width: 100%; }
+      .schlussscreen .suggestions .sugg img {
+        display: inline-block;
+        width: 30%;
+        height: 50px;
+        float: left; }
+      .schlussscreen .suggestions .sugg .sugg-infos {
+        display: inline-block;
+        font-size: 9px;
+        height: 50px;
+        width: 70%; }
+        .schlussscreen .suggestions .sugg .sugg-infos .sugg-head {
+          background: rgba(248, 245, 228, 0.9);
+          height: 13px;
+          line-height: 12px; }
+        .schlussscreen .suggestions .sugg .sugg-infos .infos {
+          height: 33px;
+          display: inline;
+          font-family: 'OswaldLight'; }
+          .schlussscreen .suggestions .sugg .sugg-infos .infos .erstellt {
+            margin-left: 7px; }
+          .schlussscreen .suggestions .sugg .sugg-infos .infos .gespielt {
+            float: right;
+            padding-right: 7px;
+            margin-top: -10px; } }
 
 /*# sourceMappingURL=schlussscreen.css.map */

@@ -99,11 +99,11 @@ body{
 	.punkte {
 	    background-color: $bg-yellow;
 	    color: $dark_black;
-	    font-size: 125%;
+	    font-size: 20px;
 	    text-align:center;
 	    width: calc(100% - 30px);
-	    height: 312.5%;
-	    line-height: 312.5%;
+	    height: 50px;
+	    line-height: 50px;
 	    display: inline-block;
 	    margin-top: 3px;
 	    font-family: $base-font-family;
@@ -128,7 +128,7 @@ body{
         h2 {
             background-color: $bg-yellow;
             color: $dark_black;
-            font-size: 1.25em;
+            font-size: 20px;
             text-align:center;
             width: 100%;
             height: 3.125em;
@@ -141,6 +141,7 @@ body{
         }
         
         .sugg {
+            
             &:last-child {
                 margin-right:  0px;
             }
@@ -253,6 +254,7 @@ body{
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        
     }
     
 	.schlussscreen{
@@ -274,8 +276,16 @@ body{
 			float:none;
 			width: 100%;
 		}
+        
+        .highscore, .suggestions h2{
+	        display:none;
+	    }
 		
+        .infos{
+            display: inline-block;
+        }
 	    
+        
         
         
 	  
@@ -315,76 +325,94 @@ body{
                 margin-top: -15px;
             }
 	    }
-	        
+	       
+        .fussbaelle {
+            width: 100%;
+            height: 13px;
+            line-height: 13px;
+            margin: 7px 0px 13px 0px;
+        }
+        
+        .fussbaelle table{
+            width: 100%;
+            text-align: center;
+        }
+        
+        .fussbaelle img{
+            width: 13px;
+            height: 13px;
+        }
+        
 	    .erneut, .highscore-btn{
+            width: 100%;
 	        background: $primary;
 	        color: $bright;
-	        height: 2.1em;
-	        width: calc(100% - 21px);
-	        transform: translate(11px);
-	        margin-top: 0.8em;
+	        height: 35px;
+	        margin-top: 7px;
 	        border: none;
 	        display: inline-block;
+            
+            p{
+                font-family: 'NotoSans';
+                font-size: 13px;
+                text-align: center;
+                text-decoration-line: none; 
+                margin-top: 8px;
+            }
 	    }
 	    
-	    .erneut p, .highscore-btn p{
-	        font-family: 'NotoSans';
-	        font-size: 0.8em;
-	        text-align: center;
-	        text-decoration-line: none; 
-	        margin-top: 0.5em;
-	    }
-	
-	    .highscore, h2{
-	        display:none;
-	    }
-	
+        .erneut p{
+            margin-top: -8px;
+        }
+        
 	    .suggestions{
-	        margin-top: 1em;
-	        /*width: calc(100% - 21px);*/
-	        width: 100%;
-	        transform: translate(11px);
-	    }
-	    
-	    .sugg{
-	        height: 2.9em;
-	        display: block;
-	        margin-bottom: 7pt;
-	        margin-top: auto;
-	    }
-	    
-	    .sugg img{
-	        display: inline-block;
-	        height: 2.9em;
-	    }
-	    
-	    .sugg-infos{
-	        height: 2.9em;
-	        width: calc(100% - 76px);
-	        /*float: right; */
-	        font-size: 0.55em;
-	        display: inline-block;
-	    }
-	    
-	    .sugg-head{
-	        font-family: $base-font-family;
-	        text-align: center;
-	        background: rgb(248, 245, 228);
-	    }
-	    
-	    .infos{
-	        background: rgba(248, 245, 228, 0.6);
-	    }
-	    
-	    .erstellt{
-	        font-family: 'OswaldLight';
-	        text-align: left;
-	        padding-left: 0.5em;
-	    }
-	    
-	    .gespielt{
-	        font-family: 'OswaldLight';
-	        text-align: right;
-	    }
+            
+            
+            
+            .sugg{
+                
+                clear: both;
+                margin-top: 9px;
+                width: 100%;
+                
+                img{
+                    display: inline-block;
+                    width: 30%;
+                    height: 50px;
+                    float: left;
+                }
+                
+                .sugg-infos{
+                    
+                    display: inline-block;
+                    font-size: 9px;
+                    height: 50px;
+                    width: 70%;
+                    
+                    .sugg-head{
+                        background: $bg-opak;
+                        height: 13px;
+                        line-height: 12px;
+                    }
+                    
+                    .infos{
+                        
+                        height: 33px;
+                        display: inline;
+                        font-family: 'OswaldLight';
+                        
+                        .erstellt{
+                            margin-left: 7px;
+                        }
+                        
+                        .gespielt{
+                            float: right;
+                            padding-right: 7px;
+                            margin-top: -10px;
+                        }
+                    }
+                } 
+            }
+        }/*suggestion Ende*/
 	}
 }
