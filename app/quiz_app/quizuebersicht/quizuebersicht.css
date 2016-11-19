@@ -75,6 +75,7 @@ td {
         height: 100%;
         position: relative; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
+          height: 18pt;
           background-color: #f8f5e4;
           text-align: center; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
@@ -90,6 +91,7 @@ td {
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt {
           font-weight: 300; }
           .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
+            height: 95px;
             float: left;
             padding-left: 5px;
             padding-right: 5px;
@@ -101,6 +103,10 @@ td {
             float: right;
             font-size: 10pt; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
+          font-weight: 300;
+          border: none;
+          height: 25pt;
+          background-color: #cb0727;
           font-size: 12pt;
           position: relative;
           bottom: 0;
@@ -118,8 +124,8 @@ td {
     width: calc(100% - 20px);
     padding: 10px;
     margin-top: 0;
-    /* Inhalt der Sortierliste pl├Âtzlich nicht mehr symmetrisch angeordnet. 
-        Mit der ├ñlteren Version abgeglichen. Kein Ergebnis. Was wird ├╝bersehen?*/ }
+    /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
+        Mit der älteren Version abgeglichen. Kein Ergebnis. Was wird übersehen?*/ }
     .quizuebersicht .content .sortierliste {
       margin-bottom: 10px; }
       .quizuebersicht .content .sortierliste .sortiercontent * {

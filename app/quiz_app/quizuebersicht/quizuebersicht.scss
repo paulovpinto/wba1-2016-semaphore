@@ -49,9 +49,9 @@
 					height: 100%;
 					position: relative;
 					
-                    .basicInfos{
-                    
+                    .basicInfos{               
                         .quizueberschrift{
+                            height: 18pt;
                             background-color: rgba(248,245,228,1);
                             text-align: center;
                             }
@@ -76,6 +76,7 @@
                         font-weight: $font-weight-light;
                         
                         .beschreibung{
+                            height: 95px;
                             float: left;
                             padding-left: $base-padding;
                             padding-right: $base-padding;
@@ -92,6 +93,10 @@
                     }
                     
 				    .auswahl-button{
+                        font-weight: $font-weight-light;
+                        border: none;
+                        height: 25pt;
+                        background-color: $primary;
                         font-size: 12pt;
 						position: relative;
                         bottom: 0;
