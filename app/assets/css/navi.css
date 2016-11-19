@@ -37,39 +37,78 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+/* Variabeln
+###################################################### */
+/* Bausteine
+###################################################### */
+.button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid 1px #ff3737;
+  padding: 5px;
+  color: white;
+  width: 100%; }
+
+.button.is-primary {
+  background-color: #ff3737; }
+
+.liste th {
+  background-color: #e9c20c;
+  text-align: left; }
+
+.liste tr th:nth-child(1),
+.liste tr td:nth-child(1) {
+  width: 10%;
+  text-align: center; }
+
+.liste tr th:nth-child(2),
+.liste tr td:nth-child(2) {
+  width: 40%; }
+
+.liste tr th:nth-child(4),
+.liste tr td:nth-child(4) {
+  width: 10%;
+  text-align: right; }
+
+th, td {
+  padding: 4px;
+  color: black; }
+
+td {
+  background: rgba(248, 245, 228, 0.9); }
+
 html, body {
   margin: 0px;
   font-family: "Oswald", sans-serif;
-  color: #FFFFFF;
+  color: white;
   background: url(../images/fubuizz-bg-gross.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 .fubuizz-header header {
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color: #504F48;
+  background-color: #504f48;
   height: 53px;
   font-size: 20px; }
 
 .fubuizz-header nav {
   margin-top: 0px;
-  background-color: #000000;
+  background-color: black;
   height: 53px;
   font-size: 25px; }
 
 .fubuizz-header .navib {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: white; }
 
 .fubuizz-header .navia {
   text-decoration: none;
-  color: #FFFFFF; }
+  color: white; }
 
 .fubuizz-header .navia:hover {
-  color: #E9C20C; }
+  color: #e9c20c; }
 
 .fubuizz-header .navia:active {
-  color: #E9C20C; }
+  color: #e9c20c; }
 
 .fubuizz-header ul {
   margin: 0px; }
@@ -79,8 +118,7 @@ html, body {
 
 .fubuizz-header .container {
   position: fixed;
-  width: 100%;
-}
+  width: 100%; }
 
 .fubuizz-header .navip {
   position: relative;
@@ -114,10 +152,10 @@ html, body {
   width: 161px;
   padding: 0.57em 0em;
   text-align: center;
-  border-left: 1px solid #504F48; }
+  border-left: 1px solid #504f48; }
 
 .fubuizz-header .navi > li:last-child {
-  border-right: 1px solid #504F48; }
+  border-right: 1px solid #504f48; }
 
 .fubuizz-header .burgermenu {
   position: absolute;
@@ -125,23 +163,23 @@ html, body {
   width: 40px;
   height: 40px;
   z-index: 2;
-  visibility: hidden; 
+  visibility: hidden;
   padding-top: 5px;
   text-align: center;
-  color: #FFFFFF;}
+  color: white; }
 
 .fubuizz-header .burgerheader {
   width: 250px;
-  height: 37px; 
+  height: 37px;
   margin-top: -24px;
   margin-left: -25px;
   padding-top: 3px;
   padding-left: 10px;
-  background-color: #504F48;}
+  background-color: #504f48; }
 
 .fubuizz-header .burgernav {
   width: 170px;
-  height: 550px; } 
+  height: 550px; }
 
 .fubuizz-header .burgernav li {
   display: block;
@@ -149,11 +187,11 @@ html, body {
   width: 250px;
   padding: 0.7em 2em;
   font-size: 17px;
-  border-bottom: 1px solid #504F48; }
+  border-bottom: 1px solid #504f48; }
 
 .fubuizz-header .quizbeenden {
-  background-color: #CB0727;
-  color: #FFFFFF;
+  background-color: #cb0727;
+  color: white;
   border: none;
   width: 170px;
   height: 40px;
@@ -172,7 +210,6 @@ html, body {
   position: relative; }
 
 @media only screen and (max-width: 1024px) {
-  
   .fubuizz-header .head {
     visibility: hidden; }
 
@@ -197,16 +234,15 @@ html, body {
   .fubuizz-header .burgermenu {
     visibility: visible; } }
 @media only screen and (max-width: 800px) {
-
   .fubuizz-header p {
     font-size: 13px; }
 
   .fubuizz-header .head {
     visibility: hidden; }
-/*
-  .fubuizz-header header {
-    height: 37px; }*/
 
+  /*
+    .fubuizz-header header {
+      height: 37px; }*/
   .fubuizz-header .burgerheader {
     height: 37px; }
 
@@ -239,5 +275,7 @@ html, body {
 
 .devnavi li:hover {
   cursor: pointer; }
+
+/*# sourceMappingURL=navi.css.map */
 
 /*# sourceMappingURL=navi.css.map */
