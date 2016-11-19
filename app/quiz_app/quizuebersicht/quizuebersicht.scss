@@ -81,34 +81,95 @@
 			width: 100%;
 			padding: $gutter-width;
 			
+            .sortierliste{
+                margin-bottom: 10px;
+                text-decoration: none;
+                
+                .sortiercontent *{
+                    
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            
 			.kacheln{
 				display: block;
                 
                 .quizkachel{
                     
+                    padding-bottom: 0;
+                    padding-top: 0;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                
                     .quizkachel-inner{
-                        
-                        .basicInfos{
+                        .basicInfos{ 
                             
-                            float: left;
                             .quizbild{
                                 float: left;
                                 width: 113px;
                                 height: 70px;
                             }
+                            
+                            h3{
+                                text-align: center;
+                                width: calc(100% - 113px);
+                                height: 16px;
+                                float: right;
+                                background-color: $bg-opak;
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+                            
+                            .erstellinfos, .datum{
+                                line-height: 5px;
+                                font-size: 12px;
+                                margin-left: calc(113px + 15px);
+                            }
+                            
+                            .datum{
+                                margin-bottom: 17px;
+                            }
+                            
+                            .anzGespielt.mobile{
+                                font-size: 11px;
+                                margin-top: -31px;
+                                margin-right: 15px;
+                                float: right;
+                            }
+                        }
+                        .inhalt{
+                            .beschreibung{
+                                font-size: 14px;
+                                margin-top: 30px;
+                                margin-left: 15px;
+                                margin-right: 15px;
+                            }
+                        }
+                        .auswahl-button{
+                            position: relative;
+                        } 
+                        .auswahl-button::after{
+                            margin-bottom: 50px;
                         }
                     }
-                }
-			}
-
-            
+                clear: both;}
+			} 
 		}  
-        .hidden{
-                display: none;
+        
+        .anzGespielt.desktop.tablet{
+            display: none;
         }
         
-	}
-         
+        .quizkachel-inner{
+            background-color: rgba(248,245,228,0.9);
+        }
+        
+        .hidden{
+            display: none;
+        }
+        
+	}      
 }
 
 
