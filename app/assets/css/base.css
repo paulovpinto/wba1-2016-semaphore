@@ -37,4 +37,7 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
 /*# sourceMappingURL=base.css.map */

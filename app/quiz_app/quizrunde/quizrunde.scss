@@ -9,7 +9,7 @@
 	width: $content-width-desktop /2;
 
 	.quizrunde-inner{
-		margin-left: -100%;
+		margin-left: -103%;
 		width: $content-width-desktop;
 	}
 
@@ -28,8 +28,6 @@
 .quizrunde .fragen-counter {
   width: 100px;
   margin-top: 100px;
-  margin-left: 15px;
-  /*margin-left: 7px;*/
   color: #FFFFFF;
 }
 /*Formatierung Frage und Hintergrund der Frage*/
@@ -138,7 +136,10 @@ Abstände zwischen den Fragen*/
 		position: static;
 		left: auto;
 		width: auto;
-
+        margin-top: -100px;
+        margin-left: 15px;
+        margin-right: 15px;
+   
 		.quizrunde-inner{
 			width: auto;
 			margin-left: auto;
@@ -154,6 +155,7 @@ Abstände zwischen den Fragen*/
 
     .quizrunde .antwort{
         margin-top:20px;
+        font-size: 24px;
     }
     .quizrunde .fragenblock{
         height: 10%;
@@ -162,6 +164,8 @@ Abstände zwischen den Fragen*/
     .quizrunde .alle-antworten{
         margin-top:-20px;
         font-size: 24px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .quizrunde .fragen-counter{
@@ -170,13 +174,18 @@ Abstände zwischen den Fragen*/
 }
 
 @media only screen and (min-width: $bp-tablet) {
+    
     .quizrunde .antwort{
         margin-top:40px;
         font-size:24px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .quizrunde .fragenblock{
         height:15%;
         font-size: 24px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     .quizrunde .fragen-counter{
         font-size: 24px;

@@ -38,6 +38,9 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
 @font-face {
   font-family: 'Oswald-Regular';
   src: url("../../assets/fonts/Oswald/Oswald-Regular.ttf") format("truetype"); }
@@ -51,15 +54,15 @@ body {
   background-size: cover; }
 
 .highscore-list {
-  /*Überschrift Container*/
-  /*Überschrifttext*/
-  /*Dropdown-Menü*/
+  /*├£berschrift Container*/
+  /*├£berschrifttext*/
+  /*Dropdown-Men├╝*/
   /*Container linke Seite*/
   /*Quizbild*/
   /*Autor und Erstelldatum*/
   /*Quizbeschreibung/Teasertext*/
   /*Rang in Tabelle*/
-  /*Container für Tabelle*/
+  /*Container f├╝r Tabelle*/
   /*Gesamte Tabelle*/ }
   .highscore-list .headline {
     height: 45px;
