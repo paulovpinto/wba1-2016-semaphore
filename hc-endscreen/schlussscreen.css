@@ -193,8 +193,8 @@ body {
 @media only screen and (max-width: 1024px) {
   .schlussscreen {
     box-sizing: border-box;
-    width: 800px;
-    margin: 0 auto; }
+    width: 100%;
+    padding: 15px 50px 5px 50px; }
     .schlussscreen .highscore table {
       width: 100%; }
     .schlussscreen .rechte-seite, .schlussscreen .linke-seite {
