@@ -70,8 +70,8 @@ td {
       margin-bottom: 5px;
       padding: 10px; }
       .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
-        margin-bottom: 0em;
-        margin-top: 0em;
+        margin-bottom: 0;
+        margin-top: 0;
         background: rgba(248, 245, 228, 0.9);
         color: black;
         height: 100%;
@@ -111,7 +111,7 @@ td {
           background-color: #cb0727;
           font-size: 12pt;
           position: relative;
-          bottom: 0;
+          bottom: -1px;
           right: 0;
           left: 0; }
       .quizuebersicht .content .kacheln .quizkachel .quizbild {

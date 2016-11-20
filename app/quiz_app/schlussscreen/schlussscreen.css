@@ -37,25 +37,39 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  border: 0; }
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
-@font-face {
-  font-family: 'OswaldLight';
-  src: url("fonts/Oswald-Light.ttf") format("truetype"); }
-@font-face {
-  font-family: 'NotoSans';
-  src: url("fonts/NotoSans-Regular.ttf") format("truetype"); }
-body {
-  max-height: auto;
-  background-image: url(images/NeuStadion.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+/* cn: regeln wir jetzt zentral via navi.scss
+	
+ html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+
+}
+
+	
+@font-face { font-family: 'OswaldLight'; 
+            src: url('fonts/Oswald-Light.ttf') format('truetype'); }
+@font-face { font-family: 'NotoSans'; 
+            src: url('fonts/NotoSans-Regular.ttf') format('truetype'); }
+
+
+body{
+    max-height: auto;
+    background-image: url(images/NeuStadion.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+*/
+.schlussscreen * {
+  font-family: "Oswald", sans-serif; }
 
 .schlussscreen {
   box-sizing: border-box;
@@ -92,7 +106,7 @@ body {
     height: 50px;
     line-height: 50px;
     display: inline-block;
-    font-family: 'NotoSans'; }
+    font-weight: 300; }
   .schlussscreen .erneut p {
     text-align: center; }
   .schlussscreen .ballFalsch img {
@@ -111,8 +125,8 @@ body {
     font-size: 20px;
     text-align: center;
     width: calc(100% - 30px);
-    height: 50px;
-    line-height: 50px;
+    /*height: 50px; cn: brauchen wir nicht 
+    line-height: 50px; */
     display: inline-block;
     margin-top: 3px;
     font-family: "Oswald", sans-serif; }
@@ -223,6 +237,17 @@ body {
       display: none; }
     .schlussscreen .infos {
       display: inline-block; }
+    .schlussscreen .erneut, .schlussscreen .highscore-btn {
+      width: 100%;
+      background: #cb0727;
+      color: white;
+      margin-top: 7px;
+      height: auto;
+      font-size: 16px;
+      border: none;
+      display: block;
+      line-height: normal;
+      font-weight: normal; }
     .schlussscreen .quizbild {
       position: relative; }
       .schlussscreen .quizbild .headline {
@@ -234,17 +259,19 @@ body {
         text-align: center;
         font-family: "Oswald", sans-serif;
         font-size: 16px;
-        padding: 4px 0; }
+        padding: 4px 0;
+        margin: 0;
+        color: #000; }
       .schlussscreen .quizbild img {
         width: 100%;
         display: block;
         margin-top: 0.56em; }
     .schlussscreen .punkte {
       width: 100%;
-      height: 33px; }
+      /*height: 33px;*/ }
       .schlussscreen .punkte p {
         font-size: 16px;
-        margin-top: -9px; }
+        /*margin-top: -9px; */ }
     .schlussscreen .fussbaelle {
       width: 100%;
       height: 13px;
@@ -256,22 +283,6 @@ body {
     .schlussscreen .fussbaelle img {
       width: 13px;
       height: 13px; }
-    .schlussscreen .erneut, .schlussscreen .highscore-btn {
-      width: 100%;
-      background: #cb0727;
-      color: white;
-      height: 35px;
-      margin-top: 7px;
-      border: none;
-      display: inline-block; }
-      .schlussscreen .erneut p, .schlussscreen .highscore-btn p {
-        font-family: 'NotoSans';
-        font-size: 13px;
-        text-align: center;
-        text-decoration-line: none;
-        margin-top: 8px; }
-    .schlussscreen .erneut p {
-      margin-top: -8px; }
     .schlussscreen .suggestions .sugg {
       clear: both;
       margin-top: 9px;

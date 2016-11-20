@@ -1,5 +1,7 @@
 @import "../../assets/css/base";
 
+/* cn: regeln wir jetzt zentral via navi.scss
+	
  html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
 {
     margin: 0;
@@ -10,6 +12,7 @@
 
 }
 
+	
 @font-face { font-family: 'OswaldLight'; 
             src: url('fonts/Oswald-Light.ttf') format('truetype'); }
 @font-face { font-family: 'NotoSans'; 
@@ -24,7 +27,11 @@ body{
     background-attachment: fixed;
 }
 
+*/
 
+.schlussscreen *{
+	font-family: $base-font-family;
+}
 
 .schlussscreen{
 	
@@ -32,7 +39,8 @@ body{
 	
 	width: 100%;
     padding: 15px 150px 5px 150px;
-
+	
+	
 
 	.tablet, .desktop{
 		display: block !important;
@@ -77,7 +85,7 @@ body{
 	    height: 50px;
 	    line-height: 50px;
 	    display: inline-block;
-	    font-family: 'NotoSans';
+	    font-weight: $font-weight-light;
 	}
 	
 	.erneut p{
@@ -106,8 +114,8 @@ body{
 	    font-size: 20px;
 	    text-align:center;
 	    width: calc(100% - 30px);
-	    height: 50px;
-	    line-height: 50px;
+	    /*height: 50px; cn: brauchen wir nicht 
+	    line-height: 50px; */
 	    display: inline-block;
 	    margin-top: 3px;
 	    font-family: $base-font-family;
@@ -271,6 +279,8 @@ body{
         
     }
     
+
+	    
 	.schlussscreen{
 		
 		box-sizing: border-box;
@@ -298,13 +308,19 @@ body{
         .infos{
             display: inline-block;
         }
-	    
-        
-        
-        
-	  
-	   
-	    
+
+	    .erneut, .highscore-btn{
+            width: 100%;
+	        background: $primary;
+	        color: $bright;
+	        margin-top: 7px;
+	        height: auto;
+	        font-size: 16px;
+	        border: none;
+	        display: block;
+			line-height: normal;
+			font-weight: normal;
+	    }
 	    
 	    .quizbild{
 		 	
@@ -320,6 +336,8 @@ body{
                 font-family: $base-font-family;
                 font-size: 16px;
                 padding: 4px 0;
+                margin: 0;
+                color: #000;
 			}
 			
 			img{
@@ -332,11 +350,11 @@ body{
 	    .punkte{
             
             width: 100%;
-            height: 33px;
+            /*height: 33px;*/
                         
             p{
                 font-size: 16px;
-                margin-top: -9px;
+                /*margin-top: -9px; */
             }
 	    }
 	       
@@ -357,28 +375,8 @@ body{
             height: 13px;
         }
         
-	    .erneut, .highscore-btn{
-            width: 100%;
-	        background: $primary;
-	        color: $bright;
-	        height: 35px;
-	        margin-top: 7px;
-	        border: none;
-	        display: inline-block;
-            
-            p{
-                font-family: 'NotoSans';
-                font-size: 13px;
-                text-align: center;
-                text-decoration-line: none; 
-                margin-top: 8px;
-            }
-	    }
-	    
-        .erneut p{
-            margin-top: -8px;
-        }
-        
+
+
 	    .suggestions{
         
             

@@ -39,10 +39,13 @@ function createQuizOverview(){
         var item = document.createElement("div");
         item.innerHTML = temp;
         item.firstChild.id = quizId;
-       // item.firstChild.onclick = function() {
-        //    console.log(this.id);
-        //    createStartscreen(this.id);
-        //};
+        
+        var auswahlButton = item.firstChild.querySelector(".auswahl-button");
+        auswahlButton.id = quizId;
+        auswahlButton.onclick = function() {
+            console.log(this.id);
+            createStartscreen(this.id);
+        };
         
         // Kachel in Wrap einfügen
         document.getElementById("snippetQuiz").appendChild(item.firstChild);
