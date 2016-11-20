@@ -33,16 +33,21 @@ function createQuizOverview(){
         temp = temp.replace(/{{author}}/, quiz.author);
         temp = temp.replace(/{{date}}/, schoeneresDatum(quiz.date));
         temp = temp.replace(/{{counter}}/, quiz.counter);
+        temp = temp.replace(/{{counter}}/, quiz.counter);
         temp = temp.replace(/{{image}}/, quiz.image);
         temp = temp.replace(/{{description}}/, quiz.description);
 
         var item = document.createElement("div");
         item.innerHTML = temp;
         item.firstChild.id = quizId;
+<<<<<<< HEAD
         
         var auswahlButton = item.firstChild.querySelector(".auswahl-button");
         auswahlButton.id = quizId;
         auswahlButton.onclick = function() {
+=======
+        item.firstChild.onclick = function() {
+>>>>>>> e74c76209493c2c5f28585e20cce970f1df5f281
             console.log(this.id);
             createStartscreen(this.id);
         };
@@ -76,4 +81,3 @@ function createQuizOverview(){
         });
     }); // Ende der vom Quizübersicht-Team erstellten Funktion
 }
-   

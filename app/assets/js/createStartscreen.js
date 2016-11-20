@@ -80,6 +80,7 @@ function createStartscreen(quizId){
 	var template = snippetstart.outerHTML;
 
 	template = template.replace(/{{name}}/, info.name);
+    template = template.replace(/{{author}}/, info.author);
 	template = template.replace(/{{date}}/, schoeneresDatum(info.date));
 	template = template.replace(/{{image}}/, info.image);
 	template = template.replace(/{{description1}}/, description1);
