@@ -1,7 +1,6 @@
 /****************************
-Dieses Script Läd die schlussscreen.html Datei und
-schreibt sie in das Dokument. Dabei wird die Punktzahl sowie
-die richtigen/falschen Antworten übergeben.
+Dieses Script erzeugt dynamisch die endscreen Seite.
+
 
 *****************************/
 
@@ -43,11 +42,11 @@ function createEndscreen(punkte, antworten, quizIdx){
 
         }
         else{
+            
             i--;
-            }
+        }
     }
-
-
+    
     // Ball-Farben für die Antworten zuweisen
     for(var i=0; i< antworten.length; i++){
 
@@ -60,6 +59,8 @@ function createEndscreen(punkte, antworten, quizIdx){
             template = template.replace(ball_src,"../../assets/images/r_ball.png");
             */
     }
+    
+
 
     // Platz in Rangliste anzeigen
 
@@ -88,40 +89,103 @@ function createEndscreen(punkte, antworten, quizIdx){
     var ranking_done = false;
 
     // TODO Fehler finden und Vereinfachen!!!!
+    
+    //suche position in der Liste
+    
+    
     for (var i = 0; i < scoredata.length; i++){
-
-        var temp = snippetranking.outerHTML;
 
         if(punkte >= scoredata[i].points){
             template = template.replace(/{{rang}}/, " " + scoredata[i].rankIdx);
-        /*    if(i < 5 && !ranking_done){
-                for(var j = 0; j<5; j++){
-                    temp = temp.replace(/{{rankIdx}}/, scoredata[]);
-                }
-
-                ranking_done = true;
-            }
-            else if(!ranking_done){
-
-                 for(var k = 0; k<5; k++){
-                    temp = temp.replace(/{{rankIdx}}/, scoredata[k].rankIdx);
-
-                     var item = document.createElement("tr");
-                     item.innerHTML = temp;
-                     htmlRankings += temp;
-
-                     ranking_done = true;
-                }
-
-            } */
-
+        	   
+            var position = (i+1);
+            break;
         }
+        
     }
 
+    console.log(position);
+    
+    var rang_arr;
+    
+    //Ein array mit rang namen und idx für jeden spielstand erzeugen
+    //Array deklarieren und mit allen Spielständen füllen
+    
+    var superContainer = Array(15);
+    
+    var neues_Ranking = [];
+    
+    var points_arr = Array(15);
+    var rankIdx_arr = Array(15);
+    var player_arr = Array(15);
+    
+    var aktueller_rang = 1;
+    
+    console.log(scoredata);
+    
+    var eingetragen = false;
+    
+    for( var i = 0; i < scoredata.length; i++ ){
+        if(punkte > scoredata[i].points && !eingetragen){
+            var mein_eintrag = {};
+            mein_eintrag.player = "Ich";
+            mein_eintrag.points = punkte;
+            mein_eintrag.rankIdx = aktueller_rang;
+            mein_eintrag.date = new Date();
+            aktueller_rang++;
+            neues_Ranking.push(mein_eintrag);
+            eingetragen = true;
+        }
+        scoredata[i].rankIdx = aktueller_rang;
+        
+        neues_Ranking.push(scoredata[i]);
+        
+        aktueller_rang++;
+    }
+    
     //document.getElementById("ranking").innerHTML = htmlRankings;
 
     var item = document.createElement("div");
     item.innerHTML = template;
 
     document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
+    
+        
+    if(position > 5){
+        
+        for(var i = (position-5); i < (position); i++){
+            
+           var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, neues_Ranking[i].date);
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+        }
+        
+    }
+    else{
+        for(var i = 0; i < 5; i++){
+            
+            var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, neues_Ranking[i].date);
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+            
+        }
+    }
+    
+    document.getElementById("ranking").innerHTML = htmlRankings;
 }

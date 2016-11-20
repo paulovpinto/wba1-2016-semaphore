@@ -11,161 +11,172 @@ body{
     background-size: cover;
 }
 
-/*Überschrift Container*/
-.headline{
-    height: 45px;
-    background: #F8F5E4;
-    width:calc(100% - 30px);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    margin-top: 116px;
-}
+.highscore-list{
+		
+	/*Überschrift Container*/
+	.headline{
+	    height: 45px;
+	    background: $bg-opak;
+	    width:calc(100% - 30px);
+	    position: absolute;
+	    left: 50%;
+	    transform: translate(-50%);
+	    margin-top: 116px;
+	}
+	
+	/*Überschrifttext*/
+	#headlinetext{
+	    text-align: center;
+	    margin-top: 3px;
+	    font-family: $base-font-family;
+	    font-size: 24px;
+	}
+	
+	/*Dropdown-Menü*/
+	#auswahl{
+	    margin-bottom: $gutter-width;
+	    width: 100%;
+	    height: 34px;
+	    font-family: $base-font-family;
+	    font-size: 20px;
+	    margin-bottom: $gutter-width;
+	    padding-left: $gutter-width;
+	    background-color: $bg-opak;
+	}
+	
+	/*Container linke Seite*/
+	.teaser {
+	    width: calc(35% - 20px);
+	    display: inline-block;
+	    float: left;
+	    margin-top: 176px;
+	    margin-left: 15px;
+	}
+	
+	/*Quizbild*/
+	#teaserimage {
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
+	    display: block;
+	}
+	
+	/*Autor und Erstelldatum*/
+	#author{
+	    font-family: $base-font-family;
+	    font-size: 20px;
+	    width: calc(100% - 20px);
+	    margin: 0;
+	    background: $bg-opak;
+	    padding: $gutter-width;
+	    float: left;
+	}
+	
+	/*Quizbeschreibung/Teasertext*/
+	#teasertext {
+	    width: calc(100% - 20px);
+	    margin-top: $gutter-width;
+	    font-family: 'NotoSans-Regular';
+	    background: $bg-opak;
+	    padding: $gutter-width;
+	    float: left;
+	    text-align: left;
+	    font-size: 20px;
+	}
+	
+	/*Rang in Tabelle*/
+	#medaillen {
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
+	    display: block;
+	    height: 50%;
+	}
+	
+	/*Container für Tabelle*/
+	.container-table {
+	    float: right;
+	    margin: 15px;
+	    width: calc(65% - 25px);
+	    position: absolute;
+	    right: 0px;
+	    margin-top: 136px; 
+	}
+	
+	/*Gesamte Tabelle*/
+	.liste{
+	    font-family: 'NotoSans-Regular';
+	    width: 100%;
+	    margin-top: 30px;
+	    border-spacing: 0 $gutter-width;   
+	}
 
-/*Überschrifttext*/
-#headlinetext{
-    text-align: center;
-    margin-top: 3px;
-    font-family: 'Oswald-Regular', sans-serif;
-    font-size: 24px;
 }
-
-/*Dropdown-Menü*/
-#auswahl{
-    margin-bottom: 10px;
-    width: 100%;
-    height: 34px;
-    font-family: 'Oswald-Regular';
-    font-size: 20px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    background-color: #F8F5E4;
-}
-
-/*Container linke Seite*/
-.teaser {
-    width: calc(35% - 20px);
-    display: inline-block;
-    float: left;
-    margin-top: 176px;
-    margin-left: 15px;
-}
-
-/*Quizbild*/
-#teaserimage {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-
-/*Autor und Erstelldatum*/
-#author{
-    font-family: 'Oswald-Regular';
-    font-size: 20px;
-    width: calc(100% - 20px);
-    margin: 0;
-    background: #F8F5E4;
-    padding: 10px;
-    float: left;
-}
-
-/*Quizbeschreibung/Teasertext*/
-#teasertext {
-    width: calc(100% - 20px);
-    margin-top: 10px;
-    font-family: 'NotoSans-Regular';
-    background:rgba(248, 245, 228, 0.7);
-    padding: 10px;
-    float: left;
-    text-align: left;
-    font-size: 20px;
-}
-
-/*Rang in Tabelle*/
-#medaillen {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
-    height: 50%;
-}
-
-/*Container für Tabelle*/
-.container-table {
-    float: right;
-    margin: 15px;
-    width: calc(65% - 25px);
-    position: absolute;
-    right: 0px;
-    margin-top: 136px; 
-}
-
-/*Gesamte Tabelle*/
-.liste{
-    font-family: 'NotoSans-Regular';
-    width: 100%;
-    margin-top: 30px;
-    border-spacing: 0px 10px;   
-}
-
 
 /*Tablet-Anischt*/
 @media only screen and (max-width: $bp-tablet) {
-       
-    .headline{    
-        margin-top: 50px;
-    }
-  
-    .teaser{
-        margin-top: 105px;
-    }
-
-    .container-table{
-        margin-top: 65px;
-    }
+    
+    .highscore-list{ 
+	    .headline{    
+	        margin-top: 50px;
+	    }
+	  
+	    .teaser{
+	        margin-top: 105px;
+	    }
+	
+	    .container-table{
+	        margin-top: 65px;
+	    }
+	}
 }
 
 /*Smartphone-Ansicht*/
 /*ID-Namen identisch, siehe oben*/
 @media only screen and (max-width: $bp-smartphone) {
     
-    body{
-        margin: 0;
-        background: url(../../assets/images/highscore%20smartphone%20back.png) no-repeat center center;
-        background-size: 100% 290px; 
-    }
-    
-    .liste{
-    font-family: 'NotoSans-Regular';
-    margin-top: 0px;   
-    }
-    
-    /*Ausgeblendeter Content*/
-    #teasertext, #author, #teaserimage{
-        display: none;
-    }
-    
-    #auswahl{
-        margin-top: 55px; 
-    }
-    
-    .teaser{
-        width: calc(100% - 30px);
-    }
-    
-    .container-table{
-        width: calc(100% - 30px);
-        margin-top: 195px;
-    }
-    
-    .headline{
-        margin-left: 15px;
-        height: 45px;
-        width: 140px;
-        position: absolute;
-        margin-top: 105px;
-        left: 70px;
-    }
+	body{
+	    margin: 0;
+	        background: no-repeat center center;
+	        background-size: 100% 290px; 
+	        background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important;
+	}
+	    
+     .highscore-list{ 
+	     
+
+	    
+	    .liste{
+	    font-family: 'NotoSans-Regular';
+	    margin-top: 0px;   
+	    }
+	    
+	    /*Ausgeblendeter Content*/
+	    #teasertext, #author, #teaserimage{
+	        display: none;
+	    }
+	    
+	    #auswahl{
+	        margin-top: 55px; 
+	    }
+	    
+	    .teaser{
+	        width: calc(100% - 30px);
+	    }
+	    
+	    .container-table{
+	        width: calc(100% - 30px);
+	        margin-top: 195px;
+	    }
+	    
+	    .headline{
+	        margin-left: 15px;
+	        height: 45px;
+	        width: 140px;
+	        position: absolute;
+	        margin-top: 105px;
+	        left: 70px;
+	    }
+	}
 }
 
