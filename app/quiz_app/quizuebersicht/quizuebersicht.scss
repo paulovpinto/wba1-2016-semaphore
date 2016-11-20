@@ -3,7 +3,7 @@
 .quizuebersicht{
 	
 	.content{
-				
+				 
 		width: 1000px;
 		margin: 0 auto;
         margin-top: 70px;
@@ -11,7 +11,7 @@
 		.sortierliste{
             margin-top: $gutter-width;
 			background-color: $bg-yellow;
-			margin: 0;
+			//margin: 0; Hat in der mobilen Ansicht tatsächlich dafpr gesorgt, dass die Sortieritems nicht mehr ordentlich dargesttllt wurden.
 			padding: 0;
 			
 			.sortiercontent{
@@ -42,8 +42,11 @@
 			    padding: $gutter-width; 
 				
 				.quizkachel-inner{
-                    margin-bottom: 0em;
-                    margin-top: 0em;
+					
+					@extend .shadow;
+					
+                    margin-bottom: 0;
+                    margin-top: 0;
 					background: $bg-opak;
 					color: $dark_black;
 					height: 100%;
@@ -161,8 +164,17 @@
                     /*Wenn man mit Strg+MouseWheel rein und raus zoomt scheint nur hin und wieder unter 
                     dem Bild eine Pixelreihe grau zu sein. Wieso? */
                     .quizkachel-inner{
+	                    
+	                    .basicInfos::after{
+		                    content: ".";
+		                    display: block;
+		                    clear: both;
+		                    height: 0;
+		                    overflow: hidden;
+	                    }
+	                    
                         .basicInfos{ 
-                            
+                                                       
                             .quizbild{
                                 float: left;
                                 width: 113px;
@@ -187,7 +199,7 @@
                             }
                         
                             .datum{
-                                margin-bottom: 9px;
+                                /*margin-bottom: 9px;*/ // Pixellinie unter dem Bild kam hier her
                             }
                             
                             .anzGespielt.mobile{
@@ -212,7 +224,7 @@
                             position: relative;
                         }
                     }
-                clear: both;}
+				}
 			} 
 		}  
         

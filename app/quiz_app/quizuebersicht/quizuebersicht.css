@@ -38,6 +38,9 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+.shadow, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
 .quizuebersicht .content {
   width: 1000px;
   margin: 0 auto;
@@ -45,7 +48,6 @@ td {
   .quizuebersicht .content .sortierliste {
     margin-top: 10px;
     background-color: #e9c20c;
-    margin: 0;
     padding: 0; }
     .quizuebersicht .content .sortierliste .sortiercontent {
       margin: 0;
@@ -138,8 +140,13 @@ td {
         padding-top: 0;
         margin-top: 10px;
         /*Wenn man mit Strg+MouseWheel rein und raus zoomt scheint nur hin und wieder unter 
-        dem Bild eine Pixelreihe grau zu sein. Wieso? */
-        clear: both; }
+        dem Bild eine Pixelreihe grau zu sein. Wieso? */ }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos::after {
+          content: ".";
+          display: block;
+          clear: both;
+          height: 0;
+          overflow: hidden; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizbild {
           float: left;
           width: 113px;
@@ -158,7 +165,7 @@ td {
           margin-left: calc(113px + 15px);
           float: none; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
-          margin-bottom: 9px; }
+          /*margin-bottom: 9px;*/ }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
           display: block;
           font-size: 11px;
