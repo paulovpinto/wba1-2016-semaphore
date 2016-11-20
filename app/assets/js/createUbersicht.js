@@ -33,16 +33,17 @@ function createQuizOverview(){
         temp = temp.replace(/{{author}}/, quiz.author);
         temp = temp.replace(/{{date}}/, schoeneresDatum(quiz.date));
         temp = temp.replace(/{{counter}}/, quiz.counter);
+        temp = temp.replace(/{{counter}}/, quiz.counter);
         temp = temp.replace(/{{image}}/, quiz.image);
         temp = temp.replace(/{{description}}/, quiz.description);
 
         var item = document.createElement("div");
         item.innerHTML = temp;
         item.firstChild.id = quizId;
-       // item.firstChild.onclick = function() {
-        //    console.log(this.id);
-        //    createStartscreen(this.id);
-        //};
+        item.firstChild.onclick = function() {
+            console.log(this.id);
+            createStartscreen(this.id);
+        };
         
         // Kachel in Wrap einfügen
         document.getElementById("snippetQuiz").appendChild(item.firstChild);
@@ -73,4 +74,3 @@ function createQuizOverview(){
         });
     }); // Ende der vom Quizübersicht-Team erstellten Funktion
 }
-   
