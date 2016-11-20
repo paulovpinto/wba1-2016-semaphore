@@ -30,8 +30,8 @@ body{
 	
 	box-sizing: border-box;
 	
-	width: $content-width-desktop;
-	margin: 0 auto;
+	width: 100%;
+    padding: 15px 150px 5px 150px;
 
 
 	.tablet, .desktop{
@@ -48,12 +48,15 @@ body{
 		display: block;
 		clear: both;
 	}
+    
+    
 	
 	.heading {
 	    text-align: center;
 	    color: $dark_black;
 	    height: 50px;
 	    background-color: $bright;
+        width: 100%;
 	}
 	
 	h1{
@@ -89,6 +92,7 @@ body{
 	    width: 100%;
 	    height: 50px;
 	    line-height: 50px;
+        margin: 10px 0px 10px 0px;
 	}
 	
 	.fussbaelle table {
@@ -175,19 +179,19 @@ body{
 	.linke-seite {
 	    float: left;
 	    margin-top: 20px;
-	    width: calc(52% - 55px);
+	    width: 49%;
 	}
 	
 	.rechte-seite {
 	    float: right;
         margin-top: 20px;
-	    width: calc(54% - 55px);
+	    width: 49%;
 	}
 	
 	.quizbild img {
 	    margin-top: 5px;
 	    width: calc(100% - 30px);
-	    max-height: 275px;
+	    max-height: auto;
 	    object-fit: cover;
 	}
 	
@@ -234,29 +238,23 @@ body{
     .schlussscreen{
         
         
-	box-sizing: border-box;
-	
-	width: $content-width-tablet;
-	margin: 0 auto;
-        
-    
-    
-    .highscore table{
-        width: 100%;
-	}
-        
-    .rechte-seite, .linke-seite {
-            width: 50%;
-    }
+        box-sizing: border-box;
+
+        width: $content-width-tablet;
+        margin: 0 auto;
+
+
+
+        .highscore table{
+            width: 100%;
+        }
+
+        .rechte-seite, .linke-seite {
+                width: 50%;
+        }
         
 
-    }
-    
-    
-    
-    
-   
-    
+    }   
 
 }
 
@@ -278,7 +276,7 @@ body{
 		box-sizing: border-box;
         
 		width: 100%;
-		padding: 9px;
+		padding: 0px 9px;
 		
 		.tablet, .desktop{
 			display: none !important;
@@ -338,7 +336,7 @@ body{
                         
             p{
                 font-size: 16px;
-                margin-top: -15px;
+                margin-top: -9px;
             }
 	    }
 	       
