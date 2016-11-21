@@ -99,15 +99,15 @@ function neueFrage( data, aktuelleFrage){
 
 	i=10;
 	updateTimer();
-  setTimeout(function() {
+	setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
 //  tausch($("#antwort1"), $("#antwort2"));
 		$("#antworten").removeClass("hidden");
 
-  clearInterval(timer);
-  darfKlicken=true;
-  timer = setInterval("count()", 1000);
+  //clearInterval(timer);
+  //darfKlicken=true;
+  //timer = setInterval("count()", 1000);
 
 
     }, delayA);

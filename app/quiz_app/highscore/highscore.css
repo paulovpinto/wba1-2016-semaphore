@@ -54,15 +54,15 @@ body {
   background-size: cover; }
 
 .highscore-list {
-  /*├£berschrift Container*/
-  /*├£berschrifttext*/
-  /*Dropdown-Men├╝*/
+  /*Überschrift Container*/
+  /*Überschrifttext*/
+  /*Dropdown-Menü*/
   /*Container linke Seite*/
   /*Quizbild*/
   /*Autor und Erstelldatum*/
   /*Quizbeschreibung/Teasertext*/
   /*Rang in Tabelle*/
-  /*Container f├╝r Tabelle*/
+  /*Container für Tabelle*/
   /*Gesamte Tabelle*/ }
   .highscore-list .headline {
     height: 45px;
@@ -147,7 +147,7 @@ body {
 /*Smartphone-Ansicht*/
 /*ID-Namen identisch, siehe oben*/
 @media only screen and (max-width: 439px) {
-  body {
+  body.fubuizz {
     margin: 0;
     background: no-repeat center center;
     background-size: 100% 290px;
