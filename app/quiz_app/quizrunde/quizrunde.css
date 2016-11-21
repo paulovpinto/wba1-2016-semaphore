@@ -42,15 +42,20 @@ td {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .quizrunde {
-  padding: 5px;
   position: absolute;
+  overflow: auto;
   top: 0;
-  left: 50vw;
+  left: 0;
   bottom: 0;
-  width: 600px; }
+  right: 0;
+  display: flex;
+  justify-content: space-between; }
   .quizrunde .quizrunde-inner {
-    margin-left: -103%;
-    width: 1200px; }
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
 
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
 .quizrunde * {
@@ -58,7 +63,7 @@ td {
   font-size: 16px;
   font-weight: lighter;
   color: #000;
-  /*background-color, Vorl├ñufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
+  /*background-color, Vorläufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
 
 /*Anzeige fragen-counte r*/
 .quizrunde .fragen-counter {
@@ -82,8 +87,7 @@ td {
 .quizrunde #balken-dauerhaft {
   height: 10px;
   margin-top: 0px;
-  background-color: rgba(233, 194, 11, 0.42);
-  }
+  background-color: rgba(233, 194, 11, 0.42); }
 
 .quizrunde #timer-js {
   height: 10px;
@@ -93,13 +97,13 @@ td {
   max-width: 100%;
   background: #E9C20C;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
+  background: -webkit-linear-gradient(left, #e9c20c, rgba(246, 227, 27, 0.9));
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
+  background: -o-linear-gradient(right, #e9c20c, rgba(246, 227, 27, 0.9));
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
+  background: -moz-linear-gradient(right, #e9c20c, rgba(246, 227, 27, 0.9));
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
+  background: linear-gradient(to right, #e9c20c, rgba(246, 227, 27, 0.9));
   /* Standard syntax */
   /* For browsers that do not support gradients */
   /*-webkit-transition: width 2s; Safari */
@@ -109,15 +113,10 @@ td {
   max-width: 0; }
 
 /*Allgemeine Formatierung der Antworten,
-haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
+hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten {
-  position: absolute;
-  width: 1200px;
-  left: -100%;
-  bottom: 0;
   list-style: none;
-  padding: 0;
-  margin: 0; }
+  min-height: 300px; }
 
 #antworten .antwort {
   transform: scale(1);
@@ -127,7 +126,7 @@ haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
   transform: scale(0); }
 
 /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
-Abst├ñnde zwischen den Fragen*/
+Abstände zwischen den Fragen*/
 .quizrunde .antwort {
   font-weight: lighter;
   margin: 10px 0;
@@ -158,12 +157,12 @@ Abst├ñnde zwischen den Fragen*/
     background-color: #0FDC00; } }
 @media only screen and (max-width: 439px) {
   .quizrunde {
-    position: static;
-    left: auto;
-    width: auto;
-    margin-top: -100px;
-    margin-left: 15px;
-    margin-right: 15px; }
+    		/*position: static;
+    		left: auto;
+    		width: auto;
+            margin-top: -100px;
+            margin-left: 15px;
+            margin-right: 15px; */ }
     .quizrunde .quizrunde-inner {
       width: auto;
       margin-left: auto; }
@@ -178,7 +177,7 @@ Abst├ñnde zwischen den Fragen*/
     font-size: 24px; }
 
   .quizrunde .fragenblock {
-    height: 10%;
+    /*height: 10%; */
     font-size: 24px; }
 
   .quizrunde .alle-antworten {
@@ -187,23 +186,23 @@ Abst├ñnde zwischen den Fragen*/
     margin-left: 15px;
     margin-right: 15px; }
 
+  .quizrunde .fragen-und-infos {
+    margin-left: 15px;
+    margin-right: 15px; }
+
   .quizrunde .fragen-counter {
     font-size: 24px; } }
 @media only screen and (min-width: 1024px) {
   .quizrunde .antwort {
     margin-top: 40px;
-    font-size: 24px;
-    margin-left: 15px;
-    margin-right: 15px; }
+    font-size: 24px; }
 
   .quizrunde .fragenblock {
-    height: 15%;
-    font-size: 24px;
-    margin-left: 15px;
-    margin-right: 15px; }
+    /*height:15%;*/
+    font-size: 24px; }
 
   .quizrunde .fragen-counter {
     font-size: 24px; } }
-/* GGf mal CSS Pr├ñprozessoren checken. */
+/* GGf mal CSS Präprozessoren checken. */
 
 /*# sourceMappingURL=quizrunde.css.map */
