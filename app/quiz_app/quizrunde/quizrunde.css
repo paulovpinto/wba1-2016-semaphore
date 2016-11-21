@@ -79,21 +79,27 @@ td {
   hyphens: auto;
   word-wrap: break-word; }
 
-.quizrunde #timer-js {
-  height: 20px;
+.quizrunde #balken-dauerhaft {
+  height: 10px;
   margin-top: 0px;
+  background-color: rgba(233, 194, 11, 0.42);
+  }
+
+.quizrunde #timer-js {
+  height: 10px;
+  margin-top: -10px;
   /*margin-left: 15px;
   margin-right: 15px;*/
   max-width: 100%;
   background: #E9C20C;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, yellow, lightyellow);
+  background: -webkit-linear-gradient(left, rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, yellow, lightyellow);
+  background: -o-linear-gradient(right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, yellow, lightyellow);
+  background: -moz-linear-gradient(right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, yellow, lightyellow);
+  background: linear-gradient(to right,rgb(233, 194, 12), rgba(246, 227, 27, 0.9));
   /* Standard syntax */
   /* For browsers that do not support gradients */
   /*-webkit-transition: width 2s; Safari */
