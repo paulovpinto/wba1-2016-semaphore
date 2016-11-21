@@ -167,10 +167,10 @@
 }
 
 	/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
-	@media only screen and (max-width: $bp-tablet){
+	@media only screen and (max-width: 1024px){
 	    
 	    .startscreen{
-		    width: $content-width-smartphone;
+		    width: 439px;
 		    padding: 20px;
 		    		    
 		    .boxbox{
