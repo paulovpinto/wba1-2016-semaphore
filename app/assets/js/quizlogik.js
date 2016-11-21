@@ -1,6 +1,6 @@
 
-var delayQ=1000; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
-var delayA=2000; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
+var delayQ=3000; // bestimmt die Verzögerung zwischen den Fragen. 1000=1sek
+var delayA=3000; //bestimmt die Länge der Verzögerung der Antworten, nachdem die Frage eingeblendet worden ist.
 
 var punkte=0;  //aktuelle Punktzahl
 
@@ -11,30 +11,24 @@ var antworten= Array(10);   // hier wird gespiechert, ob die Frage richtig oder 
 var $ele;  // aktuell angeklicktes Element
 var antwortId; // zum überprüfen der richten Antwort
 var timer= null; // das Zeitintervall, mitdem die count Methode ausgeführt wird
-var i=10; // Zeit in Sekunden
+var i=10; // Zeit in Sekundend
+var darfKlicken=true; // Wird auf false gesetzt, wenn schon eine Antwort für die Frage gegeben wurde
 
 var aktuelleFrage = 0;
 var quizLogik = {}; // Quizdaten
 quizLogik.data = {};
 quizLogik.quiz = {};
 
-
-
-// Zeit für den Timer im View
-var zeit = i;
+var zeit = i; // Zeit für den Timer im View
 
 function updateTimer(){
-	//i--;
 	document.getElementById("timer-js").style.width = (i * 10) + "%";
-	if(zeit <= 0){ clearInterval(timer); }
-
+	if(zeit <= 0){ clearInterval(timer);
+	}
 }
 
 function antwortPruefen(ele, answer){
 
-	//$ele.removeClass('hover');
-
-//	var $ele = $(ele);
   $ele= $(ele);                              // cast zu jQuery
   antwortId = $(ele).attr("data-antwortId");
 
@@ -43,10 +37,7 @@ function antwortPruefen(ele, answer){
   console.log("richtige Antwort: " + answer);
 
   if(answer === antwortId){
-			//  $("#rof").html("Richtig");
-			//  setTimeout(function() {$ele.css("background-color", "#40FF00")}, 2000);
-  //$ele.css("background-color", "#FFFFFF");
-	// $ele.removeClass("antwort")
+
  		$ele.addClass("richtig");
  		punkte+=i*5+50;
  		console.log("Punkte: "+ punkte);
@@ -54,14 +45,11 @@ function antwortPruefen(ele, answer){
 
 
   } else {
-			//    $("#rof").html("falsch");
+
 		console.log("Punkte: "+punkte);
 		antworten[aktuelleFrage]=false;
-			//    setTimeout(function() {$ele.css("background-color", "#FF0000")}, 2000);
-			//$ele.css("background-color", "#CB0");
-
-		//$ele.removeClass("antwort")
 		$ele.addClass("falsch");
+		$("#antwort"+answer).addClass("richtig");
 
   }
 
@@ -71,7 +59,7 @@ function antwortPruefen(ele, answer){
 
 function count( ){
   i--;
-    //  document.getElementById("text").innerHTML = i;
+
   console.log("Zeit: "+i);
   console.log(quizLogik.quiz);
 
@@ -81,13 +69,13 @@ function count( ){
   if(i===0){
           aktuelleFrage++;
           clearInterval(timer);
-          if(aktuelleFrage<=9){
+          if(aktuelleFrage<=9){ //Zeit abgelaufen & es gibt noch Fragen:
 
+							$("#antwort"+ quizLogik.quiz.allQuestions[aktuelleFrage].question.answer).addClass("richtig"); //Richtige Antwort anzeigen
               setTimeout(function() {neueFrage(quizLogik.quiz.allQuestions[aktuelleFrage].question, aktuelleFrage)}, delayQ);
           }
-          else{
+          else{ // Quizrunde ist vorbei da die Zeit abgelaufen ist & 10 Frage beantwortet worden sind:
               clearInterval(timer);
-              $("#question").html("Quizrunde ist vorbei" );
               setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
           }
       }
@@ -96,8 +84,9 @@ function count( ){
 }
 
 function neueFrage( data, aktuelleFrage){
-
+	clearInterval(timer);
 	removeFeedback();
+	delayA= readTime(data.question);
 
   $("#frage").html(data.question);
 	$("#antwort1").html(data.options[0].option);    // ändert per Id den Inhalt
@@ -107,10 +96,9 @@ function neueFrage( data, aktuelleFrage){
 	$("#antworten").addClass("hidden");
 
   $("#question").html("Frage: " + (aktuelleFrage+1) +"/10");
-	
+
 	i=10;
 	updateTimer();
-
   setTimeout(function() {
 
 //  console.log(document.getElementbyId("antwort1"));
@@ -118,8 +106,7 @@ function neueFrage( data, aktuelleFrage){
 		$("#antworten").removeClass("hidden");
 
   clearInterval(timer);
-//  i=10;
-//	updateTimer();
+  darfKlicken=true;
   timer = setInterval("count()", 1000);
 
 
@@ -131,35 +118,31 @@ function neueFrage( data, aktuelleFrage){
 function buttonKlick(quizIdx){
     $(".antwort").click(function(e){ //click-Funktion außerhalb von neueFrage schreiben,
     //	var cButton = e.target;
-    if(i===0){
+    if(i!==0 && darfKlicken===true ){
 
-
-
-    }else
-      {
+			darfKlicken=false;
       clearInterval(timer);
       antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
-          aktuelleFrage++;
-          console.log("aktuelle Frage: "+ aktuelleFrage);
+      aktuelleFrage++;
+      console.log("aktuelle Frage: "+ aktuelleFrage);
 
           if(aktuelleFrage<=9){
               setTimeout(function() {neueFrage( quizLogik.quiz.allQuestions[aktuelleFrage].question, aktuelleFrage )}, delayQ);
-
           }
-          else{
+         else{
               //window.location="http://www.google.de";
               //document.getElementById("text").innerHTML = "Jetzt auf Endscreen leiten";
 
-            console.log("Quizrunde ist vorbei");
+              console.log("Quizrunde ist vorbei");
               for(k=0; k<10;k++){
               console.log(antworten[k]);
-            }
+              }
               setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
-          }
+         }
 
-        }
-  });
-}
+     }
+  }); // ende click-Funktion
+} // ende buttonKlick
 
 function removeFeedback(){
 
@@ -172,6 +155,14 @@ function removeFeedback(){
 	$("#antwort4").removeClass("richtig");
 	$("#antwort4").removeClass("falsch");
 }
+
+function readTime(charCount){
+	console.log(charCount.length);
+	console.log(charCount.length/7/3.5*1000);
+	return charCount.length/7/3.5*1000;
+
+}
+
 /*
 function tausch(obj1, obj2){
 

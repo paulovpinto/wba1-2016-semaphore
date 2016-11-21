@@ -1,32 +1,35 @@
 <section class="quizrunde">
-	<!-- Einheitliches Konzept zu Klassennamen
-	http://cssguidelin.es/
-	-->
-        <p class = "fragen-counter" id="question" ></p>
-        <!--- <p id="text"></p> -->
-            <!--Hier steht der Fragenblock. Diese Fragen werden später durch das Skript zufällig wiedergegeben (hier wird das Skript implementiert).-->
-        <p class="fragenblock" id="frage"></p>
-        <!-- Fortschrittsbalken -->
 
-        <div class="wrap">
-	          <div id="timer-js"></div>
-        </div>
+	<div class="quizrunde-inner">
+		<!-- Einheitliches Konzept zu Klassennamen
+		http://cssguidelin.es/
+		-->
+	        <p class = "fragen-counter" id="question" ></p>
+	        <!--- <p id="text"></p> -->
+	            <!--Hier steht der Fragenblock. Diese Fragen werden später durch das Skript zufällig wiedergegeben (hier wird das Skript implementiert).-->
+	        <p class="fragenblock" id="frage"></p>
+	        <!-- Fortschrittsbalken -->
+	
+	        <div class="wrap">
+						  <div id="balken-dauerhaft"></div>
+		          <div id="timer-js"></div>
+	        </div>
 
 
-        <!-- Einheitliches Konzept zu Klassennamen
-	        http://cssguidelin.es/
-	         -->
-        <!--Die Klasse "AlleAntworten" gruppiert alle möglichen Antworten zur Frage.-->
-        <!-- Hier steht nacheinander aufgelistet die Klasse "Antwort".
-              Die Antworten sind mit ids ausgestattet,
-              damit das Javaskript dort die Antworten einbinden kann. -->
-        <ul class= "alle-antworten" id="antworten">
+	        <!-- Einheitliches Konzept zu Klassennamen
+		        http://cssguidelin.es/
+		         -->
+	        <!--Die Klasse "AlleAntworten" gruppiert alle möglichen Antworten zur Frage.-->
+	        <!-- Hier steht nacheinander aufgelistet die Klasse "Antwort".
+	              Die Antworten sind mit ids ausgestattet,
+	              damit das Javaskript dort die Antworten einbinden kann. -->
+	        <ul class= "alle-antworten" id="antworten">
 
-            <li><p class="antwort  button-id1" id="antwort1" data-antwortId="1"></p></li>
-            <li><p class="antwort  button-id2" id="antwort2" data-antwortId="2"></p></li>
-            <li><p class="antwort  button-id3" id="antwort3" data-antwortId="3"></p></li>
-            <li><p class="antwort  button-id4" id="antwort4" data-antwortId="4"></p></li>
+	            <li><p class="antwort  button-id1" id="antwort1" data-antwortId="1"></p></li>
+	            <li><p class="antwort  button-id2" id="antwort2" data-antwortId="2"></p></li>
+	            <li><p class="antwort  button-id3" id="antwort3" data-antwortId="3"></p></li>
+	            <li><p class="antwort  button-id4" id="antwort4" data-antwortId="4"></p></li>
 
-        </ul>
-
+	        </ul>
+	</div>
 </section>

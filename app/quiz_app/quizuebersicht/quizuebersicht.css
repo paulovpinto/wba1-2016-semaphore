@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variabeln
 ###################################################### */
 /* Bausteine
@@ -37,12 +38,21 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+.shadow, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
 .quizuebersicht .content {
-  width: 1000px;
+<<<<<<< HEAD
   margin: 0 auto; }
   .quizuebersicht .content .sortierliste {
+=======
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 70px; }
+  .quizuebersicht .content .sortierliste {
+    margin-top: 10px;
+>>>>>>> 7c15fb2c996f3e93887557742b778df745ec3242
     background-color: #e9c20c;
-    margin: 0;
     padding: 0; }
     .quizuebersicht .content .sortierliste .sortiercontent {
       margin: 0;
@@ -65,35 +75,262 @@ td {
       margin-bottom: 5px;
       padding: 10px; }
       .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
+        margin-bottom: 0;
+        margin-top: 0;
         background: rgba(248, 245, 228, 0.9);
-        color: #000;
+        color: black;
         height: 100%;
         position: relative; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
+          height: 18pt;
+          background-color: #f8f5e4;
+          text-align: center; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          width: relative;
+          float: left;
+          font-weight: 300;
+          font-size: 10pt;
+          padding-bottom: 5px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos {
+          padding-left: 5px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
+          display: none; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt {
+          font-weight: 300; }
+          .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
+            height: 95px;
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 10pt; }
+          .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .anzGespielt.desktop.tablet {
+            font-weight: 300;
+            padding-right: 5px;
+            text-align: right;
+            float: right;
+            font-size: 10pt; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0; }
+          font-weight: 300;
+          border: none;
+          height: 25pt;
+          background-color: #cb0727;
+          font-size: 12pt;
+          position: relative;
+          bottom: -1px;
+          right: 0;
+          left: 0; }
       .quizuebersicht .content .kacheln .quizkachel .quizbild {
         width: 100%; }
+<<<<<<< HEAD
+@media only screen and (max-width: 1024px) {
+  .quizuebersicht .content .sortierliste {
+    margin: 0;
+    padding: 0; }
+  .quizuebersicht .sortierliste {
+    background-color: #e9c20c;
+    margin-top: 15px;
+    padding: 0; }
+  .quizuebersicht body {
+    background-image: url(image/8-324_fussballstadion.jpg);
+    background-color: darkgray;
+    /**ENTFERNEN!!**/
+    font-size: 100%;
+    margin: 0em;
+    padding: 0em; }
+  .quizuebersicht .auswahl {
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    margin-top: -10pt; }
+  .quizuebersicht .content {
+    width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-self: stretch;
+    align-content: center; }
+  .quizuebersicht .kacheln uebersicht {
+    margin-right: 0; }
+  .quizuebersicht .inhalt {
+    position: absolute;
+    bottom: 40px;
+    width: 100%; }
+  .quizuebersicht h1 {
+    font-size: 1em;
+    line-height: 2.5em;
+    font-family: Helvetica;
+    font-weight: 100;
+    color: #2F2D2C;
+    margin: -0.6em; }
+  .quizuebersicht .quizbild {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100pt; }
+  .quizuebersicht p {
+    line-height: 0.5em;
+    font-family: Helvetica;
+    font-weight: 100;
+    color: #2F2D2C; }
+  .quizuebersicht .quizkachel {
+    box-sizing: border-box;
+    display: block;
+    flex-basis: 33%;
+    /*flex-grow: 1;*/
+    margin-bottom: 5px;
+    padding: 10px;
+    /**  //float: left;
+      //display:inline-block;
+      background: beige ;
+      //width:  172.5pt;
+      //height: 353.31px;
+     
+      // width: calc((100% - 120px - 30px)/3);
+      min-width: 150px;
+      min-height: 34.502%;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-right: 15px;
+      margin-top: 15px;
+      position: relative;
+      text-align:center;**/ }
+    .quizuebersicht .quizkachel .quizkachel-inner {
+      background: rgba(248, 245, 228, 0.9);
+      color: #000;
+      height: 100%;
+      position: relative; }
+      .quizuebersicht .quizkachel .quizkachel-inner .auswahl-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+  .quizuebersicht .button {
+    background-color: #CB0727;
+    border: none;
+    color: white;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Oswald;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0px; }
+  .quizuebersicht .erstellinfos {
+    font-family: Oswald;
+    font-weight: 50;
+    color: #2F2D2C;
+    text-align: left;
+    background: beige;
+    display: block;
+    line-height: 10px;
+    height: 5px;
+    margin: 5px 10px 0 0; }
+  .quizuebersicht .datum {
+    font-size: 10pt; }
+  .quizuebersicht .anzGespielt, .quizuebersicht .desktop, .quizuebersicht .tablet {
+    font-size: 8pt;
+    text-align: right;
+    font-weight: lighter;
+    background-color: rgba beige;
+    margin: 0;
+    width: calc(100%-5px);
+    height: 1pt;
+    float: right; }
+  .quizuebersicht .anzGespielt mobile {
+    display: none; }
+  .quizuebersicht .beschreibung {
+    text-align: left;
+    font-weight: lighter;
+    line-height: 14px;
+    font-size: 10pt;
+    background-color: #f8f5e4;
+    height: 80pt;
+    margin-left: 10px;
+    padding-left: 0; }
+  .quizuebersicht #img {
+    background-color: burlywood;
+    /**ENTFERNEN!!**/
+    margin-left: -10px;
+    width: 250px;
+    height: 50px; } }
+=======
 @media only screen and (min-width: 439px) and (max-width: 1024px) {
   .quizuebersicht .content {
     width: 800px; }
-    .quizuebersicht .content .kacheln .Quizkachel {
+    .quizuebersicht .content .kacheln .quizkachel {
       flex-basis: 33%; } }
 @media only screen and (max-width: 439px) {
   .quizuebersicht .content {
-    width: 100%;
-    padding: 10px; }
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 0;
+    /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
+        Mit der älteren Version abgeglichen. Kein Ergebnis. Was wird übersehen?*/ }
+    .quizuebersicht .content .sortierliste {
+      margin-bottom: 10px; }
+      .quizuebersicht .content .sortierliste .sortiercontent * {
+        text-decoration: none;
+        color: black; }
     .quizuebersicht .content .kacheln {
       display: block; }
-      .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos {
-        float: left; }
+      .quizuebersicht .content .kacheln .quizkachel {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 10px;
+        /*Wenn man mit Strg+MouseWheel rein und raus zoomt scheint nur hin und wieder unter 
+        dem Bild eine Pixelreihe grau zu sein. Wieso? */ }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos::after {
+          content: ".";
+          display: block;
+          clear: both;
+          height: 0;
+          overflow: hidden; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizbild {
           float: left;
           width: 113px;
           height: 70px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
+          text-align: center;
+          width: calc(100% - 113px);
+          height: 16px;
+          float: right;
+          background-color: rgba(248, 245, 228, 0.9);
+          font-size: 14px;
+          line-height: 18px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          padding-left: 0;
+          font-size: 12px;
+          margin-left: calc(113px + 15px);
+          float: none; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          /*margin-bottom: 9px;*/ }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
+          display: block;
+          font-size: 11px;
+          font-weight: 300;
+          margin-top: -31px;
+          margin-right: 15px;
+          float: right; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
+          font-size: 14px;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          margin-left: 15px;
+          margin-right: 15px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
+          position: relative; }
+  .quizuebersicht .anzGespielt.desktop.tablet {
+    display: none; }
+  .quizuebersicht .quizkachel-inner {
+    background-color: rgba(248, 245, 228, 0.9); }
   .quizuebersicht .hidden {
     display: none; } }
+>>>>>>> 7c15fb2c996f3e93887557742b778df745ec3242
 
 /*# sourceMappingURL=quizuebersicht.css.map */

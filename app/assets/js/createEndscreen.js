@@ -95,42 +95,53 @@ function createEndscreen(punkte, antworten, quizIdx){
     
     for (var i = 0; i < scoredata.length; i++){
 
-        var temp = snippetranking.outerHTML;
-
         if(punkte >= scoredata[i].points){
             template = template.replace(/{{rang}}/, " " + scoredata[i].rankIdx);
         	   
-            var position = i;
+            var position = (i+1);
             break;
         }
         
     }
 
-    
-    
-    
-    console.log("breadcrump 3");
-    
+    console.log(position);
     
     var rang_arr;
     
     //Ein array mit rang namen und idx für jeden spielstand erzeugen
     //Array deklarieren und mit allen Spielständen füllen
     
-    var superContainer = Array(20);
+    var superContainer = Array(15);
+    
+    var neues_Ranking = [];
+    
+    var points_arr = Array(15);
+    var rankIdx_arr = Array(15);
+    var player_arr = Array(15);
+    
+    var aktueller_rang = 1;
+    
+    console.log(scoredata);
+    
+    var eingetragen = false;
+    
     for( var i = 0; i < scoredata.length; i++ ){
-        superContainer[i] = [scoredata[i].points, scoredata[i].rankIdx, scoredata[i].player, schoeneresDatum(scoredata[i].date)];
+        if(punkte > scoredata[i].points && !eingetragen){
+            var mein_eintrag = {};
+            mein_eintrag.player = "Ich";
+            mein_eintrag.points = punkte;
+            mein_eintrag.rankIdx = aktueller_rang;
+            mein_eintrag.date = new Date();
+            aktueller_rang++;
+            neues_Ranking.push(mein_eintrag);
+            eingetragen = true;
+        }
+        scoredata[i].rankIdx = aktueller_rang;
+        
+        neues_Ranking.push(scoredata[i]);
+        
+        aktueller_rang++;
     }
-    
-    var neuerEintrag = [0, 24, "Ich", "Heute"];
-    
-    superContainer.push(neuerEintrag);
-    
-    //Falls der Rang größer ist als 5
-        //Dann schreibe von Rang - 5 bis Rang 
-    
-    //bubbleSort(superContainer);
-    superContainer.sort();  
     
     //document.getElementById("ranking").innerHTML = htmlRankings;
 
@@ -138,4 +149,43 @@ function createEndscreen(punkte, antworten, quizIdx){
     item.innerHTML = template;
 
     document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
+    
+        
+    if(position > 5){
+        
+        for(var i = (position-5); i < (position); i++){
+            
+           var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, neues_Ranking[i].date);
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+        }
+        
+    }
+    else{
+        for(var i = 0; i < 5; i++){
+            
+            var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, neues_Ranking[i].date);
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+            
+        }
+    }
+    
+    document.getElementById("ranking").innerHTML = htmlRankings;
 }
