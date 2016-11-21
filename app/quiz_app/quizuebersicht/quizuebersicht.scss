@@ -7,12 +7,13 @@
 		width: 1000px;
 		margin: 0 auto;
         margin-top: 70px;
-	
+	display: relative;
 		.sortierliste{
             margin-top: $gutter-width;
 			background-color: $bg-yellow;
 			//margin: 0; Hat in der mobilen Ansicht tatsächlich dafpr gesorgt, dass die Sortieritems nicht mehr ordentlich dargesttllt wurden.
 			padding: 0;
+            
 			
 			.sortiercontent{
 				margin: 0; padding: 0;
@@ -102,7 +103,7 @@
                         background-color: $primary;
                         font-size: 12pt;
 						position: relative;
-                        bottom: -1px;
+                        bottom: 0;
                         right: 0;
                         left: 0;
                         }
