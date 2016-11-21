@@ -50,7 +50,7 @@ quizze.addEventListener('click', function (event) {
     if(loaderisready)
         if(!loaderisready) console.log("Preloader war noch nicht fertig!!!");
         console.log("Die Quizze Schaltfäche wurde ausgelost.");
-        createUbersicht();
+        createQuizOverview();
 
 
 });
