@@ -30,6 +30,7 @@ body{
 	    margin-top: 3px;
 	    font-family: $base-font-family;
 	    font-size: 24px;
+        color: $dark_black;
 	}
 	
 	/*Dropdown-Menü*/
@@ -70,6 +71,7 @@ body{
 	    background: $bg-opak;
 	    padding: $gutter-width;
 	    float: left;
+        color: $dark_black;
 	}
 	
 	/*Quizbeschreibung/Teasertext*/
@@ -82,6 +84,7 @@ body{
 	    float: left;
 	    text-align: left;
 	    font-size: 20px;
+        color: $dark_black;
 	}
 	
 	/*Rang in Tabelle*/
@@ -157,7 +160,7 @@ body{
 	    }
 	    
 	    #auswahl{
-	        margin-top: 55px; 
+	        margin-top: 40px; 
 	    }
 	    
 	    .teaser{
