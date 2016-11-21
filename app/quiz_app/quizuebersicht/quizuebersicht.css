@@ -164,7 +164,7 @@ td {
           line-height: 18px; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
           padding-left: 0;
-          font-size: 12px;
+          font-size: 11px;
           margin-left: calc(113px + 15px);
           float: none; }
         .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
