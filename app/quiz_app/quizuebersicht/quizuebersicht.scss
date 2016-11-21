@@ -1,5 +1,12 @@
 @import "../../assets/css/base";
 
+//"SEMI-CHANGELOG"
+//- (1) Der aktive Punkt in der Sortierleiste wurde eingefügt
+//- (2) Um "anzGespielt mobile" und "datum" wurde im HTML eine div gezogen, 
+//  sodass die beiden Elemente eleganter auf einer Linie zu positionieren sind (mobile)
+//- (3) bottom: -1px; bei den Buttons, damit die eine Pixelzeile verschwindet
+//- (4) text-decoration bei der Sortierleiste raus genommen & schwarz gesetzt
+
 .quizuebersicht{
 	
 	.content{
@@ -7,7 +14,7 @@
 		width: 1000px;
 		margin: 0 auto;
         margin-top: 70px;
-	display: relative;
+        
 		.sortierliste{
             margin-top: $gutter-width;
 			background-color: $bg-yellow;
@@ -23,8 +30,17 @@
 					display: inline-block;
 					flex-grow: 1;
 					text-align: center;
+                    
+                    > a{    //(4)
+                        text-decoration: none;
+                        color: rgba(0,0,0,1);
+                    }
 				}
 			}
+            .top.active{    //(1)
+                border-bottom: 5px solid rgba(0,0,0,0.5);
+            }
+            
 		}		
 
 		.kacheln{
@@ -103,7 +119,7 @@
                         background-color: $primary;
                         font-size: 12pt;
 						position: relative;
-                        bottom: 0;
+                        bottom: -1px;   //(3)
                         right: 0;
                         left: 0;
                         }
@@ -141,7 +157,7 @@
 			margin-top: 0;
             
             /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
-                Mit der älteren Version abgeglichen. Kein Ergebnis. Was wird übersehen?*/
+                Mit der älteren Version abgeglichen. Kein Ergebnis. EDIT: Lösung siehe oben*/
             .sortierliste{
                 margin-bottom: 10px;
                 
@@ -150,7 +166,11 @@
                     
                     text-decoration: none;
                     color: black;
+                    
+                    
                 }
+                
+                
             }
             
 			.kacheln{
@@ -161,9 +181,7 @@
                     padding-bottom: 0;
                     padding-top: 0;
                     margin-top: 10px;
-                
-                    /*Wenn man mit Strg+MouseWheel rein und raus zoomt scheint nur hin und wieder unter 
-                    dem Bild eine Pixelreihe grau zu sein. Wieso? */
+        
                     .quizkachel-inner{
 	                    
 	                    .basicInfos::after{
@@ -201,13 +219,14 @@
                         
                             .datum{
                                 /*margin-bottom: 9px;*/ // Pixellinie unter dem Bild kam hier her
+                                margin-left: 15px;
+                                float:left;
                             }
                             
                             .anzGespielt.mobile{
                                 display: block;
                                 font-size: 11px;
                                 font-weight: 300;
-                                margin-top: -31px;
                                 margin-right: 15px;
                                 float: right;
                             }
@@ -219,6 +238,7 @@
                                 margin-bottom: 15px;
                                 margin-left: 15px;
                                 margin-right: 15px;
+                                height: initial;
                             }
                         }
                         .auswahl-button{
