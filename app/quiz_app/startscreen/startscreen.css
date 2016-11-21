@@ -73,7 +73,8 @@ td {
     max-width: 100%;
     height: auto; }
   #start .author {
-    background-color: rgba(248, 245, 228, 0.9); }
+    background-color: rgba(248, 245, 228, 0.9);
+    color: black; }
   #start .teaserbild img {
     display: block;
     width: 100%; }
