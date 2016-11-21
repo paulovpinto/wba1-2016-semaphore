@@ -241,7 +241,144 @@
             display: none;
         }
         
-	}      
+	} 
+    //-------------------------------------
+    @media only screen and (max-width: $bp-tablet){
+        
+        .content{
+            width: $content-width-tablet;
+            //width: 100%;
+            //margin-left: calc((100% - (172.5pt * 3) - 30px)   / 2);
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            justify-content:center;
+            align-self: stretch;
+            align-content: center;
+        
+        
+            .content .sortierliste{
+                margin: 0; 
+                padding: 0;
+    
+    
+                .sortierliste{
+			         background-color: $bg-yellow;
+			         margin-top:  15px;
+			         padding: 0;    
+                }
+            }
+            
+            .kacheln{
+		        display: flex;
+		        flex-wrap:wrap;
+                margin-left: -$gutter-width;
+		        margin-right: -$gutter-width;
+                
+                .quizkachel{
+        
+                    box-sizing: border-box;     		   display: block;
+                    flex-basis: 33%;
+                    /*flex-grow: 1;*/
+                    margin-bottom: $base-margin;
+                    padding: $gutter-width;
+                
+                    .quizkachel-inner{
+        
+                        background: $bg-opak;
+                        color: #000;
+                        height: 100%;
+                        position: relative;
+                
+                
+                .basicInfos{               
+                        .quizueberschrift{
+                            height: 18pt;
+                            background-color: rgba(248,245,228,1);
+                            text-align: center;
+                        }
+                        
+                        .erstellinfos{
+                            font-family: Oswald;
+                            font-weight: 50;
+                            color: #2F2D2C;
+                            text-align: left;
+                            background:beige;
+                            display: block;
+                            line-height: 10px;      
+                            height: 5px;
+                            margin: 5px 10px 0 0;
+                        }
+                    
+                       .datum{
+                            font-size: 10pt; 
+                        }
+    
+                        
+                        .anzGespielt, .desktop, .tablet{
+                            font-size: 8pt;
+                            text-align: right;
+                            font-weight: lighter;
+                            background-color: rgba beige;
+     
+                            margin: 0;
+   
+                            width: calc(100%-5px);
+                            height: 1pt;
+                            float: right;
+                        }    
+    
+                        .anzGespielt mobile{
+                            display: none;
+                        } 
+                    } 
+                    .inhalt{
+                        .beschreibung{
+                            text-align: left; 
+                            font-weight: lighter;
+                            line-height: 14px;
+                            font-size: 10pt;
+                            background-color: rgba(248,245,228,1);
+                            height: 80pt;
+                            margin-left: 10px;
+                            padding-left: 0;
+                        }
+                    }
+                
+                    .auswahl-button{
+				        position: absolute;
+                        bottom: 0;
+                        left: 0;        				    right: 0; 
+					}
+                        
+                        
+                        
+                    }
+                }
+            }
+
+    
+            
+            
+            
+  
+    
+  
+				}
+        
+     
+      
+        
+    }
+   
+    
+ 
+
+		
+    
+    
 }
 
 
