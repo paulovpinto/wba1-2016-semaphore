@@ -34,9 +34,9 @@
 	}
 	.titel {
 
-	    background-color: #F8F5E4;
+	    background-color: $bg-opak;
 	    text-align: center;
-	    color: black;
+	    color: $dark_black;
 	}
 	
 	h2{
@@ -50,7 +50,7 @@
 	    height: auto;
 	}
 	.author {
-	    background-color:rgba(248, 245, 228, 0.7);
+	    background-color: $bg-opak;
 	}
 	
 	.teaserbild{
@@ -66,7 +66,7 @@
 	    background-color: $bg-opak;;
 	    margin-bottom: 0;
 	    padding: $base-padding;
-	    color: #000;
+	    color: $dark_black;
 	    
 		.Beschreibung_kurz, .Beschreibung_lang{
 			display: inline;
@@ -111,7 +111,7 @@
 	    border-spacing: 0px 10px;
 	}
 	.liste th{
-	    background-color: #E9C20C;
+	    background-color: $bg-yellow;
 	    text-align: left;
 	}
 	.liste tr th:nth-child(1),
@@ -133,13 +133,13 @@
 	    color: black;
 	}
 	td{
-	    background:rgba(248, 245, 228, 0.7);
+	    background:$bg-opak;
 	}
 	
 }
 
  .hidden {
-        display:none !important;;
+        display:none !important;
     }
 
 .moreButton {
@@ -189,7 +189,7 @@
 }
 
 /* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: $bp-tablet){
 
     
     #start{
