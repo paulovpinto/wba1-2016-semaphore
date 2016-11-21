@@ -119,6 +119,8 @@ body{
   .schlussscreen .fussbaelle table {
     width: calc(100% - 30px);
     text-align: center; }
+    .schlussscreen .fussbaelle table td {
+      background-color: transparent; }
   .schlussscreen .punkte {
     background-color: #e9c20c;
     color: black;
@@ -137,7 +139,7 @@ body{
     clear: both; }
   .schlussscreen .suggestions img {
     width: 100%;
-    height: 90px;
+    /*height: 90px; */
     display: block; }
   .schlussscreen .suggestions h2 {
     background-color: #e9c20c;
@@ -164,13 +166,15 @@ body{
       bottom: 0;
       background-color: rgba(255, 255, 255, 0.7);
       width: 100%;
-      height: 25px;
+      /* height: 25px; */
       line-height: 25px;
       font-family: 'NotoSans'; }
       .schlussscreen .suggestions .sugg .sugg-infos .sugg-head {
         font-family: "Oswald", sans-serif;
         text-align: center;
-        height: auto; }
+        height: auto;
+        margin: 5px;
+        color: #000; }
   .schlussscreen .linke-seite {
     float: left;
     margin-top: 20px;
@@ -280,6 +284,8 @@ body{
     .schlussscreen .fussbaelle table {
       width: 100%;
       text-align: center; }
+      .schlussscreen .fussbaelle table td {
+        background-color: transparent; }
     .schlussscreen .fussbaelle img {
       width: 13px;
       height: 13px; }

@@ -106,6 +106,10 @@ body{
 	.fussbaelle table {
 	    width: calc(100% - 30px);
 	    text-align: center;
+	    
+	    td{
+		    background-color: transparent;
+	    }
 	}
 	
 	.punkte {
@@ -133,7 +137,7 @@ body{
         
         img {
            width: 100%;
-	       height: 90px;
+	       /*height: 90px; */
             display: block;
         }
         
@@ -169,7 +173,7 @@ body{
                 bottom: 0;
                 background-color: rgba(255, 255, 255, 0.7);
                 width: 100%;
-                height: 25px;
+                /* height: 25px; */
                 line-height: 25px;
                 font-family: 'NotoSans';
                 
@@ -177,6 +181,8 @@ body{
                     font-family: $base-font-family;
                     text-align: center;
                     height: auto;
+                    margin: 5px;
+                    color: #000;
                 }
 
             }
@@ -368,6 +374,10 @@ body{
         .fussbaelle table{
             width: 100%;
             text-align: center;
+            
+            td{
+	            background-color: transparent;
+            }
         }
         
         .fussbaelle img{
