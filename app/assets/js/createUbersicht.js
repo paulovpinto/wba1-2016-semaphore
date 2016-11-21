@@ -36,6 +36,7 @@ function createQuizOverview(){
         temp = temp.replace(/{{counter}}/, quiz.counter);
         temp = temp.replace(/{{image}}/, quiz.image);
         temp = temp.replace(/{{description}}/, quiz.description);
+        temp = temp.replace(/{{description}}/, quiz.description);
 
         var item = document.createElement("div");
         item.innerHTML = temp;
