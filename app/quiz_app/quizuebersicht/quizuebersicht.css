@@ -123,82 +123,6 @@ td {
         width: 100%; }
 @media only screen and (min-width: 439px) and (max-width: 1024px) {
   .quizuebersicht .content {
-    width: 800px; }
-    .quizuebersicht .content .kacheln .quizkachel {
-      flex-basis: 33%; } }
-@media only screen and (max-width: 439px) {
-  .quizuebersicht .content {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 0;
-<<<<<<< HEAD
-    /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
-        Mit der älteren Version abgeglichen. Kein Ergebnis. Was wird übersehen?*/ }
-=======
-    /* Inhalt der Sortierliste pl├Âtzlich nicht mehr symmetrisch angeordnet. 
-        Mit der ├ñlteren Version abgeglichen. Kein Ergebnis. EDIT: L├Âsung siehe oben*/ }
->>>>>>> 272c622587085da8cca67b63740bc33905d6be16
-    .quizuebersicht .content .sortierliste {
-      margin-bottom: 10px; }
-      .quizuebersicht .content .sortierliste .sortiercontent * {
-        text-decoration: none;
-        color: black; }
-    .quizuebersicht .content .kacheln {
-      display: block; }
-      .quizuebersicht .content .kacheln .quizkachel {
-        padding-bottom: 0;
-        padding-top: 0;
-        margin-top: 10px; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos::after {
-          content: ".";
-          display: block;
-          clear: both;
-          height: 0;
-          overflow: hidden; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizbild {
-          float: left;
-          width: 113px;
-          height: 70px; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
-          text-align: center;
-          width: calc(100% - 113px);
-          height: 16px;
-          float: right;
-          background-color: rgba(248, 245, 228, 0.9);
-          font-size: 14px;
-          line-height: 18px; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
-          padding-left: 0;
-          font-size: 11px;
-          margin-left: calc(113px + 15px);
-          float: none; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
-          /*margin-bottom: 9px;*/
-          margin-left: 15px;
-          float: left; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
-          display: block;
-          font-size: 11px;
-          font-weight: 300;
-          margin-right: 15px;
-          float: right; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
-          font-size: 14px;
-          margin-top: 15px;
-          margin-bottom: 15px;
-          margin-left: 15px;
-          margin-right: 15px;
-          height: initial; }
-        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
-          position: relative; }
-  .quizuebersicht .anzGespielt.desktop.tablet {
-    display: none; }
-  .quizuebersicht .quizkachel-inner {
-    background-color: rgba(248, 245, 228, 0.9); }
-  .quizuebersicht .hidden {
-    display: none; } }
-@media only screen and (max-width: 1024px) {
-  .quizuebersicht .content {
     width: 800px;
     padding: 0;
     margin: 0 auto;
@@ -273,5 +197,71 @@ td {
             bottom: 0;
             left: 0;
             right: 0; } }
+@media only screen and (max-width: 439px) {
+  .quizuebersicht .content {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 0;
+    /* Inhalt der Sortierliste pl├Âtzlich nicht mehr symmetrisch angeordnet. 
+        Mit der ├ñlteren Version abgeglichen. Kein Ergebnis. EDIT: L├Âsung siehe oben*/ }
+    .quizuebersicht .content .sortierliste {
+      margin-bottom: 10px; }
+      .quizuebersicht .content .sortierliste .sortiercontent * {
+        text-decoration: none;
+        color: black; }
+    .quizuebersicht .content .kacheln {
+      display: block; }
+      .quizuebersicht .content .kacheln .quizkachel {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 10px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos::after {
+          content: ".";
+          display: block;
+          clear: both;
+          height: 0;
+          overflow: hidden; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizbild {
+          float: left;
+          width: 113px;
+          height: 70px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
+          text-align: center;
+          width: calc(100% - 113px);
+          height: 16px;
+          float: right;
+          background-color: rgba(248, 245, 228, 0.9);
+          font-size: 14px;
+          line-height: 18px; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          padding-left: 0;
+          font-size: 11px;
+          margin-left: calc(113px + 15px);
+          float: none; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
+          /*margin-bottom: 9px;*/
+          margin-left: 15px;
+          float: left; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
+          display: block;
+          font-size: 11px;
+          font-weight: 300;
+          margin-right: 15px;
+          float: right; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .beschreibung {
+          font-size: 14px;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          margin-left: 15px;
+          margin-right: 15px;
+          height: initial; }
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
+          position: relative; }
+  .quizuebersicht .anzGespielt.desktop.tablet {
+    display: none; }
+  .quizuebersicht .quizkachel-inner {
+    background-color: rgba(248, 245, 228, 0.9); }
+  .quizuebersicht .hidden {
+    display: none; } }
 
 /*# sourceMappingURL=quizuebersicht.css.map */
