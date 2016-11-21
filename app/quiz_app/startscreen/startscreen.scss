@@ -4,7 +4,12 @@
 	margin: 60px auto;
 	width: 1000px;
 	box-sizing: border-box;
-
+	
+	button.mehr{
+		width: 100%;
+		border: none;
+		background: transparent;
+	}
     
 	.boxbox{
 	    box-sizing: border-box;
@@ -19,6 +24,8 @@
 	    }
 	    
 	}
+	
+
 	
 	.quizbox {
 	    margin-right: 1em;
@@ -45,10 +52,25 @@
 	.author {
 	    background-color:rgba(248, 245, 228, 0.7);
 	}
+	
+	.teaserbild{
+		img{
+			display: block;
+			width: 100%;
+		}
+		
+	}
+	
+	
 	.teasertext {
-	    background-color: rgba(248, 245, 228, 0.7);
-	    margin-bottom: 0em;
-	    padding-bottom: 0em;
+	    background-color: $bg-opak;;
+	    margin-bottom: 0;
+	    padding: $base-padding;
+	    color: #000;
+	    
+		.Beschreibung_kurz, .Beschreibung_lang{
+			display: inline;
+		}
 	}
 	.teasertext2{
 	    margin-top: -60px;
@@ -117,7 +139,7 @@
 }
 
  .hidden {
-        display:none;
+        display:none !important;;
     }
 
 .moreButton {
@@ -166,31 +188,33 @@
     display: none;
 }
 
-	/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
-	@media only screen and (max-width: 1024px){
-	    
-	    .startscreen{
-		    width: 439px;
-		    padding: 20px;
-		    		    
-		    .boxbox{
-			    display:block;
-			    margin-top: 0.5em;
-			    
-			    .quizbox{
-				    margin: 0;
-			    }
-			    
-			}
-			
-			.btn1 {
-	        	display: inline-block;
-			}
-	    
-			#highscorecontent {
-	        	display:none;
-	    	}
-	    }
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+@media only screen and (max-width: 1024px){
+
+    
+    #start{
+	   
+	    width: 100%;
+	    padding: 20px;
+	    		    
+	    .boxbox{
+		    display:block;
+		    margin-top: 0.5em;
+		    
+		    .quizbox{
+			    margin: 0;
+		    }
+		    
+		}
+		
+		.btn1 {
+        	display: inline-block;
+		}
+    
+		#highscorecontent {
+        	display:none;
+    	}
+    }
 
 
-	}
+}
