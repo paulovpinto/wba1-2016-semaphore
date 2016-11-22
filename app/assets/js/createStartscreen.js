@@ -29,15 +29,6 @@ function createStartscreen(quizId){
 	var description1 = description_text.slice(0, trim).join(" ");
 	var description2 = description_text.slice(trim, words).join(" ");
 
-	/*template = template.replace(/{{name}}/, quiz.name);
-    template = template.replace(/{{author}}/, quiz.author);
-    template = template.replace(/{{date}}/, schoeneresDatum(quiz.date));
-    template = template.replace(/{{counter}}/, quiz.counter);
-    template = template.replace(/{{image}}/, quiz.image);
-    template = template.replace(/{{description}}/, quiz.description);
-    template = template.replace(/{{description1}}/, description1);
-    template = template.replace(/{{description2}}/, description2);    */
-
 	var item = document.createElement("div");
 	item.innerHTML = template;
 	item.firstChild.id = quizId;

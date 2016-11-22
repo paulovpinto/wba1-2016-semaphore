@@ -1,0 +1,32 @@
+Hallo,
+
+Frage:
+"Ich sehe oben in der Adressleisten des Browser ändert sich nichts, obwohl wir die Seite gewechselt haben. Warum ist das so?"
+
+Antwort:
+index_full.png
+
+Dann nebeneinander oder Untereinander:
+index_close_content.png + index_close_loadjs.png
+
+Dann
+startscreen_full.png
+
+Danach wieder nebeneinander oder untereinander
+startscreen_close_data.png + startscreen_close_tabelle.png
+
+Dann
+JS_startscreen.png
+
+
+
+
+
+Frage:
+"Die beiden Seiten haben einen einheitlichen Look, wie haben sie das geschafft?"
+
+Nebeneinander
+preprozessoren_variablen.png + preprozessoren_bausteine.png
+
+Dann
+SCSS_startscreen_beispiel
