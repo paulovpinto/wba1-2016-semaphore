@@ -121,6 +121,7 @@ td {
           left: 0; }
       .quizuebersicht .content .kacheln .quizkachel .quizbild {
         width: 100%; }
+
 @media only screen and (min-width: 439px) and (max-width: 1024px) {
   .quizuebersicht .content {
     width: 800px;
@@ -202,8 +203,8 @@ td {
     width: calc(100% - 20px);
     padding: 10px;
     margin-top: 0;
-    /* Inhalt der Sortierliste pl├Âtzlich nicht mehr symmetrisch angeordnet. 
-        Mit der ├ñlteren Version abgeglichen. Kein Ergebnis. EDIT: L├Âsung siehe oben*/ }
+    /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
+        Mit der älteren Version abgeglichen. Kein Ergebnis. EDIT: Lösung siehe oben*/ }
     .quizuebersicht .content .sortierliste {
       margin-bottom: 10px; }
       .quizuebersicht .content .sortierliste .sortiercontent * {

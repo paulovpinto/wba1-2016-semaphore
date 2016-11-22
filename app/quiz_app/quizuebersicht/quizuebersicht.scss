@@ -136,173 +136,164 @@
 		    }
 		}		
 	}
+}
+
+
+@media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
     
-   
-		
-		 @media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
-        
-        .content{
-            width: $content-width-tablet;
-            //width: 100%;
-            //margin-left: calc((100% - (172.5pt * 3) - 30px)   / 2);
-            padding: 0;
-            margin: 0 auto;
-            list-style: none;
-            flex-direction: row;
-            flex-wrap: wrap-reverse;
-            justify-content:center;
-            align-self: stretch;
-            align-content: center;
-        
-        
-            .content .sortierliste{
-                margin: 0; 
-                padding: 0;
-    
-    
-                .sortierliste{
+    .quizuebersicht{
+	    
+	    .content{
+	        width: $content-width-tablet;
+	        //width: 100%;
+	        //margin-left: calc((100% - (172.5pt * 3) - 30px)   / 2);
+	        padding: 0;
+	        margin: 0 auto;
+	        list-style: none;
+	        flex-direction: row;
+	        flex-wrap: wrap-reverse;
+	        justify-content:center;
+	        align-self: stretch;
+	        align-content: center;
+	    
+	    
+	        .content .sortierliste{
+	            margin: 0; 
+	            padding: 0;
+	
+	
+	            .sortierliste{
 			         background-color: $bg-yellow;
 			         margin-top:  15px;
 			         padding: 0;    
-                }
-            }
-            
-            .kacheln{
+	            }
+	        }
+	        
+	        .kacheln{
 		        display: flex;
 		        flex-wrap:wrap;
-                margin-left: -$gutter-width;
+	            margin-left: -$gutter-width;
 		        margin-right: -$gutter-width;
-                
-                .quizkachel{
-        
-                    box-sizing: border-box;     		   display: block;
-                    flex-basis: 33%;
-                    /*flex-grow: 1;*/
-                    margin-bottom: $base-margin;
-                    padding: $gutter-width;
-                
-                    .quizkachel-inner{
-        
-                        background: $bg-opak;
-                        color: #000;
-                        height: 100%;
-                        position: relative;
-                
-                
-                .basicInfos{               
-                        .quizueberschrift{
-                            height: 18pt;
-                            background-color: rgba(248,245,228,1);
-                            text-align: center;
-                        }
-                        
-                        .erstellinfos{
-                            font-family: Oswald;
-                            font-weight: 50;
-                            color: #2F2D2C;
-                            text-align: left;
-                            background:beige;
-                            display: block;
-                            line-height: 10px;      
-                            height: 5px;
-                            margin: 5px 10px 0 0;
-                        }
-                    
-                       .datum{
-                            font-size: 10pt; 
-                        }
-    
-                        
-                        .anzGespielt, .desktop, .tablet{
-                            font-size: 8pt;
-                            text-align: right;
-                            font-weight: lighter;
-                            background-color: rgba beige;
-     
-                            margin: 0;
-   
-                            width: calc(100%-5px);
-                            height: 1pt;
-                            float: right;
-                        }    
-    
-                        .anzGespielt mobile{
-                            display: none;
-                        } 
-                    } 
-                    .inhalt{
-                        .beschreibung{
-                            text-align: left; 
-                            font-weight: lighter;
-                            line-height: 14px;
-                            font-size: 10pt;
-                            background-color: rgba(248,245,228,1);
-                            height: 80pt;
-                            margin-left: 10px;
-                            padding-left: 0;
-                        }
-                    }
-                
-                    .auswahl-button{
+	            
+	            .quizkachel{
+	    
+	                box-sizing: border-box;     		   display: block;
+	                flex-basis: 33%;
+	                /*flex-grow: 1;*/
+	                margin-bottom: $base-margin;
+	                padding: $gutter-width;
+	            
+	                .quizkachel-inner{
+	    
+	                    background: $bg-opak;
+	                    color: #000;
+	                    height: 100%;
+	                    position: relative;
+	            
+	            
+	            .basicInfos{               
+	                    .quizueberschrift{
+	                        height: 18pt;
+	                        background-color: rgba(248,245,228,1);
+	                        text-align: center;
+	                    }
+	                    
+	                    .erstellinfos{
+	                        font-family: Oswald;
+	                        font-weight: 50;
+	                        color: #2F2D2C;
+	                        text-align: left;
+	                        background:beige;
+	                        display: block;
+	                        line-height: 10px;      
+	                        height: 5px;
+	                        margin: 5px 10px 0 0;
+	                    }
+	                
+	                   .datum{
+	                        font-size: 10pt; 
+	                    }
+	
+	                    
+	                    .anzGespielt, .desktop, .tablet{
+	                        font-size: 8pt;
+	                        text-align: right;
+	                        font-weight: lighter;
+	                        background-color: rgba beige;
+	 
+	                        margin: 0;
+	
+	                        width: calc(100%-5px);
+	                        height: 1pt;
+	                        float: right;
+	                    }    
+	
+	                    .anzGespielt mobile{
+	                        display: none;
+	                    } 
+	                } 
+	                .inhalt{
+	                    .beschreibung{
+	                        text-align: left; 
+	                        font-weight: lighter;
+	                        line-height: 14px;
+	                        font-size: 10pt;
+	                        background-color: rgba(248,245,228,1);
+	                        height: 80pt;
+	                        margin-left: 10px;
+	                        padding-left: 0;
+	                    }
+	                }
+	            
+	                .auswahl-button{
 				        position: absolute;
-                        bottom: 0;
-                        left: 0;        				    right: 0; 
+	                    bottom: 0;
+	                    left: 0;
+	                    right: 0; 
 					}
-                        
-                        
-                        
-                    }
+	                    	                    
                 }
             }
+        }
+	}    
+}}
 
-    
-            
-            
-            
-  
-    
-  
-				}
-        
-     
-      
-        
-    }  
-    
-	@media only screen and (max-width: $bp-smartphone){
-		
+
+@media only screen and (max-width: $bp-smartphone){
+	
+	.quizuebersicht{
 		.content{
 			width: calc(100% - 20px);
 			padding: $gutter-width;
 			margin-top: 0;
-            
-            /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
-                Mit der älteren Version abgeglichen. Kein Ergebnis. EDIT: Lösung siehe oben*/
-            .sortierliste{
-                margin-bottom: 10px;
-                
-                .sortiercontent *{
-                    
-                    
-                    text-decoration: none;
-                    color: black;
-                    
-                    
-                }
-                
-                
-            }
-            
+	        
+	        /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
+	            Mit der älteren Version abgeglichen. Kein Ergebnis. EDIT: Lösung siehe oben*/
+	        .sortierliste{
+	            margin-bottom: 10px;
+	            
+	            .sortiercontent *{
+	                
+	                
+	                text-decoration: none;
+	                color: black;
+	                
+	                
+	            }
+	            
+	            
+	        }
+	        
 			.kacheln{
 				display: block;
-                
-                .quizkachel{
-                    
-                    padding-bottom: 0;
-                    padding-top: 0;
-                    margin-top: 10px;
-        
-                    .quizkachel-inner{
+	            
+	            .quizkachel{
+	                
+	                padding-bottom: 0;
+	                padding-top: 0;
+	                margin-top: 10px;
+	    
+	                .quizkachel-inner{
 	                    
 	                    .basicInfos::after{
 		                    content: ".";
@@ -312,85 +303,75 @@
 		                    overflow: hidden;
 	                    }
 	                    
-                        .basicInfos{ 
-                                                       
-                            .quizbild{
-                                float: left;
-                                width: 113px;
-                                height: 70px;
-                            }
-                            
-                            .quizueberschrift{
-                                text-align: center;
-                                width: calc(100% - 113px);
-                                height: 16px;
-                                float: right;
-                                background-color: $bg-opak;
-                                font-size: 14px;
-                                line-height: 18px;
-                            }
-                            
-                            .erstellinfos, .datum{
-                                padding-left: 0;
-                                font-size: 11px;
-                                margin-left: calc(113px + 15px);
-                                float: none;
-                            }
-                        
-                            .datum{
-                                /*margin-bottom: 9px;*/ // Pixellinie unter dem Bild kam hier her
-                                margin-left: 15px;
-                                float:left;
-                            }
-                            
-                            .anzGespielt.mobile{
-                                display: block;
-                                font-size: 11px;
-                                font-weight: 300;
-                                margin-right: 15px;
-                                float: right;
-                            }
-                        }
-                        .inhalt{
-                            .beschreibung{
-                                font-size: 14px;
-                                margin-top: 15px;
-                                margin-bottom: 15px;
-                                margin-left: 15px;
-                                margin-right: 15px;
-                                height: initial;
-                            }
-                        }
-                        .auswahl-button{
-                            position: relative;
-                        }
-                    }
+	                    .basicInfos{ 
+	                                                   
+	                        .quizbild{
+	                            float: left;
+	                            width: 113px;
+	                            height: 70px;
+	                        }
+	                        
+	                        .quizueberschrift{
+	                            text-align: center;
+	                            width: calc(100% - 113px);
+	                            height: 16px;
+	                            float: right;
+	                            background-color: $bg-opak;
+	                            font-size: 14px;
+	                            line-height: 18px;
+	                        }
+	                        
+	                        .erstellinfos, .datum{
+	                            padding-left: 0;
+	                            font-size: 11px;
+	                            margin-left: calc(113px + 15px);
+	                            float: none;
+	                        }
+	                    
+	                        .datum{
+	                            /*margin-bottom: 9px;*/ // Pixellinie unter dem Bild kam hier her
+	                            margin-left: 15px;
+	                            float:left;
+	                        }
+	                        
+	                        .anzGespielt.mobile{
+	                            display: block;
+	                            font-size: 11px;
+	                            font-weight: 300;
+	                            margin-right: 15px;
+	                            float: right;
+	                        }
+	                    }
+	                    .inhalt{
+	                        .beschreibung{
+	                            font-size: 14px;
+	                            margin-top: 15px;
+	                            margin-bottom: 15px;
+	                            margin-left: 15px;
+	                            margin-right: 15px;
+	                            height: initial;
+	                        }
+	                    }
+	                    .auswahl-button{
+	                        position: relative;
+	                    }
+	                }
 				}
 			} 
 		}  
-        
-        .anzGespielt.desktop.tablet{
-            display: none;
-        }
-        
-        .quizkachel-inner{
-            background-color: rgba(248,245,228,0.9);
-        }
-        
-        .hidden{
-            display: none;
-        }
-        
+	    
+	    .anzGespielt.desktop.tablet{
+	        display: none;
+	    }
+	    
+	    .quizkachel-inner{
+	        background-color: rgba(248,245,228,0.9);
+	    }
+	    
+	    .hidden{
+	        display: none;
+	    }
+	    
 	} 
-    //-------------------------------------
-    
-   
-    
- 
 
-		
-    
-    
 }
-
-
