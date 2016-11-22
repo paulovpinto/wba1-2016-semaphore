@@ -60,10 +60,13 @@ td {
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
 .quizrunde * {
   font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: lighter;
   color: #000;
-  /*background-color, Vorläufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
+  /*background-color, Vorl├ñufig, wird angezeigt wenn Bild nicht geladen werden kann*/ }
+
+.quizrunde .fragen-und-infos {
+  margin-top: 50px; }
 
 /*Anzeige fragen-counte r*/
 .quizrunde .fragen-counter {
@@ -113,7 +116,7 @@ td {
   max-width: 0; }
 
 /*Allgemeine Formatierung der Antworten,
-hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
+haupts├ñchliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
 .quizrunde .alle-antworten {
   list-style: none;
   min-height: 300px; }
@@ -126,7 +129,7 @@ hauptsächliche Aufgabe: alle Fragen an den unteren Fensterrand setzen*/
   transform: scale(0); }
 
 /*Antworten Formatierung, jede Frage bekommt einen eigenen Hintergrund,
-Abstände zwischen den Fragen*/
+Abst├ñnde zwischen den Fragen*/
 .quizrunde .antwort {
   font-weight: lighter;
   margin: 10px 0;
@@ -173,7 +176,7 @@ Abstände zwischen den Fragen*/
       bottom: 10px; }
 
   .quizrunde .antwort {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 24px; }
 
   .quizrunde .fragenblock {
@@ -184,15 +187,17 @@ Abstände zwischen den Fragen*/
     margin-top: -20px;
     font-size: 24px;
     margin-left: 15px;
-    margin-right: 15px; }
+    margin-right: 15px;
+    margin-bottom: 20px; }
 
   .quizrunde .fragen-und-infos {
+    margin-top: -50px;
     margin-left: 15px;
     margin-right: 15px; }
 
   .quizrunde .fragen-counter {
     font-size: 24px; } }
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .quizrunde .antwort {
     margin-top: 40px;
     font-size: 24px; }
@@ -202,7 +207,19 @@ Abstände zwischen den Fragen*/
     font-size: 24px; }
 
   .quizrunde .fragen-counter {
-    font-size: 24px; } }
-/* GGf mal CSS Präprozessoren checken. */
+    font-size: 24px; }
+
+  .quizrunde .fragen-und-infos {
+    margin-top: -50px;
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  .quizrunde .alle-antworten {
+    margin-top: -20px;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px; } }
+/* GGf mal CSS Pr├ñprozessoren checken. */
 
 /*# sourceMappingURL=quizrunde.css.map */

@@ -27,12 +27,15 @@
 /*Allgemeine Formatierung, Schriftart, Font Groesse, Hintegrund*/
 .quizrunde *{
     font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: lighter;
     color: #000;
 /*background-color, Vorläufig, wird angezeigt wenn Bild nicht geladen werden kann*/
 }
 
+.quizrunde .fragen-und-infos{
+        margin-top: 50px;
+    }
 /*Anzeige fragen-counte r*/
 .quizrunde .fragen-counter {
   width: 100px;
@@ -168,7 +171,7 @@ Abstände zwischen den Fragen*/
 	}
 
     .quizrunde .antwort{
-        margin-top:20px;
+        margin-top:10px;
         font-size: 24px;
     }
     .quizrunde .fragenblock{
@@ -180,10 +183,11 @@ Abstände zwischen den Fragen*/
         font-size: 24px;
         margin-left: 15px;
         margin-right: 15px;
+        margin-bottom:20px;
     }
     
     .quizrunde .fragen-und-infos{
-
+        margin-top: -50px;
         margin-left: 15px;
         margin-right: 15px;
     }
@@ -193,7 +197,7 @@ Abstände zwischen den Fragen*/
     }
 }
 
-@media only screen and (min-width: $bp-tablet) {
+@media only screen and (max-width: $bp-tablet) {
 
     .quizrunde .antwort{
         margin-top:40px;
@@ -206,5 +210,18 @@ Abstände zwischen den Fragen*/
     .quizrunde .fragen-counter{
         font-size: 24px;
     }
+    .quizrunde .fragen-und-infos{
+        margin-top: -50px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .quizrunde .alle-antworten{
+        margin-top:-20px;
+        font-size: 24px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom:20px;
+    }
+    
 }
 /* GGf mal CSS Präprozessoren checken. */
