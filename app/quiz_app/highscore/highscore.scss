@@ -37,7 +37,7 @@ body{
 	#auswahl{
 	    margin-bottom: $gutter-width;
 	    width: 100%;
-	    height: 34px;
+	    height: 39px;
 	    font-family: $base-font-family;
 	    font-size: 20px;
 	    margin-bottom: $gutter-width;
@@ -66,7 +66,7 @@ body{
 	#author{
 	    font-family: $base-font-family;
 	    font-size: 20px;
-	    width: calc(100% - 20px);
+	    width: 100%;
 	    margin: 0;
 	    background: $bg-opak;
 	    padding: $gutter-width;
@@ -76,7 +76,7 @@ body{
 	
 	/*Quizbeschreibung/Teasertext*/
 	#teasertext {
-	    width: calc(100% - 20px);
+	    width: 100%;
 	    margin-top: $gutter-width;
 	    font-family: 'NotoSans-Regular';
 	    background: $bg-opak;
@@ -108,7 +108,7 @@ body{
 	
 	/*Gesamte Tabelle*/
 	.liste{
-	    font-family: 'NotoSans-Regular';
+	    font-family: $base-font-family;
 	    width: 100%;
 	    margin-top: 30px;
 	    border-spacing: 0 $gutter-width;   
