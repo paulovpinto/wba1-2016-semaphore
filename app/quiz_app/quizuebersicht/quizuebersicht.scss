@@ -9,7 +9,11 @@
 
 .quizuebersicht{
     
-    
+    /*  Nach einem fix der Navigationsleiste war es uns nötig, den gesamten content in jeder Ansicht
+        um den entsprechenden Abstand nach oben zu schieben. Wenn man sich in den Entwicklertools die 
+        Navigationsleiste ansieht, nimmt der .container in der Klasse .fubuizz-header genau den Platz ein
+        um den wir den eigenen Content verschieben mussten. 
+        An den zutreffenden Stellen im Code wurde das dementsprechend kommentiert.  */
     
     
 	/********************************************************************************
@@ -23,7 +27,7 @@
 				 
 		width: $content-width-desktop;
 		margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 30px;
         
 		.sortierliste{
             margin-top: $gutter-width;
@@ -162,6 +166,7 @@
             width: $content-width-tablet;
             padding: 0;
             margin: 0 auto;
+            margin-top: -40px;  // nach fix der Navigationsleiste war es nötig, den gesamten content näher zur Leiste zu schieben
             list-style: none;
             flex-direction: row;
             flex-wrap: wrap-reverse;
@@ -186,7 +191,7 @@
 		        display: flex; // erzeugt Flexboxen aus allen direkten Nachkommen des Elements und richtet diese zentriert aus.
 		        flex-wrap: wrap; // die flexiblen Elemente können sich wenn nötig innerhalb des Containers in mehrere Zeilen aufteilen.
                 margin-left: -$gutter-width;
-		        margin-right: -$gutter-width;
+		        margin-right: -18px;  // nach dem fix der Navigationsleiste war es nötig den margin-right von -$gutter-width auf -18px zu ändern. 
                 
                 .quizkachel{
         
@@ -291,7 +296,7 @@
 		.content{ 
 			width: $content-width-smartphone;
 			padding: $gutter-width;
-			margin-top: 0;
+			margin-top: -60px;   // nach fix der Navigationsleiste war es nötig, den gesamten content näher zur Leiste zu schieben
         
             .sortierliste{
                 margin-bottom: $gutter-width;
