@@ -46,8 +46,8 @@ html, body {
   background: url(../images/NeuStadion.png) no-repeat center center fixed;
   background-size: cover; }
 
-.fubuizz-header header {
-  position: fixed;
+.fubuizz-header .sub-header {
+  /*position: fixed; */
   width: 100%;
   margin-bottom: 0px;
   background-color: $bg-darkgrey;
@@ -81,9 +81,9 @@ html, body {
   display: inline-block; }
 
 .fubuizz-header .container {
-  position: fixed;
+  /*position: fixed; */
   width: 100%;
-  margin-top: 53px;
+  /*margin-top: 53px; */
 }
 
 .fubuizz-header .navip {
@@ -96,7 +96,6 @@ html, body {
   font-size: 15px; }
 
 .fubuizz-header .head {
-  margin-top: $base-margin;
   float: right;
   z-index: 1; }
 
@@ -136,7 +135,7 @@ html, body {
 
 .fubuizz-header .burgerheader {
   width: 250px;
-  height: 37px; 
+  height: 53px; 
   margin-top: -24px;
   margin-left: -25px;
   padding-top: 3px;
@@ -145,7 +144,7 @@ html, body {
 
 .fubuizz-header .burgernav {
   width: 170px;
-  height: 550px; } 
+  height: 260px; } 
 
 .fubuizz-header .burgernav li {
   display: block;
@@ -163,8 +162,8 @@ html, body {
   height: 40px;
   font-family: 'Noto Sans' , sans-serif;
   font-size: 20px;
-  position: relative;
-  top: 260px; }
+  margin-left: 15px;
+  position: relative; }
 
 .fubuizz-header .menu {
   width: 170px;
@@ -180,7 +179,7 @@ html, body {
   .fubuizz-header .head {
     visibility: hidden; }
 
-  .fubuizz-header header {
+  .fubuizz-header .sub-header {
     height: 40px; }
 
   .fubuizz-header .burgerheader {
@@ -196,10 +195,12 @@ html, body {
     left: 20px;
     height: 38px;
     margin: 0px;
-    top: 2px; }
+    top: 2px; 
+    cursor: pointer;}
 
   .fubuizz-header .burgermenu {
-    visibility: visible; } }
+    visibility: visible; 
+    cursor: pointer;} }
 @media only screen and (max-width: 800px) {
 
   .fubuizz-header p {
@@ -208,7 +209,7 @@ html, body {
   .fubuizz-header .head {
     visibility: hidden; }
 
-  .fubuizz-header header {
+  .fubuizz-header .sub-header {
     height: 37px; }
 
   .fubuizz-header .burgerheader {
@@ -218,7 +219,8 @@ html, body {
     visibility: visible;
     height: 37px;
     width: 37px;
-    right: 10px; }
+    right: 10px; 
+    cursor: pointer;}
 
   .fubuizz-header nav {
     visibility: hidden; }

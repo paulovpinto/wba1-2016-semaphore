@@ -1,0 +1,11 @@
+//Code habe ich keinen zum zeigen
+Es wäre gut wenn bei Frage 1 Einfach jemand langsam durch die Landingpage scrollt und bei Frage 2 das Browserfenster von jemanden in verschiedene größen zieht um das rsponsive Design zu zeigen//
+
+
+Warum gelangen wir nicht direkt auf auf dem Quiz sonder auf diese Start Seite? 
+
+Was wir hier sehen nennt sich eine "Landingpage". Sie repräsentiert unser Projekt im Internet und ist auch die erste Anlaufstelle, mit der der Nutzer am Ende in Kontakt kommt. Grundsätzlich ist die Aufgabe der Landingpage für Fubuizz zu werben. Daher erscheinen hier Neuigkeiten, Werbetexte, Abbildungen der Screens und Ähnliches. Besonders wichtig ist darüber hinaus, dass man schnell und einfach zum Spiel gerät. Außerdem ist die Landingpage Suchmaschienenoptimiert. Das bedeutet, dass einige Schritte vorgenommen wurden, die das Ranking der Seite bei verschiedenen Suchmaschienen posituv beeinflussen. Mehr dazu kann man in den Berichten zu den Marketingtools erfahren.
+
+Ist die Webseite auch für den Mobilbereich konziptiert?
+
+Ja, auch bei der Landingpage ist es besonders wichtig, dass der Nutzer mit verschiedenen Endgeräten fehlerfrei auf sämtliche Inhalte zugreifen kann. Dies ist nicht nur bei der weitergabe der Informationen von Bedeutung. Auch das Auftreten und die Seriösität der Seite und damit des Projekts profitiert von einem "responsive" Design.
