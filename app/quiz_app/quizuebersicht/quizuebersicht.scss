@@ -38,20 +38,21 @@
 			
 			.sortiercontent{
 				margin: 0; padding: 0;
-				display: flex;
+				display: flex;//ermöglicht Flexboxen für alle Kindelemente (Links)
 	
 				> li{
 					display: inline-block;
-					flex-grow: 1;
+					flex-grow: 1; //alle Kindelemente haben, wenn sie größer werden, dieselben Platz zur Verfügung 
 					text-align: center;
                     
-                    > a{    //(4)
+                    > a{    
                         text-decoration: none;
                         color: $dark_black;
+                        //sorgt dafür, dss Links in der Liste nicht mehr blau und unterstrichen
                     }
 				}
 			}
-            .top.active{    //(1)
+            .top.active{    //unterer Balken des aktiven Links wird definiert
                 border-bottom: 5px solid rgba(0,0,0,0.7);
             }
             
@@ -59,15 +60,15 @@
 
 		.kacheln{
 	
-		    display: flex;
-		    flex-wrap:wrap;
+		    display: flex; //ermöglicht Flexboxen für alle Kinderelemente (Quizkacheln)
+		    flex-wrap:wrap; //Flexboxen können von links nach rechts
 		    margin-left: -$gutter-width;
 		    margin-right: -$gutter-width;
 		    
 		    .quizkachel{
 			    box-sizing: border-box;
 			    display: block;
-			    flex-basis: 25%;
+			    flex-basis: 25%; //Flex-Größe der einzelnen Kacheln wird festgelegt
 			    margin-bottom: $base-margin;
 			    padding: $gutter-width; 
 				
@@ -84,15 +85,15 @@
 					
                     .basicInfos{  
                             height: 230px;
-                            background-color: $bright;
+                            background-color: $bg-opak;
                         
                         .quizueberschrift{
                             height: 18pt;
-                            background-color: $bright;
+                            background-color: $bg-opak;
                             text-align: center;
                             }
                         
-                        .erstellinfos, .datum{
+                        .erstellinfos, .datum{ //Erstellinfos und Datum sollen zusammen in einer Zeile angezeigt werden
                             width: relative;
                             float: left;
                             font-weight: $font-weight-light;
@@ -102,10 +103,11 @@
                         
                         .erstellinfos{
                             padding-left: $base-padding;
+                            margin: 0px 3px $base-margin; // Das Erstellinfos und Datum nicht in einen Div gepackt wurden, legt man hier den Abstand zwischen den beiden fest
                         }
                         
                         .anzGespielt.mobile{
-                            display: none;
+                            display: none; //Mobiler Counter wird nicht angezeigt, weil die Desktop-/Tablet-Version einen eigenen Counter besitzt
                         }
                     }
                     .inhalt{
@@ -127,6 +129,7 @@
                             float: right;
                             font-size: 10pt;
                             margin-top: $base-margin;
+                            //dieser Counter für die Desktop-/Tablet-Version wird angezeigt
                         }
                     }
                     
@@ -137,18 +140,18 @@
                         background-color: $primary;
                         font-size: 12pt;
 						position: relative;
-                        bottom: -1px;   //(3)
+                        bottom: -1px;   //Abstand -1, weil eine Pixelreihe unter dem Button noch in der Farbe opak war
                         right: 0;
                         left: 0;
                         }
                     
-				}
+				} //Ende .quizkachel-inner
 			    .quizbild{
 				    width: 100%;
 			    }
-		    }
-		}		
-	}
+		    } //Ende .quizkachel
+		} //Ende .kacheln		
+	} //Ende .content
 
     
     
@@ -216,7 +219,7 @@
                                 
                                 .quizueberschrift{
                                     height: 18pt;   // 
-                                    background-color: $bright;
+                                    background-color: $bg-opak;
                                     text-align: center;
                                 }
 
