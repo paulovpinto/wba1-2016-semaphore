@@ -63,7 +63,7 @@ td {
     margin-top: 0.5em;
     margin-bottom: 0.5em; }
   #start .titel {
-    background-color: #F8F5E4;
+    background-color: rgba(248, 245, 228, 0.9);
     text-align: center;
     color: black; }
   #start h2 {
@@ -73,7 +73,8 @@ td {
     max-width: 100%;
     height: auto; }
   #start .author {
-    background-color: rgba(248, 245, 228, 0.7); }
+    background-color: rgba(248, 245, 228, 0.9);
+    color: black; }
   #start .teaserbild img {
     display: block;
     width: 100%; }
@@ -81,7 +82,7 @@ td {
     background-color: rgba(248, 245, 228, 0.9);
     margin-bottom: 0;
     padding: 5px;
-    color: #000; }
+    color: black; }
     #start .teasertext .Beschreibung_kurz, #start .teasertext .Beschreibung_lang {
       display: inline; }
   #start .teasertext2 {
@@ -118,7 +119,7 @@ td {
     margin-right: 1em;
     border-spacing: 0px 10px; }
   #start .liste th {
-    background-color: #E9C20C;
+    background-color: #e9c20c;
     text-align: left; }
   #start .liste tr th:nth-child(1),
   #start .liste tr td:nth-child(1) {
@@ -135,7 +136,7 @@ td {
     padding: 4px;
     color: black; }
   #start td {
-    background: rgba(248, 245, 228, 0.7); }
+    background: rgba(248, 245, 228, 0.9); }
 
 .hidden {
   display: none !important; }
@@ -178,7 +179,7 @@ td {
 .toggleBox input:checked ~ .open {
   display: none; }
 
-/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   #start {
     width: 100%;

@@ -83,11 +83,11 @@ html, body {
   margin: 0px;
   font-family: "Oswald", sans-serif;
   color: white;
-  background: url(../images/fubuizz-bg-gross.jpg) no-repeat center center fixed;
+  background: url(../images/NeuStadion.png) no-repeat center center fixed;
   background-size: cover; }
 
-.fubuizz-header header {
-  position: fixed;
+.fubuizz-header .sub-header {
+  /*position: fixed; */
   width: 100%;
   margin-bottom: 0px;
   background-color: #504f48;
@@ -121,9 +121,9 @@ html, body {
   display: inline-block; }
 
 .fubuizz-header .container {
-  position: fixed;
+  /*position: fixed; */
   width: 100%;
-  margin-top: 53px; }
+  /*margin-top: 53px; */ }
 
 .fubuizz-header .navip {
   position: relative;
@@ -175,7 +175,7 @@ html, body {
 
 .fubuizz-header .burgerheader {
   width: 250px;
-  height: 37px;
+  height: 53px;
   margin-top: -24px;
   margin-left: -25px;
   padding-top: 3px;
@@ -218,7 +218,7 @@ html, body {
   .fubuizz-header .head {
     visibility: hidden; }
 
-  .fubuizz-header header {
+  .fubuizz-header .sub-header {
     height: 40px; }
 
   .fubuizz-header .burgerheader {
@@ -245,7 +245,7 @@ html, body {
   .fubuizz-header .head {
     visibility: hidden; }
 
-  .fubuizz-header header {
+  .fubuizz-header .sub-header {
     height: 37px; }
 
   .fubuizz-header .burgerheader {
