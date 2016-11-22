@@ -7,14 +7,21 @@
 //- (3) bottom: -1px; bei den Buttons, damit die eine Pixelzeile verschwindet
 //- (4) text-decoration bei der Sortierleiste raus genommen & schwarz gesetzt
 
-//TO-DO
-//- (1) Alle Schriftgrößen in Ordnung?
-
 .quizuebersicht{
-	
+    
+    
+    
+    
+	/********************************************************************************
+	*                                                                               *
+	*                              DESKTOP-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
+    
+    
 	.content{
 				 
-		width: 1000px;
+		width: $content-width-desktop;
 		margin: 0 auto;
         margin-top: 70px;
         
@@ -36,12 +43,12 @@
                     
                     > a{    //(4)
                         text-decoration: none;
-                        color: rgba(0,0,0,1);
+                        color: $dark_black;
                     }
 				}
 			}
             .top.active{    //(1)
-                border-bottom: 5px solid rgba(0,0,0,0.5);
+                border-bottom: 5px solid rgba(0,0,0,0.7);
             }
             
 		}		
@@ -57,7 +64,6 @@
 			    box-sizing: border-box;
 			    display: block;
 			    flex-basis: 25%;
-			    /*flex-grow: 1;*/
 			    margin-bottom: $base-margin;
 			    padding: $gutter-width; 
 				
@@ -72,10 +78,13 @@
 					height: 100%;
 					position: relative;
 					
-                    .basicInfos{               
+                    .basicInfos{  
+                            height: 230px;
+                            background-color: $bright;
+                        
                         .quizueberschrift{
                             height: 18pt;
-                            background-color: rgba(248,245,228,1);
+                            background-color: $bright;
                             text-align: center;
                             }
                         
@@ -99,6 +108,7 @@
                         font-weight: $font-weight-light;
                         
                         .beschreibung{
+                            margin-top: $base-margin;
                             height: 95px;
                             float: left;
                             padding-left: $base-padding;
@@ -112,6 +122,7 @@
                             text-align: right;
                             float: right;
                             font-size: 10pt;
+                            margin-top: $base-margin;
                         }
                     }
                     
@@ -128,8 +139,6 @@
                         }
                     
 				}
-                
-			      
 			    .quizbild{
 				    width: 100%;
 			    }
@@ -137,14 +146,21 @@
 		}		
 	}
     
+    
+    
+    
+    /********************************************************************************
+	*                                                                               *
+	*                               TABLET-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
    
 		
 		 @media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
+
         
         .content{
             width: $content-width-tablet;
-            //width: 100%;
-            //margin-left: calc((100% - (172.5pt * 3) - 30px)   / 2);
             padding: 0;
             margin: 0 auto;
             list-style: none;
@@ -154,7 +170,7 @@
             align-self: stretch;
             align-content: center;
         
-        
+            
             .content .sortierliste{
                 margin: 0; 
                 padding: 0;
@@ -168,15 +184,16 @@
             }
             
             .kacheln{
-		        display: flex;
-		        flex-wrap:wrap;
+		        display: flex; // erzeugt Flexboxen aus allen direkten Nachkommen des Elements und richtet diese zentriert aus.
+		        flex-wrap: wrap; // die flexiblen Elemente können sich wenn nötig innerhalb des Containers in mehrere Zeilen aufteilen.
                 margin-left: -$gutter-width;
 		        margin-right: -$gutter-width;
                 
                 .quizkachel{
         
-                    box-sizing: border-box;     		   display: block;
-                    flex-basis: 33%;
+                    box-sizing: border-box;     		   
+                    display: block;
+                    flex-basis: 33%;  // Festlegung der Maximalen Hauptgröße des flex-Elements. 
                     /*flex-grow: 1;*/
                     margin-bottom: $base-margin;
                     padding: $gutter-width;
@@ -189,122 +206,114 @@
                         position: relative;
                 
                 
-                .basicInfos{               
-                        .quizueberschrift{
-                            height: 18pt;
-                            background-color: rgba(248,245,228,1);
-                            text-align: center;
-                        }
-                        
-                        .erstellinfos{
-                            font-family: Oswald;
-                            font-weight: 50;
-                            color: #2F2D2C;
-                            text-align: left;
-                            background:beige;
-                            display: block;
-                            line-height: 10px;      
-                            height: 5px;
-                            margin: 5px 10px 0 0;
-                        }
-                    
-                       .datum{
-                            font-size: 10pt; 
-                        }
-    
-                        
-                        .anzGespielt, .desktop, .tablet{
-                            font-size: 8pt;
-                            text-align: right;
-                            font-weight: lighter;
-                            background-color: rgba beige;
-     
-                            margin: 0;
-   
-                            width: calc(100%-5px);
-                            height: 1pt;
-                            float: right;
-                        }    
-    
-                        .anzGespielt mobile{
-                            display: none;
-                        } 
-                    } 
-                    .inhalt{
-                        .beschreibung{
-                            text-align: left; 
-                            font-weight: lighter;
-                            line-height: 14px;
-                            font-size: 10pt;
-                            background-color: rgba(248,245,228,1);
-                            height: 80pt;
-                            margin-left: 10px;
-                            padding-left: 0;
-                        }
-                    }
-                
-                    .auswahl-button{
-				        position: absolute;
-                        bottom: 0;
-                        left: 0;        				    right: 0; 
-					}
-                        
-                        
-                        
-                    }
-                }
-            }
+                            .basicInfos{        //Da die .erstellinfos und .datum nicht in einer div sind, wurde hier ein wenig getrickst um dennoch den korrekten Hintergrund unter dem Bild zu haben.
+                                background-color: $bg-opak;  
+                                height: 203px;
+                                
+                                .quizueberschrift{
+                                    height: 18pt;   // 
+                                    background-color: $bright;
+                                    text-align: center;
+                                }
 
+                                .erstellinfos{
+                                    color: #2F2D2C;
+                                    text-align: left;
+                                    background:beige;
+                                    display: block;  
+                                    line-height: 10px;      
+                                    height: 5px;
+                                    margin: 2px 3px 0 $base-margin;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+
+                                }
+
+                               .datum{
+                                    font-size: 10pt;
+                                    margin-top: -3px;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+                        
+                                }
+
+                                   
+
+                                .anzGespielt mobile{
+                                    display: none; // Es handelt sich hirbei um eine Tablet Ansicht ergo wird dies für die Mobile Ansicht ausgeschaltet 
+                                } 
+                            } 
+                            .inhalt{
+                                
+                                .beschreibung{
+                                    height: 65px;
+                                    text-align: left; 
+                                    font-weight: lighter;
+                                    line-height: 17px;
+                                    font-size: 10pt;
+                                    margin: $gutter-width 0 25px $gutter-width;
+                                    padding-left: 0;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+                       
+                                }
+                                
+                                .anzGespielt.desktop.tablet{
+                                    float: right;
+                                    margin-right: 10px;
+                                    margin-bottom: $gutter-width;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+                        
+                                }
+                            }
+
+                            .auswahl-button{
+                                position: relative;
+                            } 
+                    }  //Ende .quizkachel-inner
+                } // Ende .quizkachel
+            } // Ende .kacheln
+        } // Ende .content 
+    }  // Ende Breakpoint Tablet 
     
-            
-            
-            
-  
     
-  
-				}
-        
-     
-      
-        
-    }  
+    
+    
+    /********************************************************************************
+	*                                                                               *
+	*                               MOBILE-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
+    
     
 	@media only screen and (max-width: $bp-smartphone){
 		
-		.content{
-			width: calc(100% - 20px);
+		.content{ 
+			width: $content-width-smartphone;
 			padding: $gutter-width;
 			margin-top: 0;
-            
-            /* Inhalt der Sortierliste plötzlich nicht mehr symmetrisch angeordnet. 
-                Mit der älteren Version abgeglichen. Kein Ergebnis. EDIT: Lösung siehe oben*/
+        
             .sortierliste{
-                margin-bottom: 10px;
+                margin-bottom: $gutter-width;
                 
-                .sortiercontent *{
-                    
-                    
+                .sortiercontent *{ //Schriftanpassung in der Sortierleiste
                     text-decoration: none;
                     color: black;
-                    
-                    
                 }
-                
-                
             }
             
 			.kacheln{
-				display: block;
+				display: block; //Kacheln werden im block angeordnet
                 
                 .quizkachel{
-                    
                     padding-bottom: 0;
                     padding-top: 0;
-                    margin-top: 10px;
+                    margin-top: $gutter-width;
         
                     .quizkachel-inner{
 	                    
-	                    .basicInfos::after{
+	                    .basicInfos::after{ //nach der Klasse .basicInfos werden die Attribute "display", "content", "overflow" & die floats zurückgesetzt
 		                    content: ".";
 		                    display: block;
 		                    clear: both;
@@ -313,16 +322,18 @@
 	                    }
 	                    
                         .basicInfos{ 
-                                                       
-                            .quizbild{
+                            height: initial;
+                            background-color: initial;
+                            
+                            .quizbild{  //das Quizbild muss links sein und eine feste Größe haben
                                 float: left;
                                 width: 113px;
                                 height: 70px;
                             }
                             
-                            .quizueberschrift{
+                            .quizueberschrift{ 
                                 text-align: center;
-                                width: calc(100% - 113px);
+                                width: calc(100% - 113px);  //Die Größe des Hintergrundes in der Überschrift ergibt sich genau aus der Gesamtgröße der Kachel - der Bildbreite
                                 height: 16px;
                                 float: right;
                                 background-color: $bg-opak;
@@ -333,12 +344,11 @@
                             .erstellinfos, .datum{
                                 padding-left: 0;
                                 font-size: 11px;
-                                margin-left: calc(113px + 15px);
+                                margin-left: calc(113px + 15px); //Die Erstellinfos und das Datum müssen erstmal weiter als das Bild gehen und danach noch zusätzliche 15px
                                 float: none;
                             }
                         
                             .datum{
-                                /*margin-bottom: 9px;*/ // Pixellinie unter dem Bild kam hier her
                                 margin-left: 15px;
                                 float:left;
                             }
@@ -346,11 +356,11 @@
                             .anzGespielt.mobile{
                                 display: block;
                                 font-size: 11px;
-                                font-weight: 300;
+                                font-weight: $font-weight-light;
                                 margin-right: 15px;
                                 float: right;
                             }
-                        }
+                        } //Ende .basicInfos
                         .inhalt{
                             .beschreibung{
                                 font-size: 14px;
@@ -364,33 +374,24 @@
                         .auswahl-button{
                             position: relative;
                         }
-                    }
-				}
-			} 
-		}  
+                    } //Ende .quizkachel-inner
+				} //Ende .quizkachel
+			} //Ende .kacheln 
+		} //Ende .content
         
         .anzGespielt.desktop.tablet{
-            display: none;
+            display: none;  //Die Anzeige für die Anzahl der gespielten Spiele im Tablet- & Desktopmodus soll nicht angezeigt werden, da wir uns in diesem BP ja schließlich nicht in diesen befinden
         }
-        
+    
         .quizkachel-inner{
-            background-color: rgba(248,245,228,0.9);
+            background-color: $bg-opak;
         }
         
-        .hidden{
-            display: none;
+        .hidden{    //Alle Elemente die die Klasse .hidden bekommen, werden nicht angezeigt.
+            display: none;  
         }
         
-	} 
-    //-------------------------------------
-    
-   
-    
- 
-
-		
-    
-    
-}
+	} //Ende Breakpoint Smartphone 
+} //Ende .quizuebersicht
 
 
