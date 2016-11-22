@@ -13,17 +13,17 @@
 			padding: 0;
         
 			
-			.sortiercontent{
-				margin: 0; padding: 0;
-				display: flex;
+        .sortiercontent{
+            margin: 0; padding: 0;
+            display: flex;
 	
-				> li{
-					display: inline-block;
-					flex-grow: 1;
-					text-align: center;
-				}
-			}
-		}		
+            > li{
+                display: inline-block;
+                flex-grow: 1;
+                text-align: center;
+            }
+            }
+		}	
 
 		.kacheln {
 	
@@ -33,30 +33,30 @@
 		    margin-right: -$gutter-width;
             
 		    
-		    .Quizkachel{
+        .quizkachel{
 
-			    box-sizing: border-box;
-			    display: block;
-			    flex-basis: 25%;
-			    /*flex-grow: 1;*/
-			    margin-bottom: $base-margin;
-			    padding: $gutter-width;
+			   
+            box-sizing: border-box;
+            display: block;
+            flex-basis: 25%;
+            /*flex-grow: 1;*/
+            margin-bottom: $base-margin;
+            padding: $gutter-width;
 				
-				.quizkachel-inner{
-					background: $bg-opak;
-					color: #000;
-					height: 100%;
-					position: relative;
+        .quizkachel-inner{
+            background: $bg-opak;
+            color: #000;
+            height: 100%;
+            position: relative;
 					
-					.auswahl-button{
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0; 
+        .auswahl-button{                    			position: absolute;
+            bottom: 0;
+			left: 0;         						  right: 0; 
+            
 					}
 				}
 			      
-			    .Quizbild{
+			    .quizbild{
 				    width: 100%;
                   
 			    }
@@ -74,11 +74,9 @@
     .sortierliste{
 			background-color: $bg-yellow;
 			margin-top:  15px;
-			padding: 0;
-            
-        
-           
+			padding: 0;    
     }
+        
     
     body {
     
@@ -113,8 +111,9 @@
      
         
     }
-        .kacheln uebersicht{
-            margin-right: 0;
+        
+    .kacheln uebersicht{
+        margin-right: 0;
         } 
     
     .inhalt{
@@ -145,30 +144,27 @@
         font-weight: 100;
         color: #2F2D2C;
     }
-        
-    
-
-        
+         
     .quizkachel{
         
-         box-sizing: border-box;
-			    display: block;
-			    flex-basis: 33%;
-			    /*flex-grow: 1;*/
-			    margin-bottom: $base-margin;
-			    padding: $gutter-width;
+        box-sizing: border-box;     		          display: block;
+        flex-basis: 33%;
+        /*flex-grow: 1;*/
+        margin-bottom: $base-margin;
+        padding: $gutter-width;
 				
-				.quizkachel-inner{
-					background: $bg-opak;
-					color: #000;
-					height: 100%;
-					position: relative;
+    .quizkachel-inner{
+        
+        background: $bg-opak;
+        color: #000;
+        height: 100%;
+        position: relative;
 					
-					.auswahl-button{
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0; 
+    .auswahl-button{
+						
+        position: absolute;
+        bottom: 0;
+        left: 0;        				             right: 0; 
 					}
 				}
         

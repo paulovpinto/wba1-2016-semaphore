@@ -59,24 +59,24 @@ td {
     flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px; }
-    .quizuebersicht .content .kacheln .Quizkachel {
+    .quizuebersicht .content .kacheln .quizkachel {
       box-sizing: border-box;
       display: block;
       flex-basis: 25%;
       /*flex-grow: 1;*/
       margin-bottom: 5px;
       padding: 10px; }
-      .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner {
+      .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
         background: rgba(248, 245, 228, 0.9);
         color: #000;
         height: 100%;
         position: relative; }
-        .quizuebersicht .content .kacheln .Quizkachel .quizkachel-inner .auswahl-button {
+        .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .auswahl-button {
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0; }
-      .quizuebersicht .content .kacheln .Quizkachel .Quizbild {
+      .quizuebersicht .content .kacheln .quizkachel .quizbild {
         width: 100%; }
 @media only screen and (max-width: 1024px) {
   .quizuebersicht .content .sortierliste {
