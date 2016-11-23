@@ -105,9 +105,11 @@ function neueFrage( data, aktuelleFrage){
 //  tausch($("#antwort1"), $("#antwort2"));
 		$("#antworten").removeClass("hidden");
 
-  clearInterval(timer);
-  darfKlicken=true;
-  timer = setInterval("count()", 1000);
+ setInterval("count()", 1000);
+
+   clearInterval(timer);
+   darfKlicken=true;
+   timer = setInterval("count()", 1000);
 
 
     }, delayA);
