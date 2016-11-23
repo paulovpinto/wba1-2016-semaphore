@@ -16,8 +16,8 @@ der die Startseite läd.
 
 // cn: Sorgt für Consolenausgaben und Helper Menü 
 var devmode = true;
-if(location.href.match(/christiannoss\.de/)){ devmode = false; }
-
+if(location.href.match(/christiannoss/)){ devmode = false; }
+console.log(location.href);
 // In diesem Objekt werdne die Templates gespeichert
 var templates = {};
 
