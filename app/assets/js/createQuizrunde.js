@@ -1,6 +1,6 @@
 function initQuiz(quizIdx){
 
-	//$(".beenden").addClass("active");
+	$(".beenden").addClass("active");
 	
 	beenden.addEventListener('click', function (event) {
 	    if(!loaderisready) console.log("Preloader war noch nicht fertig!!!");
