@@ -224,6 +224,12 @@ body {
     visibility: visible; 
     cursor: pointer;} }
 @media only screen and (max-width: 800px) {
+  .mobile{
+	  display: block;
+  }
+	.desktop{
+		display: none;
+ 	}
 .fubuizz-header .container{
 	display: none;
 }
@@ -270,8 +276,6 @@ body {
 .devnavi li:hover {
   cursor: pointer; }
   
- .desktop{
-	 display: none;
- }
+
 
 /*# sourceMappingURL=navi.css.map */
