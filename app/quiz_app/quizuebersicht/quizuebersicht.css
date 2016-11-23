@@ -42,7 +42,7 @@ td {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .quizuebersicht {
-  /*  Nach einem fix der Navigationsleiste war es uns n├Âtig, den gesamten content in jeder Ansicht
+  /*  Nach einem fix der Navigationsleiste war es uns nötig, den gesamten content in jeder Ansicht
       um den entsprechenden Abstand nach oben zu schieben. Wenn man sich in den Entwicklertools die 
       Navigationsleiste ansieht, nimmt der .container in der Klasse .fubuizz-header genau den Platz ein
       um den wir den eigenen Content verschieben mussten. 
@@ -103,10 +103,10 @@ td {
           position: relative; }
           .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos {
             height: 230px;
-            background-color: white; }
+            background-color: rgba(248, 245, 228, 0.9); }
             .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
               height: 18pt;
-              background-color: white;
+              background-color: rgba(248, 245, 228, 0.9);
               text-align: center; }
             .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .datum {
               width: relative;
@@ -115,7 +115,8 @@ td {
               font-size: 10pt;
               padding-bottom: 5px; }
             .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos {
-              padding-left: 5px; }
+              padding-left: 5px;
+              margin: 0px 3px 5px; }
             .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .anzGespielt.mobile {
               display: none; }
           .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt {
@@ -187,7 +188,7 @@ td {
               height: 203px; }
               .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .quizueberschrift {
                 height: 18pt;
-                background-color: white;
+                background-color: rgba(248, 245, 228, 0.9);
                 text-align: center; }
               .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .basicInfos .erstellinfos {
                 color: #2F2D2C;
