@@ -9,9 +9,8 @@
 .schlussscreen{
 	
 	box-sizing: border-box;
-	
-	width: 100%;
-    padding: 100px 150px 5px 150px;
+	width: $content-width-desktop;
+	margin: 60px auto;
 	
 	
 
@@ -36,7 +35,7 @@
 	    text-align: center;
 	    color: $dark_black;
 	    height: 50px;
-	    background-color: $bright;
+	    background-color: $bg-opak;
         width: 100%;
 	}
 	
@@ -102,6 +101,10 @@
             clear: both;
         }
         
+        & > *{
+	        	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        	}
+        
         img {
             width: 100%;
             display: block;
@@ -135,7 +138,7 @@
             .sugg-infos {
                 position:absolute;
                 bottom: 0;
-                background-color: $bright;
+                background-color: $bg-opak;
                 width: 100%;
                 /* height: 25px; */
                 line-height: 25px;
@@ -159,12 +162,15 @@
 	    float: left;
 	    margin-top: 20px;
 	    width: 49%;
+	    
+
 	}
 	
 	.rechte-seite {
 	    float: right;
         margin-top: 20px;
 	    width: 49%;
+
 	}
 	
 	.quizbild img {
@@ -172,6 +178,7 @@
 	    width: calc(100% - 30px);
 	    max-height: auto;
 	    object-fit: cover;
+		@extend .shadow;
 	}
 	
 	.rank img {
@@ -193,7 +200,8 @@
 	    /*font-family: $base-font-family;*/
 	}
 	.highscore table td {
-	    background-color: $bright;  
+	    background-color: $content-width-desktop;  
+	    font-weight: 100;
 	    /*font-family: $base-font-family;*/
 	}
 	
@@ -312,7 +320,6 @@
             
             width: 100%;
             margin-top: 0;
-            line-height: 7px;
                         
             p{
                 font-size: 15px;
@@ -342,9 +349,11 @@
 
 
 	    .suggestions{
-        
-            
-            
+        	
+        	& > *{
+	        	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        	}
+        	    
             .sugg{
                 
                 clear: both;

@@ -119,7 +119,7 @@
                             float: left;
                             padding-left: $base-padding;
                             padding-right: $base-padding;
-                            font-size: 10pt;
+                            font-size: $base-desktop;
                         }
                         
                         .anzGespielt.desktop.tablet{
@@ -178,15 +178,17 @@
             align-content: center;
         
             
-            .content .sortierliste{
+            .sortierliste{
                 margin: 0; 
                 padding: 0;
-    
-    
-                .sortierliste{
-			         background-color: $bg-yellow;
-			         margin-top:  15px;
-			         padding: 0;    
+				width: 100%;
+
+			    background-color: $bg-yellow;
+			    margin-top:  15px;
+			    padding: 0;    
+                
+                .sortiercontent{
+	                width: 100%;
                 }
             }
             
@@ -299,14 +301,18 @@
 		.content{ 
 			width: $content-width-smartphone;
 			padding: $gutter-width;
-			margin-top: -60px;   // nach fix der Navigationsleiste war es nötig, den gesamten content näher zur Leiste zu schieben
+			margin-top: 0;
         
             .sortierliste{
                 margin-bottom: $gutter-width;
+                position: relative;
                 
-                .sortiercontent *{ //Schriftanpassung in der Sortierleiste
-                    text-decoration: none;
-                    color: black;
+                .sortiercontent{
+                	*{ //Schriftanpassung in der Sortierleiste
+						text-decoration: none;
+						color: black;
+					}
+                    
                 }
             }
             

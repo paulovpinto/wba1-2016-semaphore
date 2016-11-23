@@ -11,7 +11,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -38,7 +38,7 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.shadow, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
+.shadow, .liste tr, .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .quizuebersicht {
@@ -127,7 +127,7 @@ td {
               float: left;
               padding-left: 5px;
               padding-right: 5px;
-              font-size: 10pt; }
+              font-size: 0.9rem; }
             .quizuebersicht .content .kacheln .quizkachel .quizkachel-inner .inhalt .anzGespielt.desktop.tablet {
               font-weight: 300;
               padding-right: 5px;
@@ -159,13 +159,15 @@ td {
       justify-content: center;
       align-self: stretch;
       align-content: center; }
-      .quizuebersicht .content .content .sortierliste {
+      .quizuebersicht .content .sortierliste {
         margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #e9c20c;
+        margin-top: 15px;
         padding: 0; }
-        .quizuebersicht .content .content .sortierliste .sortierliste {
-          background-color: #e9c20c;
-          margin-top: 15px;
-          padding: 0; }
+        .quizuebersicht .content .sortierliste .sortiercontent {
+          width: 100%; }
       .quizuebersicht .content .kacheln {
         display: flex;
         flex-wrap: wrap;
@@ -229,9 +231,10 @@ td {
     .quizuebersicht .content {
       width: 100%;
       padding: 10px;
-      margin-top: -60px; }
+      margin-top: 0; }
       .quizuebersicht .content .sortierliste {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        position: relative; }
         .quizuebersicht .content .sortierliste .sortiercontent * {
           text-decoration: none;
           color: black; }

@@ -11,7 +11,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -38,7 +38,7 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.shadow {
+.shadow, .liste tr {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 @font-face {
@@ -54,15 +54,15 @@ body {
   background-size: cover; }
 
 .highscore-list {
-  /*├£berschrift Container*/
-  /*├£berschrifttext*/
-  /*Dropdown-Men├╝*/
+  /*Überschrift Container*/
+  /*Überschrifttext*/
+  /*Dropdown-Menü*/
   /*Container linke Seite*/
   /*Quizbild*/
   /*Autor und Erstelldatum*/
   /*Quizbeschreibung/Teasertext*/
   /*Rang in Tabelle*/
-  /*Container f├╝r Tabelle*/
+  /*Container für Tabelle*/
   /*Gesamte Tabelle*/ }
   .highscore-list .headline {
     height: 45px;
@@ -151,7 +151,8 @@ body {
     margin: 0;
     background: no-repeat center center;
     background-size: 100% 290px;
-    background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important; }
+    background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important;
+    background-position: center top; }
 
   .highscore-list {
     /*Ausgeblendeter Content*/ }

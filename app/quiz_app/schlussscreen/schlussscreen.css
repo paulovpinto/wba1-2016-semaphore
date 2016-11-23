@@ -10,7 +10,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -37,7 +37,7 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.shadow {
+.shadow, .liste tr, .schlussscreen .quizbild img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .schlussscreen * {
@@ -45,8 +45,8 @@ td {
 
 .schlussscreen {
   box-sizing: border-box;
-  width: 100%;
-  padding: 100px 150px 5px 150px; }
+  width: 1200px;
+  margin: 60px auto; }
   .schlussscreen .tablet, .schlussscreen .desktop {
     display: block !important; }
   .schlussscreen .mobile {
@@ -60,7 +60,7 @@ td {
     text-align: center;
     color: black;
     height: 50px;
-    background-color: white;
+    background-color: rgba(248, 245, 228, 0.9);
     width: 100%; }
   .schlussscreen h1 {
     line-height: 50px;
@@ -104,6 +104,8 @@ td {
     height: 0;
     display: block;
     clear: both; }
+  .schlussscreen .suggestions > * {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
   .schlussscreen .suggestions img {
     width: 100%;
     display: block; }
@@ -129,7 +131,7 @@ td {
     .schlussscreen .suggestions .sugg .sugg-infos {
       position: absolute;
       bottom: 0;
-      background-color: white;
+      background-color: rgba(248, 245, 228, 0.9);
       width: 100%;
       /* height: 25px; */
       line-height: 25px;
@@ -167,7 +169,8 @@ td {
     text-width: none;
     /*font-family: $base-font-family;*/ }
   .schlussscreen .highscore table td {
-    background-color: white;
+    background-color: 1200px;
+    font-weight: 100;
     /*font-family: $base-font-family;*/ }
   .schlussscreen .highscore tr:last-child {
     outline: solid 3px #cb0727; }
@@ -231,8 +234,7 @@ td {
         margin-top: 0.56em; }
     .schlussscreen .punkte {
       width: 100%;
-      margin-top: 0;
-      line-height: 7px; }
+      margin-top: 0; }
       .schlussscreen .punkte p {
         font-size: 15px; }
     .schlussscreen .fussbaelle {
@@ -247,6 +249,8 @@ td {
     .schlussscreen .fussbaelle img {
       width: 13px;
       height: 13px; }
+    .schlussscreen .suggestions > * {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
     .schlussscreen .suggestions .sugg {
       clear: both;
       margin-top: 9px;

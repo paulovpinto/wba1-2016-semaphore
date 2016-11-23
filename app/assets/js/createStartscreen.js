@@ -3,11 +3,14 @@ Dieses Script erzeugt dynmaisch die startscreen Seite
 
 *****************************/
 
-console.log("Das Script createStartscreen wird ausgeführt..");
+if(devmode) console.log("Das Script createStartscreen wird ausgeführt..");
 
 function createStartscreen(quizId){
-    console.log("createStartscreeen wurde aufgerufen.");
-    console.log("Übergabe: " + quizId);
+	
+	$(".beenden").removeClass("active");
+	    
+    if(devmode) console.log("createStartscreeen wurde aufgerufen.");
+    if(devmode) console.log("Übergabe: " + quizId);
 
 	// Stylesheet austauschen
 	var sheeturl = urls["startscreen"].replace(/\.html/, ".css");
@@ -18,13 +21,13 @@ function createStartscreen(quizId){
 
 	var quizze = jsondata["quizubersicht"];
 	var quiz = quizze[quizId];
-    console.log(quizze);
-    console.log(quiz);
+    if(devmode) console.log(quizze);
+    if(devmode) console.log(quiz);
 
 	// Wir brauchen geteilten Text zum Ausklappen
 	var description_text = quiz.description.split(/ /);
 	var words = description_text.length;
-	var anzahl_worte_desc1 = 6;
+	var anzahl_worte_desc1 = 12;
 	var trim = (words < anzahl_worte_desc1)? words : anzahl_worte_desc1;
 	var description1 = description_text.slice(0, trim).join(" ");
 	var description2 = description_text.slice(trim, words).join(" ");
@@ -88,7 +91,7 @@ function createStartscreen(quizId){
         //"reinen" Text des Rankings speichern
         var temp = snippetranking.outerHTML;
 
-		console.log(schoeneresDatum(scoredata[i].date));
+		if(devmode) console.log(schoeneresDatum(scoredata[i].date));
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
         temp = temp.replace(/{{player}}/, scoredata[i].player);
         temp = temp.replace(/{{points}}/, scoredata[i].points);
@@ -111,14 +114,14 @@ function createStartscreen(quizId){
 	// Desc Text Funktionen
 
     $('.teasertext .Beschreibung_lang').addClass("hidden");
-	console.log("javascript eingebunden")
+	if(devmode) console.log("javascript eingebunden")
 
     $('.teasertext').click(function() {
         var $this = $(this);
 
         var $beschreibung = $this.find(".Beschreibung_lang");
         
-        console.log($beschreibung);
+        if(devmode) console.log($beschreibung);
         $beschreibung.toggleClass("hidden");
         
     });

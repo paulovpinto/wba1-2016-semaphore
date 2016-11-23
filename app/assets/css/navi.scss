@@ -39,12 +39,26 @@ th, td {
 td {
   background: $bg-opak; }
 
-html, body {
-  margin: 0px;
+body {
+  margin: 0;
+  height: 100vh;
   font-family: $base-font-family;
   color: $bright;
-  background: url(../images/NeuStadion.png) no-repeat center center fixed;
+  background: radial-gradient(
+      rgba(0, 0, 0, 0), 
+      rgba(0, 0, 0, 0.9)
+    ), url(../images/stadion_Desktop.jpg) no-repeat center center fixed;
   background-size: cover; }
+
+.beenden{
+	font-family: $base-font-family;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.beenden.active{
+	opacity: 1;
+}
 
 .fubuizz-header .sub-header {
   /*position: fixed; */
@@ -118,6 +132,10 @@ html, body {
   padding: 0.31em 0em;
   text-align: center;
   border-left: 1px solid $bg-darkgrey; }
+  
+.fubuizz-header .navi > li:hover{
+	cursor: pointer;
+}
 
 .fubuizz-header .navi > li:last-child {
   border-right: 1px solid $bg-darkgrey; }
@@ -173,6 +191,10 @@ html, body {
 
 #move {
   position: relative; }
+  
+  .mobile{
+	  display: none;
+  }
 
 @media only screen and (max-width: 1024px) {
   
@@ -202,7 +224,9 @@ html, body {
     visibility: visible; 
     cursor: pointer;} }
 @media only screen and (max-width: 800px) {
-
+.fubuizz-header .container{
+	display: none;
+}
   .fubuizz-header p {
     font-size: 13px; }
 
@@ -245,5 +269,9 @@ html, body {
 
 .devnavi li:hover {
   cursor: pointer; }
+  
+ .desktop{
+	 display: none;
+ }
 
 /*# sourceMappingURL=navi.css.map */

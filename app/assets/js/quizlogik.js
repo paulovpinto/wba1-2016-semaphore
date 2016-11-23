@@ -32,21 +32,21 @@ function antwortPruefen(ele, answer){
   $ele= $(ele);                              // cast zu jQuery
   antwortId = $(ele).attr("data-antwortId");
 
-  console.log($ele);
-  console.log("gegebene Antwort: " + antwortId);
-  console.log("richtige Antwort: " + answer);
+  if(devmode) console.log($ele);
+  if(devmode) console.log("gegebene Antwort: " + antwortId);
+  if(devmode) console.log("richtige Antwort: " + answer);
 
   if(answer === antwortId){
 
  		$ele.addClass("richtig");
  		punkte+=i*5+50;
- 		console.log("Punkte: "+ punkte);
+ 		if(devmode) console.log("Punkte: "+ punkte);
  		antworten[aktuelleFrage]=true;
 
 
   } else {
 
-		console.log("Punkte: "+punkte);
+		if(devmode) console.log("Punkte: "+punkte);
 		antworten[aktuelleFrage]=false;
 		$ele.addClass("falsch");
 		$("#antwort"+answer).addClass("richtig");
@@ -60,8 +60,8 @@ function antwortPruefen(ele, answer){
 function count( ){
   i--;
 
-  console.log("Zeit: "+i);
-  console.log(quizLogik.quiz);
+  if(devmode) console.log("Zeit: "+i);
+  if(devmode) console.log(quizLogik.quiz);
 
   // Ändert den Timer im View
   updateTimer();
@@ -124,7 +124,7 @@ function buttonKlick(quizIdx){
       clearInterval(timer);
       antwortPruefen(e.target, quizLogik.quiz.allQuestions[aktuelleFrage].question.answer);    // Antwort
       aktuelleFrage++;
-      console.log("aktuelle Frage: "+ aktuelleFrage);
+      if(devmode) console.log("aktuelle Frage: "+ aktuelleFrage);
 
           if(aktuelleFrage<=9){
               setTimeout(function() {neueFrage( quizLogik.quiz.allQuestions[aktuelleFrage].question, aktuelleFrage )}, delayQ);
@@ -133,9 +133,9 @@ function buttonKlick(quizIdx){
               //window.location="http://www.google.de";
               //document.getElementById("text").innerHTML = "Jetzt auf Endscreen leiten";
 
-              console.log("Quizrunde ist vorbei");
+              if(devmode) console.log("Quizrunde ist vorbei");
               for(k=0; k<10;k++){
-              console.log(antworten[k]);
+              if(devmode) console.log(antworten[k]);
               }
               setTimeout(function() {createEndscreen(punkte, antworten, quizIdx)},delayQ);
          }
@@ -157,12 +157,23 @@ function removeFeedback(){
 }
 
 function readTime(charCount){
-	console.log(charCount.length);
-	console.log(charCount.length/7/3.5*1000);
+	if(devmode) console.log(charCount.length);
+	if(devmode) console.log(charCount.length/7/3.5*1000);
 	return charCount.length/7/3.5*1000;
 
 }
 
+
+function quiz_beenden(){
+	
+	for(var i=0; i<antworten.length; i++){
+		if(!antworten[i]){
+			antworten[i] = false;
+		}
+	}
+	
+	createEndscreen(punkte, antworten, quizIdx)
+}
 /*
 function tausch(obj1, obj2){
 

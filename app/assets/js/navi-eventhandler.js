@@ -41,11 +41,6 @@ if (
     }
 
 //Schaltfächen mit Eventlistenern ausstatten
-beenden.addEventListener('click', function (event) {
-    if(!loaderisready) console.log("Preloader war noch nicht fertig!!!");
-    console.log("Die Beenden Schaltfäche wurde ausgelost.");
-});
-
 quizze.addEventListener('click', function (event) {
     if(loaderisready)
         if(!loaderisready) console.log("Preloader war noch nicht fertig!!!");

@@ -3,29 +3,30 @@ Dieses Script erzeugt dynamisch die Highscore Seite.
 
 ********************************************************/
 
-console.log("Das createHighscore Scrip wird ausgeführt..");
+if(devmode) console.log("Das createHighscore Scrip wird ausgeführt..");
 
 var quizIdx = 1;
 
 function createHighscore(){
-    console.log("createHighscore wurde aufgerufen.");
+	
+	$(".beenden").removeClass("active");
+	    
+    if(devmode) console.log("createHighscore wurde aufgerufen.");
     
+    document.getElementById("content").innerHTML = "";
+
     // Stylesheet austauschen
 	var sheeturl = urls["highscore"].replace(/\.html/, ".css");
 	document.getElementById('css-for-view').setAttribute('href', sheeturl);
     
-
-	
 	var template = templates["highscore"];
     
     var h_ranking = document.getElementById("h_ranking");
     //Snippet des Ranking_Headers speichern
 	var h_listhead = document.getElementById("h_listhead");
     
-    console.log(document.getElementById("h_ranking"));
-    console.log(document.getElementById("h_listhead"));
-    
-
+    if(devmode) console.log(document.getElementById("h_ranking"));
+    if(devmode) console.log(document.getElementById("h_listhead"));
 
     var quizze = jsondata["quizubersicht"];
 
@@ -54,7 +55,9 @@ function createHighscore(){
     var item = document.createElement("div");
     item.innerHTML = template;
     
-    document.getElementById("content").replaceChild(item, document.getElementById("content").firstChild);
+    
+    document.getElementById("content").appendChild(item.firstChild);
+    //document.getElementById("content").replaceChild(document.getElementById("content").firstChild, item);
     
     
     var h_ranking = document.getElementById("h_ranking");
@@ -63,7 +66,7 @@ function createHighscore(){
     
     var currentrank_parsedjson = jsondata["rankingquiz" + quizIdx];
     
-    console.log(jsondata["ranking" + quizIdx]);
+    if(devmode) console.log(jsondata["ranking" + quizIdx]);
     
     var scoredata = currentrank_parsedjson.highscore;
     
@@ -76,7 +79,7 @@ function createHighscore(){
         var temp = h_ranking.outerHTML;
 
 
-		console.log(schoeneresDatum(scoredata[i].date));
+		if(devmode) console.log(schoeneresDatum(scoredata[i].date));
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
         temp = temp.replace(/{{player}}/, scoredata[i].player);
         temp = temp.replace(/{{points}}/, scoredata[i].points);
@@ -95,7 +98,7 @@ function createHighscore(){
 function changeHighscore(stuff){
 
     quizIdx = stuff;
-
+    stuff--;
     createHighscore();
-
+	$('#auswahl option:eq('+stuff+')').attr("selected", "selected");
 }

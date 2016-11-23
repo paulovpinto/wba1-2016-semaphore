@@ -11,8 +11,7 @@
   width: 100%; }
 
 .button.is-primary {
-  margin-top: 0.5em;
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -39,12 +38,12 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
-.shadow {
+.shadow, .liste tr, #start .quizbox > * {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 #start {
   margin: 60px auto;
-  width: 1000px;
+  width: 1200px;
   box-sizing: border-box; }
   #start button.mehr {
     width: 100%;
@@ -61,38 +60,52 @@ td {
       box-sizing: border-box; }
   #start .quizbox {
     margin-right: 1em;
-    margin-top: 0.6em;
+    margin-top: 0.5em;
     margin-bottom: 0.5em; }
+    #start .quizbox * {
+      font-weight: 100;
+      font-size: 0.9rem; }
   #start .titel {
-    margin-top: -2em;
     background-color: rgba(248, 245, 228, 0.9);
     text-align: center;
-    color: black; }
+    color: black;
+    padding: 10px; }
   #start h2 {
-    font-size:2em;
     text-align: center;
-    /*padding-left: 5em;*/ }
+    /*padding-left: 5em;*/
+    font-size: 1.2rem; }
   #start img {
     max-width: 100%;
     height: auto; }
   #start .author {
     background-color: rgba(248, 245, 228, 0.9);
-    color: black; }
-  #start .teaserbild img {
-    display: block;
-    width: 100%; }
+    color: black;
+    padding: 5px; }
+  #start .teaserbild {
+    position: relative;
+    margin-bottom: 5px; }
+    #start .teaserbild img {
+      display: block;
+      width: 100%; }
+    #start .teaserbild .author {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(248, 245, 228, 0.9); }
   #start .teasertext {
     background-color: rgba(248, 245, 228, 0.9);
-    margin-bottom: 0;
+    margin-bottom: 5px;
     padding: 5px;
     color: black; }
     #start .teasertext .Beschreibung_kurz, #start .teasertext .Beschreibung_lang {
       display: inline; }
+  #start .button {
+    margin-bottom: 5px; }
   #start .teasertext2 {
     margin-top: -60px; }
   #start .btn {
     padding: 0em;
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
     background-color: #CB0727;
     width: 100%;
@@ -106,8 +119,6 @@ td {
     text-decoration: none; }
   #start .btn1 {
     padding: 0em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
     background-color: #CB0727;
     width: 100%;
     height: 10%;
@@ -185,11 +196,12 @@ td {
 .toggleBox input:checked ~ .open {
   display: none; }
 
-/* Mobile Ver├ñnderungen (Highsscoreliste verschwindet und wird zu Button*/
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
 @media only screen and (max-width: 1024px) {
   #start {
     width: 100%;
-    padding: 20px; }
+    padding: 0 10px;
+    margin-top: 20px; }
     #start .boxbox {
       display: block;
       margin-top: 0.5em; }

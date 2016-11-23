@@ -1,6 +1,12 @@
 function initQuiz(quizIdx){
 
-
+	//$(".beenden").addClass("active");
+	
+	beenden.addEventListener('click', function (event) {
+	    if(!loaderisready) console.log("Preloader war noch nicht fertig!!!");
+	    console.log("Die Beenden Schaltfäche wurde ausgelost.");
+	    quiz_beenden();
+	});
 
 	function getQuizJson( jsonurl, callback ){
 		var xhttp = new XMLHttpRequest();
@@ -28,7 +34,7 @@ function startQuiz( quizIdx, json ){
 //buttonKlick();
 //	neueFrage( data, aktuelleFrage );
 
-    console.log("createStartscreeen wurde aufgerufen.");
+    if(devmode) console.log("createStartscreeen wurde aufgerufen.");
 
 	// Stylesheet austauschen
 	var sheeturl = urls["quizrunde"].replace(/\.html/, ".css");

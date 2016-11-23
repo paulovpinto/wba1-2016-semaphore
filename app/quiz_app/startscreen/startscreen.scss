@@ -2,8 +2,10 @@
 
 #start{
 	margin: 60px auto;
-	width: 1000px;
+	width: $content-width-desktop;
 	box-sizing: border-box;
+	
+	
 	
 	button.mehr{
 		width: 100%;
@@ -21,6 +23,7 @@
 	    .column{
 		    flex: 1 0 0;
 			box-sizing: border-box;
+		
 	    }
 	    
 	}
@@ -31,17 +34,25 @@
 	    margin-right: 1em;
 	    margin-top: 0.5em;
 	    margin-bottom: 0.5em;
+	    & > *{ @extend .shadow; }
+	    & *{
+		    font-weight: 100;
+		    font-size: $base-desktop;
+	    }
+	    
 	}
 	.titel {
 
 	    background-color: $bg-opak;
 	    text-align: center;
 	    color: $dark_black;
+	    padding: $base-padding *2;
 	}
 	
 	h2{
 	  text-align: center;
 	  /*padding-left: 5em;*/
+	  font-size: $head-desktop;
 	
 	}
 	
@@ -52,20 +63,32 @@
 	.author {
 	    background-color: $bg-opak;
         color: $dark_black;
+        padding: $base-padding;
 	}
 	
 	.teaserbild{
+		
+		position: relative;
+		margin-bottom: $base-margin;
+		
 		img{
 			display: block;
 			width: 100%;
 		}
 		
+		.author{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $bg-opak;
+		}
 	}
 	
 	
 	.teasertext {
 	    background-color: $bg-opak;;
-	    margin-bottom: 0;
+	    margin-bottom: $base-margin;
 	    padding: $base-padding;
 	    color: $dark_black;
 	    
@@ -73,6 +96,11 @@
 			display: inline;
 		}
 	}
+	
+	.button{
+		margin-bottom: $base-margin;
+	}
+	
 	.teasertext2{
 	    margin-top: -60px;
 	}
@@ -196,7 +224,8 @@
     #start{
 	   
 	    width: 100%;
-	    padding: 20px;
+	    padding: 0 10px;
+	    margin-top: 20px;
 	    		    
 	    .boxbox{
 		    display:block;

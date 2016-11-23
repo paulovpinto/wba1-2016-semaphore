@@ -3,11 +3,14 @@ Dieses Script erzeugt dynamisch die übersicht Seite
 
 ****************************************************/
 
-console.log("Das Script createUbersichtscreen wird ausgeführt..");
+if(devmode) console.log("Das Script createUbersichtscreen wird ausgeführt..");
 
 function createQuizOverview(){
-
-    console.log("createUbersicht wurde aufgerufen.")
+	
+	
+	$(".beenden").removeClass("active");
+	    
+    if(devmode) console.log("createUbersicht wurde aufgerufen.")
 	
 	// Stylesheet austauschen
 	var sheeturl = urls["quizOverview"].replace(/\.html/, ".css");
@@ -46,7 +49,7 @@ function createQuizOverview(){
         auswahlButton.id = quizId;
         auswahlButton.onclick = function() {
 
-            console.log(this.id);
+            if(devmode) console.log(this.id);
             createStartscreen(this.id);
         };
         
@@ -73,7 +76,7 @@ function createQuizOverview(){
             var $beschreibung = $this.find(".beschreibung");
             var $button = $this.find(".button")
             
-            console.log($beschreibung);
+            if(devmode) console.log($beschreibung);
             $beschreibung.toggleClass("hidden");
             $button.toggleClass("hidden");
             
