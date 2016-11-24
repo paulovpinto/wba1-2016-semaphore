@@ -1,186 +1,408 @@
 @import "../../assets/css/base";
 
-@font-face { 
-    font-family: 'Noto-Sans';
-    src: url('../fonts/NotoSans-hinted/NotoSans-Regular.ttf') format('truetype');
+
+
+.schlussscreen *{
+	font-family: $base-font-family;
+}
+
+.schlussscreen{
+	
+	box-sizing: border-box;
+	width: $content-width-desktop;
+	margin: 60px auto;
+	
+	
+
+	.tablet, .desktop{
+		display: block !important;
+	}
+	
+	.mobile{
+		display: none  !important;
+	}
+		
+	.inhalt::after{
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+	}
     
+    
+	
+	.heading {
+	    text-align: center;
+	    color: $dark_black;
+	    height: 50px;
+	    background-color: $bg-opak;
+        width: 100%;
+	}
+	
+	h1{
+	    line-height: 50px;
+	    color: $dark_black;
+	    font-size: 24px;
+	}
+	
+	.erneut {
+	    background-color: $primary; 
+	    color: $bright;
+	    font-size: 20px;
+	    border:none;
+	    text-align: center;
+	    text-decoration:none;
+	    width: calc(100% - 30px);
+	    height: auto;
+	    line-height: 50px;
+	    display: inline-block;
+	    font-weight: $font-weight-light;
+	}
+	
+	.erneut p{
+	    text-align:center;
+	}
+		
+	.ballFalsch img{
+	    opacity: 30%;
+	}
+	
+	.fussbaelle {
+	    width: 100%;
+	    line-height: 50px;
+        margin: 10px 0px 5spx 0px;
+	}
+	
+	.fussbaelle table {
+	    width: calc(100% - 30px);
+	    text-align: center;
+	    
+	    td{
+		    background-color: transparent;
+	    }
+	}
+	
+	.punkte {
+        background-color: $bg-yellow;
+        color: $dark_black;
+        font-size: 20px;
+        text-align:center;
+        width: calc(100% - 30px);
+        display: inline-block;
+        margin-top: -5px;
+	}
+
+    .suggestions {      
+        
+        &::after {
+            content: "";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+        
+        & > *{
+	        	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        	}
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+        
+        h2 {
+            background-color: $bg-yellow;
+            color: $dark_black;
+            font-size: 20px;
+            text-align:center;
+            width: 100%;
+            line-height: 60px;
+            display: inline-block;
+            font-style: normal;
+            margin-top: 20px;
+            font-weight: $base-font-weight;
+        }
+        
+        .sugg {
+            
+            &:last-child {
+                margin-right:  0px;
+            }
+            
+            position: relative;
+            float: left; 
+            margin-right: 10px;
+            width: calc((100% - 20px)/3);
+            margin-top: 21px;
+            
+            .sugg-infos {
+                position:absolute;
+                bottom: 0;
+                background-color: $bg-opak;
+                width: 100%;
+                /* height: 25px; */
+                line-height: 25px;
+                font-family: 'NotoSans';
+                
+                .sugg-head{
+                    text-align: center;
+                    height: auto;
+                    margin: 0px;
+                    color: #000;
+                    font-size: 13px;
+                    font-weight: $base-font-weight;
+                }
+
+            }
+        }
+        
     }
+	
+	.linke-seite {
+	    float: left;
+	    margin-top: 20px;
+	    width: 49%;
+	    
+
+	}
+	
+	.rechte-seite {
+	    float: right;
+        margin-top: 20px;
+	    width: 49%;
+
+	}
+	
+	.quizbild img {
+	    margin-top: 5px;
+	    width: calc(100% - 30px);
+	    max-height: auto;
+	    object-fit: cover;
+		@extend .shadow;
+	}
+	
+	.rank img {
+	    height: 15px;
+	    width: 20px;
+	}
+	
+	
+	.highscore table{
+	    width: 100%;
+	    margin-top: -9px;
+	    border-spacing: 0px 14px;
+	}
+	
+	.highscore table th {
+	    background-color: $bg-yellow;
+	    text-align: left;
+	    text-width: none;
+	    /*font-family: $base-font-family;*/
+	}
+	.highscore table td {
+	    background-color: $content-width-desktop;  
+	    font-weight: 100;
+	    /*font-family: $base-font-family;*/
+	}
+	
+	.highscore tr:last-child {
+	    outline: solid 3px $primary;
+	}
+	
+	.highscore-btn, .infos {
+	    display: none;
+	}
+	
+
+}
+
+
+
+
+
+@media only screen and (max-width: $bp-tablet){
     
- @font-face { 
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald/Oswald-Regular.ttf') format('truetype');
-}
+    .schlussscreen{
+        
+        
+        box-sizing: border-box;
+
+        width: 100%;
+        padding: 15px 50px 5px 50px;
 
 
-html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
-{
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    border: 0;
-}
 
-body {
-    background-image: url('../images/background.jpg');
-}
+        .highscore table{
+            width: 100%;
+        }
 
-.header {
-    background-color: $bg-darkgrey;
-    text-align: center;
-    
-}
+        .rechte-seite, .linke-seite {
+            width: 50%;
+        }
+        
 
-.header {
-    color: $dark_black;
-    background-color: $bright;
+    }   
 
 }
 
-.heading {
-    font-size: 24px;
-    text-align: center;
-    color:$dark_black;
-    width:800px;
-    height: 50px;
-    display: inline-block;
-    background-color: $bright;
-    margin-left: 15px;
-    line-height: 50px;
-    font-family: Oswald;
-}
-
-.erneut {
-    background-color: $primary; 
-    color: $bright;
-    font-size: 20px;
-    border:none;
-    text-align: center;
-    text-decoration:none;
-    width: 345px;
-    height: 50px;
-    line-height: 50px;
-    display: inline-block;
-    font-family: Noto-Sans;
-}
-
-.erneut p{
-    text-align:center;
-}
-
-.fussbaelle img{
-    height: 15px;
-    width: 15px;
-    padding: 8px;
-}
-
-.ballFalsch img{
-    opacity: 30%;
-}
-
-.fussbaelle {
-    //width: 345px;
-    width: (100%-15%);
-}
-
-.punkte {
-    background-color: $bg-yellow;
-    color: $dark_black;
-    font-size: 20px;
-    text-align:center;
-    width: 345px;
-    height: 50px;
-    line-height: 50px;
-    display: inline-block;
-    margin-top: 3px;
-    font-family: Oswald;
-}
-
-.suggestions {
-    background-color: $bg-yellow;
-    color: $dark_black;
-    font-size: 20px;
-    text-align:center;
-    width: 345px;
-    height: 50px;
-    font-family: Oswald;
-    line-height: 50px;
-    display: inline-block;
-    font-style: normal;
-}
-
-.suggestions {
-    margin-top: 3px;
-}
-
-.suggestions img{
-    width: 113px;
-    height: 70px;
-    margin-top: 21px;
-}
-
-.suggestions .sugg {
-    float: left; 
-    margin-right: 2px;
-}
-
-.suggestions .sugg div {
-    position:relative;
-    top: -36px;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 113px;
-    height: 20px;
-    line-height: 20px;
-    font-family: 'Noto-Sans';
-    
-}
-
-.linke-seite {
-    float: left;
-    padding: 50px;
-    padding-right: 50px;
-}
-
-.rechte-seite {
-    float: left;
-    padding: 50px;
-    padding-left: 5px;
-}
-
-.quizbild img {
-    width: 345px;
-    height: 214px;
-    margin-top: -5px;
-}
-
-.rank img {
-    height: 15px;
-    width: 20px;
-}
 
 
-.highscore table{
-    //width: 345px;
-    width: 100%;
-    margin-top: -9px;
-    border-spacing: 0px 5px;
-}
+@media only screen and (max-width: $bp-smartphone){
 
-.highscore table th {
-    background-color: $bg-yellow;
-    text-align: left;
-    text-width: none;
-    font-family: Oswald;
-}
-.highscore table td {
-    background-color: rgba(255, 255, 255, 0.5);  
-    font-family: Oswald;
-}
+	    
+	.schlussscreen{
+		
+		box-sizing: border-box;
+        
+		width: 100%;
+		padding: 0px 9px;
+		
+		.tablet, .desktop{
+			display: none !important;
+		}
+		
+		.mobile{
+			display: block !important;
+		}
+		
+		.linke-seite, .rechte-seite{
+			float:none;
+			width: 100%;
+		}
+        
+        .highscore, .suggestions h2{
+	        display:none;
+	    }
+		
+        .infos{
+            display: inline-block;
+        }
 
-.highscore tr:last-child {
-    outline: solid 3px $primary-light;
-}
+	    .erneut, .highscore-btn{
+            width: 100%;
+	        background: $primary;
+	        color: $bright;
+	        margin-top: 7px;
+	        height: auto;
+	        font-size: 16px;
+	        border: none;
+	        display: block;
+			line-height: normal;
+			font-weight: normal;
+	    }
+	    
+	    .quizbild{
+		 	
+		 	position: relative;
+		 	
+			.headline{
+				background: $bg-opak;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+                text-align: center;
+                /*font-family: $base-font-family;*/
+                font-size: 16px;
+                padding: 4px 0;
+                margin: 0;
+                color: #000;
+			}
+			
+			img{
+		        width: 100%;
+		        display: block;
+		        margin-top: 0.56em;
+		    }   
+	    }
+	
+	    .punkte{
+            
+            width: 100%;
+            margin-top: 0;
+                        
+            p{
+                font-size: 15px;
+            }
+	    }
+	       
+        .fussbaelle {
+            width: 100%;
+            height: auto;
+            line-height: 20px;
+        }
+        
+        .fussbaelle table{
+            width: 100%;
+            text-align: center;
+            
+            td{
+	            background-color: transparent;
+            }
+        }
+        
+        .fussbaelle img{
+            width: 13px;
+            height: 13px;
+        }
+        
 
-.highscore-btn, .infos {
-    display: none;
+
+	    .suggestions{
+        	
+        	& > *{
+	        	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        	}
+        	    
+            .sugg{
+                
+                clear: both;
+                margin-top: 9px;
+                width: 100%;
+                
+                img{
+                    display: inline-block;
+                    width: 30%;
+                    height: 50px;
+                    float: left;
+                }
+                
+                .sugg-infos{
+                    
+                    color: $dark_black;
+                    display: inline-block;
+                    font-size: 9px;
+                    height: 50px;
+                    width: 70%;
+                    
+                    .sugg-head{
+                        background: $bg-opak;
+                        height: auto;
+                        line-height: 12px;
+                        padding: 2px 0;
+                        font-weight: 400;
+                    }
+                    
+                    .infos{
+                        
+                        background-color: $bg-opak;
+                        height: 33px;
+                        display: inline;
+                        font-family: 'OswaldLight';
+                        
+                        .erstellt{
+                            margin-left: 7px;
+                            margin-top: -3px;
+                        }
+                        
+                        .gespielt{
+                            float: right;
+                            margin-right: 7px;
+                            margin-top: -18px;
+                        }
+                    }
+                } 
+            }
+        }/*suggestion Ende*/
+	}
 }

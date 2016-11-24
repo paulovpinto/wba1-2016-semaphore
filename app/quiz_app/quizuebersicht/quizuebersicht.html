@@ -1,40 +1,49 @@
+<!-- alle Klassennamen wurde alle überarbeitet und klein geschrieben -->
+
 <section class="quizuebersicht">
 	<div class="content">
-		
-	    <div class="sortierliste"><!-- cn: klassennamen bitte klein beginnen -->
+<!-- Sortierliste und Inhalt Sortierliste -->		
+	    <div class="sortierliste">
             <ul class="sortiercontent">
-				<li class="Top"><a href="https://www.google.de">Top</a></li>
-				<li class="AZ"><a href="https://www.google.de">A-Z</a></li>
-				<li class="New"><a href="https://www.google.de">New</a></li>
-				<li class="Last"><a href="https://www.google.de">Last</a></li>
+				<li class="top active"><a href="https://www.google.de">Top</a></li>
+				<li class="az"><a href="https://www.google.de">A-Z</a></li>
+				<li class="new"><a href="https://www.google.de">New</a></li>
+				<li class="last"><a href="https://www.google.de">Last</a></li>
 			</ul> 
         </div>
-            
+<!-- Quizkacheln -->          
 		<div class="kacheln uebersicht" id="snippetQuiz">
 		    <div class="quizkachel" id={{quizIdx}}>
+<!--einzelne Quizkachel mit Bild und Inhalt der Kachel -->            
 			    <div class="quizkachel-inner">
-			        <div class="basicInfos">
-			            <h3>{{name}}</h3>  
+			        <div class="basicInfos">                       
+<!-- Klassenname wurde geändert von <h3> in <quizueberschrift> -->
+			            <div class="quizueberschrift">{{name}}</div>  
 			            <img class="quizbild" src="{{image}}" alt="Fubuizz"/>
-			            <p class="erstellinfos">
+			            <div class="erstellinfos">
 			                von {{author}} erstellt 
-			            </p>
-			            <p class="datum">
-			                 am {{date}}
-			            </p>
-			            <p class="anzGespielt mobile">
-			                {{counter}} mal gespielt
-			            </p>
+			            </div>
+			            <div class="datumAnzGespielt">
+                            <div class="datum">
+                                am {{date}}
+                            </div>
+<!-- Anzahl Gespielt für Mobile Version -->                        
+                            <div class="anzGespielt mobile">
+                                {{counter}} mal gespielt
+                            </div>
+                        </div>
 			        </div>
 		            <div class="inhalt">
-		                <p class="beschreibung">
+		                <div class="beschreibung">
 		                    {{description}}
-		                </p>
-		                <p class="anzGespielt desktop tablet">
+		                </div>
+<!-- Anzahl Gespielt für Tablet/Desktop Version -->                  
+		                <div class="anzGespielt desktop tablet">
 		                    {{counter}} mal gespielt
-		                </p>
+		                </div>
 		            </div>
-		            <button class="auswahl-button button is-primary" href="">Auswaehlen</button>
+<!-- Button Auswahl zum Start -->                    
+		            <button class="auswahl-button button is-primary" href="">Auswählen</button>
 			    </div>
 		    </div>
 		</div>

@@ -6,15 +6,23 @@
 <div class="column">
     <div class="quizbox">
         <div class="teaserbild">
-            <img src={{image}}/>
+            <img src="{{image}}" />
+            <p class="author">erstellt von {{author}} am {{date}}</p>
         </div>
-		<div class="author">
+		<!--div class="author">
         	<p>erstellt von {{author}} am {{date}}</p>
-    	</div>
+    	</div-->
 		<div class="teasertext">
 			<p class="Beschreibung_kurz">{{description1}}</p>
             <p class="Beschreibung_lang">{{description2}}</p>
-            <button><i class="Pfeil" aria-hidden="true"></i></button>
+            
+
+
+            <button class="mehr"><img src="../assets/images/Pfeil.png"></button>
+
+            <!--button><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></button-->
+
+
 			<!--<div class="toggleBox">      
     				<input name="toggleContent" id="toggleContent" type="checkbox">
     				<label for="toggleContent" class="open">aufklappen</label>
@@ -25,8 +33,8 @@
 			</div> -->       
 		</div>
 		<div class="buttons"> 
-    		<button class="button is-primary" id="playButton" href="quiz.html">Spielen</button>
-			<button class="btn1 button is-primary" href="">Highscore</button>
+    		<button class="button is-primary" id="playButton" >Spielen</button>
+			<button class="button is-primary" id="highButton" href="">Highscore</button>
 		</div>
 	</div>
 </div>
@@ -48,9 +56,3 @@
 	</table>
 	</div>
 </div>
-
-
-
-
-
-

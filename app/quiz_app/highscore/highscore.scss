@@ -30,13 +30,14 @@ body{
 	    margin-top: 3px;
 	    font-family: $base-font-family;
 	    font-size: 24px;
+        color: $dark_black;
 	}
 	
 	/*Dropdown-Menü*/
 	#auswahl{
 	    margin-bottom: $gutter-width;
 	    width: 100%;
-	    height: 34px;
+	    height: 39px;
 	    font-family: $base-font-family;
 	    font-size: 20px;
 	    margin-bottom: $gutter-width;
@@ -65,16 +66,17 @@ body{
 	#author{
 	    font-family: $base-font-family;
 	    font-size: 20px;
-	    width: calc(100% - 20px);
+	    width: 100%;
 	    margin: 0;
 	    background: $bg-opak;
 	    padding: $gutter-width;
 	    float: left;
+        color: $dark_black;
 	}
 	
 	/*Quizbeschreibung/Teasertext*/
 	#teasertext {
-	    width: calc(100% - 20px);
+	    width: 100%;
 	    margin-top: $gutter-width;
 	    font-family: 'NotoSans-Regular';
 	    background: $bg-opak;
@@ -82,6 +84,7 @@ body{
 	    float: left;
 	    text-align: left;
 	    font-size: 20px;
+        color: $dark_black;
 	}
 	
 	/*Rang in Tabelle*/
@@ -105,7 +108,7 @@ body{
 	
 	/*Gesamte Tabelle*/
 	.liste{
-	    font-family: 'NotoSans-Regular';
+	    font-family: $base-font-family;
 	    width: 100%;
 	    margin-top: 30px;
 	    border-spacing: 0 $gutter-width;   
@@ -135,11 +138,12 @@ body{
 /*ID-Namen identisch, siehe oben*/
 @media only screen and (max-width: $bp-smartphone) {
     
-	body{
+	body.fubuizz{
 	    margin: 0;
 	        background: no-repeat center center;
 	        background-size: 100% 290px; 
 	        background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important;
+	        background-position: center top;
 	}
 	    
      .highscore-list{ 
@@ -157,7 +161,7 @@ body{
 	    }
 	    
 	    #auswahl{
-	        margin-top: 55px; 
+	        margin-top: 40px; 
 	    }
 	    
 	    .teaser{

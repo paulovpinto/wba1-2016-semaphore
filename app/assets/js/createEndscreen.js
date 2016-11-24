@@ -7,8 +7,10 @@ Dieses Script erzeugt dynamisch die endscreen Seite.
 
 function createEndscreen(punkte, antworten, quizIdx){
     
-    console.log("createStartscreeen wurde aufgerufen.");
-    console.log("Übergabe: " + quizIdx + " " + punkte + " " + antworten);
+    $(".beenden").removeClass("active");
+    
+    if(devmode) console.log("createStartscreeen wurde aufgerufen.");
+    if(devmode) console.log("Übergabe: " + quizIdx + " " + punkte + " " + antworten);
 
     // Stylesheet austauschen
     var sheeturl = urls["schlussscreen"].replace(/\.html/, ".css");
@@ -55,9 +57,9 @@ function createEndscreen(punkte, antworten, quizIdx){
         if(antworten[i]){
             template = template.replace(ball_src,"../../assets/images/ball.png");
         }
-/*        else
-            template = template.replace(ball_src,"../../assets/images/r_ball.png");
-            */
+		else
+            template = template.replace(ball_src,"../../assets/images/no-ball.png");
+
     }
     
 
@@ -92,50 +94,107 @@ function createEndscreen(punkte, antworten, quizIdx){
     
     //suche position in der Liste
     
-    
     for (var i = 0; i < scoredata.length; i++){
-
-        var temp = snippetranking.outerHTML;
 
         if(punkte >= scoredata[i].points){
             template = template.replace(/{{rang}}/, " " + scoredata[i].rankIdx);
         	   
-            var position = i;
+            var position = (i+1);
             break;
         }
         
     }
 
-    
-    
-    
-    console.log("breadcrump 3");
-    
+    if(devmode) console.log(position);
     
     var rang_arr;
     
     //Ein array mit rang namen und idx für jeden spielstand erzeugen
     //Array deklarieren und mit allen Spielständen füllen
     
-    var superContainer = Array(20);
+    var superContainer = Array(15);
+    
+    var neues_Ranking = [];
+    
+    var points_arr = Array(15);
+    var rankIdx_arr = Array(15);
+    var player_arr = Array(15);
+    var mein_rang = scoredata.length +1;
+    
+    var aktueller_rang = 1;
+    
+    if(devmode) console.log(scoredata);
+    
+    var eingetragen = false;
+    
     for( var i = 0; i < scoredata.length; i++ ){
-        superContainer[i] = [scoredata[i].points, scoredata[i].rankIdx, scoredata[i].player, schoeneresDatum(scoredata[i].date)];
+        if(punkte > scoredata[i].points && !eingetragen){
+            var mein_eintrag = {};
+            mein_eintrag.player = "Ich";
+            mein_eintrag.points = punkte;
+            mein_eintrag.rankIdx = aktueller_rang;
+            mein_eintrag.date = new Date();
+            mein_rang = aktueller_rang;
+            aktueller_rang++;
+            neues_Ranking.push(mein_eintrag);
+            eingetragen = true;
+        }
+        scoredata[i].rankIdx = aktueller_rang;
+        
+        neues_Ranking.push(scoredata[i]);
+        
+        aktueller_rang++;
     }
     
-    var neuerEintrag = [0, 24, "Ich", "Heute"];
     
-    superContainer.push(neuerEintrag);
-    
-    //Falls der Rang größer ist als 5
-        //Dann schreibe von Rang - 5 bis Rang 
-    
-    //bubbleSort(superContainer);
-    superContainer.sort();  
-    
+    template = template.replace(/{{rang}}/, " " + mein_rang);
     //document.getElementById("ranking").innerHTML = htmlRankings;
 
     var item = document.createElement("div");
     item.innerHTML = template;
 
     document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
+    
+        
+    if(position > 5){
+        
+        for(var i = (position-5); i < (position); i++){
+            
+           var temp = snippetranking.outerHTML;
+		   	temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, schoeneresDatum(neues_Ranking[i].date));
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+        }
+        
+    }
+    else{
+        for(var i = 0; i < 5; i++){
+            
+            var temp = snippetranking.outerHTML;
+        
+            temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
+            temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
+            temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
+            temp = temp.replace(/{{date}}/, schoeneresDatum(neues_Ranking[i].date));
+            
+            var item = document.createElement("tr");
+            item.innerHTML = temp;
+            
+            htmlRankings += temp;
+            
+        }
+    }
+    
+    document.getElementById("ranking").innerHTML = htmlRankings;
+    
+    document.getElementById("erneut-spielen").addEventListener('click', function (event) {
+	    initQuiz(quizIdx);
+	});
 }

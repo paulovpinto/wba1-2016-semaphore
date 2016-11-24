@@ -11,7 +11,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -37,6 +37,9 @@ th, td {
 
 td {
   background: rgba(248, 245, 228, 0.7); }
+
+.shadow, .liste tr {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 @font-face {
   font-family: 'Oswald-Regular';
@@ -73,11 +76,12 @@ body {
     text-align: center;
     margin-top: 3px;
     font-family: "Oswald", sans-serif;
-    font-size: 24px; }
+    font-size: 24px;
+    color: black; }
   .highscore-list #auswahl {
     margin-bottom: 10px;
     width: 100%;
-    height: 34px;
+    height: 39px;
     font-family: "Oswald", sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
@@ -97,20 +101,22 @@ body {
   .highscore-list #author {
     font-family: "Oswald", sans-serif;
     font-size: 20px;
-    width: calc(100% - 20px);
+    width: 100%;
     margin: 0;
     background: rgba(248, 245, 228, 0.9);
     padding: 10px;
-    float: left; }
+    float: left;
+    color: black; }
   .highscore-list #teasertext {
-    width: calc(100% - 20px);
+    width: 100%;
     margin-top: 10px;
     font-family: 'NotoSans-Regular';
     background: rgba(248, 245, 228, 0.9);
     padding: 10px;
     float: left;
     text-align: left;
-    font-size: 20px; }
+    font-size: 20px;
+    color: black; }
   .highscore-list #medaillen {
     width: 100%;
     margin: 0;
@@ -125,7 +131,7 @@ body {
     right: 0px;
     margin-top: 136px; }
   .highscore-list .liste {
-    font-family: 'NotoSans-Regular';
+    font-family: "Oswald", sans-serif;
     width: 100%;
     margin-top: 30px;
     border-spacing: 0 10px; }
@@ -141,11 +147,12 @@ body {
 /*Smartphone-Ansicht*/
 /*ID-Namen identisch, siehe oben*/
 @media only screen and (max-width: 439px) {
-  body {
+  body.fubuizz {
     margin: 0;
     background: no-repeat center center;
     background-size: 100% 290px;
-    background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important; }
+    background-image: url(../../assets/images/highscore%20smartphone%20back.png) !important;
+    background-position: center top; }
 
   .highscore-list {
     /*Ausgeblendeter Content*/ }
@@ -155,7 +162,7 @@ body {
     .highscore-list #teasertext, .highscore-list #author, .highscore-list #teaserimage {
       display: none; }
     .highscore-list #auswahl {
-      margin-top: 55px; }
+      margin-top: 40px; }
     .highscore-list .teaser {
       width: calc(100% - 30px); }
     .highscore-list .container-table {

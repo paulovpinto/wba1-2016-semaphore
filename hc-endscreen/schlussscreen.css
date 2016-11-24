@@ -10,7 +10,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -37,6 +37,9 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.7); }
 
+.shadow, .liste tr {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
 html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img {
   margin: 0;
   padding: 0;
@@ -44,9 +47,6 @@ html, body, header, footer, hgroup, nav, article, section, figure, figcaption, h
   vertical-align: baseline;
   border: 0; }
 
-@font-face {
-  font-family: 'OswaldRegular';
-  src: url("fonts/Oswald-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: 'OswaldLight';
   src: url("fonts/Oswald-Light.ttf") format("truetype"); }
@@ -62,8 +62,8 @@ body {
 
 .schlussscreen {
   box-sizing: border-box;
-  width: 1200px;
-  margin: 0 auto; }
+  width: 100%;
+  padding: 15px 150px 5px 150px; }
   .schlussscreen .tablet, .schlussscreen .desktop {
     display: block !important; }
   .schlussscreen .mobile {
@@ -76,13 +76,11 @@ body {
   .schlussscreen .heading {
     text-align: center;
     color: black;
-    /*width: calc(100%-30px); */
     height: 50px;
     background-color: white;
-    /*margin-left: 15px;
-    margin-right: 15px; */ }
+    width: 100%; }
   .schlussscreen h1 {
-    font-family: 'OswaldRegular';
+    font-family: "Oswald", sans-serif;
     line-height: 50px;
     color: black;
     font-size: 24px; }
@@ -97,44 +95,30 @@ body {
     height: 50px;
     line-height: 50px;
     display: inline-block;
-    font-family: Noto-Sans; }
+    font-family: 'NotoSans'; }
   .schlussscreen .erneut p {
     text-align: center; }
-  .schlussscreen .fussbaelle img {
-    height: 15px;
-    width: 15px; }
   .schlussscreen .ballFalsch img {
     opacity: 30%; }
   .schlussscreen .fussbaelle {
     width: 100%;
     height: 50px;
-    line-height: 50px; }
+    line-height: 50px;
+    margin: 10px 0px 10px 0px; }
   .schlussscreen .fussbaelle table {
     width: calc(100% - 30px);
     text-align: center; }
   .schlussscreen .punkte {
     background-color: #e9c20c;
     color: black;
-    font-size: 125%;
+    font-size: 20px;
     text-align: center;
     width: calc(100% - 30px);
-    height: 312.5%;
-    line-height: 312.5%;
+    height: 50px;
+    line-height: 50px;
     display: inline-block;
     margin-top: 3px;
-    font-family: 'OswaldRegular'; }
-  .schlussscreen .suggestions {
-    background-color: #e9c20c;
-    color: black;
-    font-size: 1.25em;
-    text-align: center;
-    width: calc(100% - 30px);
-    height: 3.125em;
-    font-family: 'OswaldRegular';
-    line-height: 3.125em;
-    display: inline-block;
-    font-style: normal;
-    margin-top: 0.188em; }
+    font-family: "Oswald", sans-serif; }
   .schlussscreen .suggestions::after {
     content: "";
     height: 0;
@@ -142,44 +126,57 @@ body {
     clear: both; }
   .schlussscreen .suggestions img {
     width: 100%;
-    height: 70px; }
+    height: auto;
+    display: block; }
+  .schlussscreen .suggestions h2 {
+    background-color: #e9c20c;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 3.125em;
+    font-family: "Oswald", sans-serif;
+    line-height: 3.125em;
+    display: inline-block;
+    font-style: normal;
+    margin-top: 20px; }
   .schlussscreen .suggestions .sugg {
+    position: relative;
     float: left;
     margin-right: 10px;
     width: calc((100% - 20px)/3);
     margin-top: 21px; }
-  .schlussscreen .suggestions .sugg:last-child {
-    margin-right: 0px; }
-  .schlussscreen .suggestions .sugg div {
-    position: relative;
-    top: -36px;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 113px;
-    height: 20px;
-    line-height: 20px;
-    font-family: 'Noto-Sans'; }
+    .schlussscreen .suggestions .sugg:last-child {
+      margin-right: 0px; }
+    .schlussscreen .suggestions .sugg .sugg-infos {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      font-family: 'NotoSans'; }
+      .schlussscreen .suggestions .sugg .sugg-infos .sugg-head {
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        height: auto; }
   .schlussscreen .linke-seite {
     float: left;
-    /*padding: 50px;
-    padding-right: 5px;*/
     margin-top: 20px;
-    width: calc(50% - 55px); }
+    width: 49%; }
   .schlussscreen .rechte-seite {
     float: right;
-    /*padding: 50px;
-    padding-left: 5px;*/
     margin-top: 20px;
-    width: calc(50% - 55px); }
+    width: 49%; }
   .schlussscreen .quizbild img {
     margin-top: 5px;
     width: calc(100% - 30px);
-    max-height: 275px;
+    max-height: auto;
     object-fit: cover; }
   .schlussscreen .rank img {
     height: 15px;
     width: 20px; }
   .schlussscreen .highscore table {
-    /*width: calc(100% - 30px);*/
     width: 100%;
     margin-top: -9px;
     border-spacing: 0px 14px; }
@@ -187,19 +184,37 @@ body {
     background-color: #e9c20c;
     text-align: left;
     text-width: none;
-    font-family: 'OswaldRegular'; }
+    font-family: "Oswald", sans-serif; }
   .schlussscreen .highscore table td {
     background-color: rgba(255, 255, 255, 0.5);
-    font-family: 'OswaldRegular'; }
+    font-family: "Oswald", sans-serif; }
   .schlussscreen .highscore tr:last-child {
     outline: solid 3px #cb0727; }
   .schlussscreen .highscore-btn, .schlussscreen .infos {
     display: none; }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .schlussscreen {
+    box-sizing: border-box;
     width: 100%;
-    padding: 20px; }
+    padding: 15px 50px 5px 50px; }
+    .schlussscreen .highscore table {
+      width: 100%; }
+    .schlussscreen .rechte-seite, .schlussscreen .linke-seite {
+      width: 50%; } }
+@media only screen and (max-width: 439px) {
+  body {
+    background-image: url(images/background.jpg);
+    max-height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+
+  .schlussscreen {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 9px;
+    /*suggestion Ende*/ }
     .schlussscreen .tablet, .schlussscreen .desktop {
       display: none !important; }
     .schlussscreen .mobile {
@@ -207,100 +222,86 @@ body {
     .schlussscreen .linke-seite, .schlussscreen .rechte-seite {
       float: none;
       width: 100%; }
-    .schlussscreen body {
-      background: purple; }
-    .schlussscreen .heading {
-      /*height: 200%;
-      width: calc(100% - 21px);*/
-      background: #f8f5e4;
-      position: absolute;
-      transform: translate(11px);
-      margin-top: 6em;
-      margin-bottom: 0em;
+    .schlussscreen .highscore, .schlussscreen .suggestions h2 {
+      display: none; }
+    .schlussscreen .infos {
       display: inline-block; }
-    .schlussscreen h1 {
-      text-align: center;
-      margin-top: 0.25em;
-      font-family: 'OswaldRegular';
-      font-size: 1em;
-      line-height: 1em; }
     .schlussscreen .quizbild {
       position: relative; }
       .schlussscreen .quizbild .headline {
-        background: pink;
+        background: rgba(248, 245, 228, 0.9);
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0; }
+        bottom: 0;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        font-size: 16px;
+        padding: 4px 0; }
       .schlussscreen .quizbild img {
         width: 100%;
         display: block;
         margin-top: 0.56em; }
     .schlussscreen .punkte {
-      height: 2.1em;
-      width: calc(100% - 21px);
-      transform: translate(11px); }
-    .schlussscreen .punkte p {
-      text-align: center;
-      font-family: 'OswaldRegular';
-      font-size: 0.8em;
-      margin-top: 0.55em; }
-    .schlussscreen .fussbaelle img {
-      height: 0.75em;
-      width: 0.75em; }
+      width: 100%;
+      height: 33px; }
+      .schlussscreen .punkte p {
+        font-size: 16px;
+        margin-top: -9px; }
     .schlussscreen .fussbaelle {
-      width: 100%; }
+      width: 100%;
+      height: 13px;
+      line-height: 13px;
+      margin: 7px 0px 13px 0px; }
     .schlussscreen .fussbaelle table {
-      /*width: calc(100% - 30px);*/
+      width: 100%;
       text-align: center; }
+    .schlussscreen .fussbaelle img {
+      width: 13px;
+      height: 13px; }
     .schlussscreen .erneut, .schlussscreen .highscore-btn {
+      width: 100%;
       background: #cb0727;
       color: white;
-      height: 2.1em;
-      width: calc(100% - 21px);
-      transform: translate(11px);
-      margin-top: 0.8em;
+      height: 35px;
+      margin-top: 7px;
       border: none;
       display: inline-block; }
-    .schlussscreen .erneut p, .schlussscreen .highscore-btn p {
-      font-family: 'NotoSans';
-      font-size: 0.8em;
-      text-align: center;
-      text-decoration-line: none;
-      margin-top: 0.5em; }
-    .schlussscreen .highscore, .schlussscreen h2 {
-      display: none; }
-    .schlussscreen .suggestions {
-      margin-top: 1em;
-      /*width: calc(100% - 21px);*/
-      width: 100%;
-      transform: translate(11px); }
-    .schlussscreen .sugg {
-      height: 2.9em;
-      display: block;
-      margin-bottom: 7pt;
-      margin-top: auto; }
-    .schlussscreen .sugg img {
-      display: inline-block;
-      height: 2.9em; }
-    .schlussscreen .sugg-infos {
-      height: 2.9em;
-      width: calc(100% - 76px);
-      /*float: right; */
-      font-size: 0.55em;
-      display: inline-block; }
-    .schlussscreen .sugg-head {
-      font-family: "Oswald", sans-serif;
-      text-align: center;
-      background: #f8f5e4; }
-    .schlussscreen .infos {
-      background: rgba(248, 245, 227, 0.6); }
-    .schlussscreen .erstellt {
-      font-family: 'OswaldLight';
-      text-align: left;
-      padding-left: 0.5em; }
-    .schlussscreen .gespielt {
-      font-family: 'OswaldLight';
-      text-align: right; } }
+      .schlussscreen .erneut p, .schlussscreen .highscore-btn p {
+        font-family: 'NotoSans';
+        font-size: 13px;
+        text-align: center;
+        text-decoration-line: none;
+        margin-top: 8px; }
+    .schlussscreen .erneut p {
+      margin-top: -8px; }
+    .schlussscreen .suggestions .sugg {
+      clear: both;
+      margin-top: 9px;
+      width: 100%; }
+      .schlussscreen .suggestions .sugg img {
+        display: inline-block;
+        width: 30%;
+        height: 50px;
+        float: left; }
+      .schlussscreen .suggestions .sugg .sugg-infos {
+        display: inline-block;
+        font-size: 9px;
+        height: 50px;
+        width: 70%; }
+        .schlussscreen .suggestions .sugg .sugg-infos .sugg-head {
+          background: rgba(248, 245, 228, 0.9);
+          height: 13px;
+          line-height: 12px; }
+        .schlussscreen .suggestions .sugg .sugg-infos .infos {
+          height: 33px;
+          display: inline;
+          font-family: 'OswaldLight'; }
+          .schlussscreen .suggestions .sugg .sugg-infos .infos .erstellt {
+            margin-left: 7px; }
+          .schlussscreen .suggestions .sugg .sugg-infos .infos .gespielt {
+            float: right;
+            padding-right: 7px;
+            margin-top: -10px; } }
 
 /*# sourceMappingURL=schlussscreen.css.map */

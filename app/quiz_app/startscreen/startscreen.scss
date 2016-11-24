@@ -2,9 +2,16 @@
 
 #start{
 	margin: 60px auto;
-	width: 1000px;
+	width: $content-width-desktop;
 	box-sizing: border-box;
-
+	
+	
+	
+	button.mehr{
+		width: 100%;
+		border: none;
+		background: transparent;
+	}
     
 	.boxbox{
 	    box-sizing: border-box;
@@ -16,25 +23,36 @@
 	    .column{
 		    flex: 1 0 0;
 			box-sizing: border-box;
+		
 	    }
 	    
 	}
+	
+
 	
 	.quizbox {
 	    margin-right: 1em;
 	    margin-top: 0.5em;
 	    margin-bottom: 0.5em;
+	    & > *{ @extend .shadow; }
+	    & *{
+		    font-weight: 100;
+		    font-size: $base-desktop;
+	    }
+	    
 	}
 	.titel {
 
-	    background-color: #F8F5E4;
+	    background-color: $bg-opak;
 	    text-align: center;
-	    color: black;
+	    color: $dark_black;
+	    padding: $base-padding *2;
 	}
 	
 	h2{
 	  text-align: center;
 	  /*padding-left: 5em;*/
+	  font-size: $head-desktop;
 	
 	}
 	
@@ -43,13 +61,46 @@
 	    height: auto;
 	}
 	.author {
-	    background-color:rgba(248, 245, 228, 0.7);
+	    background-color: $bg-opak;
+        color: $dark_black;
+        padding: $base-padding;
 	}
+	
+	.teaserbild{
+		
+		position: relative;
+		margin-bottom: $base-margin;
+		
+		img{
+			display: block;
+			width: 100%;
+		}
+		
+		.author{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $bg-opak;
+		}
+	}
+	
+	
 	.teasertext {
-	    background-color: rgba(248, 245, 228, 0.7);
-	    margin-bottom: 0em;
-	    padding-bottom: 0em;
+	    background-color: $bg-opak;;
+	    margin-bottom: $base-margin;
+	    padding: $base-padding;
+	    color: $dark_black;
+	    
+		.Beschreibung_kurz, .Beschreibung_lang{
+			display: inline;
+		}
 	}
+	
+	.button{
+		margin-bottom: $base-margin;
+	}
+	
 	.teasertext2{
 	    margin-top: -60px;
 	}
@@ -89,7 +140,7 @@
 	    border-spacing: 0px 10px;
 	}
 	.liste th{
-	    background-color: #E9C20C;
+	    background-color: $bg-yellow;
 	    text-align: left;
 	}
 	.liste tr th:nth-child(1),
@@ -111,13 +162,13 @@
 	    color: black;
 	}
 	td{
-	    background:rgba(248, 245, 228, 0.7);
+	    background:$bg-opak;
 	}
 	
 }
 
  .hidden {
-        display:none;
+        display:none !important;
     }
 
 .moreButton {
@@ -166,31 +217,34 @@
     display: none;
 }
 
-	/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
-	@media only screen and (max-width: $bp-tablet){
-	    
-	    .startscreen{
-		    width: $content-width-smartphone;
-		    padding: 20px;
-		    		    
-		    .boxbox{
-			    display:block;
-			    margin-top: 0.5em;
-			    
-			    .quizbox{
-				    margin: 0;
-			    }
-			    
-			}
-			
-			.btn1 {
-	        	display: inline-block;
-			}
-	    
-			#highscorecontent {
-	        	display:none;
-	    	}
-	    }
+/* Mobile Veränderungen (Highsscoreliste verschwindet und wird zu Button*/
+@media only screen and (max-width: $bp-tablet){
+
+    
+    #start{
+	   
+	    width: 100%;
+	    padding: 0 10px;
+	    margin-top: 20px;
+	    		    
+	    .boxbox{
+		    display:block;
+		    margin-top: 0.5em;
+		    
+		    .quizbox{
+			    margin: 0;
+		    }
+		    
+		}
+		
+		.btn1 {
+        	display: inline-block;
+		}
+    
+		#highscorecontent {
+        	display:none;
+    	}
+    }
 
 
-	}
+}

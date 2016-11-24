@@ -10,7 +10,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -36,6 +36,9 @@ th, td {
 
 td {
   background: rgba(248, 245, 228, 0.7); }
+
+.shadow, .liste tr {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 .quizuebersicht .content {
   width: 1000px;

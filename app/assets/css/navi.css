@@ -10,7 +10,7 @@
   width: 100%; }
 
 .button.is-primary {
-  background-color: #ff3737; }
+  background-color: #cb0727; }
 
 .liste th {
   background-color: #E9C20C;
@@ -36,6 +36,9 @@ th, td {
 
 td {
   background: rgba(248, 245, 228, 0.7); }
+
+.shadow, .liste tr {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 
 /* Variabeln
 ###################################################### */
@@ -76,15 +79,25 @@ th, td {
 td {
   background: rgba(248, 245, 228, 0.9); }
 
-html, body {
-  margin: 0px;
+body {
+  margin: 0;
+  height: 100vh;
   font-family: "Oswald", sans-serif;
   color: white;
-  background: url(../images/fubuizz-bg-gross.jpg) no-repeat center center fixed;
+  background: radial-gradient(transparent, rgba(0, 0, 0, 0.9)), url(../images/stadion_Desktop.jpg) no-repeat center center fixed;
   background-size: cover; }
 
-.fubuizz-header header {
-  margin-top: 0px;
+.beenden {
+  font-family: "Oswald", sans-serif;
+  opacity: 0;
+  transition: all 0.5s; }
+
+.beenden.active {
+  opacity: 1; }
+
+.fubuizz-header .sub-header {
+  /*position: fixed; */
+  width: 100%;
   margin-bottom: 0px;
   background-color: #504f48;
   height: 53px;
@@ -117,8 +130,9 @@ html, body {
   display: inline-block; }
 
 .fubuizz-header .container {
-  position: fixed;
-  width: 100%; }
+  /*position: fixed; */
+  width: 100%;
+  /*margin-top: 53px; */ }
 
 .fubuizz-header .navip {
   position: relative;
@@ -130,7 +144,6 @@ html, body {
   font-size: 15px; }
 
 .fubuizz-header .head {
-  margin-top: 5px;
   float: right;
   z-index: 1; }
 
@@ -150,9 +163,12 @@ html, body {
 
 .fubuizz-header .navi > li {
   width: 161px;
-  padding: 0.57em 0em;
+  padding: 0.31em 0em;
   text-align: center;
   border-left: 1px solid #504f48; }
+
+.fubuizz-header .navi > li:hover {
+  cursor: pointer; }
 
 .fubuizz-header .navi > li:last-child {
   border-right: 1px solid #504f48; }
@@ -170,7 +186,7 @@ html, body {
 
 .fubuizz-header .burgerheader {
   width: 250px;
-  height: 37px;
+  height: 53px;
   margin-top: -24px;
   margin-left: -25px;
   padding-top: 3px;
@@ -179,7 +195,7 @@ html, body {
 
 .fubuizz-header .burgernav {
   width: 170px;
-  height: 550px; }
+  height: 260px; }
 
 .fubuizz-header .burgernav li {
   display: block;
@@ -197,8 +213,8 @@ html, body {
   height: 40px;
   font-family: 'Noto Sans' , sans-serif;
   font-size: 20px;
-  position: relative;
-  top: 260px; }
+  margin-left: 15px;
+  position: relative; }
 
 .fubuizz-header .menu {
   width: 170px;
@@ -209,11 +225,14 @@ html, body {
 #move {
   position: relative; }
 
+.mobile {
+  display: none; }
+
 @media only screen and (max-width: 1024px) {
   .fubuizz-header .head {
     visibility: hidden; }
 
-  .fubuizz-header header {
+  .fubuizz-header .sub-header {
     height: 40px; }
 
   .fubuizz-header .burgerheader {
@@ -229,20 +248,31 @@ html, body {
     left: 20px;
     height: 38px;
     margin: 0px;
-    top: 2px; }
+    top: 2px;
+    cursor: pointer; }
 
   .fubuizz-header .burgermenu {
-    visibility: visible; } }
+    visibility: visible;
+    cursor: pointer; } }
 @media only screen and (max-width: 800px) {
+  .mobile {
+    display: block; }
+
+  .desktop {
+    display: none; }
+
+  .fubuizz-header .container {
+    display: none; }
+
   .fubuizz-header p {
     font-size: 13px; }
 
   .fubuizz-header .head {
     visibility: hidden; }
 
-  /*
-    .fubuizz-header header {
-      height: 37px; }*/
+  .fubuizz-header .sub-header {
+    height: 37px; }
+
   .fubuizz-header .burgerheader {
     height: 37px; }
 
@@ -250,7 +280,8 @@ html, body {
     visibility: visible;
     height: 37px;
     width: 37px;
-    right: 10px; }
+    right: 10px;
+    cursor: pointer; }
 
   .fubuizz-header nav {
     visibility: hidden; }

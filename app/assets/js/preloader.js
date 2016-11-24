@@ -14,6 +14,10 @@ Wenn alles geladen wurde wird ein Callback ausgelöst,
 der die Startseite läd.
 ****************************************************/
 
+// cn: Sorgt für Consolenausgaben und Helper Menü 
+var devmode = true;
+if(location.href.match(/christiannoss/)){ devmode = false; }
+console.log(devmode);
 
 // In diesem Objekt werdne die Templates gespeichert
 var templates = {};
@@ -22,7 +26,7 @@ var templates = {};
 var jsondata = {};
 
 
-console.log("Das preloader.js Script wird ausgeführt..")
+if(devmode) console.log("Das preloader.js Script wird ausgeführt..")
 
 // Welcher Server stellt die Daten bereit?
 var server = "";//"http://wba1-semaphore.christiannoss.de/app";

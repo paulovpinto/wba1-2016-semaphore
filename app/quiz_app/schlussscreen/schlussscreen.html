@@ -39,20 +39,13 @@
 							</tr>
 						</table>
 					</div>
-
-					<a href="https://www.google.de">
-						<div class="highscore-btn">
-							<p>Highscore</p>
-							<!--Button zur Highscoreliste-->
-						</div>
-					</a>
-
-                    <a href="https://www.google.de">
-						<div class="erneut">
-							<p>Erneut spielen</p>
-							<!--Button zum erneuten Spielen-->
-						</div>
-					</a>
+					
+					
+					<!-- cn Hier eher einen Button nehmen -->
+					<button class="highscore-btn" id="highscore-zeigen">Highscore</button>
+                    <button class="erneut" id="erneut-spielen">Erneut spielen</button>
+				
+					
 
 				</div>
 
@@ -65,11 +58,11 @@
 							<tr id="listhead">
 								<th>
                                     <div class="rank">  
-                                        <img src="../grafiker/Grafiken/05_medallie_tablet%20mit%20gelben%20hintergrund.jpg" /><!--Medaille-->      
+                                        <img src="../../assets/images/medaillen%20highscore.png" /><!--Medaille-->      
                                     </div>
                                 </th>
 								<th>Spieler</th>
-								<th>Zeit</th>
+								<th>Datum</th>
 								<th>Punkte</th>
 							</tr>
 							 <tr id="tabellenranking">
@@ -90,20 +83,7 @@
 							<img src="{{r_image}}" /><!--Quizbild-->
 
                             <div class="sugg-infos">
-                                <div class="sugg-head">{{r_name}}</div><!--Überschrift-->
-
-                                <div class="infos">
-                                    <div class="erstellt">von {{r_author}} erstellt am {{r_date}}</div>
-                                    <div class="gespielt">{{r_counter}} mal gespielt</div>
-                                </div>
-                            </div>
-						</div>
-
-						<div class="sugg">
-							<img src="{{r_image}}" />
-
-                            <div class="sugg-infos">
-                                <p class="sugg-head">{{r_name}}</p>
+                                <h3 class="sugg-head">{{r_name}}</h3><!--Überschrift-->
 
                                 <div class="infos">
                                     <p class="erstellt">von {{r_author}} erstellt am {{r_date}}</p>
@@ -116,7 +96,20 @@
 							<img src="{{r_image}}" />
 
                             <div class="sugg-infos">
-                                <p class="sugg-head">{{r_name}}</p>
+                                <h3 class="sugg-head">{{r_name}}</h3>
+
+                                <div class="infos">
+                                    <p class="erstellt">von {{r_author}} erstellt am {{r_date}}</p>
+                                    <p class="gespielt">{{r_counter}} mal gespielt</p>
+                                </div>
+                            </div>
+						</div>
+
+						<div class="sugg">
+							<img src="{{r_image}}" />
+
+                            <div class="sugg-infos">
+                                <h3 class="sugg-head">{{r_name}}</h3>
 
                                 <div class="infos">
                                     <p class="erstellt">von {{r_author}} erstellt am {{r_date}}</p>

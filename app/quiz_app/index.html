@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="de">
 <head>
     <title>Fubuizz</title>
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="../assets/css/navi.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/icons.css" type="text/css">
     <link rel="stylesheet" href="quizuebersicht/quizuebersicht.css" type="text/css" id="css-for-view">
-    
-    <!-- cn: statische css aufrufe dürch dynamische ersetzt -->
-    <!--link rel="stylesheet" href="quizuebersicht/quizuebersicht.css" type="text/css"/>
-    <link rel="stylesheet" href="startscreen/start.css" type="text/css"/>
-    <link rel="stylesheet" href="highscore/highscore.css" type="text/css"/>
-    <link rel="stylesheet" href="quizrunde/quiz.css" type="text/css"/>
-    <link rel="stylesheet" href="schlussscreen/schlussscreen.css" type="text/css"/-->
+
     
      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
 
@@ -21,41 +15,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
+<body class="fubuizz">
     <header class="fubuizz-header">
-        <header>
+        <div class="sub-header">
             <a class="navia" href="index.html"><img class="logo" src="../assets/images/Logo_Fubuizz.png" title="Startseite" alt="Fubuizz"></a>
             <a class="burgermenu" data-component="offcanvas" data-target="#offcanvas-right" data-direction="right"><i class="fa fa-bars" aria-hidden="true"></i></a>
             <ul class="head">
-                <li><a class="navia" href="https://www.google.de">Registrieren</a></li>
-                <li><a class="navia" href="https://www.google.de">Login</a></li>
+	            <li><button class="button is-primary beenden desktop" id="beenden" type="button">Quiz beenden</button></li>
+                <li><a class="navia">Registrieren</a></li>
+                <li><a class="navia">Login</a></li>
             </ul>
-        </header>
+        </div>
         <div class="container">
             <nav>
                 <ul class="navi">
                     <!--<button class="navibeenden" type="button">Quiz beenden</button>-->
                     <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
-                    <li><a class="navia" id="highscore" >Highscore</a></li>
-                    <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
-                    <li><a class="navia" id="kontakt" >Kontakt</a></li>
-                    <li><a class="navia" id="einstellungen" >Einstellungen</a></li>
+                    <li><a class="navia" id="highscore">Highscore</a></li>
+                    <li><a class="navia" id="uber">Über Fubuizz</a></li>
+                    <li><a class="navia" id="kontakt">Kontakt</a></li>
+                    <li><a class="navia" id="einstellungen">Einstellungen</a></li>
+                    
                 </ul>
             </nav>
         </div>
         <div id="offcanvas-right" class="hide">
             <!--<a href="#" class="close"></a>-->
             <div class="burgerheader">
-                <a class="navib" href="https://www.google.de"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Nico Schnurbusch</a>
+                <a class="navib"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> Nico Schnurbusch</a>
             </div>
             <ul class="burgernav">
-                <li><a class="navia" id="quizze">Aktuelle Quizze</a></li>
-                <li><a class="navia" id="highscore" >Highscore</a></li>
-                <li><a class="navia" id="uber" href="EndscreenTablet.html">Über Fubuizz</a></li>
-                <li><a class="navia" id="kontakt" >Kontakt</a></li>
-                <li><a class="navia" id="einstellungen" >Einstellungen</a></li>
+                <li><a class="navia" id="quizze-mob">Aktuelle Quizze</a></li>
+                <li><a class="navia" id="highscore-mob">Highscore</a></li>
+                <li><a class="navia" id="uber-mob">Über Fubuizz</a></li>
+                <li><a class="navia" id="kontakt-mob">Kontakt</a></li>
+                <li><a class="navia" id="einstellungen">Einstellungen</a></li>
             </ul>
-            <button class="quizbeenden" id="beenden" type="button">Quiz beenden</button>
+            <button class="button is-primary beenden mobile" id="beenden-mob" type="button">Quiz beenden</button>
         </div>
     </header>
     
@@ -84,7 +80,7 @@
     ************************************************************************-->
 
     <section class="content-wrap" id="content"></section>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/preloader.js" language="JavaScript"></script>
     <script type="text/javascript" src="../assets/js/navi-eventhandler.js" language="JavaScript"></script>
     <script type="text/javascript" src="../assets/js/createStartscreen.js" language="JavaScript"></script>
@@ -93,7 +89,7 @@
     <script type="text/javascript" src="../assets/js/createEndscreen.js" language="JavaScript"></script>
 	<script type="text/javascript" src="https://use.fontawesome.com/3ea7c8d876.js"></script>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script>!window.jQuery && document.write('<script src="js/jquery-2.1.4.min.js"><\/script>')</script-->
 

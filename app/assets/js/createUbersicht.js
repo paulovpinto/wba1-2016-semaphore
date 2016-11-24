@@ -3,11 +3,14 @@ Dieses Script erzeugt dynamisch die übersicht Seite
 
 ****************************************************/
 
-console.log("Das Script createUbersichtscreen wird ausgeführt..");
+if(devmode) console.log("Das Script createUbersichtscreen wird ausgeführt..");
 
 function createQuizOverview(){
-
-    console.log("createUbersicht wurde aufgerufen.")
+	
+	
+	$(".beenden").removeClass("active");
+	    
+    if(devmode) console.log("createUbersicht wurde aufgerufen.")
 	
 	// Stylesheet austauschen
 	var sheeturl = urls["quizOverview"].replace(/\.html/, ".css");
@@ -33,16 +36,22 @@ function createQuizOverview(){
         temp = temp.replace(/{{author}}/, quiz.author);
         temp = temp.replace(/{{date}}/, schoeneresDatum(quiz.date));
         temp = temp.replace(/{{counter}}/, quiz.counter);
+        temp = temp.replace(/{{counter}}/, quiz.counter);
         temp = temp.replace(/{{image}}/, quiz.image);
+        temp = temp.replace(/{{description}}/, quiz.description);
         temp = temp.replace(/{{description}}/, quiz.description);
 
         var item = document.createElement("div");
         item.innerHTML = temp;
         item.firstChild.id = quizId;
-       // item.firstChild.onclick = function() {
-        //    console.log(this.id);
-        //    createStartscreen(this.id);
-        //};
+        
+        var auswahlButton = item.firstChild.querySelector(".auswahl-button");
+        auswahlButton.id = quizId;
+        auswahlButton.onclick = function() {
+
+            if(devmode) console.log(this.id);
+            createStartscreen(this.id);
+        };
         
         // Kachel in Wrap einfügen
         document.getElementById("snippetQuiz").appendChild(item.firstChild);
@@ -50,23 +59,27 @@ function createQuizOverview(){
 	
 	// Kacheltemplate loeschen
 	document.getElementById("snippetQuiz").removeChild(document.getElementsByClassName("quizkachel")[0]);
+
     
     //ACHTUNG! VON QUIZÜBERSICHT EINGEFÜGT. 
-    //Funktion zum Anzeigen der Beschreibung(beim )
+    //Funktion zum Anzeigen der Beschreibung(beim Klick öffnet sich die Beschreibung)
     
      $(document).ready(function(){
-       $('.beschreibung').addClass("hidden");
+         $('.beschreibung').addClass("hidden");
+         $('.button').addClass("hidden");
+         
        
 
         $('.quizkachel').click(function() {
             var $this = $(this);
 
             var $beschreibung = $this.find(".beschreibung");
+            var $button = $this.find(".button")
             
-            console.log($beschreibung);
+            if(devmode) console.log($beschreibung);
             $beschreibung.toggleClass("hidden");
+            $button.toggleClass("hidden");
             
         });
-    }); // Ende der vom Quizübersich-Team erstellten Funktion
+    }); // Ende der vom Quizübersicht-Team erstellten Funktion
 }
-   

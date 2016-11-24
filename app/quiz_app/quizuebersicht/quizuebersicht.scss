@@ -1,114 +1,408 @@
 @import "../../assets/css/base";
 
+//"SEMI-CHANGELOG"
+//- (1) Der aktive Punkt in der Sortierleiste wurde eingefügt
+//- (2) Um "anzGespielt mobile" und "datum" wurde im HTML eine div gezogen, 
+//  sodass die beiden Elemente eleganter auf einer Linie zu positionieren sind (mobile)
+//- (3) bottom: -1px; bei den Buttons, damit die eine Pixelzeile verschwindet
+//- (4) text-decoration bei der Sortierleiste raus genommen & schwarz gesetzt
+
 .quizuebersicht{
-	
+    
+    /*  Nach einem fix der Navigationsleiste war es uns nötig, den gesamten content in jeder Ansicht
+        um den entsprechenden Abstand nach oben zu schieben. Wenn man sich in den Entwicklertools die 
+        Navigationsleiste ansieht, nimmt der .container in der Klasse .fubuizz-header genau den Platz ein
+        um den wir den eigenen Content verschieben mussten. 
+        An den zutreffenden Stellen im Code wurde das dementsprechend kommentiert.  */
+    
+    
+	/********************************************************************************
+	*                                                                               *
+	*                              DESKTOP-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
+    
+    
 	.content{
-				
-		width: 1000px;
+				 
+		width: $content-width-desktop;
 		margin: 0 auto;
-	
+        margin-top: 30px;
+        
 		.sortierliste{
+            margin-top: $gutter-width;
 			background-color: $bg-yellow;
-			margin: 0;
+			//margin: 0; Hat in der mobilen Ansicht tatsächlich dafpr gesorgt, dass die Sortieritems nicht mehr ordentlich dargesttllt wurden.
 			padding: 0;
+            
 			
 			.sortiercontent{
 				margin: 0; padding: 0;
-				display: flex;
+				display: flex;//ermöglicht Flexboxen für alle Kindelemente (Links)
 	
 				> li{
 					display: inline-block;
-					flex-grow: 1;
+					flex-grow: 1; //alle Kindelemente haben, wenn sie größer werden, dieselben Platz zur Verfügung 
 					text-align: center;
+                    
+                    > a{    
+                        text-decoration: none;
+                        color: $dark_black;
+                        //sorgt dafür, dss Links in der Liste nicht mehr blau und unterstrichen
+                    }
 				}
 			}
+            .top.active{    //unterer Balken des aktiven Links wird definiert
+                border-bottom: 5px solid rgba(0,0,0,0.7);
+            }
+            
 		}		
 
-		.kacheln {
+		.kacheln{
 	
-		    display: flex;
-		    flex-wrap:wrap;
+		    display: flex; //ermöglicht Flexboxen für alle Kinderelemente (Quizkacheln)
+		    flex-wrap:wrap; //Flexboxen können von links nach rechts
 		    margin-left: -$gutter-width;
 		    margin-right: -$gutter-width;
 		    
 		    .quizkachel{
 			    box-sizing: border-box;
 			    display: block;
-			    flex-basis: 25%;
-			    /*flex-grow: 1;*/
+			    flex-basis: 25%; //Flex-Größe der einzelnen Kacheln wird festgelegt
 			    margin-bottom: $base-margin;
-			    padding: $gutter-width;
+			    padding: $gutter-width; 
 				
 				.quizkachel-inner{
+					
+					@extend .shadow;
+					
+                    margin-bottom: 0;
+                    margin-top: 0;
 					background: $bg-opak;
-					color: #000;
+					color: $dark_black;
 					height: 100%;
 					position: relative;
 					
-					.auswahl-button{
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0; 
-					}
-				}
-			      
+                    .basicInfos{  
+                            height: 230px;
+                            background-color: $bg-opak;
+                        
+                        .quizueberschrift{
+                            height: 18pt;
+                            background-color: $bg-opak;
+                            text-align: center;
+                            }
+                        
+                        .erstellinfos, .datum{ //Erstellinfos und Datum sollen zusammen in einer Zeile angezeigt werden
+                            width: relative;
+                            float: left;
+                            font-weight: $font-weight-light;
+                            font-size: 10pt; 
+                            padding-bottom: $base-padding;
+                        }
+                        
+                        .erstellinfos{
+                            padding-left: $base-padding;
+                            margin: 0px 3px $base-margin; // Das Erstellinfos und Datum nicht in einen Div gepackt wurden, legt man hier den Abstand zwischen den beiden fest
+                        }
+                        
+                        .anzGespielt.mobile{
+                            display: none; //Mobiler Counter wird nicht angezeigt, weil die Desktop-/Tablet-Version einen eigenen Counter besitzt
+                        }
+                    }
+                    .inhalt{
+                        font-weight: $font-weight-light;
+                        
+                        .beschreibung{
+                            margin-top: $base-margin;
+                            height: 95px;
+                            float: left;
+                            padding-left: $base-padding;
+                            padding-right: $base-padding;
+                            font-size: $base-desktop;
+                        }
+                        
+                        .anzGespielt.desktop.tablet{
+                            font-weight: $font-weight-light;
+                            padding-right: $base-padding;
+                            text-align: right;
+                            float: right;
+                            font-size: 10pt;
+                            margin-top: $base-margin;
+                            //dieser Counter für die Desktop-/Tablet-Version wird angezeigt
+                        }
+                    }
+                    
+				    .auswahl-button{
+                        font-weight: $font-weight-light;
+                        border: none;
+                        height: 25pt;
+                        background-color: $primary;
+                        font-size: 12pt;
+						position: relative;
+                        bottom: -1px;   //Abstand -1, weil eine Pixelreihe unter dem Button noch in der Farbe opak war
+                        right: 0;
+                        left: 0;
+                        }
+                    
+				} //Ende .quizkachel-inner
 			    .quizbild{
 				    width: 100%;
 			    }
-		    }
-		}		
-	}
-	
-	@media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
-		
-		.content{
-		
-			width: $content-width-tablet;
-			
-			.kacheln{
-				.Quizkachel{
-					flex-basis: 33%;	
-				}
-			}
+		    } //Ende .quizkachel
+		} //Ende .kacheln		
+	} //Ende .content
 
-		}   
-	}
-	
-	@media only screen and (max-width: $bp-smartphone){
+    
+    
+    /********************************************************************************
+	*                                                                               *
+	*                               TABLET-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
+   
 		
-		.content{
-			width: 100%;
-			padding: $gutter-width;
-			
-			.kacheln{
-				display: block;
+		 @media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
+
+        
+        .content{
+            width: $content-width-tablet;
+            padding: 0;
+            margin: 0 auto;
+            margin-top: -40px;  // nach fix der Navigationsleiste war es nötig, den gesamten content näher zur Leiste zu schieben
+            list-style: none;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            justify-content:center;
+            align-self: stretch;
+            align-content: center;
+        
+            
+            .sortierliste{
+                margin: 0; 
+                padding: 0;
+				width: 100%;
+
+			    background-color: $bg-yellow;
+			    margin-top:  15px;
+			    padding: 0;    
+                
+                .sortiercontent{
+	                width: 100%;
+                }
+            }
+            
+            .kacheln{
+		        display: flex; // erzeugt Flexboxen aus allen direkten Nachkommen des Elements und richtet diese zentriert aus.
+		        flex-wrap: wrap; // die flexiblen Elemente können sich wenn nötig innerhalb des Containers in mehrere Zeilen aufteilen.
+                margin-left: -$gutter-width;
+		        margin-right: -18px;  // nach dem fix der Navigationsleiste war es nötig den margin-right von -$gutter-width auf -18px zu ändern. 
                 
                 .quizkachel{
-                    
+        
+                    box-sizing: border-box;     		   
+                    display: block;
+                    flex-basis: 33%;  // Festlegung der Maximalen Hauptgröße des flex-Elements. 
+                    /*flex-grow: 1;*/
+                    margin-bottom: $base-margin;
+                    padding: $gutter-width;
+                
                     .quizkachel-inner{
+        
+                        background: $bg-opak;
+                        color: #000;
+                        height: 100%;
+                        position: relative;
+                
+                
+                            .basicInfos{        //Da die .erstellinfos und .datum nicht in einer div sind, wurde hier ein wenig getrickst um dennoch den korrekten Hintergrund unter dem Bild zu haben.
+                                background-color: $bg-opak;  
+                                height: 203px;
+                                
+                                .quizueberschrift{
+                                    height: 18pt;   // 
+                                    background-color: $bg-opak;
+                                    text-align: center;
+                                }
+
+                                .erstellinfos{
+                                    color: #2F2D2C;
+                                    text-align: left;
+                                    background:beige;
+                                    display: block;  
+                                    line-height: 10px;      
+                                    height: 5px;
+                                    margin: 2px 3px 0 $base-margin;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+
+                                }
+
+                               .datum{
+                                    font-size: 10pt;
+                                    margin-top: -3px;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
                         
-                        .basicInfos{
+                                }
+
+                                   
+
+                                .anzGespielt mobile{
+                                    display: none; // Es handelt sich hirbei um eine Tablet Ansicht ergo wird dies für die Mobile Ansicht ausgeschaltet 
+                                } 
+                            } 
+                            .inhalt{
+                                
+                                .beschreibung{
+                                    height: 65px;
+                                    text-align: left; 
+                                    font-weight: lighter;
+                                    line-height: 17px;
+                                    font-size: 10pt;
+                                    margin: $gutter-width 0 25px $gutter-width;
+                                    padding-left: 0;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+                       
+                                }
+                                
+                                .anzGespielt.desktop.tablet{
+                                    float: right;
+                                    margin-right: 10px;
+                                    margin-bottom: $gutter-width;
+                                    font-family: Oswald;
+                                    font-weight: $font-weight-light;
+                        
+                                }
+                            }
+
+                            .auswahl-button{
+                                position: relative;
+                            } 
+                    }  //Ende .quizkachel-inner
+                } // Ende .quizkachel
+            } // Ende .kacheln
+        } // Ende .content 
+    }  // Ende Breakpoint Tablet 
+    
+    
+    
+    
+    /********************************************************************************
+	*                                                                               *
+	*                               MOBILE-ANSICHT                                  *
+	*                                                                               *
+	*********************************************************************************/
+    
+    
+	@media only screen and (max-width: $bp-smartphone){
+		
+		.content{ 
+			width: $content-width-smartphone;
+			padding: $gutter-width;
+			margin-top: 0;
+        
+            .sortierliste{
+                margin-bottom: $gutter-width;
+                position: relative;
+                
+                .sortiercontent{
+                	*{ //Schriftanpassung in der Sortierleiste
+						text-decoration: none;
+						color: black;
+					}
+                    
+                }
+            }
+            
+			.kacheln{
+				display: block; //Kacheln werden im block angeordnet
+                
+                .quizkachel{
+                    padding-bottom: 0;
+                    padding-top: 0;
+                    margin-top: $gutter-width;
+        
+                    .quizkachel-inner{
+	                    
+	                    .basicInfos::after{ //nach der Klasse .basicInfos werden die Attribute "display", "content", "overflow" & die floats zurückgesetzt
+		                    content: ".";
+		                    display: block;
+		                    clear: both;
+		                    height: 0;
+		                    overflow: hidden;
+	                    }
+	                    
+                        .basicInfos{ 
+                            height: initial;
+                            background-color: initial;
                             
-                            float: left;
-                            .quizbild{
+                            .quizbild{  //das Quizbild muss links sein und eine feste Größe haben
                                 float: left;
                                 width: 113px;
                                 height: 70px;
                             }
+                            
+                            .quizueberschrift{ 
+                                text-align: center;
+                                width: calc(100% - 113px);  //Die Größe des Hintergrundes in der Überschrift ergibt sich genau aus der Gesamtgröße der Kachel - der Bildbreite
+                                height: 16px;
+                                float: right;
+                                background-color: $bg-opak;
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+                            
+                            .erstellinfos, .datum{
+                                padding-left: 0;
+                                font-size: 11px;
+                                margin-left: calc(113px + 15px); //Die Erstellinfos und das Datum müssen erstmal weiter als das Bild gehen und danach noch zusätzliche 15px
+                                float: none;
+                            }
+                        
+                            .datum{
+                                margin-left: 15px;
+                                float:left;
+                            }
+                            
+                            .anzGespielt.mobile{
+                                display: block;
+                                font-size: 11px;
+                                font-weight: $font-weight-light;
+                                margin-right: 15px;
+                                float: right;
+                            }
+                        } //Ende .basicInfos
+                        .inhalt{
+                            .beschreibung{
+                                font-size: 14px;
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                                margin-left: 15px;
+                                margin-right: 15px;
+                                height: initial;
+                            }
                         }
-                    }
-                }
-			}
-
-            
-		}  
-        .hidden{
-                display: none;
+                        .auswahl-button{
+                            position: relative;
+                        }
+                    } //Ende .quizkachel-inner
+				} //Ende .quizkachel
+			} //Ende .kacheln 
+		} //Ende .content
+        
+        .anzGespielt.desktop.tablet{
+            display: none;  //Die Anzeige für die Anzahl der gespielten Spiele im Tablet- & Desktopmodus soll nicht angezeigt werden, da wir uns in diesem BP ja schließlich nicht in diesen befinden
+        }
+    
+        .quizkachel-inner{
+            background-color: $bg-opak;
         }
         
-	}
-         
-}
-
-
+        .hidden{    //Alle Elemente die die Klasse .hidden bekommen, werden nicht angezeigt.
+            display: none;  
+        }
+        
+	} //Ende Breakpoint Smartphone 
+} //Ende .quizuebersicht

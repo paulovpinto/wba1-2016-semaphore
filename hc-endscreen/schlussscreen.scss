@@ -10,8 +10,6 @@
 
 }
 
-@font-face { font-family: 'OswaldRegular'; 
-            src: url('fonts/Oswald-Regular.ttf') format('truetype'); }
 @font-face { font-family: 'OswaldLight'; 
             src: url('fonts/Oswald-Light.ttf') format('truetype'); }
 @font-face { font-family: 'NotoSans'; 
@@ -32,8 +30,8 @@ body{
 	
 	box-sizing: border-box;
 	
-	width: $content-width-desktop;
-	margin: 0 auto;
+	width: 100%;
+    padding: 15px 150px 5px 150px;
 
 
 	.tablet, .desktop{
@@ -50,29 +48,27 @@ body{
 		display: block;
 		clear: both;
 	}
+    
+    
 	
 	.heading {
-	
-	    
 	    text-align: center;
-	    color:black;
-	    /*width: calc(100%-30px); */
+	    color: $dark_black;
 	    height: 50px;
-	    background-color: white;
-	    /*margin-left: 15px;
-	    margin-right: 15px; */
+	    background-color: $bright;
+        width: 100%;
 	}
 	
 	h1{
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	    line-height: 50px;
-	    color:black;
+	    color: $dark_black;
 	    font-size: 24px;
 	}
 	
 	.erneut {
-	    background-color: rgba(203,7,39,1); 
-	    color: rgba(255,255,255,1 );
+	    background-color: $primary; 
+	    color: $bright;
 	    font-size: 20px;
 	    border:none;
 	    text-align: center;
@@ -81,18 +77,13 @@ body{
 	    height: 50px;
 	    line-height: 50px;
 	    display: inline-block;
-	    font-family: Noto-Sans;
+	    font-family: 'NotoSans';
 	}
 	
 	.erneut p{
 	    text-align:center;
 	}
-	
-	.fussbaelle img{
-	    height: 15px;
-	    width: 15px;
-	}
-	
+		
 	.ballFalsch img{
 	    opacity: 30%;
 	}
@@ -101,6 +92,7 @@ body{
 	    width: 100%;
 	    height: 50px;
 	    line-height: 50px;
+        margin: 10px 0px 10px 0px;
 	}
 	
 	.fussbaelle table {
@@ -109,87 +101,97 @@ body{
 	}
 	
 	.punkte {
-	    background-color: rgba(233,194,12,1);
-	    color: black;
-	    font-size: 125%;
+	    background-color: $bg-yellow;
+	    color: $dark_black;
+	    font-size: 20px;
 	    text-align:center;
 	    width: calc(100% - 30px);
-	    height: 312.5%;
-	    line-height: 312.5%;
+	    height: 50px;
+	    line-height: 50px;
 	    display: inline-block;
 	    margin-top: 3px;
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	
 	}
-	 
-	.suggestions {
-	    background-color: rgba(233,194,12,1);
-	    color: black;
-	    font-size: 1.25em;
-	    text-align:center;
-	    width: calc(100% - 30px);
-	    height: 3.125em;
-	    font-family: 'OswaldRegular';
-	    line-height: 3.125em;
-	    display: inline-block;
-	    font-style: normal;
-	    margin-top: 0.188em;
-	}
-	
-	.suggestions::after{
-		content: "";
-		height: 0;
-		display: block;
-		clear: both;
-	}
-	
-	.suggestions img{
-	    width: 100%;
-	    height: 70px;
-	}
-	
-	.suggestions .sugg {
-	    float: left; 
-	    margin-right: 10px;
-	    width: calc((100% - 20px)/3);
-	    margin-top: 21px;
-	}
-	
-	.suggestions .sugg:last-child {
-	    margin-right:  0px;
-	}
-	
-	.suggestions .sugg div {
-	    position:relative;
-	    top: -36px;
-	    background-color: rgba(255, 255, 255, 0.5);
-	    width: 113px;
-	    height: 20px;
-	    line-height: 20px;
-	    font-family: 'Noto-Sans';
-	    
-	}
+
+    .suggestions {      
+        
+        &::after {
+            content: "";
+            height: 0;
+            display: block;
+            clear: both;
+        }
+        
+        img {
+           width: 100%;
+	       height: auto;
+            display: block;
+        }
+        
+        h2 {
+            background-color: $bg-yellow;
+            color: $dark_black;
+            font-size: 20px;
+            text-align:center;
+            width: 100%;
+            height: 3.125em;
+            font-family: $base-font-family;
+            line-height: 3.125em;
+            display: inline-block;
+            font-style: normal;
+            margin-top: 20px;
+            
+        }
+        
+        .sugg {
+            
+            &:last-child {
+                margin-right:  0px;
+            }
+            
+            position: relative;
+            float: left; 
+            margin-right: 10px;
+            width: calc((100% - 20px)/3);
+            margin-top: 21px;
+            
+            .sugg-infos {
+                position:absolute;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.7);
+                width: 100%;
+                height: 25px;
+                line-height: 25px;
+                font-family: 'NotoSans';
+                
+                .sugg-head{
+                    font-family: $base-font-family;
+                    text-align: center;
+                    height: auto;
+                }
+
+            }
+        }
+        
+    }
 	
 	.linke-seite {
 	    float: left;
-	    /*padding: 50px;
-	    padding-right: 5px;*/
 	    margin-top: 20px;
-	    width: calc(50% - 55px);
+	    width: 49%;
 	}
 	
 	.rechte-seite {
 	    float: right;
-	    /*padding: 50px;
-	    padding-left: 5px;*/
-		margin-top: 20px;
-	    width: calc(50% - 55px);
+        margin-top: 20px;
+	    width: 49%;
 	}
 	
 	.quizbild img {
 	    margin-top: 5px;
 	    width: calc(100% - 30px);
-	    max-height: 275px;
+	    max-height: auto;
 	    object-fit: cover;
 	}
 	
@@ -200,25 +202,24 @@ body{
 	
 	
 	.highscore table{
-	    /*width: calc(100% - 30px);*/
 	    width: 100%;
 	    margin-top: -9px;
 	    border-spacing: 0px 14px;
 	}
 	
 	.highscore table th {
-	    background-color: rgba(233,194,12,1);
+	    background-color: $bg-yellow;
 	    text-align: left;
 	    text-width: none;
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	}
 	.highscore table td {
 	    background-color: rgba(255, 255, 255, 0.5);  
-	    font-family: 'OswaldRegular';
+	    font-family: $base-font-family;
 	}
 	
 	.highscore tr:last-child {
-	    outline: solid 3px rgba(203, 7, 39, 1);
+	    outline: solid 3px $primary;
 	}
 	
 	.highscore-btn, .infos {
@@ -229,13 +230,53 @@ body{
 }
 
 
-@media only screen and (max-width: 800px){
+
+
+
+@media only screen and (max-width: $bp-tablet){
+    
+    .schlussscreen{
+        
+        
+        box-sizing: border-box;
+
+        width: 100%;
+        padding: 15px 50px 5px 50px;
+
+
+
+        .highscore table{
+            width: 100%;
+        }
+
+        .rechte-seite, .linke-seite {
+                width: 50%;
+        }
+        
+
+    }   
+
+}
+
+
+
+@media only screen and (max-width: $bp-smartphone){
 	
+    body{
+        background-image: url(images/background.jpg);
+        max-height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+    }
+    
 	.schlussscreen{
 		
-		
+		box-sizing: border-box;
+        
 		width: 100%;
-		padding: 20px;
+		padding: 0px 9px;
 		
 		.tablet, .desktop{
 			display: none !important;
@@ -249,29 +290,20 @@ body{
 			float:none;
 			width: 100%;
 		}
+        
+        .highscore, .suggestions h2{
+	        display:none;
+	    }
 		
-	    body{
-	        background: purple;
-	    }
-	        
-	    .heading{
-	        /*height: 200%;
-	        width: calc(100% - 21px);*/
-	        background: rgb(248, 245, 228);
-	        position: absolute;
-	        transform: translate(11px);
-	        margin-top: 6em;
-	        margin-bottom: 0em; 
-	        display: inline-block;
-	    }
+        .infos{
+            display: inline-block;
+        }
 	    
-	    h1{
-	        text-align: center;
-	        margin-top: 0.25em;
-	        font-family: 'OswaldRegular';
-	        font-size: 1em;
-	        line-height: 1em;
-	    }
+        
+        
+        
+	  
+	   
 	    
 	    
 	    .quizbild{
@@ -279,11 +311,15 @@ body{
 		 	position: relative;
 		 	
 			.headline{
-				background: pink;
+				background: $bg-opak;
 				position: absolute;
 				left: 0;
 				right: 0;
 				bottom: 0;
+                text-align: center;
+                font-family: $base-font-family;
+                font-size: 16px;
+                padding: 4px 0;
 			}
 			
 			img{
@@ -294,101 +330,103 @@ body{
 	    }
 	
 	    .punkte{
-	        height: 2.1em;
-	        width: calc(100% - 21px);
-	        transform: translate(11px);
+            
+            width: 100%;
+            height: 33px;
+                        
+            p{
+                font-size: 16px;
+                margin-top: -9px;
+            }
 	    }
-	    
-	    .punkte p{
-	        text-align: center;
-	        font-family: 'OswaldRegular';
-	        font-size: 0.8em;
-	        margin-top: 0.55em;
-	    }
-	
-	    .fussbaelle img{
-	        height: 0.75em;
-	        width: 0.75em;
-	    }
-	    
-	    .fussbaelle{
-	        width: 100%; 
-	    }
-	    
-	    .fussbaelle table {
-	        /*width: calc(100% - 30px);*/
-	        text-align: center;
-	    }
-	        
+	       
+        .fussbaelle {
+            width: 100%;
+            height: 13px;
+            line-height: 13px;
+            margin: 7px 0px 13px 0px;
+        }
+        
+        .fussbaelle table{
+            width: 100%;
+            text-align: center;
+        }
+        
+        .fussbaelle img{
+            width: 13px;
+            height: 13px;
+        }
+        
 	    .erneut, .highscore-btn{
-	        background: rgb(203, 7, 39);
-	        color: rgb(255, 255, 255);
-	        height: 2.1em;
-	        width: calc(100% - 21px);
-	        transform: translate(11px);
-	        margin-top: 0.8em;
+            width: 100%;
+	        background: $primary;
+	        color: $bright;
+	        height: 35px;
+	        margin-top: 7px;
 	        border: none;
 	        display: inline-block;
+            
+            p{
+                font-family: 'NotoSans';
+                font-size: 13px;
+                text-align: center;
+                text-decoration-line: none; 
+                margin-top: 8px;
+            }
 	    }
 	    
-	    .erneut p, .highscore-btn p{
-	        font-family: 'NotoSans';
-	        font-size: 0.8em;
-	        text-align: center;
-	        text-decoration-line: none; 
-	        margin-top: 0.5em;
-	    }
-	
-	    .highscore, h2{
-	        display:none;
-	    }
-	
+        .erneut p{
+            margin-top: -8px;
+        }
+        
 	    .suggestions{
-	        margin-top: 1em;
-	        /*width: calc(100% - 21px);*/
-	        width: 100%;
-	        transform: translate(11px);
-	    }
-	    
-	    .sugg{
-	        height: 2.9em;
-	        display: block;
-	        margin-bottom: 7pt;
-	        margin-top: auto;
-	    }
-	    
-	    .sugg img{
-	        display: inline-block;
-	        height: 2.9em;
-	    }
-	    
-	    .sugg-infos{
-	        height: 2.9em;
-	        width: calc(100% - 76px);
-	        /*float: right; */
-	        font-size: 0.55em;
-	        display: inline-block;
-	    }
-	    
-	    .sugg-head{
-	        font-family: $base-font-family;
-	        text-align: center;
-	        background: rgb(248, 245, 228);
-	    }
-	    
-	    .infos{
-	        background: rgba(248, 245, 227, 0.6);
-	    }
-	    
-	    .erstellt{
-	        font-family: 'OswaldLight';
-	        text-align: left;
-	        padding-left: 0.5em;
-	    }
-	    
-	    .gespielt{
-	        font-family: 'OswaldLight';
-	        text-align: right;
-	    }
+        
+            
+            
+            .sugg{
+                
+                clear: both;
+                margin-top: 9px;
+                width: 100%;
+                
+                img{
+                    display: inline-block;
+                    width: 30%;
+                    height: 50px;
+                    float: left;
+                }
+                
+                .sugg-infos{
+                    
+                    display: inline-block;
+                    font-size: 9px;
+                    height: 50px;
+                    width: 70%;
+                    
+                    .sugg-head{
+                        background: $bg-opak;
+                        height: 13px;
+                        line-height: 12px;
+                    }
+                    
+                    .infos{
+                        
+                        height: 33px;
+                        display: inline;
+                        font-family: 'OswaldLight';
+                        
+                        .erstellt{
+                            margin-left: 7px;
+                        }
+                        
+                        .gespielt{
+                            float: right;
+                            padding-right: 7px;
+                            margin-top: -10px;
+                        }
+                    }
+                } 
+            }
+        }/*suggestion Ende*/
 	}
 }

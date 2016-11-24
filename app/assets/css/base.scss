@@ -2,7 +2,7 @@
 ###################################################### */
 
 // Farben
-$primary: rgba(203,7,39,1);
+$primary: #cb0727;
 $primary-light: rgba(255,55,55,1);
 $bright: rgba(255,255,255,1 );
 $secondary: #00ff00;
@@ -36,6 +36,10 @@ $content-width-desktop: 1200px;
 $content-width-tablet: 800px;
 $content-width-smartphone: 100%;
 
+// Font Sizes
+$base-desktop: 0.9rem;
+$head-desktop: 1.2rem;
+
 /* Bausteine
 ###################################################### */
 
@@ -48,7 +52,7 @@ $content-width-smartphone: 100%;
 }
 
 .button.is-primary{
-	background-color: $primary-light;
+	background-color: $primary;
 }
 
 .liste th{
@@ -75,4 +79,13 @@ th, td{
 }
 td{
     background:rgba(248, 245, 228, 0.7);
+}
+
+
+.liste tr{
+	@extend .shadow;
+}
+
+.shadow{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
