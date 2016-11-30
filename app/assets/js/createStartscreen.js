@@ -19,10 +19,9 @@ function createStartscreen(quizId){
     // Snippet ziehen 
     var template = templates["startscreen"];
 
+
 	var quizze = jsondata["quizubersicht"];
 	var quiz = quizze[quizId];
-    if(devmode) console.log(quizze);
-    if(devmode) console.log(quiz);
 
 	// Wir brauchen geteilten Text zum Ausklappen
 	var description_text = quiz.description.split(/ /);
@@ -41,18 +40,13 @@ function createStartscreen(quizId){
 	
 	document.getElementById("content").innerHTML = template;
 
-	/*	document.getElementById("playButton").onclick = function(){
-		initQuiz(quiz.quizIdx);
-	}  */
-
+    // Daten aus den JSON zwichenspeichern
     var ubersicht_parsedjson = jsondata["quizubersicht"];
     var currentrank_parsedjson = jsondata["ranking" + quizId];
     var currentinfo_object = ubersicht_parsedjson[quizId];
 
 
- // JSON Merken
-  //  var  model.data.rankingjson = JSON.parse(this.responseText);
-
+    // Inhalt von Content holen und mit template füllen
     var target = document.getElementById("content");
     target.innerHTML = templates["startscreen"];
 
@@ -73,6 +67,8 @@ function createStartscreen(quizId){
 	//"reinen" Text in der Variable speichern
 	var template = snippetstart.outerHTML;
 
+
+    // Ersetzen der Tokens mit den "richtigen" Daten
 	template = template.replace(/{{name}}/, info.name);
     template = template.replace(/{{author}}/, info.author);
 	template = template.replace(/{{date}}/, schoeneresDatum(info.date));
@@ -91,7 +87,7 @@ function createStartscreen(quizId){
         //"reinen" Text des Rankings speichern
         var temp = snippetranking.outerHTML;
 
-		if(devmode) console.log(schoeneresDatum(scoredata[i].date));
+        // Tokens werden ersetzt durch die "richtigen" Daten
         temp = temp.replace(/{{rankIdx}}/, scoredata[i].rankIdx);
         temp = temp.replace(/{{player}}/, scoredata[i].player);
         temp = temp.replace(/{{points}}/, scoredata[i].points);
@@ -100,9 +96,12 @@ function createStartscreen(quizId){
         var item = document.createElement("tr");
         item.innerHTML = temp;
 
+        // wird jeweils mit dem vorher bearbeiteten Highscore-Eintrag erweitert
         htmlRankings += temp;
     }
 
+
+    // Speichern der templetes im content Bereich sowie im Ranking Bereich
     document.getElementById("content").innerHTML = template;
     document.getElementById("ranking").innerHTML = htmlRankings;
 	  // return this.responseText;
@@ -127,14 +126,3 @@ function createStartscreen(quizId){
     });
 
 }
-
-
-/***********
-highscorecontent
-
-{{rankIdx}}
-{{player}}}
-{{date}}
-{{points}}
-*/
-

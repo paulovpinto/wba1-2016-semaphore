@@ -30,10 +30,6 @@ function initQuiz(quizIdx){
 
 function startQuiz( quizIdx, json ){
 
-//		data = quiz.allQuestions[0].question;
-//buttonKlick();
-//	neueFrage( data, aktuelleFrage );
-
     if(devmode) console.log("createStartscreeen wurde aufgerufen.");
 
 	// Stylesheet austauschen
@@ -47,25 +43,10 @@ function startQuiz( quizIdx, json ){
 
 	quizLogik.data = quizLogik.quiz.allQuestions[0].question
 
-	/*template = template.replace(/{{quizname}}/, quiz.name);
-    template = template.replace(/{{autor}}/, quiz.author);
-    template = template.replace(/{{datum}}/, quiz.date);
-    template = template.replace(/{{anzahl}}/, quiz.counter);
-    template = template.replace(/{{src}}/, quiz.image);
-    template = template.replace(/{{beschreibung}}/, quiz.description);*/
-
-	/*var item = document.createElement("div");
-	item.innerHTML = template;
-	item.firstChild.id = quizIdx;*/
-
-
 
 	aktuelleFrage = 0;
 	document.getElementById("content").innerHTML = template;
 	buttonKlick(quizIdx);
 	neueFrage( quizLogik.data, aktuelleFrage);
-
-	// HTML in Wrap einfügen
-	//document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
 
 }

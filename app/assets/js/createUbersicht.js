@@ -32,6 +32,7 @@ function createQuizOverview(){
         var temp = snippet.outerHTML;
         var quiz = json[quizId];
 
+        // Tokens werden durch "richtige" Daten ersetzt
         temp = temp.replace(/{{name}}/, quiz.name);
         temp = temp.replace(/{{author}}/, quiz.author);
         temp = temp.replace(/{{date}}/, schoeneresDatum(quiz.date));
@@ -45,6 +46,7 @@ function createQuizOverview(){
         item.innerHTML = temp;
         item.firstChild.id = quizId;
         
+        // Auswählen Button bekommt funktion
         var auswahlButton = item.firstChild.querySelector(".auswahl-button");
         auswahlButton.id = quizId;
         auswahlButton.onclick = function() {

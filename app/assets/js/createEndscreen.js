@@ -64,8 +64,6 @@ function createEndscreen(punkte, antworten, quizIdx){
     
 
 
-    // Platz in Rangliste anzeigen
-
     //Document holen und merken
     var target = document.getElementById("content");
     target.innerHTML = templates["schlussscreen"];
@@ -86,13 +84,8 @@ function createEndscreen(punkte, antworten, quizIdx){
 
     var scoredata = currentrank_parsedjson.highscore;
 
-    var rang = 0;
-
-    var ranking_done = false;
-
-    // TODO Fehler finden und Vereinfachen!!!!
     
-    //suche position in der Liste
+    //suche position in der Liste und zeige nach erreichten Punkten an
     
     for (var i = 0; i < scoredata.length; i++){
 
@@ -105,28 +98,16 @@ function createEndscreen(punkte, antworten, quizIdx){
         
     }
 
-    if(devmode) console.log(position);
-    
-    var rang_arr;
-    
-    //Ein array mit rang namen und idx für jeden spielstand erzeugen
-    //Array deklarieren und mit allen Spielständen füllen
-    
-    var superContainer = Array(15);
     
     var neues_Ranking = [];
-    
-    var points_arr = Array(15);
-    var rankIdx_arr = Array(15);
-    var player_arr = Array(15);
+
     var mein_rang = scoredata.length +1;
     
     var aktueller_rang = 1;
-    
-    if(devmode) console.log(scoredata);
-    
+
     var eingetragen = false;
     
+    // Speichern des erreichten Ergebnisses in der Highscoreliste an Richtiger Stelle
     for( var i = 0; i < scoredata.length; i++ ){
         if(punkte > scoredata[i].points && !eingetragen){
             var mein_eintrag = {};
@@ -145,24 +126,19 @@ function createEndscreen(punkte, antworten, quizIdx){
         
         aktueller_rang++;
     }
-    
-    
-    template = template.replace(/{{rang}}/, " " + mein_rang);
-    //document.getElementById("ranking").innerHTML = htmlRankings;
 
     var item = document.createElement("div");
     item.innerHTML = template;
 
     document.getElementById("content").replaceChild(item.firstChild, document.getElementById("content").firstChild);
     
-        
+    // Wenn Postion > 5, wird der erreichte Rang + die 4 davor angezeigt
     if(position > 5){
         
         for(var i = (position-5); i < (position); i++){
             
            var temp = snippetranking.outerHTML;
 		   	temp = temp.replace(/{{points}}/, neues_Ranking[i].points);
-            
             temp = temp.replace(/{{rankIdx}}/, neues_Ranking[i].rankIdx);
             temp = temp.replace(/{{player}}/, neues_Ranking[i].player);
             temp = temp.replace(/{{date}}/, schoeneresDatum(neues_Ranking[i].date));
@@ -174,6 +150,7 @@ function createEndscreen(punkte, antworten, quizIdx){
         }
         
     }
+    // Ansonsten einfach Rang 1-5, wo dann der erreichte Rang drinsteht
     else{
         for(var i = 0; i < 5; i++){
             

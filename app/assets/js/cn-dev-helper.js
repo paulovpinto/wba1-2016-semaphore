@@ -33,7 +33,7 @@ if(devmode){
 	for(var i=0; i<dev_antworten.length;i++){
 	    dev_antworten[i] = true;
 	}
-	item.onclick = function(){ createEndscreen(890, dev_antworten, "1"); }
+	item.onclick = function(){ createEndscreen(450, dev_antworten, "1"); }
 	devnavi.appendChild(item);
 	
 	// Highscore

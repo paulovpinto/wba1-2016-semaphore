@@ -32,6 +32,7 @@ function createHighscore(){
 
     var i = 1;
     
+    // Ersetzen der Tokens im Dropdown Menü mit den Quiznamen
     for(var quizId in quizze){
 
         var option = "{{option" + i + "}}";
@@ -46,6 +47,7 @@ function createHighscore(){
 
     h_quiz = quizze["quiz" + quizIdx];
 
+    // Tokens werden ersetzt durch die "richtigen" Daten
     template = template.replace(/{{image}}/, h_quiz.image);
     template = template.replace(/{{author}}/, h_quiz.author);
     template = template.replace(/{{date}}/, h_quiz.date);
@@ -57,7 +59,6 @@ function createHighscore(){
     
     
     document.getElementById("content").appendChild(item.firstChild);
-    //document.getElementById("content").replaceChild(document.getElementById("content").firstChild, item);
     
     
     var h_ranking = document.getElementById("h_ranking");
@@ -65,9 +66,7 @@ function createHighscore(){
 	var h_listhead = document.getElementById("h_listhead");
     
     var currentrank_parsedjson = jsondata["rankingquiz" + quizIdx];
-    
-    if(devmode) console.log(jsondata["ranking" + quizIdx]);
-    
+
     var scoredata = currentrank_parsedjson.highscore;
     
     var htmlRankings = h_listhead.outerHTML;
