@@ -5,6 +5,7 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
 
         <meta charset="utf-8">
+        <!--Einbindung des navi stylesheets, festlegung des viewports und des charsets.-->
 
         <!-- Kube CSS -->
         <link rel="stylesheet" href="dist/css/kube.css">
@@ -16,8 +17,8 @@
         <script src="dist/js/kube.js"></script>
     </head>
     <body>
-                <div class="container">
-                <header>
+                <div class="container"> <!-- alles in container stellt das Navi in der Ausgangsform (Desktop Ansicht) dar.-->
+                <header> <!-- header beinhaltet den oberen grauen Teil der Navigation-->
                         <a href="https://www.google.de"><img class="logo" src="img/Logo_Fubuizz.png" title="Startseite" alt="Fubuizz"></a>
                         <img class="burgermenu" src="img/menue_button_handy.png" href="#" data-component="offcanvas" data-target="#offcanvas-right" data-direction="right">
                     <ul class="head">
@@ -25,7 +26,7 @@
                         <li><a href="https://www.google.de">Login</a></li>
                     </ul>
                 </header>
-                <nav>
+                <nav> <!-- alles in nav legt die eigentliche Navigation fest.-->
                     
                     <ul class="navi">
                         <!--<button class="navibeenden" type="button">Quiz beenden</button>-->
@@ -37,13 +38,13 @@
                     </ul>
                 </nav>
                 </div>
-                    <div id="offcanvas-right" class="hide" style="background-color: #000000;">
+                    <div id="offcanvas-right" class="hide" style="background-color: #000000;"> <!-- alles in offcanvas-right beinhaltet das burgermenu welches in der tablet und mobilen Ansicht benutzt werden kann-->
                         <!--<a href="#" class="close"></a>-->
                         <div class="burgerheader">
                             <a href="https://www.google.de"><img class="avatar" src="img/Avatar.png"></a>
                             <p class="username">Nico Schnurbusch</p>
                         </div>
-                        <ul class="burgernav">
+                        <ul class="burgernav"> <!-- burgernav beinhltet die eigentliche Navigation des Burgermenus-->
                             <li><a href="https://www.google.de">Aktuelle Quizze</a></li>
                             <li><a href="https://www.google.de">Highscore</a></li>
                             <li><a href="https://www.google.de">Über Fubuizz</a></li>

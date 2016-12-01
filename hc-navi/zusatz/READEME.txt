@@ -1,0 +1,5 @@
+Der Navigations Aufabau ist identsich mit dem im Hauptordner.
+
+Die Seiten wurden jeweils nur um ein wenig Inhalt erweitert.
+
+Die Seiten sollten zum damaligen Stand als mögliche Zusatzseiten gelten.

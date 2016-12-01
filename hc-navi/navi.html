@@ -4,11 +4,12 @@
         <link href="navi.css" type="text/css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <!--Einbindung des navi stylesheets, festlegung des viewports und des charsets.-->
     </head>
     <body>
-        <div id="move">
-                <div class="container">
-                <header>
+        <div id="move"><!-- move legt den teil fest der nach links verschoben werden soll.-->
+                <div class="container"> <!-- alles in container stellt das Navi in der Ausgangsform (Desktop Ansicht) dar.-->
+                <header> <!-- header beinhaltet den oberen grauen Teil der Navigation-->
                         <a href="https://www.google.de"><img class="logo" src="img/Logo_Fubuizz.png" title="Startseite" alt="Fubuizz"></a>
                         <img class="burgermenu" src="img/menue_button_handy.png" onclick="myMove">
                     <ul class="head">
@@ -16,7 +17,7 @@
                         <li><a href="https://www.google.de">Login</a></li>
                     </ul>
                 </header>
-                <nav>
+                <nav> <!-- alles in nav legt die eigentliche Navigation fest.-->
                     
                     <ul class="navi">
                         <button class="navibeenden" type="button">Quiz beenden</button>
@@ -28,12 +29,12 @@
                     </ul>
                 </nav>
                 </div>
-                <div class="menu">
-                    <header class="burgerheader">
+                <div class="menu"> <!-- alles in menu beinhaltet das burgermenu welches in der tablet und mobilen Ansicht benutzt werden kann-->
+                    <header class="burgerheader"> <!-- der header beihnaltet die personenspezifischen Informationen -->
                         <a href="https://www.google.de"><img class="avatar" src="img/Avatar.png"></a>
                         <p>Nico Schnurbusch</p>
                     </header>
-                    <nav class="burgernav">
+                    <nav class="burgernav"> <!-- burgernav beinhltet die eigentliche Navigation des Burgermenus-->
                         <ul>
                             <li><a href="https://www.google.de">Aktuelle Quizze</a></li>
                             <li><a href="https://www.google.de">Highscore</a></li>
@@ -45,9 +46,7 @@
                     </nav>
                 </div>
                 <div class="content-wrap" id="content">
-                    <!-- hier -->
-                    <br><br><br>
-                    <a href="#" data-component="offcanvas" data-target="#offcanvas-right" data-direction="right">Open Right</a>
+                    <!--hier kann der Seiteninhalt eingefügt werden.-->
                 </div>
             </div>
     </body>
