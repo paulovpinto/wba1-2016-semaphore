@@ -105,12 +105,9 @@ function neueFrage( data, aktuelleFrage){
 //  tausch($("#antwort1"), $("#antwort2"));
 		$("#antworten").removeClass("hidden");
 
- setInterval("count()", 1000);
-
    clearInterval(timer);
    darfKlicken=true;
    timer = setInterval("count()", 1000);
-
 
     }, delayA);
   }
@@ -167,13 +164,13 @@ function readTime(charCount){
 
 
 function quiz_beenden(){
-	
+
 	for(var i=0; i<antworten.length; i++){
 		if(!antworten[i]){
 			antworten[i] = false;
 		}
 	}
-	
+
 	createEndscreen(punkte, antworten, quizIdx)
 }
 /*
