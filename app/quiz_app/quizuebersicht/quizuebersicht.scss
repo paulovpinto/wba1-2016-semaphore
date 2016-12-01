@@ -24,7 +24,6 @@
     
     
 	.content{
-				 
 		width: $content-width-desktop;
 		margin: 0 auto;
         margin-top: 30px;
@@ -34,8 +33,7 @@
 			background-color: $bg-yellow;
 			//margin: 0; Hat in der mobilen Ansicht tatsächlich dafpr gesorgt, dass die Sortieritems nicht mehr ordentlich dargesttllt wurden.
 			padding: 0;
-            
-			
+        
 			.sortiercontent{
 				margin: 0; padding: 0;
 				display: flex;//ermöglicht Flexboxen für alle Kindelemente (Links)
@@ -59,7 +57,6 @@
 		}		
 
 		.kacheln{
-	
 		    display: flex; //ermöglicht Flexboxen für alle Kinderelemente (Quizkacheln)
 		    flex-wrap:wrap; //Flexboxen können von links nach rechts
 		    margin-left: -$gutter-width;
@@ -162,7 +159,7 @@
 	*********************************************************************************/
    
 		
-		 @media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
+    @media only screen and (min-width: $bp-smartphone) and (max-width: $bp-tablet){
 
         
         .content{
@@ -176,8 +173,7 @@
             justify-content:center;
             align-self: stretch;
             align-content: center;
-        
-            
+           
             .sortierliste{
                 margin: 0; 
                 padding: 0;
@@ -193,13 +189,12 @@
             }
             
             .kacheln{
-		        display: flex; // erzeugt Flexboxen aus allen direkten Nachkommen des Elements und richtet diese zentriert aus.
-		        flex-wrap: wrap; // die flexiblen Elemente können sich wenn nötig innerhalb des Containers in mehrere Zeilen aufteilen.
+		        display: flex;    // erzeugt Flexboxen aus allen direkten Nachkommen des Elements und richtet diese zentriert aus.
+		        flex-wrap: wrap;  // die flexiblen Elemente können sich wenn nötig innerhalb des Containers in mehrere Zeilen aufteilen.
                 margin-left: -$gutter-width;
 		        margin-right: -18px;  // nach dem fix der Navigationsleiste war es nötig den margin-right von -$gutter-width auf -18px zu ändern. 
                 
                 .quizkachel{
-        
                     box-sizing: border-box;     		   
                     display: block;
                     flex-basis: 33%;  // Festlegung der Maximalen Hauptgröße des flex-Elements. 
@@ -208,13 +203,11 @@
                     padding: $gutter-width;
                 
                     .quizkachel-inner{
-        
                         background: $bg-opak;
                         color: #000;
                         height: 100%;
                         position: relative;
-                
-                
+            
                             .basicInfos{        //Da die .erstellinfos und .datum nicht in einer div sind, wurde hier ein wenig getrickst um dennoch den korrekten Hintergrund unter dem Bild zu haben.
                                 background-color: $bg-opak;  
                                 height: 203px;
@@ -243,15 +236,13 @@
                                     margin-top: -3px;
                                     font-family: Oswald;
                                     font-weight: $font-weight-light;
-                        
                                 }
-
-                                   
 
                                 .anzGespielt mobile{
                                     display: none; // Es handelt sich hirbei um eine Tablet Ansicht ergo wird dies für die Mobile Ansicht ausgeschaltet 
                                 } 
                             } 
+                        
                             .inhalt{
                                 
                                 .beschreibung{
@@ -325,7 +316,8 @@
                     margin-top: $gutter-width;
         
                     .quizkachel-inner{
-	                    
+                        background-color: $bg-opak;
+                        
 	                    .basicInfos::after{ //nach der Klasse .basicInfos werden die Attribute "display", "content", "overflow" & die floats zurückgesetzt
 		                    content: ".";
 		                    display: block;
@@ -374,7 +366,9 @@
                                 float: right;
                             }
                         } //Ende .basicInfos
+                        
                         .inhalt{
+                            
                             .beschreibung{
                                 font-size: 14px;
                                 margin-top: 15px;
@@ -384,6 +378,7 @@
                                 height: initial;
                             }
                         }
+                        
                         .auswahl-button{
                             position: relative;
                         }
@@ -394,10 +389,6 @@
         
         .anzGespielt.desktop.tablet{
             display: none;  //Die Anzeige für die Anzahl der gespielten Spiele im Tablet- & Desktopmodus soll nicht angezeigt werden, da wir uns in diesem BP ja schließlich nicht in diesen befinden
-        }
-    
-        .quizkachel-inner{
-            background-color: $bg-opak;
         }
         
         .hidden{    //Alle Elemente die die Klasse .hidden bekommen, werden nicht angezeigt.
