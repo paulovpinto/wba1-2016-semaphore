@@ -55,10 +55,10 @@ function createEndscreen(punkte, antworten, quizIdx){
         var ball_src = "{{ball" + (i+1) + "}}";
 
         if(antworten[i]){
-            template = template.replace(ball_src,"../../assets/images/ball.png");
+            template = template.replace(ball_src,"../../assets/images/Ball.png");
         }
 		else
-            template = template.replace(ball_src,"../../assets/images/no-ball.png");
+            template = template.replace(ball_src,"../../assets/images/no-Ball.png");
 
     }
     
@@ -94,6 +94,9 @@ function createEndscreen(punkte, antworten, quizIdx){
         	   
             var position = (i+1);
             break;
+        }
+        else{
+            template = template.replace(/{{rang}}/, " " + "16");
         }
         
     }
