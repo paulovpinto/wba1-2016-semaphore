@@ -52,7 +52,6 @@ td {
   #start .boxbox {
     box-sizing: border-box;
     width: 100%;
-    /*margin-left: 10%; */
     display: flex;
     margin-top: 0.5em; }
     #start .boxbox .column {
@@ -72,7 +71,6 @@ td {
     padding: 10px; }
   #start h2 {
     text-align: center;
-    /*padding-left: 5em;*/
     font-size: 1.2rem; }
   #start img {
     max-width: 100%;
