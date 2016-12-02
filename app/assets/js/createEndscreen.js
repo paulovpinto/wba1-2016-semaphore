@@ -55,10 +55,10 @@ function createEndscreen(punkte, antworten, quizIdx){
         var ball_src = "{{ball" + (i+1) + "}}";
 
         if(antworten[i]){
-            template = template.replace(ball_src,"../../assets/images/Ball.png");
+            template = template.replace(ball_src,"../images/Ball.png");
         }
 		else
-            template = template.replace(ball_src,"../../assets/images/no-Ball.png");
+            template = template.replace(ball_src,"../images/no-Ball.png");
 
     }
     
